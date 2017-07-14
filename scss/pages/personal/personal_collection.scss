@@ -1,0 +1,110 @@
+@charset "UTF-8";
+// 个人中心 我的收藏
+// Created by qiangkailiang on 2016/11/03
+// 功能库引入
+@import "../../modules/_common-modules";
+// 变量入口引入
+@import "../../variables/_yiding-variables";
+@import "../../components/_pageTopNav_And_SideBar"; //主导航-主侧栏
+@import "../../components/_contentInner"; //内容容器
+@import "../../components/_indexHeader"; //页头
+@import "../../components/_noContent"; //无内容提示
+@import "../../components/_iconModule"; //图标标签
+@import "../../components/_contentItem"; //内容条目
+html,
+body {
+    background-color: #f4f7f6;
+}
+
+.contentInnerItem {
+    &:hover {
+        .yd-collectCancel {
+            display: block;
+        }
+    }
+    .yd-collectCancel {
+        float: right;
+        padding-right: 1rem;
+        cursor: pointer;
+        display: none;
+    }
+}
+
+.contentItemHeader {
+    margin-top: 0;
+}
+
+.yd-contentChangeBox .contentItem {
+    display: none;
+}
+
+.yd-contentChangeBox {
+    /*margin-top: rem(20px);*/
+}
+
+@include query() {
+    .yd-contentChangeBox {
+        margin-top: rem(8px);
+    }
+}
+
+.yd-contentChangeNavbar {
+    border: 1px solid #dfdfdf;
+    background-color: #fff;
+    height: rem(60px);
+    text-align: center;
+    font-size: 0;
+  border-bottom:none ;
+    & > figure {
+        color: #909090;
+        font-size: rem(17px);
+        display: inline-block;
+        height: 100%;
+        line-height: rem(60px);
+        box-sizing: border-box;
+        padding: 0 rem(30px);
+        cursor: pointer;
+        span {
+            display: inline-block;
+            width: rem(83px);
+        }
+    }
+    & > figure.on {
+        color: #ffa800;
+        span {
+            box-sizing: border-box;
+            border-bottom: rem(2px) solid #ffa800;
+        }
+    }
+}
+
+@include query() {
+    .yd-contentChangeNavbar {
+        height: 80px;
+    }
+}
+
+.yd-titleItem {
+    padding: 0 rem(15px);
+    border-bottom: 1px solid #e5e5e5;
+    height: rem(49px);
+    line-height: rem(49px);
+    text-align: left;
+    @include clearfix();
+    &:nth-last-child(1) {
+        border-bottom: none;
+    }
+    a {
+        color: #333;
+        font-size: rem(17px);
+    }
+    span {
+        color: #909090;
+        font-size: rem(13px);
+        float: right;
+    }
+}
+
+.icon-comment {
+    @extend %icon-comment;
+}

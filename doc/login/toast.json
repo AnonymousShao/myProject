@@ -1,0 +1,22 @@
+
+{
+  "name":"toast(content,time1,time2)",
+  "des":"提示框的toast显示,content:提示内容,time1:时间间隔，time2:显示时间",
+  "attention":["每个实参都要传"],
+  "comp":"IE8兼容",
+  "scene":"需要一个固定的位置显示不同的提示信息的逻辑",
+  "returnVal":{
+    "isNull":true,
+    "des":"",
+    "type":"json",
+    "val":{}
+
+  },
+  "code":"",
+  "param":{
+    "isNull":false,
+    "des":"",
+    "type":"json",
+    "val":{}
+  }
+}

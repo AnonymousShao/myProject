@@ -1,0 +1,13 @@
+{
+  "name":"postVideoTime()",
+  "des":"//该方法是在视频播放的时候，向后台传递用户观看的进度。",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+  },
+  "param":{
+    "isNull":true
+  }
+}

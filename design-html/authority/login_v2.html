@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <meta name="viewport" content="width=750">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="/css/base.css">
+    <!--        <link rel="stylesheet" type="text/css" href="/css/pages/authority/login.css" />-->
+    <script type="text/javascript" src="/js/common/mobile-util.js"></script>
+    <script type="text/javascript" src="/js/common/fastclick.js"></script>
+    <script type="text/javascript" src="/js/common/rem.js"></script>
+    <script type="text/javascript" src="/js/third-party/jquery/jquery-1.8.0.min.js"></script>
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="/js/common/rem.js"></script>
+    <script type="text/javascript" src="../../js/common/html5shiv.js"></script>
+    <script type="text/javascript" src="../../js/common/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<section class="loginMain">
+
+    <section class="loginCont">
+        <section class="authorityCommon">
+            <!--关闭-->
+            <section class="experiencePo"><img src="/image/authority/login/login_close.png"></section>
+            <!--错误提示-->
+            <section class="errorTip"><i></i> <span>密码错误</span></section>
+            <!--登录状态-->
+            <section class="loginWidth ev-login" style="display: none; ">
+                <div class="yd_logo"><img src="/image/authority/login/yiding_logo.png"></div>
+                <aside class="loginUsername marginTop"><input type="text" class="ev-phoneNum" placeholder="请输入唯医通行证">
+
+                    <div class="phone"><i class="close"></i></div>
+                    <div class="allinPass"><i></i><a href="/pages/help/allin_pass.html" target="_blank"><span>什么是唯医通行证？</span></a></div>
+                </aside>
+                <ul class="history"></ul>
+                <aside class="loginUsername clear"><input type="password" class="ev-passWord" placeholder="请输入6位以上密码">
+
+                    <div class="password"><i class="close"></i> <i class="eyeClose"></i> <i class="eyeOpen"></i></div>
+                </aside>
+                <div class="phoneFind clear">
+                    <div class="phoneLogin isJump">手机快捷登录
+                        <div class="prompt">点击这里使用手机快捷登录</div>
+                    </div>
+                    <div class="findPassword isJump">找回密码</div>
+                </div>
+                <div class="loginBtn ev-loginBtn">登录</div>
+                <div class="goOnregister">立即注册</div>
+                <div class="wechatLogin"><i></i>微信登录</div>
+            </section>
+            <!--登录状态 END-->
+
+
+            <!--注册-->
+            <section class="loginWidth" style="display: none;">
+                <section class="loginFixed">
+                    <div class="authorityTitle">注册唯医通行证</div>
+                    <section class="titleInput clear marginTop">
+                        <div class="titleText">手机号</div>
+                        <input class="titleType" placeholder="请输入手机号"/>
+                    </section>
+                    <section class="titleInput clear marginTop">
+                        <div class="titleText">密码</div>
+                        <input class="titleType" placeholder="请输入6位以上密码"/>
+                    </section>
+                    <section class="titleInput clear marginTop">
+                        <div class="titleText">验证码</div>
+                        <input class="titleType" placeholder="请输入验证码"/>
+
+                        <div class="validate"><!--获取验证码--><!--60s后重新获取-->重新获取</div>
+                    </section>
+                    <section class="service"><i class="active"></i>同意<a href="/pages/help/service.html" target="_blank">医鼎服务条款</a>
+                    </section>
+                    <div class="loginBtn activation">保存</div>
+                    <a class="returnText" href="">返回上一步</a>
+                </section><i class="authorityBg"></i>
+            </section>
+
+            <!--微信登录-->
+            <section class="loginWidth" style="display: ;">
+                <section class="loginFixed">
+                    <div class="authorityTitle" style="margin-bottom: 0;">绑定唯医通行证</div>
+                    <div class="bindPass">绑定唯医通行证，下次就可以使用微信快速登录</div>
+                    <section class="titleInput clear marginTop">
+                        <div class="titleText">账号</div>
+                        <input class="titleType" placeholder="请输入唯医通行证"/>
+                    </section>
+                    <section class="titleInput clear marginTop">
+                        <div class="titleText">密码</div>
+                        <input class="titleType" placeholder="请输入6位以上密码"/>
+                    </section>
+                    <div class="loginBtn activation loginMargin">登录</div>
+                    <a class="returnText" href="">返回上一步</a>
+                </section><i class="authorityBg"></i>
+            </section>
+
+
+        </section>
+    </section>
+</section>
+</body>
+</html>

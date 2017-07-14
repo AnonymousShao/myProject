@@ -1,0 +1,22 @@
+
+{
+  "name":"indexCont()",
+  "des":"获取首页所有相关的数据，并实现加入系列课程，跳转课程终端页，登录与未登录区分的所有逻辑",
+  "attention":["使用前要预想加载ajaxFn()方法"],
+  "comp":"IE8兼容",
+  "scene":"",
+  "returnVal":{
+    "isNull":true,//无返回值
+    "des":"",
+    "type":"json",
+    "val":{}
+
+  },
+  "code":"",
+  "param":{
+    "isNull":false,
+    "des":"",
+    "type":"json",
+    "val":{}
+  }
+}

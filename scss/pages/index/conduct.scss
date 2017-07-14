@@ -1,0 +1,57 @@
+@charset "UTF-8";
+//内容区块 基本样式结构
+//公共方法模块调用
+@import "../../modules/_common-modules";
+@import "../../components/_tagSelectorBox";
+//公共变量引用
+@import "../../variables/_yiding-variables";
+//图标标签
+@import "../../components/_iconModule";
+
+
+
+
+.indexH5{
+  width: 100%;
+  margin: 0 auto;
+  img{
+    vertical-align:bottom;
+    display:block;
+    width: 100%;
+  }
+  .appdownland{
+    position: relative;
+    .But{
+      position: absolute;
+      left:50%;
+      top: 2rem;
+      z-index: 5;
+      width: 58.6%;
+      margin-left: -29.3%;
+      img{
+        width: 100%;
+      }
+    }
+  }
+
+  .position{
+
+    .But{
+      top: 5rem;
+    }
+  }
+}
+
+.ydAppDown{
+  position: absolute;
+  right: 3rem;
+  top: 0;
+  z-index: 2;
+  font-size: rem(15px);
+  color: #73859e;
+  line-height:2.75rem;
+}
+.icon-search {
+  @extend %icon-search;
+  vertical-align: middle;
+}

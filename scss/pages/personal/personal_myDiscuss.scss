@@ -1,0 +1,192 @@
+@charset "UTF-8";
+// 个人中心 我的讨论
+// Created by qiangkailiang on 2016/11/03
+// 功能库引入
+@import "../../modules/_common-modules";
+// 变量入口引入
+@import "../../variables/_yiding-variables";
+@import "../../components/_pageTopNav_And_SideBar";
+//主导航-主侧栏
+@import "../../components/_contentInner";
+//内容容器
+@import "../../components/_indexHeader";
+//页头
+@import "../../components/_noContent";
+//无内容提示
+@import "../../components/_iconModule";
+//图标标签
+@import "../../pages/classes/classes_details";
+//查看大图
+@import "../discuss/big-img";
+
+.yd-maskBackground {
+
+  .exercise-discuss {
+    width: 750px;
+    position: relative;
+    left: 50%;
+    margin-left: -375px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .yd-timelineFooter {
+    padding: 0;
+  }
+  .discussPublish {
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .disscussFunction {
+    margin: 15px 30px
+  }
+}
+
+.contentItemHeader {
+  margin-top: 0;
+}
+
+.contentItem {
+  padding: 0;
+}
+
+.yd-commentBox {
+  margin-top: rem(8px);
+  background-color: #fff;
+}
+
+.yd-commentItem {
+  padding: rem(20px) rem(15px);
+  box-sizing: border-box;
+  border-bottom: 1px solid #eeeeee;
+  display: table;
+  width: 100%;
+  .yd-commentImg {
+    display: table-cell;
+    @include circle(rem(40px), transparent);
+    vertical-align: top;
+    a {
+      display: block;
+      @include circle(rem(40px), transparent);
+      & > img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        vertical-align: top;
+      }
+    }
+  }
+
+  .yd-commentContext {
+    display: table-cell;
+    padding-left: rem(15px);
+    position: relative;
+    & > h2 {
+      font-weight: normal;
+      color: #333;
+      font-size: rem(15px);
+      @include clearfix();
+      em {
+        font-style: normal;
+        vertical-align: middle;
+      }
+      & > span {
+        float: right;
+        color: #808080;
+        font-size: rem(12px);
+      }
+    }
+    & > p {
+      color: #aeaeae;
+      font-size: rem(12px);
+      margin: rem(9px) 0;
+      display: inline-block;
+
+      b {
+        font-weight: normal;
+        padding-right: rem(2.5px);
+      }
+      a {
+        vertical-align: middle;
+        display: inline-block;
+        max-width: 33rem;
+        @include ellipsis();
+        font-size: rem(15px);
+
+      }
+    }
+    & > article {
+      line-height: 1.5;
+      a {
+        color: #222;
+        word-break: break-all;
+      }
+      font-size: rem(16px);
+      @include ellipsis(2);
+    }
+  }
+}
+
+.yd-classMark {
+  margin-right: rem(8px);
+  border: 1px solid #aeaeae;
+  font-size: rem(12px);
+  border-radius: rem(1px);
+  padding: rem(1px) rem(5px);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.yd-commentItem {
+  &:hover {
+    .yd-commentDelete {
+      display: block;
+    }
+  }
+  .yd-commentDelete {
+    font-style: normal;
+    float: right;
+    cursor: pointer;
+    display: none;
+    color: #aeaeae;
+    font-size: rem(12px);
+    position: absolute;
+    right: 0;
+    top: 34px;
+  }
+}
+
+.yd-contentDeleted {
+  padding: rem(10px);
+  background-color: #F8F8F8;
+
+  margin: rem(10px) 0;
+  font-size: 15px;
+  a {
+    color: grey !important;
+  }
+}
+
+.icon-vip {
+  @extend %icon-vip;
+}
+.yd-vipUser{
+  @extend %icon-vip;
+}
+@import "../../components/_footerBar"; //页脚
+.Ev-sidebarMessage{
+  .yd-newsNum {
+    behavior: url(/js/third-party/pie/pie.htc);
+    text-align: center;
+    top: 20%;
+    margin-top: rem(-7.5px);
+    margin-right: rem(15px);
+    @include circle(rem(17px), #f35555);
+    display: block;
+    position: absolute;
+    right: -5%;
+    font-size: rem(12px);
+    line-height: rem(17px);
+    color: #fff;
+  }
+}

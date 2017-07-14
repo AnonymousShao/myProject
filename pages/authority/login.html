@@ -1,0 +1,289 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>医鼎－骨科规范化培训平台</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/yiding.ico">
+    <meta name="viewport" content="width=750">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <script type="text/javascript" src="/js/third-party/jquery/jquery-1.8.0.min.js" ></script>
+    <script type="text/javascript">
+        domain.get(
+                "/css/base.css"
+        );
+        if(pcOrH5.pc()){
+            domain.get(
+                    "/js/common/rem.js"
+            );
+        }
+    </script>
+        <!--[if lte IE 8]>
+	        <script type="text/javascript" src="/js/common/html5shiv.js" ></script>
+	        <script type="text/javascript" src="/js/common/respond.min.js"></script>
+	    <![endif]-->
+</head>
+
+<body>
+<section class="loginMain">
+    <section class="loginCont">
+        <section class="authorityCommon">
+            <!--关闭-->
+            <section class="experiencePo"><img src="/image/authority/login/login_close.png"> </section>
+            <!--错误提示-->
+            <section class="errorTip"><i></i> <span>密码错误</span></section>
+        <!--登录状态-->
+        <section class="loginWidth ev-login" style="display: none; ">
+            <div class="yd_logo"><img src="/image/authority/login/yiding_logo.png" /></div>
+            <div class="authorityTitle">立即登录</div>
+            <aside class="loginUsername marginTop">
+            	<input type="text" class="ev-phoneNum" placeholder="请输入手机号"/>
+            	<div class="phone"> 
+            		<i class="close"></i>
+            	</div>
+            </aside> 
+            <ul class="history">
+            	<!--<li>16464</li>-->
+            </ul>
+            <aside class="loginUsername clear">
+            	<input type="password" class="ev-passWord" placeholder="请输入6位以上密码"/>
+            	<div class="password"> 
+            		<i class="close"></i>
+            		<i class="eyeClose"></i>
+            		<i class="eyeOpen"></i>
+            	</div>
+            </aside>
+            <div class="phoneFind clear">
+                <div class="phoneLogin">手机快捷登陆<div class="prompt">点击这里使用手机快捷登陆</div></div>
+                <div class="findPassword">找回密码</div>
+            </div>
+            <div class="loginBtn ev-loginBtn">登录</div>
+            <div class="goOnregister">立即注册</div>
+            <div class="OR"></div>
+            <ul class="unionLogin clear">
+                <li class="weixin">
+                    <div class="icon"><img src="/image/authority/login/login_WeChat.png"> </div>
+                    <div class="text">微信</div>
+                </li>
+                <li class="allin">
+                    <div class="icon"></div>
+                    <div class="text"></div>
+                </li>
+                <li class="caos">
+                    <div class="icon"><img src="/image/authority/login/login_allin.png"></div>
+                    <div class="text">唯医</div>
+                </li>
+            </ul>
+        </section>
+        <!--登录状态 END-->
+
+        <!--找回密码-->
+        <section class="loginWidth ev-findPassword" style="display: none;">
+            <section class="loginFixed">
+                <div class="authorityTitle">找回密码</div>
+                <section class="titleInput clear marginTop">
+                    <div class="titleText">账号</div>
+                    <input class="titleType ev-findNum" placeholder="请输入手机号" />
+                    <div class="phone"> 
+	            		<i class="close"></i>
+	            	</div>
+                </section>
+                <section class="titleInput clear">
+                    <div class="titleText">验证码</div>
+                    <input class="titleType ev-fidCode" placeholder="请输入验证码" />
+                    <div class="validate ev-finValidate">获取验证码<!--60s后重新获取--><!--重新获取--></div>
+                </section>
+                <div class="loginBtn ev-fidNext">下一步</div>
+                <a class="returnText ev-findReturn" href="javaScript:;">返回上一步</a>
+            </section>
+        </section>
+        <!--找回密码 END-->
+
+        <!--验证手机号-->
+        <section class="loginWidth" style="display: none; ">
+            <section class="loginFixed">
+                <div class="authorityTitle">验证手机号</div>
+                <section class="titleInput clear marginTop">
+                    <div class="titleText">账号</div>
+                    <input class="titleType" placeholder="请输入手机号" />
+                </section>
+                <section class="titleInput clear">
+                    <div class="titleText">验证码</div>
+                    <input class="titleType ev-phoneNum" placeholder="请输入验证码" />
+                    <div class="validate"><!--获取验证码--><!--60s后重新获取-->重新获取</div>
+                </section>
+                <div class="loginBtn">下一步</div>
+                <a class="returnText" href="javaScript:;">返回上一步</a>
+            </section>
+        </section>
+        <!--验证手机号 END-->
+        <!--设置新密码-->
+        <section class="loginWidth ev-newPass" style="display: none;">
+            <section class="loginFixed">
+                <div class="authorityTitle">设置新密码</div>
+                <section class="titleInput clear marginTop">
+                    <div class="titleText">新密码</div>
+                    <input class="titleType ev-newPas" type="password" oncopy="log('复制被阻止!'); return false;" placeholder="请输入6位以上密码" />
+                    <div class="phone"> 
+	            		<i class="close"></i>
+	            	</div>
+                </section>
+                <section class="titleInput clear">
+                    <div class="titleText">确认密码</div>
+                    <input class="titleType ev-conPas" type="password" oncopy="log('复制被阻止!'); return false;" placeholder="请再次输入新密码" />
+                    <div class="password"> 
+	            		<i class="close"></i>
+	            	</div>
+                </section>
+                <div class="loginBtn ev-passSave">保存</div>
+                <a class="returnText ev-newReturn" href="javaScript:;">返回上一步</a>
+            </section>
+            <section class="reset">已重置</section>
+        </section>
+        <!--设置新密码 END-->
+        <!--验证手机号-->
+        <section class="loginWidth ev-testNum" style="display:none; ">
+            <section class="loginFixed">
+                <section class="return"></section>
+                <div class="authorityTitle">验证手机号</div>
+                <section class="yanzheng">验证码已发送至：<span>15022322566</span></section>
+                <section class="proving"><input type="text" class="error"/></section>
+                <section class="send"><span>9</span>秒后重新发送</section>
+                <section class="surplus">今天剩余<span>2</span>次</section>
+            </section>
+        </section>
+        <!--验证手机号 END-->
+        <!--手机快捷登录-->
+        <section class="loginWidth ev-quickLogin" style="display:none; ">
+            <section class="loginFixed">
+                <div class="authorityTitle">手机快捷登陆</div>
+                <section class="titleInput clear marginTop">
+                    <div class="titleText">账号</div>
+                    <input class="titleType ev-quiNum" placeholder="请输入手机号" />
+                    <div class="phone"> 
+	            		<i class="close"></i>
+	            	</div>
+                </section>
+                <section class="titleInput clear">
+                    <div class="titleText">验证码</div>
+                    <input class="titleType ev-quiCode" placeholder="请输入验证码" />
+                    <div class="validate ev-quickCode"><!--获取验证码--><!--60s后重新获取-->获取验证码</div>
+                </section>
+                <div class="loginBtn ev-quiLoginBtn ">登录</div>
+                <a class="returnText ev-quickReturn" href="javaScript:;">返回上一步</a>
+            </section>
+        </section>
+        <!--验证手机号 END-->
+        <!--绑定手机号创建账号-->
+        <section class="loginWidth ev-createBind" style="display: none;">
+            <div class="yd_logo"><img src="/image/authority/login/yiding_logo.png" /></div>
+            <div class="createAccount">使用13033333333创建医鼎账号</div>
+            <div class="shortcut">之后您将可以使用手机号快捷登录医鼎</div>
+            <div class="loginBtn ev-createAccount activation">创建账号</div>
+            <div class="changeSigns ev-changeSigns">更换其他手机号</div>
+            <a class="returnText ev-createReturn" href="javaScript:;">返回上一步</a>
+        </section>
+        <!--绑定手机号创建账号 END-->
+        <!--唯医绑定医鼎账号-->
+        <section class="loginWidth ev-bindAllin" style="display: none">
+            <section class="loginFixed">
+                <section class="return"></section>
+                <div class="authorityTitle">绑定医鼎账号</div>
+                <section class="binding">绑定医鼎账号，可用唯医登录</section>
+                <section class="titleInput clear marginTop">
+                    <div class="titleText">账号</div>
+                    <input class="titleType ev-bindNum" placeholder="请输入手机号" />
+                    <div class="phone"> 
+	            		<i class="close"></i>
+	            	</div>
+                </section>
+                <section class="titleInput clear">
+                    <div class="titleText">验证码</div>
+                    <input class="titleType ev-bindCode" placeholder="请输入验证码" />
+                    <div class="validate ev-bindValidate"><!--获取验证码--><!--60s后重新获取-->获取验证码</div>
+                </section>
+                <div class="loginBtn ev-bindLogin">登录</div>
+                <a class="returnText ev-bindReturn" href="javaScript:;">返回上一步</a>
+            </section>
+        </section>
+        <!--绑定医鼎账号 END-->
+        <!--微信绑定医鼎账号-->
+        <section class="loginWidth ev-bindWeixin" style="display: none">
+            <section class="loginFixed">
+                <section class="return"></section>
+                <div class="authorityTitle">绑定医鼎账号</div>
+                <section class="binding">绑定医鼎账号,可用微信快速登录</section>
+                <section class="titleInput clear marginTop">
+                    <div class="titleText">账号</div>
+                    <input class="titleType ev-bindWeixinNum" placeholder="请输入手机号" />
+                    <div class="phone"> 
+	            		<i class="close"></i>
+	            	</div>
+                </section>
+                <section class="titleInput clear">
+                    <div class="titleText">验证码</div>
+                    <input class="titleType ev-bindWeixinCode" placeholder="请输入验证码" />
+                    <div class="validate ev-bindWeixinValidate"><!--获取验证码--><!--60s后重新获取-->获取验证码</div>
+                </section>
+                <div class="loginBtn ev-bindWeixinLogin">登录</div>
+                <a class="returnText ev-bindWeixinReturn" href="javaScript:;">返回上一步</a>
+            </section>
+        </section>
+        <!--绑定医鼎账号 END-->
+        <!--caos登录-->
+        <div class="loginWidth ev-caosLogin" style="display: none;">
+            <div class="loginFixed">
+                <div class="authorityTitle"><span>CAOS账号登录</span></div>
+                <section class="titleInput clear marginTop">
+                    <div class="titleText">用户名</div>
+                    <input class="titleType ev-caosNum" placeholder="请输入用户名" />
+                    <div class="phone">
+                        <i class="close"></i>
+                    </div>
+                </section>
+                <section class="titleInput clear">
+                    <div class="titleText">密码</div>
+                    <input class="titleType ev-passWord ev-caosPas" type="password" placeholder="请输入6位以上密码" />
+                    <div class="password">
+                        <i class="close"></i>
+                        <i class="eyeClose"></i>
+                        <i class="eyeOpen"></i>
+                    </div>
+                </section>
+                <div class="loginBtn ev-caosBtn">登录</div>
+                <a class="returnText ev-caosRet" href="#">返回上一步</a>
+            </div>
+        </div>
+    </section>
+</section>
+    </section>
+</body>
+<script>
+    if(pcOrH5.pc()){
+        domain.get(
+                "/js/third-party/jquery/jquery.json-2.4.js",
+                "/js/third-party/jqueryscrollpagination/js/scrollpagination.js",
+                "/js/third-party/fastclick.js",
+                "/js/common/main.js",
+                "/js/common/common.js",
+                "/js/common/comm.func.js",
+                "/js/common/comm-customer.js",
+                "/js/common/comm-data.js",
+                "/js/common/comm_service.js",
+                "/js/common/log.js",
+                "/js/common/jweixin-1.0.0.js",
+                "/js/common/shareAll.js",
+                "/js/common/comm.cutArray.js",
+                "/js/scene/authority/allinAuthority.js",
+                "/js/third-party/jquery-form/jquery.form.js",
+                "/js/scene/authority/login.js",
+                "/js/scene/authority/register.js",
+                "/js/scene/authority/checkLogin.js"
+
+        );
+    }
+</script>
+</html>

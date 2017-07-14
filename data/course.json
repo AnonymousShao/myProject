@@ -1,0 +1,234 @@
+{
+  "responseObject": {
+    "series": [
+      {
+        "id": "01",
+        "status": "on",
+        "amount": "10",
+        "name": "脊柱外科1",
+        "logUrl": "http://h5.86.cc/walls/20150922/1024x768_0cce092c00c8dec.jpg"
+      },
+      {
+        "id": "02",
+        "status": "off",
+        "amount": "40",
+        "name": "脊柱外科2",
+        "logUrl": "http://img2.3lian.com/2014/f3/57/d/15.jpg"
+      },
+      {
+        "id": "03",
+        "status": "on",
+        "amount": "50",
+        "name": "脊柱外科3",
+        "logUrl": "http://image.tianjimedia.com/uploadImages/2014/106/04/JC1H4PI563W3_1000x500.png"
+      },
+      {
+        "id": "04",
+        "status": "on",
+        "amount": "30",
+        "name": "脊柱外科4",
+        "logUrl": "http://img3.3lian.com/2013/v9/58/d/25.jpg"
+      },
+      {
+        "id": "05",
+        "status": "on",
+        "amount": "13",
+        "name": "脊柱外科5",
+        "logUrl": "http://h5.86.cc/walls/20150922/1440x900_b96b825539b730c.jpg"
+      },
+      {
+        "id": "06",
+        "status": "on",
+        "amount": "23",
+        "name": "脊柱外科6",
+        "logUrl": "http://img2.zjolcdn.com/pic/0/13/66/56/13665652_914292.jpg"
+      },
+      {
+        "id": "07",
+        "status": "on",
+        "amount": "25",
+        "name": "脊柱外科7",
+        "logUrl": "http://ww1.sinaimg.cn/mw600/67eb04f2jw1elz2vnsw7oj21hc0u0b21.jpg"
+      },
+      {
+        "id": "08",
+        "status": "off",
+        "amount": "45",
+        "name": "脊柱外科8",
+        "logUrl": "http://image.tianjimedia.com/uploadImages/2013/284/F879R8LSSQ28.jpg"
+      },
+      {
+        "id": "09",
+        "status": "on",
+        "amount": "54",
+        "name": "脊柱外科9",
+        "logUrl": "http://uploadfile.bizhizu.cn/2014/0724/20140724021050338.jpg"
+      },
+      {
+        "id": "10",
+        "status": "off",
+        "amount": "23",
+        "name": "脊柱外科10",
+        "logUrl": "http://img.daimg.com/uploads/allimg/141115/1-141115150604.jpg"
+      }
+    ],
+    "elite": [
+      {
+        "title": "骨的发生与正常结构1",
+        "author": "萤火虫",
+        "hospital": "北京大学第三医院",
+        "office": "脊柱外科",
+        "reply": "55",
+        "logUrl": "http://img2.3lian.com/2014/f3/57/d/15.jpg",
+        "id": "001"
+      },
+      {
+        "title": "骨的发生与正常结构2",
+        "author": "萤火虫",
+        "hospital": "北京大学第三医院",
+        "office": "脊柱外科",
+        "reply": "25",
+        "logUrl": "http://img2.3lian.com/2014/c7/29/d/23.jpg",
+        "id": "002"
+      },
+      {
+        "title": "骨的发生与正常结构3",
+        "author": "萤火虫",
+        "hospital": "北京大学第三医院",
+        "office": "脊柱外科",
+        "reply": "95",
+        "logUrl": "http://ww1.sinaimg.cn/mw600/67eb04f2jw1elz2vnsw7oj21hc0u0b21.jpg",
+        "id": "003"
+      },
+      {
+        "title": "骨的发生与正常结构3",
+        "author": "萤火虫",
+        "hospital": "北京大学第三医院",
+        "office": "脊柱外科",
+        "reply": "75",
+        "logUrl": "http://img.daimg.com/uploads/allimg/141115/1-141115150604.jpg",
+        "id": "004"
+      },
+      {
+        "title": "骨的发生与正常结构4",
+        "author": "萤火虫",
+        "hospital": "北京大学第三医院",
+        "office": "脊柱外科",
+        "reply": "55",
+        "logUrl": "http://h5.86.cc/walls/20150922/1440x900_b96b825539b730c.jpg",
+        "id": "005"
+      },
+      {
+        "title": "骨的发生与正常结构5",
+        "author": "萤火虫",
+        "hospital": "北京大学第三医院",
+        "office": "脊柱外科",
+        "reply": "45",
+        "logUrl": "http://pic77.nipic.com/file/20150905/17961491_220021444000_2.jpg",
+        "id": "006"
+      },
+      {
+        "title": "骨的发生与正常结构6",
+        "author": "萤火虫",
+        "hospital": "北京大学第三医院",
+        "office": "脊柱外科",
+        "reply": "67",
+        "logUrl": "http://img1.3lian.com/img13/c4/98/d/66.jpg",
+        "id": "007"
+      },
+      {
+        "title": "骨的发生与正常结构7",
+        "author": "萤火虫",
+        "hospital": "北京大学第三医院",
+        "office": "脊柱外科",
+        "reply": "98",
+        "logUrl": "http://imga1.pic21.com/bizhi/140212/07423/s05.jpg",
+        "id": "008"
+      },
+      {
+        "title": "骨的发生与正常结构8",
+        "author": "萤火虫",
+        "hospital": "北京大学第三医院",
+        "office": "脊柱外科",
+        "reply": "76",
+        "logUrl": "http://img1.gamedog.cn/2012/01/04/14-120104155437.jpg",
+        "id": "009"
+      },
+      {
+        "title": "骨的发生与正常结构9",
+        "author": "萤火虫",
+        "hospital": "北京大学第三医院",
+        "office": "脊柱外科",
+        "reply": "68",
+        "logUrl": "http://img05.tooopen.com/images/20150420/tooopen_sy_119461018247.jpg",
+        "id": "010"
+      },
+      {
+        "title": "骨的发生与正常结构10",
+        "author": "萤火虫",
+        "hospital": "北京大学第三医院",
+        "office": "脊柱外科",
+        "reply": "56",
+        "logUrl": "http://p0.qhimg.com/t0153b1be7cfa7d2c3e.jpg?size=1500x1000",
+        "id": "011"
+      },
+      {
+        "title": "骨的发生与正常结构11",
+        "author": "萤火虫",
+        "hospital": "北京大学第三医院",
+        "office": "脊柱外科",
+        "reply": "78",
+        "logUrl": "http://i3.s2.dpfile.com/pc/wed/87a8c4289fa52bf74bc148a4c8da6990%28640c480%29/thumb.jpg",
+        "id": "012"
+      },
+      {
+        "title": "骨的发生与正常结构12",
+        "author": "萤火虫",
+        "hospital": "北京大学第三医院",
+        "office": "脊柱外科",
+        "reply": "90",
+        "logUrl": "http://i1.s2.dpfile.com/wed/_myM9xAlmP31b4G0Sj3gjQNPF5m_Gatpo_NXxwKhcIVSRDgQBKrxzU_4qCzw6vujEKQ_oZ_owvl3Ag3Ctjd26Q.jpg",
+        "id": "013"
+      }
+    ],
+    "resources": [
+      {
+        "title": "骨的发生与正常结构1",
+        "author": "萤火虫",
+        "hospital": "北京大学第三医院",
+        "office": "脊柱外科",
+        "reply": "55",
+        "logUrl": "http://img2.3lian.com/2014/f3/57/d/15.jpg",
+        "id": "001"
+      },
+      {
+        "title": "骨的发生与正常结构2",
+        "author": "萤火虫",
+        "hospital": "北京大学第三医院",
+        "office": "脊柱外科",
+        "reply": "25",
+        "logUrl": "http://img2.3lian.com/2014/c7/29/d/23.jpg",
+        "id": "002"
+      },
+      {
+        "title": "骨的发生与正常结构3",
+        "author": "萤火虫",
+        "hospital": "北京大学第三医院",
+        "office": "脊柱外科",
+        "reply": "95",
+        "logUrl": "http://ww1.sinaimg.cn/mw600/67eb04f2jw1elz2vnsw7oj21hc0u0b21.jpg",
+        "id": "003"
+      },
+      {
+        "title": "骨的发生与正常结构3",
+        "author": "萤火虫",
+        "hospital": "北京大学第三医院",
+        "office": "脊柱外科",
+        "reply": "75",
+        "logUrl": "http://img.daimg.com/uploads/allimg/141115/1-141115150604.jpg",
+        "id": "004"
+      }
+    ],
+    "responseStatus": true
+  }
+}

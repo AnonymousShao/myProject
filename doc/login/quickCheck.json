@@ -1,0 +1,21 @@
+
+{
+  "name":"quickCheck()",
+  "des":"校验各个登录方式的调用总方法",
+  "attention":[""],
+  "comp":"IE8兼容",
+  "scene":"其中调用了各个校验的方法，进行判断是否可以进行激活并且登录",
+  "returnVal":{
+    "isNull":true,
+    "des":"",
+    "type":"json",
+    "val":{}
+  },
+  "code":"",
+  "param":{
+    "isNull":false,
+    "des":"",
+    "type":"json",
+    "val":{}
+  }
+}

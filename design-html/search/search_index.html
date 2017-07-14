@@ -1,0 +1,201 @@
+<html><head>
+    <meta charset="UTF-8">
+    <title>搜索</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/yiding.ico">
+    <meta name="viewport" content="width=750">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/index/index.css">
+    <link rel="stylesheet" href="/css/pages/search/search.css">
+    <script type="text/javascript" src="/js/common/mobile-util.js"></script>
+    <script type="text/javascript" src="/js/common/fastclick.js"></script>
+    <script type="text/javascript" src="/js/common/rem.js"></script>
+    <script type="text/javascript" src="/js/third-party/jquery/jquery-1.8.0.min.js"></script>
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="/js/common/html5shiv.js" ></script>
+    <script type="text/javascript" src="/js/common/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--全内容容器——mainInner-->
+<section class="yd-mainInner"><header class="al-header al-indexHeader pcModule" style="margin-left: 0px;">            <section class="al-headerContainer">                <ul class="al-headerTopNav" id="al-headerTopNav"></ul>                <div class="al-se-lo-re">                                        <div class="al-lo-re notLogin" id="notLogin" style="display: none;">                        <div class="al-login">登录</div>                        <div class="al-register">注册</div>                    </div>                    <div class="al-lo-re isLogin" id="isLogin" style="display: inline-block; cursor: pointer;">                        <div class="user-header" style="background-image: url(&quot;https://img05.allinmd.cn/public1/M00/43/DC/oYYBAFh4PzaATRHRAAAmy0XX0Sg937_c_p_150_150.png&quot;);"></div>                        <div class="user-name"><a href="//www.yi-ding.net.cn/pages/personal/personal_index.html">张显国</a></div>                    </div>                </div>            </section>        </header><section id="al-mainSidebar" class="pcModule" style="width: auto; height: 1000px;position: fixed; left: 0;top: 0; z-index: 3;">            <!--左侧导航栏-->            <aside class="al-mainSidebar al-mainSidebarCollapse pcModule" style="width: 80px;" id="al-mainSidebarWide">                <header class="al-collapseLogo" style="display: none;">                    <img src="/image/index/bigLogo.png" alt="">                </header>                <header class="al-mainLogo" style="display: block;">                    <img src="/image/index/logo.png" alt="" style="box-shadow: rgb(51,51,51) 0px 0px 2px;">                </header>                <section class="al-mainSidebarList" id="al-mainSidebarList">                    <ul>                        <li class="al-mainSidebarItem Ev-sidebarIndex">                            <a href="//www.yi-ding.net.cn">                                <img src="/image/index/home.png" alt="">                                <figcaption style="display: block;">首页</figcaption>                                <article class="al-collapseItem" style="display: none;">                                    <p class="al-collapseItemText">                                    </p>                                    <h4>首页</h4>                                    <p>HOME</p>                                    <p></p>                                </article>                            </a>                        </li>                        <li class="al-mainSidebarItem Ev-sidebarMessage">                            <a href="/pages/message/message_discuss.html">                                <img src="/image/index/mail.png" alt="">                                <figcaption style="display: block;">消息</figcaption>                                <article class="al-collapseItem" style="display: none;">                                    <p class="al-collapseItemText">                                    </p>                                    <h4>消息</h4>                                    <p>MESSAGE</p>                                    <p></p>                                </article>                            </a>                        <span class="yd-newsNum">2</span></li>                    </ul>                </section>            </aside>        </section>
+    <!--右侧回到顶部+二维码+分享-->
+    <!--<aside class="pcModule al-rightNav" id="al-rightNav" style="z-index: 100;">-->
+    <!--<div class="toTop rightNav" id="toTop">-->
+    <!--<i class="icon-toTop"></i>-->
+    <!--<p>回到<br/>顶部</p>-->
+    <!--</div>-->
+    <!--<div class="code rightNav" id="code">-->
+    <!--<i class="icon-code"></i>-->
+    <!--<p>二维码</p>-->
+    <!--<p class="codePic"></p>-->
+    <!--</div>-->
+    <!--<div class="share rightNav" id="share">-->
+    <!--<i class="icon-share"></i>-->
+    <!--<p class="shareTxt">分享</p>-->
+    <!--<p class="sharePic">-->
+    <!--<b>-->
+    <!--<i class="icon-weixin"></i>-->
+    <!--<em>微信</em>-->
+    <!--</b>-->
+    <!--<b>-->
+    <!--<i class="icon-qq"></i>-->
+    <!--<em>QQ</em>-->
+    <!--</b>-->
+    <!--<b>-->
+    <!--<i class="icon-zone"></i>-->
+    <!--<em>QQ空间</em>-->
+    <!--</b>-->
+    <!--<b>-->
+    <!--<i class="icon-weibo"></i>-->
+    <!--<em>微博</em>-->
+    <!--</b>-->
+    <!--<b>-->
+    <!--<i class="icon-link"></i>-->
+    <!--<em>链接</em>-->
+    <!--</b>-->
+    <!--<b>-->
+    <!--<i class="icon-email"></i>-->
+    <!--<em>邮箱</em>-->
+    <!--</b>-->
+    <!--</p>-->
+    <!--</div>-->
+    <!--</aside>-->
+    <!--手机端头部-->
+    <header class="mobileModule contentHeader">
+        <figure class="contentHeaderItem">
+            <a href="javascript:void(0)">
+                <i class="icon-download"></i>
+            </a>
+        </figure>
+        <figure class="contentHeaderItem">
+            医鼎
+        </figure>
+        <figure class="contentHeaderItem">
+            <a href="javascript:void(0)">
+                <i class="icon-search"></i>
+            </a>
+        </figure>
+    </header>
+    <section class="contentInner" id="SearchContentInner">
+        <section class="al-searchInputBar">
+            <i class="icon-searchreturn">返回</i>
+            <form action="javascript:;">
+                <input type="search" autocomplete="off" placeholder="请输入关键词" max="35" id="searchTool">
+            </form>
+            <button class="al-search">搜索</button>
+        </section>
+        <div class="clearfix terminalSearchContent"></div>
+        <!--联想词-->
+        <section class="yd-searchResult terminalSearchContent" id="searchResultContainer" style="margin-top: 0.3rem; display: none;"><article class="yd-searchResultItem"><span>关节</span>与矫形外科</article><article class="yd-searchResultItem">1.6 髋<span>关节</span>外科基础—诊断方法</article><article class="yd-searchResultItem">2.3 肩<span>关节</span>撞击症与肩袖损伤</article><article class="yd-searchResultItem">髋<span>关节</span>，疼痛，鉴别诊断</article><article class="yd-searchResultItem">股骨头髋臼撞击综合症，髋<span>关节</span>盂唇损伤</article><article class="yd-searchResultItem">肩<span>关节</span>撞击综合征，肩袖损伤</article><article class="yd-searchResultItem">股骨头坏死，全髋<span>关节</span>置换术，髓芯减压</article></section>
+        <!--联想词 end-->
+
+
+        <!--热门搜索-->
+        <section class="al-searchItem terminalSearchContent" id="hotSearchOutContainer" style="display: none;">
+            <h2 class="al-searchTitle">热门搜索</h2>
+            <article class="al-hotSearchContent">
+                <!--<span class="al-hotSearchWord" keyword="椎间孔镜">椎间孔镜</span>-->
+                <!--<span class="al-hotSearchWord" keyword="胫骨平台骨折">胫骨平台骨折</span>-->
+                <!--<span class="al-hotSearchWord" keyword="人工髋关节置换术">人工髋关节置换术</span>-->
+                <!--<span class="al-hotSearchWord" keyword="跟骨骨折">跟骨骨折</span>-->
+                <!--<span class="al-hotSearchWord" keyword="王秋根">王秋根</span>-->
+                <!--<span class="al-hotSearchWord" keyword="踝关节骨折">踝关节骨折</span>-->
+                <!--<span class="al-hotSearchWord" keyword="桡骨远端骨折">桡骨远端骨折</span>-->
+                <!--<span class="al-hotSearchWord" keyword="骨盆骨折">骨盆骨折</span>-->
+            </article>
+        </section>
+        <!--历史纪录-->
+        <section class="al-historySearchContent terminalSearchContent" id="historyOutContainer" style="display: none;">
+            <h2 class="al-searchTitle"><span class="clear-history">清空</span>历史搜索</h2>
+            <ul class="al-historySearchContent" id="historyContainer"><li>关节</li><li>股骨头坏死</li><li>骨科总论</li><li>总论</li><li>王岩</li><li>康复</li><li>李</li><li>张</li><li>王</li><li>骨</li><li>骨科</li></ul>
+        </section>
+        <!--清空历史记录弹出框-->
+        <div class="historyClear-dialog terminalSearchContent">
+
+        </div>
+        <!--搜索结果-->
+        <!--系列课程-->
+        <section class="terminalSearchContent seriesCoursesContent" id="seriesCoursesContent" style="display: block;">
+            <header class="contentItemHeader">
+                <h2>系列课程<span>(2)</span></h2>
+            </header>
+            <section class="seriesCourses">
+                <article class="contentArea" id="contentArea"><article class="bestItem" data-seid="www.yi-ding.net.cn/series/2017/01/13/1484289975316.html"><figure class="bestItemImg"><img src="https://img04.yi-ding.net.cn/series/attachment/2017/01/13/1484291733244.png" alt=""></figure><figcaption class="bestItemMsg" tagid="1484289975316"><a href="javascript:void(0)">关节与矫形外科</a><p>共<b>2</b>课时</p><article class="addClass"><i class="icon-addClass"></i><p>添加</p></article><article class="addClassActive"><p>已添加</p></article></figcaption></article><article class="bestItem" data-seid="www.yi-ding.net.cn/series/2017/01/10/1483954472642.html"><figure class="bestItemImg"><img src="https://img04.yi-ding.net.cn/series/attachment/2017/01/09/1483954320604.png" alt=""></figure><figcaption class="bestItemMsg" tagid="1483954472642"><a href="javascript:void(0)">骨科康复</a><p>共<b>8</b>课时</p><article class="addClass"><i class="icon-addClass"></i><p>添加</p></article><article class="addClassActive"><p>已添加</p></article></figcaption></article></article>
+
+            </section>
+            <section class="contentInnerMore" id="moreQualityContent" style="display: none">
+                <p>查看更多</p>
+                <i class="icon-rArrow"></i>
+            </section>
+        </section>
+        <!--系列课程 end-->
+        <section class="al-searchResult terminalSearchContent eliteSearchContent" style="display: block;">
+            <section class="search-series">
+                <h2 class="al-searchTitle">精品课程<span>(6)</span></h2>
+                <!--搜索有结果-->
+                <section class="contentItem" id="quality" style=""><section class="contentInnerItem" data-elitid="m.yi-ding.net.cn/course/2017/01/10/1483955734856.html"><article class="contentInnerContext" tagid="1483955734856"><h2>2.2 髋臼股骨撞击症与髋臼盂唇损伤</h2><p><span class="user">王雪松 </span><span class="hospital"> 北京积水潭医院</span></p><article class="contentOtherMsg"><span class="resourceType">骨科康复</span><i class="icon-comment"></i><span>0</span></article></article><figure class="contentInnerImg"><img src="https://img04.yi-ding.net.cn/course/attachment/2017/01/10/1484015457510.jpg" alt=""></figure></section><section class="contentInnerItem" data-elitid="m.yi-ding.net.cn/course/2017/01/10/1483955073832.html"><article class="contentInnerContext" tagid="1483955073832"><h2>1.1 肌腱与腱膜疾病</h2><p><span class="user">李忠哲</span><span class="hospital">北京积水潭医院</span></p><article class="contentOtherMsg"><span class="resourceType">骨科总论</span><i class="icon-comment"></i><span>2</span></article></article><figure class="contentInnerImg"><img src="https://img04.yi-ding.net.cn/course/attachment/2017/01/19/1484803220292.jpg" alt=""></figure></section><section class="contentInnerItem" data-elitid="m.yi-ding.net.cn/course/2017/01/10/1483955209341.html"><article class="contentInnerContext" tagid="1483955209341"><h2>1.6 髋关节外科基础—诊断方法</h2><p><span class="user">柴伟 </span><span class="hospital">中国人民解放军总医院</span></p><article class="contentOtherMsg"><span class="resourceType">骨科总论</span><i class="icon-comment"></i><span>1</span></article></article><figure class="contentInnerImg"><img src="https://img04.yi-ding.net.cn/course/attachment/2017/01/10/1484013440479.jpg" alt=""></figure></section><section class="contentInnerItem" data-elitid="m.yi-ding.net.cn/course/2017/01/10/1483955764540.html"><article class="contentInnerContext" tagid="1483955764540"><h2>2.3 肩关节撞击症与肩袖损伤</h2><p><span class="user">李众利 </span><span class="hospital">解放军总医院</span></p><article class="contentOtherMsg"><span class="resourceType">骨科康复</span><i class="icon-comment"></i><span>0</span></article></article><figure class="contentInnerImg"><img src="https://img04.yi-ding.net.cn/course/attachment/2017/01/19/1484803324692.jpg" alt=""></figure></section><section class="contentInnerItem" data-elitid="m.yi-ding.net.cn/course/2017/01/10/1483955165270.html"><article class="contentInnerContext" tagid="1483955165270"><h2>1.4 足踝解剖与生物力学</h2><p><span class="user">王旭 </span><span class="hospital">复旦大学附属华山医院骨科</span></p><article class="contentOtherMsg"><span class="resourceType">骨科总论</span><i class="icon-comment"></i><span>7</span></article></article><figure class="contentInnerImg"><img src="https://img04.yi-ding.net.cn/course/attachment/2017/01/19/1484803526211.jpg" alt=""></figure></section></section>
+            </section>
+            <section class="contentInnerMore" id="moreQuality" style="">
+                <p>更多课程</p>
+                <i class="icon-rArrow"></i>
+            </section>
+            <!--搜索有结果 end-->
+            <!--a搜索无结果-->
+            <section class="contentItem contentSeriesNoResult" id="seriesNoResult" style="display:none ">
+                <section class="contentInnerItem">
+                    <p class="Ydnone">没有找到医鼎课程</p>
+                    <p class="Ydnone">看看唯医资源吧</p>
+                </section>
+            </section>
+            <!--a搜索无结果 end-->
+        </section>
+        <!--唯医资源-->
+        <section class="al-searchResult medicalResources searchmedicalResource" style="">
+            <section class="search-series">
+                <h2 class="al-searchTitle">唯医资源<span>(26975)</span></h2>
+                <!--搜索有结果-->
+                <section class="contentItem" id="recource" style="display: ;"><section class="al-contentPartModule al-contentUpTitleDownImg"><article class="al-contentText"><a href="//m.allinmd.cn/pages/conference/meeting-place.html?conId=1471930636333&amp;conName=Xa例之声“2016全国关节外科病例演讲赛—全国总决赛" class="al-contentTitle" target="_blank"><span>Xa例之声“2016全国关节外科病例演讲赛—全国总决赛</span></a><p class="al-contentOtherMsg"><span class="al-contentSeminarTime icon-contentSeminarTime">2016/09/03-03</span><span class="icon-contentSeminarPlace">中国.广州</span></p></article></section><section class="al-contentPartModule al-contentUpTitleDownImg"><article class="al-contentText"><a href="//m.allinmd.cn/pages/conference/meeting-place.html?conId=1474526807724&amp;conName=2016年度中国关节外科学术大会" class="al-contentTitle" target="_blank"><span>2016年度中国关节外科学术大会</span></a><p class="al-contentOtherMsg"><span class="al-contentSeminarTime icon-contentSeminarTime">2016/09/01-03</span><span class="icon-contentSeminarPlace">中国.广州</span></p></article></section><section class="al-contentPartModule al-contentUpTitleDownImg"><article class="al-contentText"><a href="//m.allinmd.cn/pages/conference/meeting-place.html?conId=1466049021640&amp;conName=中国医师协会骨科医师分会全国人工关节翻修论坛 暨第十一届武汉同济骨科国际学术研讨会" class="al-contentTitle" target="_blank"><span>中国医师协会骨科医师分会全国人工关节翻修论坛 暨第十一届武汉同济骨科国际学术研讨会</span></a><p class="al-contentOtherMsg"><span class="al-contentSeminarTime icon-contentSeminarTime">2016/07/01-01</span><span class="icon-contentSeminarPlace">中国.武汉</span></p></article></section><section class="al-contentPartModule al-contentUpTitleDownImg"><article class="al-contentText"><a href="//m.allinmd.cn/pages/conference/meeting-place.html?conId=1466645718597&amp;conName=中国医药教育协会骨科专业委员会人工关节实用技术与技术论坛" class="al-contentTitle" target="_blank"><span>中国医药教育协会骨科专业委员会人工关节实用技术与技术论坛</span></a><p class="al-contentOtherMsg"><span class="al-contentSeminarTime icon-contentSeminarTime">2016/05/28-29</span><span class="icon-contentSeminarPlace">中国.西安</span></p></article></section><section class="al-contentPartModule al-contentUpTitleDownImg"><article class="al-contentText"><a href="//m.allinmd.cn/pages/conference/meeting-place.html?conId=1466582598280&amp;conName=中国骨科菁英会2016年关节第二次会议" class="al-contentTitle" target="_blank"><span>中国骨科菁英会2016年关节第二次会议</span></a><p class="al-contentOtherMsg"><span class="al-contentSeminarTime icon-contentSeminarTime">2016/05/22-22</span><span class="icon-contentSeminarPlace">中国.成都</span></p></article></section></section>
+            </section>
+            <section class="contentInnerMore" id="moreRecource" style="">
+                <p>查看更多相关资源</p>
+                <i class="icon-rArrow"></i>
+            </section>
+        </section>
+        <!--搜索结果无内容-->
+        <figure class="yd-noContentTips searchInexistence" style="display: none;">
+            <img src="/image/search/search-result_nor@2x.png" alt="">
+            <figcaption><p>没有找到相关内容</p><p>换个词试试吧</p></figcaption>
+        </figure>
+        <!--搜索结果无内容 end-->
+        <script src="/js/third-party/jquery/jquery-1.8.0.min.js"></script>
+        <script src="/js/third-party/jquery/jquery.json-2.4.js"></script>
+        <script src="/js/third-party/jqueryscrollpagination/js/scrollpagination.js"></script>
+        <script src="/js/third-party/fastclick.js"></script>
+        <script src="/js/common/main.js"></script>
+        <script src="/js/common/common.js"></script>
+        <script src="/js/scene/authority/authentication.js"></script>
+        <script src="/js/scene/authority/login.js"></script>
+        <script src="/js/scene/authority/register.js"></script>
+        <script src="/js/scene/authority/checkLogin.js"></script>
+        <script src="/js/common/comm.func.js"></script>
+        <script src="/js/common/comm-customer.js"></script>
+        <script src="/js/common/comm-data.js"></script>
+        <script src="/js/common/comm_service.js"></script>
+        <script src="/js/common/jweixin-1.0.0.js"></script>
+        <script src="/js/common/log.js"></script>
+        <script src="/js/common/shareAll.js"></script>
+        <script src="/js/common/comm.cutArray.js"></script>
+        <script src="/js/common/comm.log.js"></script>
+        <script src="/js/common/comm.date.js"></script>
+        <script type="text/javascript" src="/js/scene/search/search.js"></script>
+
+    </section>
+    <footer class="yd-mainFooter pcModule">        <section class="yd-mainFooterInner">            <section class="yd-mainFooterContent">                <section class="yd-mainFooterLinks">                    <a href="/pages/help/statement.html" class="yd-mainFooterLinkItem" style="padding-left: 0;">隐私声明</a>                    <a href="/pages/help/service.html" class="yd-mainFooterLinkItem">服务条款</a>                    <a href="/pages/help/about_us.html" class="yd-mainFooterLinkItem">关于我们</a>                    <a href="/pages/help/contact.html" class="yd-mainFooterLinkItem" style="padding-right: 0;border-right: none;">联系我们</a>                </section>                <article class="yd-mainFooterMsg">                    <figure class="yd-mainFooterMsgImg marginR">                        <a id="___szfw_logo___" href="https://credit.szfw.org/CX20160321018165560180.html" target="_blank">                            <img src="//img10.allinmd.cn/v3/common/icon/site_1.png" alt="">                        </a>                    </figure>                    <figure class="yd-mainFooterMsgImg">                        <a href="http://www.anquan.org/authenticate/cert/?site=www.allinmd.cn&amp;at=business">                            <img src="//img10.allinmd.cn/v3/common/icon/site_2.png" alt="">                        </a>                    </figure>                </article>                <article class="yd-mainFooterRecordMsg">                    <p>京ICP备14007118号-3 京公网安备 11010502031779号京卫计网审[2014] 第0378号 </p>                    <p>Copyright?2016 Yi-ding.net.cn All Rights Reserved.版权所有?北京欧应信息技术有限公司</p>                </article>            </section>        </section>    </footer></section>
+
+
+<aside class="pcModule al-rightNav" id="al-rightNav">           <div class="toTop rightNav" id="toTop" style="display: block;">               <i class="icon-toTop" style="display: block;"></i>               <p style="display: none;">回到<br>顶部</p>           </div>           <div class="code rightNav" id="code">               <i class="icon-code" style="display: block;"></i>               <p style="display: none;">二维码</p>               <p class="codePic" style="display: none;">                   <img src="/image/erweiCode.jpg">               </p>           </div>           <div class="suggestion rightNav" id="suggestion">               <i class="icon-suggestion"></i>               <p style="display: none;">意见<br>反馈</p>           </div>           <section class="yd-suggestionBox">                <button class="yd-suggestionBoxClose">X</button>               <article class="yd-suggestionText">                   <textarea name="" id="Ev-suggestionText" cols="30" rows="10" placeholder="请输入反馈，我们将不断为您改进"></textarea>                    <span>500</span>               </article>               <figure class="yd-suggestionBtn">                   <button>提交</button>               </figure>           </section>        </aside><section class="al-middleTipsBox"><section class="al-middleTipsModal ev-loading" style="display: none;"><figure class="al-middleTipsModalText al-loading"><img src="/image/personal/loading_big@2x.png" alt=""></figure></section></section></body></html>

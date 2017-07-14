@@ -1,0 +1,95 @@
+@charset "UTF-8";
+//二级筛选列表组件
+//Created by qiangkailiang on 2016/08/13
+//公共方法模块调用
+@import "../../modules/common-modules";
+//公共变量引用
+@import "../../variables/_yiding-variables";
+
+.viewBigImg{
+  width:750px;
+  margin: 0 auto;
+  padding-top: 17px;
+  .listCont{
+    width:750px;
+    @include clearfix();
+    .prevIcon{
+      float: left;
+      background: url("/image/discuss/prev.png") no-repeat;
+      height: 75px;
+      width: 30px;
+      margin-right: 10px;
+    }
+    .next{
+      float: left;
+      background: url("/image/discuss/next.png") no-repeat;
+      height: 75px;
+      width: 30px;
+      margin-left: 20px;
+    }
+    .list {
+      width:660px;
+      float: left;
+      overflow: hidden;
+    }
+    ul{
+        width: 1000000px;
+      @include clearfix();
+      li{
+        float: left;
+        margin-left: 10px;
+        width: 75px;
+        height: 75px;
+        img{
+          width: 75px;
+          height: 75px;
+        }
+        &.active{
+          border:3px solid #3a9eeb;
+          box-sizing:border-box;
+          img{
+            width: 69px;
+            height: 69px;
+          }
+        }
+      }
+    }
+  }
+  .bigImg{
+    padding: 20px 30px;
+    background: #fff;
+    margin-top: 30px;
+    position: relative;
+    .close{
+      background: url("/image/discuss/close.png") no-repeat;
+      width:48px;
+      height: 48px;
+      position: absolute;
+      right: -20px;
+      top: -20px;
+    }
+    img{
+      width: 690px;
+      margin: 0 auto;
+      height:auto;
+    }
+    .fitInWindow,.viewNormalImg{
+      position: absolute;
+      background: #000;
+      font-size: 15px;
+      color: #fff;
+      padding:5px 10px;
+      border-radius: 3px;
+    }
+    .fitInWindow{
+      right: 120px;
+      top: 20px;
+    }
+    .viewNormalImg{
+      right: 30px;
+      top: 20px;
+    }
+  }
+}
+
+

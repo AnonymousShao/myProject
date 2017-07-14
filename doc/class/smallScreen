@@ -1,0 +1,13 @@
+{
+  "name":"smallScreen()",
+  "des":"//视频下移，此方法不兼容IE8，在非IE8的情况下，进行操作，如果滚动条下移超过视频的位置，就将视频向下滑动",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+  },
+  "param":{
+    "isNull":true
+  }
+}

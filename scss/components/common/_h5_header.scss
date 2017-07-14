@@ -1,0 +1,30 @@
+@charset "UTF-8";
+//内容区块 基本样式结构
+//公共方法模块调用
+@import "../../modules/_common-modules";
+@import "../../components/_tagSelectorBox";
+//公共变量引用
+@import "../../variables/_yiding-variables";
+
+.ydAppDown {
+  position: absolute;
+  right: 3rem;
+  top: 0;
+  z-index: 2;
+  font-size: .9375rem;
+  color: #73859e;
+  line-height: 2.75rem;
+}
+//引入search图标
+@include query(){
+  .icon-search{
+    width: rem(18px);
+    height: rem(19px);
+    display: inline-block;
+    margin-right: rem(10px);
+    background: url("/image/index_search.png") no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  }
+
+}

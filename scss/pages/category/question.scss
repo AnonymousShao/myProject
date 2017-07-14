@@ -1,0 +1,206 @@
+@charset "UTF-8";
+
+@import "../../components/_pageTopNav_And_SideBar";//侧边栏
+@import "../../components/_contentInner"; //内容容器
+@import "../../pages/index/index";
+//清除浮动
+.clearfix{
+  @include clearfix();
+}
+
+.contentInner{
+  box-sizing:border-box;
+  margin-top: rem(16px);
+}
+.orderEx{
+  cursor: pointer;
+  width:100%;
+  height:rem(84px);
+  font-face:PingFangSC-Regular;
+  border: solid 1px #e3e8ed;
+  border-bottom:1px solid #eee;
+  position:relative;
+  background:#fff;
+  @include clearfix();
+  .queLeft{
+    float: left;
+  }
+  .goOnStart{
+    float: right;
+    color: #73859e;
+    font-size: 13px;
+    line-height: 5.25rem;
+    i{
+      width: .75rem;
+      height: .75rem;
+      display: inline-block;
+      margin:0 0.9375rem rem(4px) rem(6px);
+      background: url(/image/index/course_list_more.png) center center no-repeat;
+      background-size: cover;
+      vertical-align: middle;
+    }
+  }
+  .figure{
+    width:100%;
+    height:100%;
+    img{
+      width:rem(46px);
+
+      height:rem(46px);
+      float:left;
+      margin:rem(19px) rem(12px) rem(19px) rem(24px);
+    }
+    .describe{
+      color:#333333;
+      font-size:rem(16px);
+      line-height:rem(84px);
+      float:left;
+    }
+  }
+  a{
+    &.goOnStart{
+    position:absolute;
+    font-size:rem(13px);
+    right:0;
+    top:0;
+    line-height:rem(84px);
+    color:#73859e;
+    @extend %icon-rArrow;
+    &:after{
+      content: "";
+      margin-top:rem(-1px);
+      margin-left: rem(6px);
+    }
+   }
+  }
+}
+.specialEx{
+  cursor: pointer;
+  width:100%;
+  background:#fff;
+  height:rem(82px);
+  border: solid 1px #e3e8ed;
+  border-bottom:1px solid #eee;
+  border-top: none;
+  .specialSon{
+    box-sizing:border-box;
+    width:50%;
+    padding:rem(20px) rem(29px);
+    float:left;
+    position:relative;
+    h1{
+      color:#333;
+      font-weight:normal;
+      font-size:rem(16px);
+      padding-bottom:rem(6px);
+      position:relative;
+    }
+    p{
+      color:#909090;
+      font-size:rem(12px);
+      line-height: rem(12px);
+    }
+    img{
+      width:rem(37px);
+      height:rem(37px);
+      float:left;
+    }
+  }
+
+  .specialSonLink{
+    border-right:1px solid #eee;
+  }
+  .disable{
+    cursor: default;
+    .expect{
+      width: rem(52px);
+      height: rem(21px);
+      background:url("/image/curriculum/label-hope@2x.png") no-repeat;
+      background-size:contain;
+      position:absolute;
+      left:rem(56px);
+      top:rem(-16px);
+      width:52px\9;
+      height:21px\9;
+    }
+    h1,p{
+      color:#ccc;
+    }
+  }
+  .spec_fl{
+    float:left;
+    margin:rem(10px);
+  }
+  #border{
+    border-right:none;
+    &:after{
+      content:"";
+      height:rem(40px);
+      width:1px;
+      background:#eee;
+      position:absolute;
+      right:0;
+    }
+  }
+}
+.margin{
+  margin:rem(8px) 0;
+}
+.curriculumHeader{
+    height:rem(46px);
+    background: #fff;
+    line-height: rem(46px);
+    width: 750px;
+    margin: 0 auto;
+    border: 1px solid #CCC;
+    border-bottom: none;
+    box-sizing: border-box;
+    margin-bottom: rem(8px);
+    
+    li{
+        width: 45%;
+        display: inline-block;
+        text-align: center;
+        font-size: rem(17px);
+        height: rem(44px);
+        
+        a{
+            color: #909090;
+            width: 50%;
+            height: 97%;
+            display: inline-block;
+            border-bottom: rem(2px) solid #fff;
+            
+            &.active{
+                color: #FFA800;
+                border-bottom: rem(2px) solid #FFA800;
+            }
+        }
+    }
+}
+.al-pcFooterBar{
+    margin-top: rem(285px);
+}
+
+@include query() {
+.orderEx{
+  cursor: pointer;
+    .figure{
+        width:100%;
+        height:100%;
+        img{
+          width:rem(46px);
+          height:rem(46px);
+          float:left;
+          margin:rem(19px) rem(6px) rem(19px) rem(20px);
+        }
+        .describe{
+          color:#333333;
+          font-size:rem(16px);
+          line-height:rem(84px);
+          float:left;
+        }
+      } 
+    }
+}
+   

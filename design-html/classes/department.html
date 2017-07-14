@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>课室课程</title>
+    <meta name="viewport" content="width=750">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/index/index.css" />
+    <link rel="stylesheet" href="/css/pages/classes/department.css" />
+    <script type="text/javascript" src="/js/common/mobile-util.js"></script>
+    <script type="text/javascript" src="/js/common/fastclick.js"></script>
+    <script type="text/javascript" src="/js/common/rem.js" ></script>
+    <script type="text/javascript" src="/js/common/jquery-1.11.0.js" ></script>
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="/js/common/html5shiv.js" ></script>
+    <script type="text/javascript" src="/js/common/respond.min.js"></script>
+    <![endif]-->
+
+<body>
+<!--全内容容器——mainInner-->
+<section class="al-mainInner">
+    <header class="al-header al-indexHeader pcModule" style="margin-left: 0px;">
+        <section class="al-headerContainer">
+            <ul class="al-headerTopNav" id="al-headerTopNav">
+                <li class="active"><a href="/design-html/index/index.html">首页</a></li>
+                <li><a href="/design-html/curriculum/curriculum.html">课程</a></li>
+                <li><a href="/design-html/category/question.html">习题</a></li>
+            </ul>
+            <div class="al-se-lo-re">
+            	<div class="al-search">
+            		<i class="icon-search"></i>
+            	</div>
+            	<div class="al-lo-re notLogin ev-notLogin" id="notLogin">
+            		<div class="al-login">登录</div>
+            		<div class="al-register">注册</div>
+            	</div>
+            	<div class="al-lo-re ev-isLogin" id="user">
+                	<div class="user-header"></div>
+                	<div class="user-name">黄志强</div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <section id="al-mainSidebar" class="pcModule" style="width: auto; height: 1000px;position: fixed; left: 0;top: 0; z-index: 10;">
+        <!--左侧导航栏-->
+        <aside class="al-mainSidebar al-mainSidebarCollapse pcModule" style="width: 80px;" id="al-mainSidebarWide">
+            <header class="al-collapseLogo">
+                <img src="../../image/logo.png" alt="">
+            </header>
+            <header class="al-mainLogo">
+                <img src="../../image/logo2.jpg" alt="" style="box-shadow: rgb(51,51,51) 0px 0px 2px;">
+            </header>
+            <section id="al-mainSidebar" class="pcModule" style="width: auto;position: fixed; left: 0;top: 0; z-index: 10;">
+        	<!--左侧导航栏-->
+	        <aside class="al-mainSidebar al-mainSidebarCollapse pcModule" style="width: 80px;" id="al-mainSidebarWide">
+	            <header class="al-collapseLogo">
+	                <img src="/image/index/bigLogo.png" alt="">
+	            </header>
+	            <header class="al-mainLogo">
+	            	<img src="/image/index/logo.png" alt="" style="box-shadow: rgb(51,51,51) 0px 0px 2px;">
+	            </header>
+	            <section class="al-mainSidebarList" id="al-mainSidebarList">
+	                <ul>
+	                    <li class="al-mainSidebarItem active">
+	                        <a href="javascript:;">
+	                            <img src="/image/index/home.png" alt="">
+	                            <figcaption>首页</figcaption>
+	                            <article class="al-collapseItem">
+	                                <p class="al-collapseItemText">
+	                                </p>
+	                                <h4>首页</h4>
+	                                <p>HOME</p>
+	                                <p></p>
+	                            </article>
+	                        </a>
+	                    </li>
+	                    <li class="al-mainSidebarItem">
+	                        <a href="javascript:;">
+	                            <img src="/image/index/mail.png" alt="">
+	                            <figcaption>消息</figcaption>
+	                            <article class="al-collapseItem">
+	                                <p class="al-collapseItemText">
+	                                </p>
+	                                <h4>消息</h4>
+	                                <p>MESSAGE</p>
+	                                <p></p>
+	                            </article>
+	                        </a>
+	                    </li>
+	                </ul>
+	            </section>
+	        </aside>
+        </section>
+        </aside>
+    </section>
+    <!--pc端返回-->
+    <section class="pcModule return_pc">
+        <a class="text" href="#">返回</a>
+    </section>
+
+    <section class="depart_head width_auto" style="background: url(/image/classes/department/banner_bg.png) no-repeat ">
+        <!--h5端返回-->
+        <section class="mobileModule return_head">
+            <a class="return_mobile" href="#"></a>
+            <a class="share_mobile" href="#"></a>
+        </section>
+        <!--h5端-->
+        <div class="depart_title clear mobileModule">
+            <div class="de_user_img"><img src="/image/classes/department/children.png" /> </div>
+            <div class="de_classesname">小儿骨科</div>
+            <!--h5未加入-->
+            <section class="de_addclass ev-addBtnH5 ev-btnH5">
+                <span class="de_addclasstext">加入</span>
+            </section>
+            <!--h5已加入-->
+            <section class="de_addfinish ev-finBtnH5 ev-btnH5">
+                <span class="de_addclasstext">已加入</span>
+            </section>
+
+        </div>
+        <!--pc端-->
+        <div class="depart_title clear pcModule">
+            <section class="depart_titletop clear">
+                <div class="de_user_img"><img src="/image/classes/department/children.png" /> </div>
+            </section>
+            <section class=""><div class="de_classesname">小儿骨科</div></section>
+            <section class="de_addclass ev-de_addclass ev-addBtn">
+                <span class="de_addclasstext ev-addCourse">加入系列课程</span> 
+                <span class="de_finclasstext ev-finCourse" style="display: none;"><a href="javaScript:;">开始学习 1.1 骨的正常与发生</a></span>
+            </section>
+        </div>
+    </section>
+    <nav class="depart_nav width_auto pcModule">
+        <div class="yd_t_bg"></div>
+        <div class="yd_c_bg">
+            <ul class="nav_list clear">
+                <li class="chapter_num"><span class="chart_zj">9</span>章内容</li>
+                <li class="chapter_num"><span class="chart_nr">9</span>个课时</li>
+                <li class="chapter_num"><span class="chart_cs">9</span>个练习测验</li>
+
+            </ul>
+        </div>
+        <div class="yd_b_bg"></div>
+    </nav>
+    <nav class="depart_nav width_auto mobileModule">
+        <ul class="nav_list clear">
+            <li>
+                <div class="chapter_num clear"><div class="chart_zj">9</div><div class="chapter_t">章</div></div>
+                <div class="chapter_text">内容</div>
+            </li>
+
+            <li>
+                <div class="chapter_num clear"><div class="chart_nr">30</div><div class="chapter_t">个</div></div>
+                <div class="chapter_text">课时</div>
+            </li>
+            <li>
+                <div class="chapter_num clear"><div class="chart_cs">9</div><div class="chapter_t">个</div></div>
+                <div class="chapter_text">练习测验</div>
+            </li>
+        </ul>
+        </div>
+    </nav>
+    <section class="modulesFloor width_auto">
+        <div class="yd_t_bg pcModule"></div>
+        <div class="yd_c_bg">
+            <nav class="de_dire_nav tab_box">
+                <ul class="clear line_df ev-line_df">
+                    <li class="introduction_text current" data-role="a">简介</li>
+                    <li class="catalog_text" data-role="b">目录</li>
+                </ul>
+            </nav>
+            <div class="departmentTab">
+                <!--简介-->
+                <div class="trainTarget_cont" data-role="a" style="display: block">
+                    <aside class="train_target clear">
+                        <div class="trTarget_title">培训目标</div>
+                        <div class="trTarget_cont ev-trTarget_cont line2 ev-target" style="white-space:pre-wrap"></div>
+                        <div class="trTargetFloat"><i class="icon-upMore ev-icon-upMore"></i><span>展开</span></div>
+                    </aside>
+                    <aside class="train_target clear">
+                        <div class="trTarget_title">轮转目的</div>
+                        <div class="trTarget_cont ev-trTarget_cont line2 ev-obj" style="white-space:pre-wrap"></div>
+                        <i class="icon-upMore ev-icon-upMore"><span>展开</span></i>
+                    </aside>
+                </div>
+                <!--简介 END-->
+                <!--目录-->
+                <div class="catalog_cont" data-role="b" style="display: none">
+                    <aside class="clear">
+                        <div class="margin30"></div>
+                        <!--<aside class="boneBasis_title ev-boneBasis_title">
+                        	<aside class="width92 clear"> 
+                        		<div class="boneBasis_titleText"> 一 骨科基础</div>
+                        		<div class="boneBasis_packUp"></div>
+                        	</aside> 
+                        </aside>
+                        <ul class="boneBasis_list width92">
+                            <li data-type = "">1.1骨的发生与正常结构<span>还剩00:12:55</span></li>
+                            <li data-type = "">1.2骨的发生与正常结构骨的发生与正常结构骨的发生与正常结构<span></span></li>
+                        </ul>-->
+                    </aside>
+                </div>
+                <!--目录 END-->
+            </div>
+        </div>
+        <div class="yd_b_bg pcModule"></div>
+
+    </section>
+    <section class="modulesFloor width_auto">
+        <div class="yd_t_bg pcModule"></div>
+        <div class="yd_c_bg">
+            <header class="modulesTitle">
+                <div class="width92">教师介绍<span>排名不分先后</span></div>
+            </header>
+            <ul class="teacher_ranking clear ev-teacher_ranking">
+                <!--<li class="clear">
+                    <div class="teacherImg"><img src="/image/classes/department/children.png" /> </div>
+                    <div class="teacherIntroduction">
+                        <div class="teacherName">冯辉</div>
+                        <div class="teacherText"><span>主任医师</span>北京协和医院</div>
+                    </div>
+                </li>-->
+            </ul>
+            <aside class="lookMore ev-lookMore">
+                <span>展开更多</span>
+            </aside>
+        </div>
+        <div class="yd_b_bg pcModule"></div>
+    </section>
+    <section class="modulesFloor width_auto">
+        <div class="yd_t_bg pcModule"></div>
+        <div class="yd_c_bg">
+            <header class="modulesTitle">
+                <div class="width92">基础要求</div>
+            </header>
+            <aside class="requireFloor width92">
+                <div class="reFloor_title clear">实践部分<div class="trTargetFloat"><i class="icon-upMore ev-icon-upMore"></i><span>展开</span></div></div>
+                <div class="reFloor_cont ev-reFloor_cont">
+                    <ul>
+                        <li class="clear">
+                            <div class="reF_listText"><span>腰椎间盘突出症</span></div>
+                            <div class="reF_listNum">5例</div>
+                        </li>
+                        <li class="clear">
+                            <div class="reF_listText"><span>腰椎间盘突出症</span></div>
+                            <div class="reF_listNum">5例</div>
+                        </li>
+                        <li class="clear">
+                            <div class="reF_listText"><span>腰椎间盘突出症</span></div>
+                            <div class="reF_listNum">5例</div>
+                        </li>
+                        <li class="clear">
+                            <div class="reF_listText"><span>腰椎间盘突出症</span></div>
+                            <div class="reF_listNum">5例</div>
+                        </li>
+                    </ul>
+                    <div class="reFloorSubtitle_cont">
+                        <div class="reFloorSubtitle">临床操作技术要求</div>
+                        <div class="reFloorSubtitle_text clear"><span class="reSub_num">1.</span><span class="reSub_text">书写住院病历不少于5份；书写大病历不少于1份。</span></div>
+                        <div class="reFloorSubtitle_text clear"><span class="reSub_num">2.</span><span class="reSub_text">在上级医师指导下完成以下手术</span></div>
+                        <ul>
+                            <li class="clear">
+                                <div class="reF_listText"><span>腰椎间盘突出症</span></div>
+                                <div class="reF_listNum">5例</div>
+                            </li>
+                            <li class="clear">
+                                <div class="reF_listText"><span>腰椎间盘突出症</span></div>
+                                <div class="reF_listNum">5例</div>
+                            </li>
+                            <li class="clear">
+                                <div class="reF_listText"><span>腰椎间盘突出症</span></div>
+                                <div class="reF_listNum">5例</div>
+                            </li>
+                            <li class="clear">
+                                <div class="reF_listText"><span>腰椎间盘突出症</span></div>
+                                <div class="reF_listNum">5例</div>
+                            </li>
+                        </ul>
+                        <div class="reFloorSubtitle_text clear"><span class="reSub_num">3.</span><span class="reSub_text">在上级医师指导下完成以下手术</span></div>
+                        <ul>
+                            <li class="clear">
+                                <div class="reF_listText"><span>腰椎间盘突出症</span></div>
+                                <div class="reF_listNum">5例</div>
+                            </li>
+                            <li class="clear">
+                                <div class="reF_listText"><span>腰椎间盘突出症</span></div>
+                                <div class="reF_listNum">5例</div>
+                            </li>
+                            <li class="clear">
+                                <div class="reF_listText"><span>腰椎间盘突出症</span></div>
+                                <div class="reF_listNum">5例</div>
+                            </li>
+                            <li class="clear">
+                                <div class="reF_listText"><span>腰椎间盘突出症</span></div>
+                                <div class="reF_listNum">5例</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+            <aside class="requireFloor width92">
+                <div class="reFloor_title clear">实践部分<i class="icon-upMore ev-icon-upMore"><span>展开</span></i></div>
+                <div class="reFloor_cont">
+                    <div class="reFloorSubtitle_cont">
+                        <div class="reFloorSubtitle_text clear"><span class="reSub_num">1.</span><span class="reSub_text">书写住院病历不少于5份；书写大病历不少于1份。</span></div>
+                        <ul>
+                            <li class="clear">
+                                <div class="reF_listText"><span>腰椎间盘突出症</span></div>
+                            </li>
+                            <li class="clear">
+                                <div class="reF_listText"><span>腰椎间盘突出症腰椎间盘突出症腰椎间盘突出症腰椎间盘突出症</span></div>
+                            </li>
+                            <li class="clear">
+                                <div class="reF_listText"><span>腰椎间盘突出症腰椎间盘突出症腰椎间盘突出症</span></div>
+                            </li>
+                            <li class="clear">
+                                <div class="reF_listText"><span>腰椎间盘突出症</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <div class="yd_b_bg pcModule"></div>
+    </section>
+</section>
+<section class="quitClass ev-quitClass" style="display: none;">退出系列课程</section>
+<section class="mobileModule mlbileAddClass">
+    <span>加入系列课程</span>
+</section>
+<section class="mobileModule learnStart" style="display: none;">
+    <span>开始学习1.1骨的发生于正常结构</span>
+</section>
+<section style="height: 114px;" class="mobileModule"></section>
+</section>
+<script src="/js/third-party/jquery/jquery-1.8.0.min.js"></script>
+<script src="/js/third-party/jquery/jquery.json-2.4.js"></script>
+<script src="/js/third-party/jqueryscrollpagination/js/scrollpagination.js"></script>
+<script src="/js/third-party/fastclick.js"></script>
+<script src="/js/common/main.js"></script>
+<script src="/js/common/common.js"></script>
+<script src="/js/common/comm.func.js"></script>
+<script src="/js/common/comm-customer.js"></script>
+<script src="/js/common/comm-data.js"></script>
+<script src="/js/common/comm_service.js"></script>
+<script src="/js/common/jweixin-1.0.0.js"></script>
+<script src="/js/common/log.js"></script>
+<script src="/js/common/shareAll.js"></script>
+<script src="/js/common/comm.cutArray.js"></script>
+<script src="/js/scene/classes/department.js"></script>
+</body>
+
+</html>

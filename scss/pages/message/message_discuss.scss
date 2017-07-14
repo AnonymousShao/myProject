@@ -1,0 +1,61 @@
+@charset "UTF-8";
+//消息——评论我的
+//公共方法模块调用
+@import "../../modules/common-modules";
+//公共变量引用
+@import "../../variables/_yiding-variables";
+//样式模块调用
+@import "../../components/_indexHeader"; //首页头部信息栏
+@import "../../components/_iconModule"; //小图标组件
+@import "../../components/_buttonModule"; //按钮组件
+@import "../../components/_msgListModule";  //信息列表组件
+@import "../../components/_confirmModal";    //中部悬浮弹窗
+@import "../../components/_noContent"; //无内容
+@import "../../components/_contentInner"; //内容容器
+@import "../../pages/classes/classes_details";
+.yd-maskBackground{
+    .exercise-discuss{
+        width: 750px;
+        position: relative;
+        left: 50%;
+        margin-left:-375px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .yd-timelineFooter{
+        padding: 0;
+    }
+    .discussPublish{
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .disscussFunction{
+        margin: 15px 30px
+    }
+}
+.checkDiscuss{
+    cursor: pointer;
+}
+.contentInner{
+  margin-top: 0;
+}
+.yd-content{
+    margin-top: 0;
+}
+
+.icon-newTips:after{
+    top: 0;
+    right: 0.1rem;
+}
+
+.yd-personalNoneTipsImg{
+    figure{
+        width: rem(183px);
+        height: rem(317px);
+    }
+}
+
+.icon-vip{
+    @extend %icon-vip;
+}

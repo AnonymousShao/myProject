@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>认证信息</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/yiding.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=750">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/personal/personal_introConfig.css">
+    <link rel="stylesheet" href="/js/third-party/jquery-autocomplete/jquery.autocomplete.css">
+    <script src="/js/common/rem.js"></script>
+
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="/build/compatibility.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- 主内容容器 -->
+    <section class="yd-mainInner">
+        <section class="contentInner">
+            <a href="personal_introConfig.html?sourceType=51" class="pcModule yd-pageBackBtn"><img src="/image/personal/nav_back_black@2x.png" alt=""><span>返回</span></a>
+            <header class="yd-indexHeader mobileModule">
+                <figure class="yd-indexHeaderItem">
+                    <a href="javascript:history.go(-1);">
+                        <img src="/image/personal/nav_back_black@2x.png" alt="">
+                    </a>
+                </figure>
+                <figure class="yd-indexHeaderItem">
+                    <h1>认证信息</h1>
+                </figure>
+                <figure class="yd-indexHeaderItem">
+                    <a href="javascript:void(0)">
+                    </a>
+                </figure>
+            </header>
+            <section class="yd-tableModule Ev-inputPart">
+                <article class="yd-tableModuleItem">
+                    <h3>姓名</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <span class="Ev-userName"></span>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>专业</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <span class="Ev-profession"></span>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>职称</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <span class="Ev-medicalTitle"></span>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>就职医院</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <span class="Ev-jobHospital"></span>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>住培基地</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <span class="Ev-studyHospital"></span>
+                    </figure>
+                </article>
+            </section>
+            <section class="yd-tableModule Ev-inputPart yd-personalImgUpload">
+                <section class="ev-authList">
+                    <article class="yd-tableModuleItem" id="yd-tableModuleItem1">
+                        <h3 tagId="11">工作证</h3>
+                        <article class="yd-tableQuMsgBox" id="yd-tableQuMsgBox1">
+                            <figure class="yd-detailedTableItem yd-credentialsUploadBox">
+                                <article>
+                                    <p class="yd-credentIalsTitle">证件照片</p>
+                                    <figure class="yd-credentIalsImgBox" id="ydImgSucess1">
+                                        <figure class="yd-tableModuleUploadImg">
+                                            <figure class="yd-loading">
+                                                <img src="/image/personal/loading_big@2x.png" alt="">
+                                            </figure>
+                                            <form class="uploadIcon uploadPic" method="POST" enctype="multipart/form-data">                                                                                 <input type="file" name="file" class="authenticationFile" multiple="" id="myfile1">
+                                            </form>
+                                        </figure>
+                                    </figure>
+                                    <p class="yd-tableErrorTips hide"><i></i><span></span></p>
+                                </article>
+                                <section class="yd-tableDetailedBtn">
+                                    <button class="yd-personalAdviceSubmit none" id="auth_save1">确定</button>
+                                    <button class="yd-personalAdviceCancel" id="auth_cancel1">取消</button>
+                                </section>
+                            </figure>
+                        </article>
+                        <p class="yd-tableQuMsgAdd">添加</p>
+                        <figure class="yd-tableQuMsgFull"  style="display: none">
+                            <img src="" alt="">
+                        </figure>
+                    </article>
+                    <article class="yd-tableModuleItem" id="yd-tableModuleItem2">
+                        <h3 tagId="6">医师资格证</h3>
+                        <article class="yd-tableQuMsgBox" id="yd-tableQuMsgBox2">
+                            <figure class="yd-detailedTableItem yd-credentialsUploadBox">
+                                <article>
+                                    <p class="yd-credentIalsTitle">证件号</p>
+                                    <input type="text" id="certificatesCode2">
+                                    <p class="yd-tableErrorTips hide" id="attCode_error2"><i></i><span></span></p>
+                                </article>
+                                <article>
+                                    <p class="yd-credentIalsTitle">证件照片</p>
+                                    <figure class="yd-credentIalsImgBox" id="ydImgSucess2">
+                                        <figure class="yd-tableModuleUploadImg">
+                                            <figure class="yd-loading">
+                                                <img src="/image/personal/loading_big@2x.png" alt="">
+                                            </figure>
+                                            <form class="uploadIcon uploadPic" method="POST" enctype="multipart/form-data">                                                                                 <input type="file" name="file" class="authenticationFile" multiple="" id="myfile2">
+                                            </form>
+                                        </figure>
+                                    </figure>
+                                    <p class="yd-tableErrorTips hide"><i></i><span></span></p>
+                                </article>
+                                <section class="yd-tableDetailedBtn">
+                                    <button class="yd-personalAdviceSubmit none" id="auth_save2">确定</button>
+                                    <button class="yd-personalAdviceCancel" id="auth_cancel2">取消</button>
+                                </section>
+                            </figure>
+                        </article>
+                        <p class="yd-tableQuMsgAdd">添加</p>
+                        <figure class="yd-tableQuMsgFull" style="display: none">
+                            <p></p>
+                            <img src="" alt="">
+                        </figure>
+                    </article>
+                    <article class="yd-tableModuleItem" id="yd-tableModuleItem3">
+                        <h3 tagId="9">医学学历证</h3>
+                        <article class="yd-tableQuMsgBox" id="yd-tableQuMsgBox3">
+                            <figure class="yd-detailedTableItem yd-credentialsUploadBox">
+                                <article>
+                                    <p class="yd-credentIalsTitle">证件号</p>
+                                    <input type="text" id="certificatesCode3">
+                                    <p class="yd-tableErrorTips hide" id="attCode_error3"><i></i><span></span></p>
+                                </article>
+                                <article>
+                                    <p class="yd-credentIalsTitle">证件照片</p>
+                                    <figure class="yd-credentIalsImgBox" id="ydImgSucess3">
+                                        <figure class="yd-tableModuleUploadImg">
+                                            <figure class="yd-loading">
+                                                <img src="/image/personal/loading_big@2x.png" alt="">
+                                            </figure>
+                                            <form class="uploadIcon uploadPic" method="POST" enctype="multipart/form-data">                                                                                 <input type="file" name="file" class="authenticationFile" multiple="" id="myfile3">
+                                            </form>
+                                        </figure>
+                                    </figure>
+                                    <p class="yd-tableErrorTips hide"><i></i><span></span></p>
+                                </article>
+                                <section class="yd-tableDetailedBtn">
+                                    <button class="yd-personalAdviceSubmit none" id="auth_save3">确定</button>
+                                    <button class="yd-personalAdviceCancel" id="auth_cancel3">取消</button>
+                                </section>
+                            </figure>
+                        </article>
+
+                        <p class="yd-tableQuMsgAdd">添加</p>
+                        <figure class="yd-tableQuMsgFull"  style="display: none">
+                            <p></p>
+                            <img src="" alt="">
+                        </figure>
+                    </article>
+                    <article class="yd-tableModuleItem" id="yd-tableModuleItem4">
+                        <h3 tagId="7">医学学位证</h3>
+                        <article class="yd-tableQuMsgBox" id="yd-tableQuMsgBox4">
+                            <figure class="yd-detailedTableItem yd-credentialsUploadBox">
+                                <article>
+                                    <p class="yd-credentIalsTitle">证件号</p>
+                                    <input type="text" id="certificatesCode4">
+                                    <p class="yd-tableErrorTips hide" id="attCode_error4"><i></i><span></span></p>
+                                </article>
+                                <article>
+                                    <p class="yd-credentIalsTitle">证件照片</p>
+                                    <figure class="yd-credentIalsImgBox" id="ydImgSucess4">
+                                        <figure class="yd-tableModuleUploadImg">
+                                            <figure class="yd-loading">
+                                                <img src="/image/personal/loading_big@2x.png" alt="">
+                                            </figure>
+                                            <form class="uploadIcon uploadPic" method="POST" enctype="multipart/form-data">                                                                                 <input type="file" name="file" class="authenticationFile" multiple="" id="myfile4">
+                                            </form>
+                                        </figure>
+                                    </figure>
+                                    <p class="yd-tableErrorTips hide"><i></i><span></span></p>
+                                </article>
+                                <section class="yd-tableDetailedBtn">
+                                    <button class="yd-personalAdviceSubmit none" id="auth_save4">确定</button>
+                                    <button class="yd-personalAdviceCancel" id="auth_cancel4">取消</button>
+                                </section>
+                            </figure>
+                        </article>
+
+                        <p class="yd-tableQuMsgAdd">添加</p>
+                        <figure class="yd-tableQuMsgFull"  style="display: none">
+                            <p></p>
+                            <img src="" alt="">
+                        </figure>
+                    </article>
+                    <article class="yd-tableModuleItem" id="yd-tableModuleItem5">
+                        <h3 tagId="8">医师执业证</h3>
+                        <article class="yd-tableQuMsgBox" id="yd-tableQuMsgBox5">
+                            <figure class="yd-detailedTableItem yd-credentialsUploadBox">
+                                <article>
+                                    <p class="yd-credentIalsTitle">证件号</p>
+                                    <input type="text" id="certificatesCode5">
+                                    <p class="yd-tableErrorTips hide" id="attCode_error5"><i></i><span></span></p>
+                                </article>
+                                <article>
+                                    <p class="yd-credentIalsTitle">证件照片</p>
+                                    <figure class="yd-credentIalsImgBox" id="ydImgSucess5">
+                                        <figure class="yd-tableModuleUploadImg">
+                                            <figure class="yd-loading">
+                                                <img src="/image/personal/loading_big@2x.png" alt="">
+                                            </figure>
+                                            <form class="uploadIcon uploadPic" method="POST" enctype="multipart/form-data">                                                                                 <input type="file" name="file" class="authenticationFile" multiple="" id="myfile5">
+                                            </form>
+                                        </figure>
+                                    </figure>
+                                    <p class="yd-tableErrorTips hide"><i></i><span></span></p>
+                                </article>
+                                <section class="yd-tableDetailedBtn">
+                                    <button class="yd-personalAdviceSubmit none" id="auth_save5">确定</button>
+                                    <button class="yd-personalAdviceCancel" id="auth_cancel5">取消</button>
+                                </section>
+                            </figure>
+                        </article>
+                        <p class="yd-tableQuMsgAdd">添加</p>
+                        <figure class="yd-tableQuMsgFull"  style="display: none">
+                            <p></p>
+                            <img src="" alt="">
+                        </figure>
+                    </article>
+                    <article class="yd-tableModuleItem" id="yd-tableModuleItem6">
+                        <h3 tagId="12">学生证</h3>
+                        <article class="yd-tableQuMsgBox" id="yd-tableQuMsgBox6">
+                            <figure class="yd-detailedTableItem yd-credentialsUploadBox">
+                                <article>
+                                    <p class="yd-credentIalsTitle">证件照片</p>
+                                    <figure class="yd-credentIalsImgBox" id="ydImgSucess6">
+                                        <figure class="yd-tableModuleUploadImg">
+                                            <figure class="yd-loading">
+                                                <img src="/image/personal/loading_big@2x.png" alt="">
+                                            </figure>
+                                            <form class="uploadIcon uploadPic" method="POST" enctype="multipart/form-data">                                                                                 <input type="file" name="file" class="authenticationFile" multiple="" id="myfile6">
+                                            </form>
+                                        </figure>
+                                    </figure>
+                                    <p class="yd-tableErrorTips hide"><i></i><span></span></p>
+                                </article>
+                                <section class="yd-tableDetailedBtn">
+                                    <button class="yd-personalAdviceSubmit none" id="auth_save6">确定</button>
+                                    <button class="yd-personalAdviceCancel" id="auth_cancel6">取消</button>
+                                </section>
+                            </figure>
+                        </article>
+                        <p class="yd-tableQuMsgAdd">添加</p>
+                        <figure class="yd-tableQuMsgFull"  style="display: none">
+                            <!--<p></p>-->
+                            <img src="" alt="">
+                        </figure>
+                    </article>
+                </section>
+            </section>
+            <section class="yd-fixAuthMsg">
+                <p>修改认证信息，可以提交申请~</p>
+                <button>申请</button>
+            </section>
+            <div class="yd-changeInfoPop">
+                <figure class="yd-changeInfoPopBox">
+                    <b class="yd-deletePromptClose ev-iKnow"></b>
+                    <figcaption>变更信息已提交</figcaption>
+                    <p>您的申请我们会尽快处理，随后通过消息通知您</p>
+                    <p>谢谢您对唯医的支持~</p>
+                    <span class="ev-iKnow">知道了</span>
+                </figure>
+            </div>
+            <!--申请修改认证信息-->
+            <section class="yd-personalInner ev-applyAuthConent">
+                <section class="yd-applyInfoChangeBox">
+                    <figure class="yd-infoChangeHead">
+                        <figcaption>申请信息变更</figcaption>
+                        <p class="yd-infoChangePrompt">填写真实信息，才能享受更多的免费资源~</p>
+                    </figure>
+                    <div class="yd-infoChangeDetailsBox">
+                        <section class="yd-infoChangeDetails">
+                            <p>姓名</p>
+                            <figure class="yd-infoChangeContent">
+                                <input type="text" id="fullName01"/>
+                            </figure>
+                            <p class="yd-tableErrorTips" id="re_con01"><i></i><span></span></p>
+                        </section>
+                        <section class="yd-infoChangeDetails">
+                            <p>专业</p>
+                            <figure class="yd-infoChangeContent">
+                                <figure class="yd-infoChangeContent">
+                                    <input type="text" id="professionalName01" readonly="readonly"/>
+                                    <section class="yd-tagSelectorBox hide pcModule Ev-professionalBox" id="pcModule">
+                                        <header class="yd-tagSelectorBoxTitle">选择专业领域<span class="yd-tagSelectorBoxCloseBtn">X</span></header>
+                                        <section class="yd-tagSelectorItem">
+                                        </section>
+                                        <footer class="yd-tagSelectorBoxFootBtn">
+                                            <button class="yd-personalAdviceSubmit Ev-professionalSure">确定</button>
+                                            <button class="yd-personalAdviceCancel Ev-professionalCancel">取消</button>
+                                        </footer>
+                                    </section>
+                                </figure>
+                            </figure>
+                            <p class="yd-tableErrorTips" id="area_error01"><i></i><span>请选择专业领域！</span></p>
+
+                        </section>
+                        <section class="yd-infoChangeDetails">
+                            <p>职称</p>
+                            <figure class="yd-infoChangeContent">
+                                <input type="text" id="medicalName01" readonly="readonly"/>
+                                <section class="al-tagSelectorBox ev-medicalBox"  id="tagSelectorBox" style="display: none;">
+                                    <header class="al-tagSelectorBoxTitle">选择职称<span class="al-tagSelectorBoxCloseBtn ev-medCancel">X</span></header>
+                                    <section class="al-tagSelectorItem ev-medicalConList">
+                                        <article class="al-tagSelectorList" id="tagSelectorList1">
+                                        </article>
+                                        <article class="al-tagSelectorList hide" id="tagSelectorList2" style="display: none;">
+                                        </article>
+                                        <article class="al-tagSelectorList hide" id="tagSelectorList3" style="display: none;">
+                                        </article>
+                                    </section>
+                                    <footer class="al-tagSelectorBoxFootBtn">
+                                        <button class="al-personalAdviceSubmit ev-medSave">确定</button>
+                                        <button class="al-personalAdviceCancel ev-medCancel">取消</button>
+                                    </footer>
+                                </section>
+                            </figure>
+                            <p class="yd-tableErrorTips" id="med_error01"><i></i><span>请选择职称！</span></p>
+                            </section>
+                            <section class="yd-infoChangeDetails">
+                                <p>就职医院</p>
+                                <figure class="yd-infoChangeContent">
+                                    <figure class="yd-infoChangeContent">
+                                        <input type="text" id="hospitalName01" />
+                                    </figure>
+                                </figure>
+                                <p class="yd-tableErrorTips" id="hos_error01"><i></i><span>请填写就职医院！</span></p>
+                            </section>
+                            <section class="yd-infoChangeDetails">
+                                <p>住培基地</p>
+                                <figure class="yd-infoChangeContent">
+                                    <figure class="yd-infoChangeContent">
+                                        <input type="text" id="baseName01" />
+                                    </figure>
+                                </figure>
+                                <p class="yd-tableErrorTips" id="base_error01"><i></i><span>请填写住培基地！</span></p>
+                            </section>
+                    </div>
+                    <div class="yd-infoChangeBtn">
+                        <span id="ev-applyAuthCancel">取消</span>
+                        <span class="yd-submitBtn active" id="ev-applyAuthSave" submit="false">提交</span>
+                    </div>
+                </section>
+            </section>
+        </section>
+        <footer class="yd-bottomSelectorBox mobileModule">
+            <footer class="yd-bottomSelector">
+                <section class="yd-bottomSelectorItemBox">
+                    <section class="yd-bottomSelectorItem">保存</section>
+                    <section class="yd-bottomSelectorItem">放弃</section>
+                </section>
+                <section class="yd-bottomSelectorItemBox cancel">
+                    <section class="yd-bottomSelectorItem">取消</section>
+                </section>
+            </footer>
+        </footer>
+        <!--common.log统计ip,address-->
+        <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+        <!-- end -->
+        <script src="/js/third-party/jquery/jquery-1.8.0.min.js"></script>
+        <!--about:jq-->
+        <script src="/build/jqAll.js"></script>
+        <!-- end -->
+        <script src="/js/third-party/uploadReplace.js"></script>
+        <script src="/js/third-party/jquery-autocomplete/jquery.autocomplete.js"></script>
+        <script src="/js/third-party/jquery-autocomplete/jquery.lenovo.js"></script>
+        <!--about:common&login-->
+        <script src="/build/common.js"></script>
+        <!-- end -->
+        <script src="/js/scene/personal/personalQualification.js"></script>
+</body>
+
+
+</html>

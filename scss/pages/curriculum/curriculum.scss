@@ -1,0 +1,214 @@
+/**
+ * 功能描述：
+ * 使用方法:
+ * 注意事件：
+ * 引入来源：  作用：
+ *
+ * Created by ZhangHongDa on 2016/11/4.
+ */
+@charset "UTF-8";
+@import "../../modules/_common-modules";
+@import "../../variables/_yiding-variables";
+
+
+@import "../../components/_pageTopNav_And_SideBar";//主导航-主侧栏
+@import "../../components/_iconModule"; //图标标签
+@import "../../components/_footerBar";//页脚
+html,body {
+    background-color: #eef3f8;
+}
+//引入search图标
+.icon-search {
+    @extend %icon-search;
+}
+.curriculumHeader{
+    height:rem(46px);
+    background: #fff;
+    line-height: rem(46px);
+    background: #fff;
+    width: 750px;
+    margin: 0 auto;
+    border: 1px solid #dee6ee;
+    border-bottom: none;
+    box-sizing: border-box;
+    
+    li{
+        width: 45%;
+        display: inline-block;
+        text-align: center;
+        font-size: rem(17px);
+        height: rem(44px);
+        
+        a{
+            color: #909090;
+            width: 50%;
+            height: 97%;
+            display: inline-block;
+            border-bottom: rem(2px) solid #fff;
+            
+            &.active{
+                color: #FFA800;
+                border-bottom: rem(2px) solid #FFA800;
+            }
+        }
+    }
+}
+
+.al-curriculum{
+    color: #ccc;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+    padding: 0 0 0 rem(24px);
+    width: 750px;
+    margin: 0 auto;
+    background: #fff;
+    margin-top:rem(16px);
+    .al-curriculumAll{
+        display: block;
+//      margin-top: rem(10px);
+        font-size: 0;
+      padding-bottom: rem(20px);
+        li{
+            border: 1px solid #dee6ee;
+            height: rem(140px);
+            width: rem(338px);
+            box-sizing: border-box;
+            background: #fff;
+            display: inline-block;
+            margin-right: rem(22px);
+            margin-top: rem(24px);
+          &:before{
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+          }
+        }
+      a{
+        display: inline-block;
+        vertical-align: middle;
+        .curriculumItem{
+            background: url("/image/curriculum/chuangshang2@2x.png") no-repeat center center;
+            color: #333;
+            &:hover{
+                -webkit-box-shadow: 5px 5px 5px #eee;
+                -moz-box-shadow: 5px 5px 5px #eee;
+                box-shadow: 5px 5px 5px #eee;
+            }
+
+
+                span{
+                    display: block;
+                    &.className{
+                        //margin-top: rem(22px);
+                        margin-left: 15px;
+                        color: #333;
+                        font-size: rem(18px);
+                    }
+                    &.classTime{
+                        color: #909090;
+                        font-size: rem(13px);
+                        margin-left: rem(15px);
+                        margin-top: rem(9px);
+                    }
+                }
+            }
+        }
+    }
+}
+.al-pcFooterBar{
+    margin-top: rem(61px);
+}
+@include query() {
+   .curriculumHeader{
+        height:rem(46px);
+        background: #fff;
+        line-height: rem(46px);
+        width: 750px;
+        margin: 0 auto;
+        border: 1px solid #CCC;
+        border-bottom: none;
+        box-sizing: border-box;
+        
+        li{
+            width: 45%;
+            display: inline-block;
+            text-align: center;
+            font-size: rem(17px);
+            height: rem(44px);
+            
+            a{
+                color: #909090;
+                width: 50%;
+                height: 97%;
+                display: inline-block;
+                border-bottom: rem(2px) solid #fff;
+                
+                &.active{
+                    color: #FFA800;
+                    border-bottom: rem(2px) solid #FFA800;
+                }
+            }
+        }
+    }
+
+    .al-curriculum{
+        color: #ccc;
+        border: none;
+        box-sizing: border-box;
+        padding: 0 rem(24px);
+        width: 750px;
+        margin: 0 auto;
+        background: #eef3f8;
+        .al-curriculumAll{
+            display: block;
+            font-size: 0;
+            li{
+                border: 1px solid #ccc;
+                height: rem(97px);
+                width: rem(166px);
+                background: #fff;
+                display: inline-block;
+                margin-right: rem(11px);
+                box-sizing: border-box;
+
+                &:nth-child(2n){
+                    margin-right: 0;
+                }
+            }
+
+            .curriculumItem{
+                margin-top: rem(11px); 
+                font-size: rem(15px);
+                color: #333;
+                width: rem(167px);
+               a{
+                  span{
+                        display: block;
+                        &:nth-child(1){
+                             margin-top: rem(30px);
+                            margin-left: rem(12px);
+                            color: #333;
+                        }
+                        &:nth-child(2){
+                            color: #909090;
+                            font-size: rem(11px);
+                            margin-left: rem(12px);
+                            margin-top: rem(10px);
+                        }
+                    }
+               } 
+                
+            }
+        }
+        
+    } 
+}
+
+
+
+
+.curriculumItemCont{
+  display: inline-block;
+  vertical-align: middle;
+}

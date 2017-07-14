@@ -1,0 +1,36 @@
+BODY {
+	FONT-FAMILY: "Trebuchet MS", sans-serif; BACKGROUND-COLOR: #efefef
+}
+A {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #666666
+}
+#main_container {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; MARGIN: 0px auto; BORDER-LEFT: #000000 1px solid; WIDTH: 600px; BORDER-BOTTOM: #000000 1px solid; BACKGROUND-COLOR: #fefefe
+}
+#header {
+	BACKGROUND-IMAGE: url(../images/clock.jpg); WIDTH: 100%; BACKGROUND-REPEAT: no-repeat; HEIGHT: 174px
+}
+H1 {
+	FLOAT: right; MARGIN: 10px 20px 0px 0px; VERTICAL-ALIGN: middle; FONT-FAMILY: Impact, Arial, Helvetica, sans-serif; size: 30px
+}
+H2 {
+	PADDING-LEFT: 5px; MARGIN: 5px 0px 0px
+}
+P {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; MARGIN: 0px; PADDING-TOP: 10px; TEXT-ALIGN: justify; size: 10px
+}
+#navigation {
+	BORDER-TOP: #000000 1px solid; WIDTH: 100%; BORDER-BOTTOM: #000000 1px solid; TEXT-ALIGN: center
+}
+#navigation A {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+#content {
+	WIDTH: 100%
+}
+#footer {
+	BORDER-TOP: #000000 1px solid; FONT-SIZE: 9px; WIDTH: 100%; TEXT-ALIGN: center
+}

@@ -1,0 +1,13 @@
+{
+  "name":"onPlay()",
+  "des":"//视频播放时的一些操作，隐藏掉一些无关项目",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+  },
+  "param":{
+    "isNull":true
+  }
+}

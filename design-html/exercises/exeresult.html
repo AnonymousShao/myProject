@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=750">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/pages/exercises/exercises.css" />
+    <script type="text/javascript" src="../../js/common/mobile-util.js"></script>
+    <script type="text/javascript" src="../../js/common/fastclick.js"></script>
+    <script type="text/javascript" src="../../js/common/rem.js" ></script>
+    <script src="/js/third-party/jquery/jquery-1.8.0.min.js"></script>
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="../../js/common/html5shiv.js" ></script>
+    <script type="text/javascript" src="../../js/common/respond.min.js"></script>
+    <![endif]-->
+<body>
+<!--全内容容器——mainInner-->
+<section class="al-mainInner">
+    <header class="al-header al-indexHeader pcModule" style="margin-left: 0px;">
+        <section class="al-headerContainer">
+            <ul class="al-headerTopNav" id="al-headerTopNav">
+                <li class="active"><a href="javascript:void(0)">首页</a></li>
+                <li><a href="javascript:void(0)">课程</a></li>
+                <li><a href="javascript:void(0)">习题</a></li>
+            </ul>
+            <!--浏览记录：begin-->
+            <!--<div class="al-headerSearchRecord">
+                浏览记录
+                <div class="al-browseRecordBox">
+                    <figure class="al-browseLogin"><span>您还没有登录，无法查看浏览记录</span>
+                        <h6 class="ev-browseLoginBtn">去登录</h6></figure>
+                </div>
+            </div>
+            <!--浏览记录：end-->
+            <!--<figure class="al-headerSearch">
+                <input type="text">
+                <b></b>
+                <div class="al-searchContent"></div>
+            </figure>-->
+            <div class="al-se-lo-re">
+                <div class="al-search">
+                    <i class="icon-search"></i>
+                </div>
+                <div class="al-lo-re notLogin" id="notLogin">
+                    <div class="al-login">登录</div>
+                    <div class="al-register">注册</div>
+                </div>
+                <div class="al-lo-re isLogin" id="isLogin">
+                    <div class="user-header"></div>
+                    <div class="user-name">黄志强</div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <section id="al-mainSidebar" class="pcModule" style="width: auto; height: 1000px;position: fixed; left: 0;top: 0; z-index: 10;">
+        <!--左侧导航栏-->
+        <aside class="al-mainSidebar al-mainSidebarCollapse pcModule" style="width: 80px;" id="al-mainSidebarWide">
+            <header class="al-collapseLogo">
+                <img src="../../image/logo.png" alt="">
+            </header>
+            <header class="al-mainLogo">
+                <img src="../../image/logo2.jpg" alt="" style="box-shadow: rgb(51,51,51) 0px 0px 2px;">
+            </header>
+            <section class="al-mainSidebarList" id="al-mainSidebarList">
+                <ul>
+                    <li class="al-mainSidebarItem active">
+                        <a href="javascript:;">
+                            <img src="//img10.allinmd.cn/v3/common/sidebar/sidebar_index_active.png" alt="">
+                            <figcaption>首页</figcaption>
+                            <article class="al-collapseItem">
+                                <p class="al-collapseItemText">
+                                </p>
+                                <h4>首页</h4>
+                                <p>HOME</p>
+                                <p></p>
+                            </article>
+                        </a>
+                    </li>
+                    <li class="al-mainSidebarItem">
+                        <a href="javascript:;">
+                            <img src="//img10.allinmd.cn/v3/common/sidebar/sidebar_find.png" alt="">
+                            <figcaption>消息</figcaption>
+                            <article class="al-collapseItem">
+                                <p class="al-collapseItemText">
+                                </p>
+                                <h4>消息</h4>
+                                <p>MESSAGE</p>
+                                <p></p>
+                            </article>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+    </section>
+    <!--右侧回到顶部-->
+    <aside class="pcModule al-rightNav" id="al-rightNav">
+        <div class="toTop rightNav" id="toTop">
+            <i class="icon-toTop"></i>
+            <p style="display: none;text-align: center;padding-top: 10px;color: #fff;font-size: 14px;">回到<br/>顶部</p>
+        </div>
+        <div class="code rightNav" id="code">
+            <i class="icon-toTop"></i>
+            <p style="display: none;text-align: center;padding-top: 15px;color: #fff;">二维码</p>
+            <p class="codePic" style="background: red; width: 50px; height: 50px; display: none;"></p>
+        </div>
+        <div class="share rightNav" id="share">
+            <i class="icon-toTop"></i>
+            <p style="display: none;text-align: center;padding-top: 15px;color: #fff;">分享</p>
+        </div>
+    </aside>
+    <!--手机端头部-->
+    <header class="mobileModule contentHeader">
+        <figure class="contentHeaderItem">
+            <a href="javascript:void(0)">
+                <i class="icon-download"></i>
+            </a>
+        </figure>
+        <figure class="contentHeaderItem">
+            医鼎
+        </figure>
+        <figure class="contentHeaderItem">
+            <a href="javascript:void(0)">
+                <i class="icon-search"></i>
+            </a>
+        </figure>
+    </header>
+    <section class="contentInner">
+        <!--最终展示的成绩报告-->
+        <section id="queResult" class="queResultContent">
+            <article class="queResultInner">
+                <article class="queScoreRe">
+                    <h2 class="queScoreReTi">顺序练习</h2>
+                </article>
+                <div class="queResultProgress">
+                    <div class="queResultProContent  queResultProContentOr">
+                        <div class="queResultImg"><img src="/image/exercises/result.png"> </div>
+
+                        <h3 class="queResultProCoHd">共答对:</h3>
+                        <h2 class="queResultProCoTitle">25<span class="queResultProCoSum">/31题</span></h2>
+                        <div class="resultStar"><figure><img src="/image/exercises/main_getpoint.png"></figure><figure><img src="/image/exercises/main_nopoint.png"> </figure><figure><img src="/image/exercises/main_nopoint.png"> </figure></div>
+
+                    </div>
+                    <canvas width="270" height="270" style="filter:alpha(opacity=75);-moz-opacity:0.75; opacity:0.75;margin-left: 15px;margin-top: 14px;"></canvas></div>
+            </article>
+            <article class="queResultCare">
+                <a href="javascript:;" class="queResultCarIte queResultCareRe fl"><img src="/image/exercises/main_view_results@2x.png" alt="" class="queResultCareBg"><span class="queResultCareName">全部解析</span></a>
+                <a href="javascript:;" class="queResultCarIte queResultCareWr fr"><img src="/image/exercises/main_wrong_parsing@2x.png" alt="" class="queResultCareBg"><span class="queResultCareName">错题解析</span></a>
+            </article>
+            <article class="queResultShare">
+                <div class="queResultShareIte queResultShareMor">下一关</div>
+            </article>
+        </section>
+    </section>
+    <section class=""></section>
+    <footer class="al-footerBar mobileModule">
+        <a href="javascript:;" class="al-footerBarItem active">
+            <img src="//m.allinmd.cn/images/img50/pages/index/mainIndex_off.png" alt="">
+            <figcaption class="al-footerBarItemTitle">
+                首页
+            </figcaption>
+        </a>
+        <a href="javascript:;" class="al-footerBarItem">
+            <img src="//m.allinmd.cn/images/img50/pages/index/discover_on.png" alt="">
+            <figcaption class="al-footerBarItemTitle">
+                分类
+            </figcaption>
+        </a>
+        <a href="javascript:;" class="al-footerBarItem">
+            <img src="//m.allinmd.cn/images/img50/pages/index/mine_off.png" alt="">
+            <figcaption class="al-footerBarItemTitle">
+                我的
+            </figcaption>
+        </a>
+    </footer>
+</section>
+<script>
+    window.onload = function() {
+        var canvas = document.querySelectorAll(".circleBorder");
+        for (var i = 0; i < canvas.length; i++) {
+            var w = canvas[i].parentNode.querySelector('p').offsetWidth,
+                    h = canvas[i].parentNode.querySelector('p').offsetHeight;
+            canvas[i].width = w;
+            canvas[i].height = h;
+
+            var angle = canvas[i].getAttribute('circle-angle');
+            var color = canvas[i].getAttribute('circle-color');
+            var angles = canvas[i].getAttribute('circle-angles');
+            var ctx = canvas[i].getContext("2d");
+            var grd=ctx.createLinearGradient(0,0,w,h);
+
+            ctx.beginPath();
+            ctx.lineWidth = "3";
+//            ctx.strokeStyle = color;
+            ctx.strokeStyle=grd;
+            var angles=angle/360;
+            grd.addColorStop(angles,"white");
+            grd.addColorStop("0",color);
+            ctx.arc(w / 2, h / 2, w / 2-1.5, 0, toA(angle), false);
+
+            ctx.stroke();
+        }
+        function toA(a) {
+            return a / 180 * Math.PI;
+        }
+    };
+</script>
+<script src="/js/third-party/jquery/jquery.json-2.4.js"></script>
+<script src="/js/third-party/jqueryscrollpagination/js/scrollpagination.js"></script>
+<script src="/js/third-party/fastclick.js"></script>
+<script src="/js/common/main.js"></script>
+<script src="/js/common/common.js"></script>
+<script src="/js/common/comm.func.js"></script>
+<script src="/js/common/comm-customer.js"></script>
+<script src="/js/common/comm.autoHeight.js"></script>
+<script src="/js/common/comm-data.js"></script>
+<script src="/js/common/comm_service.js"></script>
+<script src="/js/common/jweixin-1.0.0.js"></script>
+<script src="/js/common/log.js"></script>
+<script src="/js/common/shareAll.js"></script>
+<script src="/js/common/comm.cutArray.js"></script>
+<script src="../../js/scene/exercises/json2.js" type="text/javascript"></script>
+<script  src="../../js/scene/exercises/radialIndicator.js" type="text/javascript"></script>
+<script src="../../js/scene/exercises/exercise.js" type="text/javascript"></script>
+</body>
+
+</html>
