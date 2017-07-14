@@ -1,0 +1,22 @@
+
+{
+  "name":"ajaxFn(opt)",
+  "des":"ajax获取数据的引用方法",
+  "attention":[""],
+  "comp":"IE8中不兼容！",
+  "scene":"医鼎首页课程表的圆弧显示，适用于有圆弧渐变显示的页面",
+  "returnVal":{
+    "isNull":true,//无返回值
+    "des":"",
+    "type":"json",
+    "val":{}
+
+  },
+  "code":"",
+  "param":{
+    "isNull":false,
+    "des":"",
+    "type":"json",
+    "val":{}
+  }
+}

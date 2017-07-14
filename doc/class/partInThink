@@ -1,0 +1,13 @@
+{
+  "name":"partInThink()",
+  "des":"//该方法是对课后思考题进行讨论。",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+  },
+  "param":{
+    "isNull":true
+  }
+}

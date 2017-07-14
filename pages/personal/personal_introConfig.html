@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>编辑简介</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/yiding.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=750">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/personal/personal_introConfig.css">
+    <link rel="stylesheet" href="/js/third-party/jquery-autocomplete/jquery.autocomplete.css">
+    <script src="/js/third-party/jquery/jquery-1.8.0.min.js"></script>
+    <script src="/js/third-party/jquery/jquery.json-2.4.js"></script>
+    <script src="/js/common/rem.js"></script>
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="/build/compatibility.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<!-- 主内容容器 -->
+<section class="yd-mainInner none">
+    <section class="contentInner">
+        <a href="personal_index.html?sourceType=51" class="pcModule yd-pageBackBtn"><img src="/image/personal/nav_back_black@2x.png"
+                                                                           alt=""><span>返回</span></a>
+        <a href="personal_qualification.html?sourceType=51" class="pcModule yd-pageBackBtn"
+           style="float: right;"><span>认证信息</span></a>
+
+        <header class="yd-indexHeader mobileModule">
+            <figure class="yd-indexHeaderItem">
+                <a href="javascript:history.go(-1);">
+                    <img src="/image/personal/nav_back_black@2x.png" alt="">
+                </a>
+            </figure>
+            <figure class="yd-indexHeaderItem">
+                <h1>编辑简介</h1>
+            </figure>
+            <figure class="yd-indexHeaderItem">
+                <a href="javascript:void(0)">
+                    保存
+                </a>
+            </figure>
+        </header>
+        <!-- configOff不可编辑 -->
+        <section class="yd-tableModule Ev-userBaseMsg" style="padding-bottom: 25px">
+            <header class="yd-tableModuleConfigTitle ">
+                <h2>基本信息<p class="Ev-baseMsgConfig pcModule">编辑</p></h2>
+            </header>
+            <article class="yd-tableModuleItem" style="margin-top: 8px;">
+                <h3>姓名</h3>
+                <figure class="yd-tableModuleItemInput">
+                    <input type="text" placeholder="请输入姓名" id="Ev-userNameInput" disabled="disabled">
+                </figure>
+            </article>
+            <article class="yd-tableModuleItem">
+                <h3>性别</h3>
+                <figure class="yd-tableModuleItemInput">
+                    <article class="yd-tableModuleSelect">
+                        <figure class="yd-tableSexSelector on" id="sex-man" data-role="1">
+                            <p><i></i><span>男</span></p>
+                        </figure>
+                        <figure class="yd-tableSexSelector" id="sex-woman" data-role="2">
+                            <p><i></i><span>女</span></p>
+                        </figure>
+                    </article>
+                </figure>
+            </article>
+            <article class="yd-tableModuleItem">
+                <h3>出生年月</h3>
+                <figure class="yd-tableModuleItemInput" style="line-height: 24px;">
+                    <article class="yd-tableModuleSelect yd-timeSelect ">
+                        <select id="year" disabled="disabled">
+                            <option selected="true" value=""></option>
+                        </select>
+                        <span style="font-size: 15px;">年</span>
+                    </article>
+                    <article class="yd-tableModuleSelect yd-timeSelect ">
+                        <select id="month" disabled="disabled">
+                            <option selected="true" value=""></option>
+                        </select>
+                        <span style="font-size: 15px;">月</span>
+                    </article>
+                    <article class="yd-tableModuleSelect yd-timeSelect ">
+                        <select id="day" disabled="disabled">
+                            <option selected="true" value=""></option>
+                        </select>
+                        <span style="font-size: 15px;">日</span>
+                    </article>
+                    <p class="yd-tableErrorTips Ev-baseTimeErrorTips"><i></i><span></span></p>
+                </figure>
+            </article>
+            <figure class="yd-tableItemContent Ev-ensureBtnBox pcModule" style="display: none;padding-bottom: 0;">
+                <button class="yd-personalAdviceSubmit" id="base_save">确定</button>
+                <button class="yd-personalAdviceCancel" id="base_cancel">取消</button>
+            </figure>
+        </section>
+        <section class="yd-tableModule Ev-userIntroduce clear">
+            <header class="yd-tableModuleConfigTitle">
+                <h2>个人简介<p class="Ev-introduceConfig pcModule">编辑</p></h2>
+            </header>
+            <article class="yd-tableModuleContent">
+                <p class="yd-introduceContent Ev-introduceContent"></p>
+                <textarea id="Ev-introduceTextarea" placeholder="请输入个人简介" style="margin: 24px 0 0;"></textarea>
+                <a class="yd-introduceOpen" href="javascript:void(0)">展开</a>
+            </article>
+            <figure class="yd-tableItemContent Ev-ensureBtnBox pcModule" style="display: none; padding-left: 24px; float: right;">
+
+                <button class="yd-personalAdviceCancel" id="base_cancel">取消</button>
+                <button class="yd-personalAdviceSubmit" style="margin: 25px 0 0 6px;" id="it_base_save">确定</button>
+            </figure>
+        </section>
+        <section class="yd-tableGoToAuth Ev-noAuthUser">
+            <h3>去认证，将可以获得更多特权</h3>
+            <a class="btn-primary" href="personal_qualification.html">去认证</a>
+        </section>
+        <section class="yd-tableModule configOff Ev-authUserContent">
+            <article class="yd-tableModuleItem">
+                <h3>专业</h3>
+                <figure class="yd-tableModuleItemInput Ev-deparmentSelect">
+                    <span></span>
+                </figure>
+            </article>
+            <article class="yd-tableModuleItem">
+                <h3>职称</h3>
+                <figure class="yd-tableModuleItemInput Ev-medicalSelect ">
+                    <span></span>
+                </figure>
+            </article>
+            <article class="yd-tableModuleItem">
+                <h3>就职医院</h3>
+                <figure class="yd-tableModuleItemInput Ev-hospitalSelect">
+                    <span></span>
+                </figure>
+            </article>
+            <article class="yd-tableModuleItem">
+                <h3>住培基地</h3>
+                <figure class="yd-tableModuleItemInput Ev-baseSelect">
+                    <span></span>
+                </figure>
+            </article>
+        </section>
+        <section class="yd-tableModule Ev-personalMsgBox Ev-workExperience">
+            <header class="yd-tableModuleConfigTitle">
+                <h2>工作经历</h2>
+            </header>
+
+            <section class="yd-tableModule Ev-personalDataConfig Ev-workExperienceTable">
+                <article class="yd-tableModuleItem">
+                    <h3>地点</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <input type="text" id="Ev-workExpPlace" placeholder="请输入地点" value="">
+                        <p class="yd-tableErrorTips Ev-workExpPlaceErrorTips"><i></i><span></span></p>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>单位</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <input type="text" id="Ev-workExpCompany" placeholder="请选择单位" value="">
+                        <p class="yd-tableErrorTips Ev-workExpCompanyErrorTips"><i></i><span></span></p>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>所在科室</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <input type="text" id="Ev-workExpDepartment" placeholder="请选择科室" value="">
+                        <p class="yd-tableErrorTips Ev-workExpDepartmentErrorTips"><i></i><span></span></p>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>职称</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <input type="text" id="Ev-workExpMedicalTitle" placeholder="请选择职称" value="">
+                        <p class="yd-tableErrorTips Ev-workExpMedicalTitleErrorTips"><i></i><span></span></p>
+                        <section class="yd-tagSelectorBox pcModule Ev-medicalBox">
+                            <header class="yd-tagSelectorBoxTitle">选择职称<span class="yd-tagSelectorBoxCloseBtn">X</span>
+                            </header>
+                            <section class="yd-tagSelectorItem ev-medicalConList">
+                                <article class="yd-tagSelectorList ev-medicalConFirstList">
+                                </article>
+                                <article class="yd-tagSelectorList ev-medicalConSecondList" style="display: none;">
+                                </article>
+                                <article class="yd-tagSelectorList ev-medicalConThirdList" style="display: none;">
+                                </article>
+                            </section>
+                            <footer class="yd-tagSelectorBoxFootBtn">
+                                <button class="yd-personalAdviceSubmit Ev-medicalSure">确定</button>
+                                <button class="yd-personalAdviceCancel Ev-medicalCancel">取消</button>
+                            </footer>
+                        </section>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>任职时间</h3>
+                    <figure class="yd-tableModuleItemInput"  style="line-height: 24px;">
+                        <article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-workExpYear01" value="">
+                                <option value="0"></option>
+                            </select>
+                            <span>年</span>
+                        </article>
+                        <article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-workExpMonth01">
+                                <option value="0"></option>
+                            </select>
+                            <span>月</span>
+                        </article>
+                        <p class="yd-tableErrorTips Ev-workExpTimeErrorTips">
+                            <i></i><span></span>
+                        </p>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>结束时间</h3>
+                    <figure class="yd-tableModuleItemInput"  style="line-height: 24px;">
+                        <article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-workExpYear02">
+                                <option value="0"></option>
+                            </select>
+                            <span>年</span>
+                        </article>
+                        <article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-workExpMonth02">
+                                <option value="0"></option>
+                            </select>
+                            <span>月</span>
+                        </article>
+                        <button class="yd-toNow" id="Ev-workExpToNow"><i></i><span>至今</span></button>
+                    </figure>
+
+                </article>
+                <figure class="yd-tableItemContent Ev-ensureBtnBox pcModule" style="display: block;">
+                    <button class="yd-personalAdviceSubmit" id="we_base_save" data-enable="on">确定</button>
+                    <button class="yd-personalAdviceCancel" id="base_cancel">取消</button>
+                </figure>
+            </section>
+            <footer class="yd-personalContentAdd Ev-workExperienceAdd">
+                <a href="javascript:void(0)"><i class="icon-add"></i><span>添加</span></a>
+            </footer>
+            <section class="yd-historyTimelineContent Ev-workExperienceContent">
+            </section>
+        </section>
+        <section class="yd-tableModule Ev-personalMsgBox Ev-eduBackground">
+            <header class="yd-tableModuleConfigTitle">
+                <h2>教育背景</h2>
+            </header>
+
+            <section class="yd-tableModule Ev-personalDataConfig Ev-eduBackgroundTable">
+                <article class="yd-tableModuleItem">
+                    <h3>就读城市</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <input id="Ev-eduBackgroundPlace" type="text" placeholder="请选择地点">
+                        <p class="yd-tableErrorTips Ev-eduBackgroundPlaceErrorTips"><i></i><span></span></p>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>学校名称</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <input id="Ev-eduBackgroundSchool" type="text" placeholder="请选择学校">
+                        <p class="yd-tableErrorTips Ev-eduBackgroundSchoolErrorTips"><i></i><span></span></p>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>所学专业</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <input id="Ev-eduBackgroundProfession" type="text" placeholder="请选择专业">
+                        <p class="yd-tableErrorTips Ev-eduBackgroundProfessionErrorTips"><i></i><span></span></p>
+                        <section class="yd-tagSelectorBox pcModule Ev-majorBox">
+                            <header class="yd-tagSelectorBoxTitle">选择专业<span class="yd-tagSelectorBoxCloseBtn">X</span>
+                            </header>
+                            <section class="yd-tagSelectorItem">
+                                <article class="yd-tagSelectorList">
+                                </article>
+                            </section>
+                            <footer class="yd-tagSelectorBoxFootBtn">
+                                <button class="yd-personalAdviceSubmit Ev-majorSure">确定</button>
+                                <button class="yd-personalAdviceCancel Ev-majorCancel">取消</button>
+                            </footer>
+                        </section>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>获得学历</h3>
+                    <figure class="yd-tableModuleItemInput"  style="line-height: 24px;">
+                        <article class="yd-tableModuleSelect yd-timeSelect">
+                            <select class="yd-selected" id="Ev-eduBackgroundQualifications" style="color: #222">
+                                <option value="4">专科</option>
+                                <option value="5">本科</option>
+                                <option value="6">硕士研究生</option>
+                                <option value="7">博士研究生</option>
+                            </select>
+                        </article>
+                        <p class="yd-tableErrorTips Ev-eduBackgroundEduTitleErrorTips"><i></i><span></span></p>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>开始时间</h3>
+                    <figure class="yd-tableModuleItemInput"  style="line-height: 24px;">
+                        <article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-eduBackgroundYear01">
+                                <option value="0"></option>
+                            </select>
+                            <span>年</span>
+                        </article>
+                        <article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-eduBackgroundMonth01">
+                                <option value="0"></option>
+                            </select>
+                            <span>月</span>
+                        </article>
+                        <p class="yd-tableErrorTips Ev-eduBackgroundTimeErrorTips">
+                            <i></i><span></span>
+                        </p>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>结束时间</h3>
+                    <figure class="yd-tableModuleItemInput"  style="line-height: 24px;">
+                        <article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-eduBackgroundYear02">
+                                <option value="0"></option>
+                            </select>
+                            <span>年</span>
+                        </article>
+                        <article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-eduBackgroundMonth02">
+                                <option value="0"></option>
+                            </select>
+                            <span>月</span>
+                        </article>
+                        <button class="yd-toNow" id="Ev-eduBackgroundToNow"><i></i><span>至今</span></button>
+                    </figure>
+                </article>
+                <figure class="yd-tableItemContent Ev-ensureBtnBox pcModule" style="display: block;">
+                    <button class="yd-personalAdviceSubmit" id="eb_base_save">确定</button>
+                    <button class="yd-personalAdviceCancel" id="base_cancel">取消</button>
+                </figure>
+            </section>
+            <footer class="yd-personalContentAdd Ev-eduBackgroundAdd">
+                <a href="javascript:void(0)"><i class="icon-add"></i><span>添加</span></a>
+            </footer>
+            <section class="yd-historyTimelineContent Ev-eduBackgroundContent">
+            </section>
+        </section>
+        <section class="yd-tableModule Ev-personalMsgBox Ev-continueEdu">
+            <header class="yd-tableModuleConfigTitle">
+                <h2>继续教育</h2>
+            </header>
+
+            <section class="yd-tableModule Ev-personalDataConfig Ev-continueEduTable">
+                <article class="yd-tableModuleItem">
+                    <h3>学术机构</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <input id="Ev-continueEduCompany" type="text" placeholder="请输入机构名称">
+                        <p class="yd-tableErrorTips Ev-continueEduCompanyErrorTips"><i></i><span></span></p>
+
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>培训内容</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <input id="Ev-continueEduContentText" type="text" placeholder="请输入培训内容">
+                        <p class="yd-tableErrorTips Ev-continueEduContentTextErrorTips"><i></i><span></span></p>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>开始时间</h3>
+                    <figure class="yd-tableModuleItemInput"  style="line-height: 24px;">
+                        <article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-continueEduYear01">
+                                <option value="0"></option>
+                            </select>
+                            <span>年</span>
+                        </article>
+                        <article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-continueEduMonth01">
+                                <option value="0"></option>
+                            </select>
+                            <span>月</span>
+                        </article>
+                        <!--<article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-continueEduDay01">
+                                <option value="0"></option>
+                            </select>
+                            <span>日</span>
+                        </article>-->
+                        <p class="yd-tableErrorTips Ev-continueEduTimeErrorTips">
+                            <i></i><span></span>
+                        </p>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>结束时间</h3>
+                    <figure class="yd-tableModuleItemInput"  style="line-height: 24px;">
+                        <article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-continueEduYear02">
+                                <option value="0"></option>
+                            </select>
+                            <span>年</span>
+                        </article>
+                        <article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-continueEduMonth02">
+                                <option value="0"></option>
+                            </select>
+                            <span>月</span>
+                        </article>
+                        <!--<article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-continueEduDay02">
+                                <option value="0"></option>
+                            </select>
+                            <span>日</span>
+                        </article>-->
+                    </figure>
+
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>获得证书</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <input id="Ev-continueEduDiploma" type="text" placeholder="请输入证书名称">
+                        <p class="yd-tableErrorTips Ev-continueEduDiplomaErrorTips"><i></i><span></span></p>
+                    </figure>
+                </article>
+                <figure class="yd-tableItemContent Ev-ensureBtnBox pcModule" style="display: block;">
+                    <button class="yd-personalAdviceSubmit" id="ce_base_save">确定</button>
+                    <button class="yd-personalAdviceCancel" id="base_cancel">取消</button>
+                </figure>
+            </section>
+            <footer class="yd-personalContentAdd Ev-continueEduAdd">
+                <a href="javascript:void(0)"><i class="icon-add"></i><span>添加</span></a>
+            </footer>
+            <section class="yd-historyTimelineContent Ev-continueEduContent">
+            </section>
+        </section>
+        <section class="yd-tableModule Ev-personalMsgBox Ev-award">
+            <header class="yd-tableModuleConfigTitle">
+                <h2>获得荣誉</h2>
+            </header>
+
+            <section class="yd-tableModule Ev-personalDataConfig Ev-awardTable">
+                <article class="yd-tableModuleItem">
+                    <h3>荣誉名称</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <input id="Ev-awardName" type="text" placeholder="请输入荣誉名称">
+                        <p class="yd-tableErrorTips Ev-awardNameErrorTips"><i></i><span></span></p>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>颁发机构</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <input id="Ev-awardCompany" type="text" placeholder="请输入颁发机构">
+                        <p class="yd-tableErrorTips Ev-awardCompanyErrorTips"><i></i><span></span></p>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>获得时间</h3>
+                    <figure class="yd-tableModuleItemInput"  style="line-height: 24px;">
+                        <article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-awardYear01">
+                                <option value="0"></option>
+                            </select>
+                            <span>年</span>
+                        </article>
+                    </figure>
+                </article>
+                <figure class="yd-tableItemContent Ev-ensureBtnBox pcModule" style="display: block;">
+                    <button class="yd-personalAdviceSubmit" id="ac_base_save" data-enable="off">确定</button>
+                    <button class="yd-personalAdviceCancel" id="base_cancel">取消</button>
+                </figure>
+            </section>
+            <footer class="yd-personalContentAdd Ev-awardContentAdd">
+                <a href="javascript:void(0)"><i class="icon-add"></i><span>添加</span></a>
+            </footer>
+            <section class="yd-historyTimelineContent Ev-awardContent">
+            </section>
+        </section>
+        <section class="yd-tableModule Ev-personalMsgBox Ev-foud">
+            <header class="yd-tableModuleConfigTitle">
+                <h2>科研基金</h2>
+            </header>
+
+            <section class="yd-tableModule Ev-personalDataConfig Ev-foudTable">
+                <article class="yd-tableModuleItem">
+                    <h3>项目名称</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <input id="Ev-foudName" type="text" placeholder="请输入项目名称">
+                        <p class="yd-tableErrorTips Ev-foudNameErrorTips"><i></i><span></span></p>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>项目编号</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <input id="Ev-foudNumber" type="text" placeholder="请输入项目编号">
+                        <p class="yd-tableErrorTips Ev-foudNumberErrorTips"><i></i><span></span></p>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>批注年度</h3>
+                    <figure class="yd-tableModuleItemInput"  style="line-height: 24px;">
+                        <article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-foudYear01">
+                                <option value="0"></option>
+                            </select>
+                            <span>年</span>
+                        </article>
+                    </figure>
+                </article>
+                <figure class="yd-tableItemContent Ev-ensureBtnBox pcModule" style="display: block;">
+                    <button class="yd-personalAdviceSubmit" id="fd_base_save" data-enable="off">确定</button>
+                    <button class="yd-personalAdviceCancel" id="base_cancel">取消</button>
+                </figure>
+            </section>
+            <footer class="yd-personalContentAdd Ev-foudAdd">
+                <a href="javascript:void(0)"><i class="icon-add"></i><span>添加</span></a>
+            </footer>
+            <section class="yd-historyTimelineContent Ev-foudContent">
+            </section>
+        </section>
+        <section class="yd-tableModule Ev-personalMsgBox Ev-business">
+            <header class="yd-tableModuleConfigTitle">
+                <h2>社会任职</h2>
+            </header>
+
+            <section class="yd-tableModule Ev-personalDataConfig Ev-businessTable">
+                <article class="yd-tableModuleItem">
+                    <h3>机构名称</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <input id="Ev-businessCompany" type="text" placeholder="请输入机构名称">
+                        <p class="yd-tableErrorTips Ev-businessCompanyErrorTips"><i></i><span></span></p>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>职位名称</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <input id="Ev-businessName" type="text" placeholder="请输入职位名称">
+                        <p class="yd-tableErrorTips Ev-businessNameErrorTips"><i></i><span></span></p>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>任职时间</h3>
+                    <figure class="yd-tableModuleItemInput"  style="line-height: 24px;">
+                        <article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-businessYear01">
+                                <option value="0"></option>
+                            </select>
+                            <span>年</span>
+                        </article>
+                        <article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-businessMonth01">
+                                <option value="0"></option>
+                            </select>
+                            <span>月</span>
+                        </article>
+                        <p class="yd-tableErrorTips Ev-businessTimeErrorTips">
+                            <i></i><span></span>
+                        </p>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>结束时间</h3>
+                    <figure class="yd-tableModuleItemInput"  style="line-height: 24px;">
+                        <article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-businessYear02">
+                                <option value="0"></option>
+                            </select>
+                            <span>年</span>
+                        </article>
+                        <article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-businessMonth02">
+                                <option value="0"></option>
+                            </select>
+                            <span>月</span>
+                        </article>
+                        <button class="yd-toNow" id="Ev-businessToNow"><i></i><span>至今</span></button>
+                    </figure>
+                </article>
+                <figure class="yd-tableItemContent Ev-ensureBtnBox pcModule" style="display: block;">
+                    <button class="yd-personalAdviceSubmit" id="bs_base_save">确定</button>
+                    <button class="yd-personalAdviceCancel" id="base_cancel">取消</button>
+                </figure>
+            </section>
+            <footer class="yd-personalContentAdd Ev-businessAdd">
+                <a href="javascript:void(0)"><i class="icon-add"></i><span>添加</span></a>
+            </footer>
+            <section class="yd-historyTimelineContent Ev-businessContent">
+            </section>
+        </section>
+        <section class="yd-tableModule Ev-personalMsgBox Ev-treatise">
+            <header class="yd-tableModuleConfigTitle">
+                <h2>学术专著</h2>
+            </header>
+
+            <section class="yd-tableModule Ev-personalDataConfig Ev-treatiseTable">
+                <article class="yd-tableModuleItem">
+                    <h3>学术标题</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <input id="Ev-treatiseTitle" type="text" placeholder="请输入学术标题">
+                        <p class="yd-tableErrorTips Ev-treatiseTitleErrorTips"><i></i><span></span></p>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>作者身份</h3>
+                    <figure class="yd-tableModuleItemInput"  style="line-height: 24px;">
+                        <article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-treatiseCapacity">
+                                <option value="0">请选择</option>
+                                <option value="1">第一作者</option>
+                                <option value="2">第一译者</option>
+                                <option value="3">联合作者</option>
+                                <option value="4">联合译者</option>
+                            </select>
+                        </article>
+                        <p class="yd-tableErrorTips Ev-treatiseCapacityErrorTips"><i></i><span></span></p>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>出版机构</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <input id="Ev-treatiseCompany" type="text" placeholder="请输入出版机构">
+                        <p class="yd-tableErrorTips Ev-treatiseCompanyErrorTips"><i></i><span></span></p>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>出版时间</h3>
+                    <figure class="yd-tableModuleItemInput"  style="line-height: 24px;">
+                        <article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-treatiseYear01">
+                                <option value="0"></option>
+                            </select>
+                            <span>年</span>
+                        </article>
+                        <article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-treatiseMonth01">
+                                <option value="0"></option>
+                            </select>
+                            <span>月</span>
+                        </article>
+                        <!--<article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-treatiseDay01">
+                                <option value="0"></option>
+                            </select>
+                            <span>日</span>
+                        </article>-->
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>引用信息</h3>
+                    <figure class="yd-tableModuleItemInput"
+                            style="position: static;margin-left: 0.925rem;vertical-align: top;width: 31.25rem">
+                        <textarea id="Ev-treatiseMsg" type="text" placeholder="请输入引用信息"
+                                  style="display: inline-block"></textarea>
+                        <p class="yd-tableErrorTips Ev-treatiseMsgErrorTips"><i></i><span></span></p>
+                    </figure>
+                </article>
+                <figure class="yd-tableItemContent Ev-ensureBtnBox pcModule" style="display: block;">
+                    <button class="yd-personalAdviceSubmit" id="tr_base_save">确定</button>
+                    <button class="yd-personalAdviceCancel" id="base_cancel">取消</button>
+                </figure>
+            </section>
+            <footer class="yd-personalContentAdd Ev-treatiseAdd">
+                <a href="javascript:void(0)"><i class="icon-add"></i><span>添加</span></a>
+            </footer>
+            <section class="yd-historyTimelineContent Ev-treatiseContent">
+            </section>
+        </section>
+        <section class="yd-tableModule Ev-personalMsgBox Ev-invented">
+            <header class="yd-tableModuleConfigTitle">
+                <h2>发明专利</h2>
+            </header>
+
+            <section class="yd-tableModule Ev-personalDataConfig Ev-inventedTable">
+                <article class="yd-tableModuleItem">
+                    <h3>专利名称</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <input id="Ev-inventedName" type="text" placeholder="请输入专利名称">
+                        <p class="yd-tableErrorTips Ev-inventedNameErrorTips"><i></i><span></span></p>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>专利编号</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <input id="Ev-inventedNumber" type="text" placeholder="请输入专利编号">
+                        <p class="yd-tableErrorTips Ev-inventedNumberErrorTips"><i></i><span></span></p>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>公告日期</h3>
+                    <figure class="yd-tableModuleItemInput"  style="line-height: 24px;">
+                        <article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-inventedYear01">
+                                <option value="0"></option>
+                            </select>
+                            <span>年</span>
+                        </article>
+                        <article class="yd-tableModuleSelect yd-timeSelect">
+                            <select id="Ev-inventedMonth01">
+                                <option value="0"></option>
+                            </select>
+                            <span>月</span>
+                        </article>
+                    </figure>
+                </article>
+                <article class="yd-tableModuleItem">
+                    <h3>注册国家</h3>
+                    <figure class="yd-tableModuleItemInput">
+                        <input id="Ev-inventedCountry" type="text" placeholder="请选择注册国家">
+                        <p class="yd-tableErrorTips Ev-inventedCountryErrorTips"><i></i><span></span></p>
+                    </figure>
+                </article>
+                <figure class="yd-tableItemContent Ev-ensureBtnBox pcModule" style="display: block;">
+                    <button class="yd-personalAdviceSubmit" id="base_save" data-enable="off">确定</button>
+                    <button class="yd-personalAdviceCancel" id="base_cancel">取消</button>
+                </figure>
+            </section>
+            <footer class="yd-personalContentAdd Ev-inventedAdd">
+                <a href="javascript:void(0)"><i class="icon-add"></i><span>添加</span></a>
+            </footer>
+            <section class="yd-historyTimelineContent Ev-inventedContent">
+            </section>
+        </section>
+    </section>
+</section>
+
+<!--common.log统计ip,address-->
+<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+<!-- end -->
+<script src="/js/third-party/jquery/jquery-1.8.0.min.js"></script>
+<!--about:jq-->
+<script src="/build/jqAll.js"></script>
+<!-- end -->
+<script src="/js/third-party/jquery-autocomplete/jquery.autocomplete.js"></script>
+<script src="/js/third-party/jquery-autocomplete/jquery.lenovo.js"></script>
+<!--about:common&login-->
+<script src="/build/common.js"></script>
+<!-- end -->
+<script src="/js/common/ymd.js"></script>
+
+<script src="/js/scene/personal/personalCommon.js"></script>
+<script src="/js/scene/personal/personalIntroConfig.js"></script>
+</body>
+
+
+
+</html>

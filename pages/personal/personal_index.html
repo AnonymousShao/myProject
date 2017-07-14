@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>个人主页 - 医鼎</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/yiding.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="keywords" content="我的主页、我的首页、个人主页、个人首页">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=750">
+    <meta data-alcode="a8" >
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/personal/personal_index.css">
+    <script src="/js/common/rem.js"></script>
+
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="/build/compatibility.js"></script>
+    <script src="/js/third-party/excanvas.js"></script>
+    <![endif]-->
+
+</head>
+
+<body data-alcode="42">
+<!-- 主内容容器 -->
+<section class="yd-mainInner none">
+    <nav class="yd-personalUserNoQualification" id="mValidEmail" style="display: none!important">
+        <article>我们需要认证您的邮箱<span class="al-personalUserEmail"></span>,
+            <a href="javascript:void(0)" id="mValidEmailResendBtn">点击发送验证邮件</a>。
+            <i class="al-close test_mail_close"><img src="/image/personal/close.png"></i>
+        </article>
+    </nav>
+    <section class="contentInner">
+        <!-- 头部 -->
+        <header class="yd-personalHeader yd-personalNoLogin">
+            <figure class="yd-personalImg" id="Ev-headImgUploadBtn">
+                <img src="" alt="">
+                <figure class="yd-loading" style="display: none;">
+                    <img src="/image/personal/loading_big@2x.png" alt="">
+                </figure>
+            </figure>
+            <a class="btn-yellow yd-personalLoginBtn">去登录</a>
+            <div class="setting" style="display: inline-block"><i class="icon-personalConfig"></i></div>
+            <!--<a href="personal_setting.html?sourceType=42" class="setting"><i class="icon-personalConfig"></i></a>-->
+        </header>
+
+        <!-- 滚动页头 -->
+        <header class="yd-personalScrollHead mobileModule">
+            <h2>个人中心</h2>
+        </header>
+        <!-- 入口 -->
+        <section class="yd-personalEntry">
+            <figure class="yd-personalEntryItem">
+                <a href="personal_wrongList.html?sourceType=42" target="_blank">
+                    <i class="icon-personalWrong"></i><span class="EV-activityEntry">错题本</span>
+                </a>
+            </figure>
+            <!--未激活添加off-->
+            <figure class="yd-personalEntryItem">
+                <a href="personal_myDiscuss.html?sourceType=42">
+                    <i class="icon-personalDiscuss"></i><span class="EV-activityEntry">我的讨论</span>
+                </a>
+            </figure>
+            <figure class="yd-personalEntryItem">
+                <a href="personal_collection.html?sourceType=42">
+                    <i class="icon-personalCollect"></i><span class="EV-activityEntry">收藏</span>
+                </a>
+            </figure>
+            <figure class="yd-personalEntryItem">
+                <a href="personal_learnHistory.html?sourceType=42">
+                    <i class="icon-personalHistory"></i><span class="EV-activityEntry">学习历史</span>
+                </a>
+            </figure>
+        </section>
+        <figure class="yd-noContentTips">
+            <img src="/image/personal/message_nor@2x.png" alt="">
+            <figcaption>
+                登录后查看学习报告
+            </figcaption>
+        </figure>
+        <!-- 资料完整度Rader图 -->
+        <figure class="yd-personalMessageRatio">
+
+            <div class="yd-raderItemOnCircle"></div>
+            <canvas id="myChart" class="yd-personalRader" width="750" height="400">
+
+            </canvas>
+            <figure class="yd-personalRaderItem" data-index="0"></figure>
+            <figure class="yd-personalRaderItem" data-index="1"></figure>
+            <figure class="yd-personalRaderItem " data-index="2"></figure>
+            <figure class="yd-personalRaderItem " data-index="3"></figure>
+            <figure class="yd-personalRaderItem " data-index="4"></figure>
+            <figure class="yd-personalRaderItem " data-index="5"></figure>
+            <figure class="yd-personalRaderItem " data-index="6"></figure>
+            <figure class="yd-personalRaderItem " data-index="7"></figure>
+            <figure class="yd-personalRaderItem " data-index="8"></figure>
+            <figure class="yd-personalRaderItem " data-index="9"></figure>
+            <figure class="yd-personalRaderItem " data-index="10"></figure>
+            <figure class="yd-personalRaderItem " data-index="11"></figure>
+            <figure class="yd-personalRaderItem " data-index="12"></figure>
+            <figure class="yd-personalRaderItem " data-index="13"></figure>
+            <figure class="yd-personalRaderItem " data-index="14"></figure>
+            <figure class="yd-personalRaderItem " data-index="15"></figure>
+        </figure>
+        <!-- 课程完成度 -->
+        <section class="yd-personalClassRatio">
+        </section>
+    </section>
+    <footer class="al-footerBar mobileModule" id="al-footerBar">
+        <a href="javascript:;" class="al-footerBarItem">
+            <img src="/image/index/Tabbar_index_def@2x.png" alt="">
+            <figcaption class="al-footerBarItemTitle">
+                首页
+            </figcaption>
+        </a>
+        <a href="javascript:;" class="al-footerBarItem">
+            <img src="/image/index/Tabbar_classify_def@2x.png" alt="">
+            <figcaption class="al-footerBarItemTitle">
+                分类
+            </figcaption>
+        </a>
+        <a href="javascript:;" class="al-footerBarItem">
+            <img src="/image/index/Tabbar_personal_sel@2x.png" alt="">
+            <figcaption class="al-footerBarItemTitle active">
+                我的
+            </figcaption>
+        </a>
+    </footer>
+    <section class="yd-settingHeadImg mobileModule">
+        <a href="###" class="yd-stopTips">不再提示</a>
+        <a href="###" class="yd-skip">跳过</a>
+        <figure class="yd-defaultImg">
+            <img src="/image/personal/Artboard.png" alt="">
+        </figure>
+        <figcaption>
+            <p>添加真实的头像信息</p>
+            <p>让更多人认识你</p>
+        </figcaption>
+        <button class="btn-uploadImg">上传头像</button>
+    </section>
+    <section class="yd-changeImg mobileModule" style="display: none;">
+        <header class="yd-indexHeader mobileModule">
+            <figure class="yd-indexHeaderItem Ev-uploadCancel">
+                <a href="###">
+                    <img src="/image/personal/nav_back_black@2x.png" alt="">
+                </a>
+            </figure>
+            <figure class="yd-indexHeaderItem">
+                <h1>上传头像</h1>
+            </figure>
+            <figure class="yd-indexHeaderItem">
+                <a href="javascript:void(0)">
+                    保存
+                </a>
+            </figure>
+        </header>
+        <figure class="yd-bigHeadImg">
+            <img src="/image/logo.png" alt="">
+        </figure>
+        <figcaption>
+            <button class="btn-primary">更换头像</button>
+        </figcaption>
+    </section>
+</section>
+
+<!--common.log统计ip,address-->
+<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+<!-- end -->
+<script src="/js/third-party/jquery/jquery-1.8.0.min.js"></script>
+<!--about:jq-->
+<script src="/build/jqAll.js"></script>
+<!-- end -->
+<script src="/js/third-party/ajaxfileupload.js"></script>
+<!--about:common&login-->
+<script src="/build/common.js"></script>
+<!-- end -->
+
+<script src="/js/third-party/upload.js"></script>
+<script src="/js/third-party/uploadReplace.js"></script>
+<script src="/js/third-party/plugin.readFile.js"></script>
+<script src="/js/third-party/plugin.replaceInput.js"></script>
+<script src="/js/common/comm.log.js"></script>
+<script src="/js/third-party/chart/Chart.js"></script>
+<!--[if lte IE 8]>
+<script src="/js/third-party/chart/Chart2.js"></script>
+<![endif]-->
+<script src="/js/scene/personal/personalIndex.js"></script>
+<script src="/js/common/comm.sps.js"></script>
+</body>
+
+</html>

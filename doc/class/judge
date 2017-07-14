@@ -1,0 +1,16 @@
+{
+  "name": "judge(callBack, ap)",
+  "des": "//用来判断讨论的权限，如果认证了，则可以任意回复。如果没有认证，则进入认证流程，并且根据不同的认证状态显示不同的认证提示语",
+  "attention": "",
+  "comp": "",
+  "scene": "",
+  "returnVal": {
+    "isNull": true
+  },
+  "param": {
+    "isNull":false,
+    "des":"",
+    "type":"function",
+    "timeUpdata":{"callBack":"回调函数","ap":"布尔值"}
+  }
+}

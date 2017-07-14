@@ -1,0 +1,13 @@
+{
+  "name":"videoFn.showDot()",
+  "des":"//该方法是在视频的进度条上添加节点，也是随堂测试出现题的地方。",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+  },
+  "param":{
+    "isNull":true
+  }
+}

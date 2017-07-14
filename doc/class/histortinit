@@ -1,0 +1,13 @@
+{
+  "name":"histortinit()",
+  "des":"//该方法用来获取用户对当前视频的观看记录，将视频按记录继续播放视频，并且在在这个过程中对视频锚点初始化，以及目录初始化。",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+  },
+  "param":{
+    "isNull":true
+  }
+}

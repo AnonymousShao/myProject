@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>搜索</title>
+		<meta name="viewport" content="width=750">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta content="telephone=no,email=no" name="format-detection">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="renderer" content="webkit">
+		<link rel="stylesheet" href="/css/base.css">
+		<link rel="stylesheet" href="/css/pages/index/index.css" />
+		<link rel="stylesheet" href="/css/pages/search/search.css" />
+		<script type="text/javascript" src="/js/common/mobile-util.js"></script>
+		<script type="text/javascript" src="/js/common/fastclick.js"></script>
+		<script type="text/javascript" src="/js/common/rem.js" ></script>
+		<script type="text/javascript" src="/js/third-party/jquery/jquery-1.8.0.min.js" ></script>
+		<!--[if lte IE 8]>
+		<script type="text/javascript" src="../../js/common/html5shiv.js" ></script>
+		<script type="text/javascript" src="js/../../js/common/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+	<!--全内容容器——mainInner-->
+	<section class="al-mainInner">
+		<header class="al-header al-indexHeader pcModule" style="margin-left: 0px;">
+			<section class="al-headerContainer">
+				<ul class="al-headerTopNav" id="al-headerTopNav">
+					<li class="active"><a href="javascript:void(0)">首页</a></li>
+					<li><a href="javascript:void(0)">课程</a></li>
+					<li><a href="javascript:void(0)">习题</a></li>
+				</ul>
+				<div class="al-se-lo-re">
+					<div class="al-search">
+						<i class="icon-search"></i>
+					</div>
+					<div class="al-lo-re notLogin" id="notLogin">
+						<div class="al-login">登录</div>
+						<div class="al-register">注册</div>
+					</div>
+					<div class="al-lo-re isLogin" id="isLogin">
+						<div class="user-header"></div>
+						<div class="user-name">黄志强</div>
+					</div>
+				</div>
+			</section>
+		</header>
+		<section id="al-mainSidebar" class="pcModule" style="width: auto; height: 1000px;position: fixed; left: 0;top: 0; z-index: 10;">
+			<!--左侧导航栏-->
+			<aside class="al-mainSidebar al-mainSidebarCollapse pcModule" style="width: 80px;" id="al-mainSidebarWide">
+				<header class="al-collapseLogo">
+					<img src="../../image/index/bigLogo.png" alt="">
+				</header>
+				<header class="al-mainLogo">
+					<img src="../../image/index/logo.png" alt="" style="box-shadow: rgb(51,51,51) 0px 0px 2px;">
+				</header>
+				<section class="al-mainSidebarList" id="al-mainSidebarList">
+					<ul>
+						<li class="al-mainSidebarItem active">
+							<a href="javascript:;">
+								<img src="../../image/index/home.png" alt="">
+								<figcaption>首页</figcaption>
+								<article class="al-collapseItem">
+									<p class="al-collapseItemText">
+									</p>
+									<h4>首页</h4>
+									<p>HOME</p>
+									<p></p>
+								</article>
+							</a>
+						</li>
+						<li class="al-mainSidebarItem">
+							<a href="/pages/message/message_index.html">
+								<img src="../../image/index/mail.png" alt="">
+								<figcaption>消息</figcaption>
+								<article class="al-collapseItem">
+									<p class="al-collapseItemText">
+									</p>
+									<h4>消息</h4>
+									<p>MESSAGE</p>
+									<p></p>
+								</article>
+							</a>
+						</li>
+					</ul>
+				</section>
+			</aside>
+		</section>
+		<!--右侧回到顶部+二维码+分享-->
+		<aside class="pcModule al-rightNav" id="al-rightNav" style="z-index: 100;">
+			<div class="toTop rightNav" id="toTop">
+				<i class="icon-toTop"></i>
+				<p>回到<br/>顶部</p>
+			</div>
+			<div class="code rightNav" id="code">
+				<i class="icon-code"></i>
+				<p>二维码</p>
+				<p class="codePic"></p>
+			</div>
+			<div class="share rightNav" id="share">
+				<i class="icon-share"></i>
+				<p class="shareTxt">分享</p>
+				<p class="sharePic">
+					<b>
+						<i class="icon-weixin"></i>
+						<em>微信</em>
+					</b>
+					<b>
+						<i class="icon-qq"></i>
+						<em>QQ</em>
+					</b>
+					<b>
+						<i class="icon-zone"></i>
+						<em>QQ空间</em>
+					</b>
+					<b>
+						<i class="icon-weibo"></i>
+						<em>微博</em>
+					</b>
+					<b>
+						<i class="icon-link"></i>
+						<em>链接</em>
+					</b>
+					<b>
+						<i class="icon-email"></i>
+						<em>邮箱</em>
+					</b>
+				</p>
+			</div>
+		</aside>
+		<!--手机端头部-->
+		<header class="mobileModule contentHeader">
+			<figure class="contentHeaderItem">
+				<a href="javascript:void(0)">
+					<i class="icon-download"></i>
+				</a>
+			</figure>
+			<figure class="contentHeaderItem">
+				医鼎
+			</figure>
+			<figure class="contentHeaderItem">
+				<a href="javascript:void(0)">
+					<i class="icon-search"></i>
+				</a>
+			</figure>
+		</header>
+		<section class="contentInner">
+			<section class="al-searchInputBar">
+				<i class="icon-searchreturn">返回</i>
+				<form action="javascript:;">
+					<input type="search" placeholder="请输入关键词" max="35">
+				</form>
+				<button class="al-search">搜索</button>
+			</section>
+			<div class="clearfix"></div>
+            <!--联想词-->
+            <section class="yd-searchResult" style="margin-top:0.3rem">
+                <article class="yd-searchResultItem">
+                    <span>主题</span>医院
+                </article>
+                <article class="yd-searchResultItem">
+                    主题医院
+                </article>
+                <article class="yd-searchResultItem">
+                    主题医院
+                </article>
+                <article class="yd-searchResultItem">
+                    主题医院
+                </article>
+                <article class="yd-searchResultItem">
+                    主题医院
+                </article>
+                <article class="yd-searchResultItem">
+                    主题医院
+                </article>
+                <article class="yd-searchResultItem">
+                    主题医院
+                </article>
+                <article class="yd-searchResultItem">
+                    主题医院
+                </article>
+                <article class="yd-searchResultItem">
+                    主题医院
+                </article>
+            </section>
+            <!--联想词 end-->
+
+
+			<!--热门搜索-->
+			<section class="al-searchItem">
+				<h2 class="al-searchTitle">热门搜索</h2>
+				<article class="al-hotSearchContent">
+					<span class="al-hotSearchWord" keyword="椎间孔镜">椎间孔镜</span>
+					<span class="al-hotSearchWord" keyword="胫骨平台骨折">胫骨平台骨折</span>
+					<span class="al-hotSearchWord" keyword="人工髋关节置换术">人工髋关节置换术</span>
+					<span class="al-hotSearchWord" keyword="跟骨骨折">跟骨骨折</span>
+					<span class="al-hotSearchWord" keyword="王秋根">王秋根</span>
+					<span class="al-hotSearchWord" keyword="踝关节骨折">踝关节骨折</span>
+					<span class="al-hotSearchWord" keyword="桡骨远端骨折">桡骨远端骨折</span>
+					<span class="al-hotSearchWord" keyword="骨盆骨折">骨盆骨折</span>
+				</article>
+			</section>
+			<!--历史纪录-->
+			<section class="al-historySearchContent">
+				<h2 class="al-searchTitle"><span class="clear-history">清空</span>历史搜索</h2>
+				<ul class="al-historySearchContent">
+					<li>上肢骨折与脱位</li>
+					<li>上肢骨折与脱位上肢骨折与脱位上肢骨折与脱位上肢骨折与脱位</li>
+					<li>骨科基础</li>
+					<li>顾客基础是</li>
+				</ul>
+			</section>
+			<!--清空历史记录弹出框-->
+			<div class="historyClear-dialog">
+
+			</div>
+			<!--搜索结果-->
+            <!--系列课程-->
+            <section class="">
+                <header class="contentItemHeader">
+                    <h2>系列课程<span>（5）</span></h2>
+                </header>
+                <section class="seriesCourses">
+                    <article class="contentArea" id="contentArea">
+                        <article class="bestItem" data-id="aaa">
+                            <figure class="bestItemImg">
+                                <img src="/image/index/jizhu1@2x.png" alt="">
+                            </figure>
+                            <figcaption class="bestItemMsg">
+                                <a href="javascript:void(0)">脊柱外科</a>
+                                <p>共<b>30</b>课时</p>
+                                <article class="addClass">
+                                    <i class="icon-addClass"></i>
+                                    <p>添加</p>
+                                </article>
+                                <article class="addClassActive">
+                                    <p>已添加</p>
+                                </article>
+                            </figcaption>
+                        </article>
+                    </article>
+
+                </section>
+            </section>
+            <!--系列课程 end-->
+
+			<section class="al-searchResult">
+				<section class="search-series">
+					<h2 class="al-searchTitle">精品课程<span>（5）</span></h2>
+                    <!--搜索有结果-->
+                    <section class="contentItem" id="quality" style="display: ;">
+                        <section class="contentInnerItem">
+                            <article class="contentInnerContext">
+                                <h2>骨的发生与正常结构</h2>
+                                <p><span class="user">徐毅老师</span><span class="hospital">北京大学第三医院</span></p>
+                                <article class="contentOtherMsg">
+                                    <span class="resourceType">脊柱外科</span>
+                                    <i class="icon-comment"><span>243</span></i>
+                                </article>
+                            </article>
+                            <figure class="contentInnerImg">
+                                <img src="/image/index/hh.png" alt="">
+                            </figure>
+                        </section>
+                        <section class="contentInnerItem">
+                            <article class="contentInnerContext">
+                                <h2>骨的发生与正常结构骨的发生与正常结构骨的发生与正常结构</h2>
+                                <p><span class="user">徐毅老师</span><span class="hospital">北京大学第三医院</span></p>
+                                <article class="contentOtherMsg">
+                                    <span class="resourceType">骨肿瘤</span>
+                                    <i class="icon-comment"><span>243</span></i>
+                                </article>
+                            </article>
+                            <figure class="contentInnerImg">
+                                <img src="/image/index/hh.png" alt="">
+                            </figure>
+                        </section>
+                    </section>
+				</section>
+                <!--搜索有结果 end-->
+                <!--a搜索无结果-->
+                <section class="contentItem" id="quality" style="display: ">
+                    <section class="contentInnerItem">
+                        <p class="Ydnone">没有找到医鼎课程</p>
+                        <p class="Ydnone">看看唯医资源吧</p>
+                    </section>
+                </section>
+                <!--a搜索无结果 end-->
+
+                <section class="search-series">
+                    <h2 class="al-searchTitle">唯医资源<span>(5615)</span></h2>
+                    <!--搜索有结果-->
+                    <section class="contentItem" id="recource" style="display: ;"><section class="contentInnerItem searchYDnone allinDoc" data-url="https://m.allinmd.cn/allin/personal/app/#/index?cid=1481695372900">							<article class="allinPersonal">								<figure class="allinUserImg"><img src="https://img00.allinmd.cn/default-user/doctor02.jpg" alt=""></figure>								<figure class="allinUserSynopsis">									<span class="name">骨科的</span>									<span class="hospital"></span>								</figure>							</article>						</section>
+                        <section class="al-contentPartModule al-contentUpTitleDownImg contentInnerItem "><article class="al-contentText contentInnerContext"><a href="//m.allinmd.cn/pages/conference/meeting-place.html?conId=1472545938791&amp;conName=CAOS-AORecon 国际关节课程&#9;" class="al-contentTitle contentInnerContext" target="_blank"><span>CAOS-AORecon 国际关节课程	</span></a><p class="al-contentOtherMsg" style="
+    margin-top: 16px;
+    font-size: 13px;
+"><span class="al-contentSeminarTime icon-contentSeminarTime"><i></i>2016/09/03-03</span><span class="icon-contentSeminarPlace"><i></i>中国.广州</span></p></article><section></section></section><section class="contentInnerItem searchYDnone allinDoc" data-url="https://m.allinmd.cn/allin/personal/app/#/index?cid=1481594993028">							<article class="allinPersonal">								<figure class="allinUserImg"><img src="https://img10.allinmd.cn/default/customer/190_190.jpg" alt=""></figure>								<figure class="allinUserSynopsis">									<span class="name">骨科</span>									<span class="hospital">邯郸市第一医院</span>								</figure>							</article>						</section><section class="contentInnerItem searchYDnone allinDoc">							<article class="contentInnerContext">								<a href="https://www.allinmd.cn/html/doc/2015/03/05/1425543833854.html">骨科概论</a>								<article class="contentOtherMsg">									<figure class="allinDocIcon">PDF</figure>									<figure class="personalName"><i></i><span>唯医小编</span></figure>									<figure class="watchNum"><i></i><span>10</span></figure>								</article>							</article>						</section><section class="contentInnerItem searchYDnone allinDoc">							<article class="contentInnerContext">								<a href="https://www.allinmd.cn/html/doc/2016/10/26/1477463224191.html">骨科论文</a>								<article class="contentOtherMsg">									<figure class="allinDocIcon">PDF</figure>									<figure class="personalName"><i></i><span>筱雅</span></figure>									<figure class="watchNum"><i></i><span>15</span></figure>								</article>							</article>						</section><section class="contentInnerItem searchYDnone allinDoc">							<article class="contentInnerContext">								<a href="https://www.allinmd.cn/html/doc/2016/10/26/1477471230145.html"> 骨科护理论文</a>								<article class="contentOtherMsg">									<figure class="allinDocIcon">PDF</figure>									<figure class="personalName"><i></i><span>小雨滴</span></figure>									<figure class="watchNum"><i></i><span>4</span></figure>								</article>							</article>						</section></section>
+                </section>
+			</section>
+		</section>
+	</section>
+    <!--搜索结果无内容-->
+    <figure class="yd-noContentTips">
+        <img src="/image/search/search-result_nor@2x.png" alt="">
+        <figcaption><p>没有找到相关内容</p><p>换个词试试吧</p></figcaption>
+    </figure>
+    <!--搜索结果无内容 end-->
+	<script src="/js/third-party/jquery/jquery-1.8.0.min.js"></script>
+	<script src="/js/third-party/jquery/jquery.json-2.4.js"></script>
+	<script src="/js/third-party/jqueryscrollpagination/js/scrollpagination.js"></script>
+	<script src="/js/third-party/fastclick.js"></script>
+	<script src="/js/common/main.js"></script>
+	<script src="/js/common/common.js"></script>
+	<script src="/js/common/comm.func.js"></script>
+	<script src="/js/common/comm-customer.js"></script>
+	<script src="/js/common/comm-data.js"></script>
+	<script src="/js/common/comm_service.js"></script>
+	<script src="/js/common/jweixin-1.0.0.js"></script>
+	<script src="/js/common/log.js"></script>
+	<script src="/js/common/shareAll.js"></script>
+	<script src="/js/common/comm.cutArray.js"></script>
+	</body>
+</html>

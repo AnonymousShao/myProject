@@ -1,0 +1,13 @@
+{
+  "name":"init()",
+  "des":"//课程终端页初始化方法，程序的入口地址",
+  "attention":"",
+  "comp":"",
+  "scene":"课程终端页面准备就绪后直接调用",
+  "returnVal":{
+    "isNull":true
+  },
+  "param":{
+    "isNull":true
+  }
+}

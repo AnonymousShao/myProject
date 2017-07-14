@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>专项练习－医鼎</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/yiding.ico">
+    <meta name="keywords" content="专项练习、考试、练习、海量习题、测试题">
+    <meta name="viewport" content="width=750">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <meta data-alcode="a8"/>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/exercises/exercises.css" />
+    <script src="/js/common/rem.js"></script>
+
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="/build/compatibility.js"></script>
+    <![endif]-->
+<body data-alcode="43">
+<!--全内容容器——mainInner-->
+<section class="yd-mainInner none">
+    <!--手机端头部-->
+    <section class="contentInner">
+        <!--专项练习的初始页-->
+        <section id="queSpecially" class="queSpeciallyIn none" data-alcode-mod="18" data-alcode-item-selector="span.queSpeciallyLiAns,span.queSpeciInnerLiAns">
+            <header class="queSpeciallyTitle">专项练习</header>
+            <ul class="queSpeciallyList">
+            </ul>
+        </section>
+    </section>
+</section>
+<!--common.log统计ip,address-->
+<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+<!-- end -->
+<script src="/js/third-party/jquery/jquery-1.8.0.min.js"></script>
+<!--about:jq-->
+<script src="/build/jqAll.js"></script>
+<!-- end -->
+<!--about:common&login-->
+<script src="/build/common.js"></script>
+<!-- end -->
+<script src="/js/scene/discuss/discuss.js"></script>
+<script src="../../js/scene/exercises/json2.js" type="text/javascript"></script>
+<script src="../../js/scene/exercises/exerciseCommon.min.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function(){
+        var  projectBeginOptions = {
+            "type": {
+                "page":0,
+                "exam":1
+            },
+            initData:{
+                "customerId":localStorage.getItem("userId")
+            },
+            "login":true,
+            "site":true
+        };
+        exerciseCommon.analysis(projectBeginOptions);
+    });
+</script>
+<script src="/js/common/comm.sps.js"></script>
+</body>
+
+</html>

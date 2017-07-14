@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0">
+    <style>
+
+        body {
+            background: url(https://img50.allinmd.cn/callApp/applinks-bg.png) no-repeat;
+            background-size: 100%;
+            width: 100%;
+        }
+
+        .content-bg {
+
+            padding-top: 5.8rem;
+        }
+
+        .text01 {
+            font-family: microsoft yahei;
+            font-size: 1rem;
+            color: #ffffff;
+            line-height: 1.5rem;
+            text-align: center;
+        }
+
+        .text02 {
+            font-family: microsoft yahei;
+            font-size: 0.875rem;
+            color: #cad0d3;
+            line-height: 1rem;
+            text-align: center;
+            padding: 1.625rem 0 0.5rem 0;
+        }
+
+        .text02 a {
+            color: #cad0d3;
+            text-decoration: underline;
+            display: inline-block;
+            margin-left: 2%;
+        }
+
+        .allin-logo {
+            margin: 0 auto;
+            width: 37%;
+        }
+        img{
+            width:100%;
+        }
+        .open-btn {
+            margin: 0 auto;
+            width: 58.9%;
+            padding: 2.185rem 0 0 0;
+        }
+        /* 提示微信下载 的弹层*/
+        .app_download_wx {
+            width: 100%;
+            height: 100%;
+            background: #efeff4;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10060; }
+
+        .app_download_wx img {
+            width: 100%; }
+
+        .app_download_wx_jump_app {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10039; }
+
+        .app_download_wx_jump_app .bg {
+            width: 100%;
+            height: 100%;
+            background: #000000;
+            opacity: 0.7;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10040; }
+
+        .app_download_wx_jump_app.viewport-small .center {
+            width: 80%; }
+
+        .app_download_wx_jump_app.viewport-small .center img {
+            width: 100%; }
+
+        .app_download_wx_jump_app .center {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            z-index: 10050; }
+
+        .app_download_wx_jump_app .center img {
+            /* width:100%;*/ }
+
+    </style>
+    <meta name='apple-itunes-app' content='app-id=1127209482'>
+    <script src="/js/third-party/jquery/jquery-2.1.0.min.js"></script>
+</head>
+<body>
+<div class="content-bg">
+    <div class="text01">
+        <div>若您已安装了医鼎，</div>
+        <div>请下拉并点击“打开”按钮</div>
+    </div>
+    <div class="text02">（若无打开按钮，请<a href="" id="location">点此打开</a>）</div>
+    <div class="allin-logo"><img src="https://img00.yi-ding.net.cn/default/logo/yiding_logo.png
+"/></div>
+    <div class="open-btn">
+        <a href="https://itunes.apple.com/cn/app/yi-ding/id1127209482?mt=8"><img src="https://img50.allinmd.cn/callApp/applinks-btn.png"/></a>
+    </div>
+</div>
+
+<script>
+    //    setTimeout(function(){
+    //        window.location.href="http://a.app.qq.com/o/simple.jsp?pkgname=net.medplus.social";    // 跳转到应用宝
+    //    },2000);
+    var u = window.navigator.userAgent;
+    var isWeixin = /MicroMessenger/.test(u);
+    /**
+     *  在不支持统一链接的微信内的话显示引导界面
+     * */
+    function showWeixinGuide(type) {
+        var imgPath;
+        if (type == "android") {
+            imgPath = "//m.medplus.net/image/callApp/android.png";
+        } else {
+            imgPath = "//m.medplus.net/image/callApp/ios.png";
+        }
+
+        var $content = $(".content-page");
+        if ($content.length > 0) {
+            $content.append("<div class='app_download_wx'><img src='" + imgPath + "' /></div>");
+        } else {
+            $("body").append("<div class='app_download_wx'><img src='" + imgPath + "' /></div>");
+        }
+        $("body").css("overflow", "hidden");
+        $(".app_download_wx").on("click", function () {
+            $(this).remove();
+            $("body").css("overflow", "auto");
+        });
+    }
+
+    if(isWeixin){
+        showWeixinGuide("ios");
+    }
+
+    document.getElementById("location").href = window.location.href.replace(/(https|http)/gi,"yiding");
+</script>
+
+</body>
+</html>

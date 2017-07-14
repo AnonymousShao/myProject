@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>医师认证－医鼎</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/yiding.ico">
+    <meta name="viewport" content="width=750">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+    <script type="text/javascript" src="/js/third-party/jquery/jquery-1.8.0.min.js" ></script>
+    <script src="/js/common/documentLink.js"></script>
+    <script type="text/javascript">
+        domain.get(
+                "/css/base.css",
+                "/css/pages/authority/login.css",
+                "/css/pages/authority/authentication.css",
+                "/css/pages/personal/personal_introConfig.css"
+        );
+        if(pcOrH5.pc()){
+            domain.get(
+                    "/js/common/mobile-util.js",
+                    "/js/common/fastclick.js",
+                    "/js/common/rem.js"
+            );
+        }
+    </script>
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="/js/common/html5shiv.js" ></script>
+    <script type="text/javascript" src="/js/common/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<script>
+    if(pcOrH5.pc()){
+        domain.get(
+                "/js/third-party/jquery/jquery.json-2.4.js",
+                "/js/third-party/jqueryscrollpagination/js/scrollpagination.js",
+                "/js/third-party/fastclick.js",
+                "/js/common/main.js",
+                "/js/common/common.js",
+                "/js/common/comm.func.js",
+                "/js/common/comm-customer.js",
+                "/js/common/comm-data.js",
+                "/js/common/comm_service.js",
+                "/js/third-party/jquery-form/jquery.form.js",
+                "/js/common/log.js",
+                "/js/common/jweixin-1.0.0.js",
+                "/js/common/shareAll.js",
+                "/js/common/comm.cutArray.js",
+                "/js/scene/exercises/json2.js",
+                "/js/scene/authority/authentication.js",
+                "/js/scene/authority/allinAuthority.js"
+
+        );
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>习题详情页</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/yiding.ico">
+    <meta name="viewport" content="width=750">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="/css/pages/exercises/exercises.css"/>
+    <link rel="stylesheet" href="/css/base.css">
+    <script src="/js/common/rem.js"></script>
+    <!--build:mobile-->
+    <script src="/build/mobile.js"></script>
+    <!-- endbuild -->
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="/build/compatibility.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<!--题型展示-->
+<!--全内容容器——mainInner-->
+<section class="yd-mainInner none">
+    <section class="contentInner">
+        <!--试题答题部分-->
+        <section id="quesContainer" class="quesContainer none">
+            <ul id="queInnerContent" class="innerContent">
+            </ul>
+        </section>
+
+    </section>
+</section>
+</section>
+<!--common.log统计ip,address-->
+<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+<!-- end -->
+<script src="/js/third-party/jquery/jquery-1.8.0.min.js"></script>
+<!--about:jq-->
+<script src="/build/jqAll.js"></script>
+<!-- end -->
+<!--about:common&login-->
+<script src="/build/common.js"></script>
+<!-- end -->
+<script src= "//paas.allinmd.cn/modules/app_awaken/awaken.js"></script>
+<script src="/js/scene/exercises/json2.js" type="text/javascript"></script>
+<!--<script src="/js/common/jumpapp.js"></script>-->
+<script>
+    if(!pcOrH5.pc()){
+        domain.get(
+            "/js/common/jumpapp.js"
+        );
+    }
+</script>
+<script type="text/javascript" src="/js/scene/exercises/exerciseCommon.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        var href = window.location.href;
+        if (pcOrH5.pc()) {
+            if (window.location.href.indexOf("m.yi-ding.net.cn") > -1) {
+                window.location.href = href.replace("m.yi-ding.net.cn", "www.yi-ding.net.cn");
+            }
+        } else {
+            if (window.location.href.indexOf("www.yi-ding.net.cn") > -1) {
+                window.location.href = href.replace("www.yi-ding.net.cn", "m.yi-ding.net.cn");
+            }
+        }
+        var orderOptions = {
+            "type": {
+                "page": 3,
+                "exam": 5,
+                "name": ""
+            },
+            appData: "data={scene:1,type:9,resourceId:" + exerciseCommon.means.getUrlName("exercisesId") + "}",
+            initData: {
+                "customerId": "0",
+                "type": "9",
+                "exercisesId": exerciseCommon.means.getUrlName("exercisesId")
+            },
+            "record": false,
+            "login": false,
+            "site": false
+        };
+        exerciseCommon.analysis(orderOptions);
+    });
+</script>
+</body>
+</html>

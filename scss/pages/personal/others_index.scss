@@ -1,0 +1,171 @@
+@charset "UTF-8";
+// 他人主页
+// Created by qiangkailiang on 2016/11/09
+// 功能库引入
+@import "../../modules/_common-modules";
+// 变量入口引入
+@import "../../variables/_yiding-variables";
+@import "../../components/_pageTopNav_And_SideBar"; //主导航-主侧栏
+@import "../../components/_contentInner"; //内容容器
+@import "../../components/_indexHeader"; //页头
+@import "../../components/_noContent"; //无内容提示
+@import "../../components/_iconModule"; //图标标签
+@import "../../components/_contentItem"; //内容条目
+html,
+body {
+    background-color: #f4f7f6;
+}
+
+.contentInner {
+    margin-top: rem(20px);
+}
+
+@include query() {
+    .contentInner {
+        margin-top: rem(0px);
+    }
+}
+.contentInnerItem{
+    &:nth-last-child(2){
+        border-bottom:0;
+    }
+}
+
+.yd-othersHeader {
+    height: rem(240px);
+    height:240px\9;
+    width: 100%;
+    background: transparent url('/image/personal/other_page_bg@2x.png') center center no-repeat;
+    background-size: 100%;
+    position: relative;
+    .yd-othersHeadImg {
+        position: absolute;
+        top: rem(82px);
+        left: 0;
+        right: 0;
+        text-align: center;
+        & > a {
+            display: block;
+            @include circle(rem(58px),
+            #fff);
+            border: rem(1px) solid #fff;
+            margin: 0 auto;
+            & > img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                vertical-align: middle;
+            }
+        }
+    }
+    .yd-othersMessage {
+        h3 {
+            color: #222;
+            font-size: rem(17px);
+            margin-top: rem(12px);
+            font-weight: normal;
+        }
+        p {
+            color: #555;
+            font-size: rem(13px);
+            padding-top: rem(5px);
+        }
+    }
+}
+
+.yd-othersHeaderBack {
+    position: absolute;
+    top: rem(31px);
+    left: rem(15px);
+}
+
+.yd-classItemsBox {
+    background-color: #fff;
+    padding: rem(20px) 0 0;
+    text-align: left;
+    font-size: 0;
+    border: 1px solid #e5e5e5;
+    .yd-classItem {
+        display: inline-block;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 0 rem(10px);
+        margin-bottom: rem(20px);
+        vertical-align: top;
+        width: 16.5%;
+        a {
+            display: block;
+            margin: auto;
+            @include circle(rem(80px),
+            #fff);
+            img {
+                width: 100%;
+                height: 100%;
+                vertical-align: top;
+                border-radius: 50%;
+            }
+        }
+        figcaption {
+            font-size: rem(12px);
+            color: #333;
+            width: rem(80px);
+            margin: 0 auto;
+            margin-top: rem(10px);
+        }
+    }
+}
+
+.yd-scrollTips {
+    margin: rem(25px) 0;
+    text-align: center;
+    color: #808080;
+    font-size: rem(15px);
+}
+
+.yd-jumpAllinPersonal {
+    height: rem(49px);
+    line-height: rem(49px);
+
+    font-size: rem(17px);
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, .1);
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: #73859E;
+    }
+}
+.yd-releaseCheckMore{
+    padding:rem(13px) 0;
+    text-align: center;
+    color:#73859e;
+    font-size:rem(14px);
+    border-top:1px solid $innerBorderColor;
+    margin:0 rem(-15px);
+}
+.yd-otherIndexNoContentTips{
+    height:rem(180px);
+    width: 100%;
+    background-color: #fff;
+    line-height:rem(180px);
+    text-align: center;
+    border-top:1px solid #e5e5e5;
+    display: none;
+    & > p{
+        font-size:rem(15px);
+        color:rgba(128,128,128,1);
+    }
+}
+.icon-whiteRightArrow {
+    @extend %icon-whiteRightArrow;
+}
+
+.icon-vip {
+    @extend %icon-vip;
+}
+
+.icon-comment {
+    @extend %icon-comment;
+}

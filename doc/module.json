@@ -1,0 +1,159 @@
+[
+  {
+    "name": "登录",
+    "func": [
+      "toast",
+      "hisCli",
+      "eyeOpen",
+      "clearNum",
+      "hisPhone",
+      "hisPhone",
+      "sendCode",
+      "sendCode",
+      "clearPass",
+      "historyNum",
+      "checkLoginPhone",
+      "checkLoginPhone2",
+      "checkLoginPass",
+      "checkLoginPass2",
+      "activeLogin",
+      "quickCheck",
+      "quiBtn",
+      "weixin",
+      "close",
+      "isLogin",
+      "returnText",
+      "createNumBtn"
+    ],
+    "des": "登录相关代表性方法",
+    "attention": "",
+    "comp": "",
+    "scene": ""
+  },
+  {
+    "name": "注册",
+    "func": [
+      "check",
+      "regBtn",
+      "active",
+      "checkSer",
+      "sendCode",
+      "confirmBox",
+      "checkPhone",
+      "checkPhone2",
+      "checkValidCode"
+    ],
+    "des": "注册相关的代表性方法",
+    "attention": "",
+    "comp": "",
+    "scene": ""
+  },
+  {
+    "name": "首页",
+    "func": [
+      "ajax",
+      "isPC",
+      "angle",
+      "timCir",
+      "loading",
+      "indexCont",
+      "niceClass",
+      "alertBoxClo"
+
+    ],
+    "des": "关于首页相关方法",
+    "attention": "",
+    "comp": "",
+    "scene": ""
+  },
+  {
+    "name": "认证",
+    "func": [
+      "a",
+      "b"
+    ],
+    "des": "",
+    "attention": "",
+    "comp": "",
+    "scene": ""
+  },
+  {
+    "name": "课程终端页",
+    "func": [
+      "init",
+      "eventDefault",
+      "browserVerinfo",
+      "removeHead",
+      "talkInit",
+      "onPlay",
+      "onEnded",
+      "smallScreen",
+      "share",
+      "videoFn.videoFaceInit",
+      "baseInfo",
+      "applyData",
+      "courseTap",
+      "courseAbstract",
+      "collect",
+      "postVideoTime",
+      "courseware",
+      "eventClick",
+      "manageData",
+      "courseStudy",
+      "partInCourse",
+      "courseTest",
+      "showTest",
+      "keyEvent",
+      "testAnswer",
+      "histortinit",
+      "videoFn.showDot",
+      "videoFn.showSubway",
+      "toggleExer",
+      "timeUpdata",
+      "videoFn.changeHSVideo",
+      "videoFn.operate",
+      "changeVideo",
+      "partInThink",
+      "judge",
+      "swipe",
+      "courseLook"
+    ],
+    "des": "课程终端页的所采用的方法",
+    "attention": "",
+    "comp": "",
+    "scene": ""
+  },
+  {
+    "name": "习题",
+    "func": [
+      "a",
+      "b"
+    ],
+    "des": "",
+    "attention": "",
+    "comp": "",
+    "scene": ""
+  },
+  {
+    "name": "个人中心",
+    "func": [
+      "a",
+      "b"
+    ],
+    "des": "",
+    "attention": "",
+    "comp": "",
+    "scene": ""
+  },
+  {
+    "name": "讨论",
+    "func": [
+      "a",
+      "b"
+    ],
+    "des": "",
+    "attention": "",
+    "comp": "",
+    "scene": ""
+  }
+]

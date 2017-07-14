@@ -1,0 +1,14 @@
+{
+  "name":"videoFn.videoFaceInit()",
+  "des":"//初始化视频界面，将标清和高清字样动态添加到视频当中，使用户可以自由切换",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+
+  },
+  "param":{
+    "isNull":true
+  }
+}

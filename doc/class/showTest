@@ -1,0 +1,16 @@
+{
+  "name":"showTest(type)",
+  "des":"//该方法是用来区分是大屏弹题还是小屏弹题，根据不同的类型，执行不同的操作。",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+  },
+  "param":{
+    "isNull":false,
+    "des":"",
+    "type":"string",
+    "timeUpdata":{"type":"各种类型的关键字，用以区分全屏还是普通屏，传参的形式是字符串"}
+  }
+}

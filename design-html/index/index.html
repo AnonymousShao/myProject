@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta name="viewport" content="width=750">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/index/index.css" />
+    <script type="text/javascript" src="/js/common/mobile-util.js"></script>
+    <script type="text/javascript" src="/js/common/fastclick.js"></script>
+    <script type="text/javascript" src="/js/common/rem.js" ></script>
+    <script type="text/javascript" src="/js/third-party/jquery/jquery-1.8.0.min.js" ></script>
+    <!--[if lte IE 8]>
+	    <script type="text/javascript" src="../../js/common/html5shiv.js" ></script>
+	    <script type="text/javascript" src="js/../../js/common/respond.min.js"></script>
+    <![endif]-->
+
+<body>
+    <!--全内容容器——mainInner-->
+    <section class="al-mainInner">
+        <header class="al-header al-indexHeader pcModule" style="margin-left: 0px;">
+            <section class="al-headerContainer">
+	            <ul class="al-headerTopNav" id="al-headerTopNav">
+	                <li class="active"><a href="/design-html/index/index.html">首页</a></li>
+	                <li><a href="/design-html/curriculum/curriculum.html">课程</a></li>
+	                <li><a href="/design-html/category/question.html">习题</a></li>
+	            </ul>
+	            <div class="al-se-lo-re">
+	            	<div class="al-search">
+	            		<i class="icon-search"></i>
+	            	</div>
+	            	<div class="al-lo-re notLogin ev-notLogin" id="notLogin">
+	            		<div class="al-login">登录</div>
+	            		<div class="al-register">注册</div>
+	            	</div>
+	            	<div class="al-lo-re ev-isLogin" id="user">
+	                	<div class="user-header"></div>
+	                	<div class="user-name">黄志强</div>
+	                </div>
+	            </div>
+	        </section>
+        </header>
+        <section id="al-mainSidebar" class="pcModule" style="width: auto; position: fixed; left: 0;top: 0; z-index: 10;">
+	        	<!--pc左侧导航栏-->
+		        <aside class="al-mainSidebar al-mainSidebarCollapse pcModule" style="width: 80px;" id="al-mainSidebarWide">
+		            <header class="al-collapseLogo">
+		                <img src="/image/index/bigLogo.png" alt="">
+		            </header>
+		            <header class="al-mainLogo">
+		            	<img src="/image/index/logo.png" alt="" style="box-shadow: rgb(51,51,51) 0px 0px 2px;">
+		            </header>
+		            <section class="al-mainSidebarList" id="al-mainSidebarList">
+		                <ul>
+		                    <li class="al-mainSidebarItem active">
+		                        <a href="/design-html/index/index.html">
+		                            <img src="/image/index/home.png" alt="">
+		                            <figcaption>首页</figcaption>
+		                            <article class="al-collapseItem">
+		                                <p class="al-collapseItemText">
+		                                </p>
+		                                <h4>首页</h4>
+		                                <p>HOME</p>
+		                                <p></p>
+		                            </article>
+		                        </a>
+		                    </li>
+		                    <li class="al-mainSidebarItem">
+		                        <a href="/pages/message/message_index.html">
+		                            <img src="/image/index/mail.png" alt="">
+		                            <figcaption>消息</figcaption>
+		                            <article class="al-collapseItem">
+		                                <p class="al-collapseItemText">
+		                                </p>
+		                                <h4>消息</h4>
+		                                <p>MESSAGE</p>
+		                                <p></p>
+		                            </article>
+		                        </a>
+		                    </li>
+		                </ul>
+		            </section>
+		        </aside>
+	        </section>
+        <!--手机端头部-->
+        <header class="mobileModule contentHeader">
+            <figure class="contentHeaderItem">
+                <a href="javascript:void(0)">
+                    <i class="icon-download"></i>
+                </a>
+            </figure>
+            <figure class="contentHeaderItem">
+                医鼎
+            </figure>
+            <figure class="contentHeaderItem">
+                <a href="javascript:void(0)">
+                    <i class="icon-search"></i>
+                </a>
+            </figure>
+        </header>
+        <section class="contentInner">
+        	<section class="isLogin pcModule ev-isLogin" style="display: none;" id="stuPro">
+        		<header>总共学习</header>
+        		<article class="stuCourse">
+        			<span>87</span>/<p>400</p>课时
+        		</article>
+        		<ul class="stuClass">
+        			<li>
+        				<span>8</span>/<p>9</p>
+        				<em>学习系列课程</em>
+        			</li>
+        			<li>
+        				<span>400</span>
+        				<em>已做习题</em>
+        			</li>
+        			<li>
+        				<span>64</span>
+        				<em>学习天数</em>
+        			</li>
+        		</ul>
+        	</section>
+            <section>
+            	<header class="classAdd ev-notLogin">
+	                <article>
+	                    <button>
+	                    	添加系列课程
+	                    </button>
+	                    <p>中国骨科住院医师规范化培训课程</p>
+	                </article>
+	            </header>
+	            <nav class="messageBar mobileModule">
+	                <i class="icon-message">
+	               		<span>消息</span>
+	               	</i>
+	                <i class="icon-rArrow">
+	               		<span>暂无消息</span>
+	               	</i>
+	            </nav>
+            </section>
+            <!--****课程表begin****-->
+            <section class="pcModule ev-isLogin TimeTables" style="display: none;">
+            	<header class="contentItemHeader pcModule ev-isLogin">
+	                <h2>课程表</h2>
+	            </header>
+	            <section class="timetables ev-isLogin">
+	            	<section class="contentArea" id="timetables">
+		                <section class="bestItem">
+		                    <figure class="classContentName">
+		                        <p><span>运动医学</span></p>
+		                        <canvas class="circleBorder" circle-angle="50" circle-color="#058" circle-angles="50/360"></canvas>
+		                    </figure>
+		                    <article class="classContentContext">
+		                        <h2>1.2 脊柱脊髓的发生原因</h2>
+		                        <p>
+		                            <span>徐毅</span>
+		                            <span>北京大学第三医院</span>
+		                        </p>
+		                        <span class="time">还剩 <i>00:09:35</i></span>
+		                    </article>
+		                </section>
+		                <section class="bestItem">
+		                    <figure class="classContentName">
+		                        <p><span>手外科</span></p>
+		                        <canvas class="circleBorder" circle-angle="50" circle-color="#058" circle-angles="50/360"></canvas>
+		                    </figure>
+		                    <article class="classContentContext">
+		                        <h2>1.2 脊柱脊髓的发生</h2>
+		                        <p>
+		                            <span>徐毅</span>
+		                            <span>北京大学第三医院</span>
+		                        </p>
+		                        <span class="time">还剩 <i>00:09:35</i></span>
+		                    </article>
+		                </section>
+		                <section class="bestItem">
+		                    <figure class="classContentName">
+		                        <p><span>关节与矫形外科</span></p>
+		                        <canvas class="circleBorder" circle-angle="280" circle-color="#30bb4e" circle-angles="280/360"></canvas>
+		                    </figure>
+		                    <article class="classContentContext">
+		                        <h2>1.2 脊柱脊髓的发生</h2>
+		                        <p>
+		                            <span>徐毅</span>
+		                            <span>北京大学第三医院</span>
+		                        </p>
+		                        <span class="time">还剩 <i>00:09:35</i></span>
+		                    </article>
+		                </section>
+		                <section class="bestItem">
+		                    <figure class="classContentName">
+		                        <p><span>骨软组织肿瘤科</span></p>
+		                        <canvas class="circleBorder" circle-angle="350"  circle-color="#000" circle-angles="350/360"></canvas>
+		                    </figure>
+		                    <article class="classContentContext">
+		                        <h2>1.2 脊柱脊髓的发生原因</h2>
+		                        <p>
+		                            <span>徐毅</span>
+		                            <span>北京大学第三医院</span>
+		                        </p>
+		                        <span class="time">还剩 <i>00:09:35</i></span>
+		                    </article>
+		                </section>
+		            </section>
+	            </section>
+            </section>
+            
+            
+            <!--****课程表end******-->
+            <!--******系列课程begin******-->
+            <header class="contentItemHeader">
+                <h2>系列课程推荐</h2>
+            </header>
+            <section class="seriesCourses">
+                <article class="contentArea" id="contentArea">
+                    <article class="bestItem" data-id="aaa">
+                        <figure class="bestItemImg">
+                            <img src="/image/index/jizhu1@2x.png" alt="">
+                        </figure>
+                        <figcaption class="bestItemMsg">
+                            <a href="javascript:void(0)">脊柱外科</a>
+                            <p>共<b>30</b>课时</p>
+                            <article class="addClass">
+                                <i class="icon-addClass"></i>
+                                <p>添加</p>
+                            </article>
+                            <article class="addClassActive">
+                            	<p>已添加</p>
+                            </article>
+                        </figcaption>
+                    </article>
+                    <article class="bestItem">
+                        <figure class="bestItemImg">
+                            <img src="/image/index/shouwaike1@2x.png" alt="">
+                        </figure>
+                        <figcaption class="bestItemMsg">
+                            <a href="javascript:void(0)">手外科</a>
+                            <p>共<b>30</b>课时</p>
+                            <article class="addClass">
+                                <i class="icon-addClass"></i>
+                                <p>添加</p>
+                            </article>
+                            <article class="addClassActive">
+                            	<p>已添加</p>
+                            </article>
+                        </figcaption>
+                    </article>
+                    <article class="bestItem">
+                        <figure class="bestItemImg">
+                            <img src="/image/index/yundongyixue1@2x.png" alt="">
+                        </figure>
+                        <figcaption class="bestItemMsg">
+                            <a href="javascript:void(0)">运动外科</a>
+                            <p>共<b>30</b>课时</p>
+                            <article class="addClass">
+                                <i class="icon-addClass"></i>
+                                <p>添加</p>
+                            </article>
+                            <article class="addClassActive">
+                            	<p>已添加</p>
+                            </article>
+                        </figcaption>
+                    </article>
+                    <article class="bestItem">
+                        <figure class="bestItemImg">
+                            <img src="/image/index/guzhongliu@2x.png" alt="">
+                        </figure>
+                        <figcaption class="bestItemMsg">
+                            <a href="javascript:void(0)">骨软组织肿瘤科</a>
+                            <p>共<b>30</b>课时</p>
+                            <article class="addClass">
+                                <i class="icon-addClass"></i>
+                                <p>添加</p>
+                            </article>
+                            <article class="addClassActive">
+                            	<p>已添加</p>
+                            </article>
+                        </figcaption>
+                    </article>
+                    <article class="bestItem">
+                        <figure class="bestItemImg">
+                            <img src="/image/index/chuangshang1@2x.png" alt="">
+                        </figure>
+                        <figcaption class="bestItemMsg">
+                            <a href="javascript:void(0)">创伤骨科</a>
+                            <p>共<b>30</b>课时</p>
+                            <article class="addClass">
+                                <i class="icon-addClass"></i>
+                                <p>添加</p>
+                            </article>
+                            <article class="addClassActive">
+                            	<p>已添加</p>
+                            </article>
+                        </figcaption>
+                    </article>
+                    <article class="bestItem">
+                        <figure class="bestItemImg">
+                            <img src="/image/index/jiaoxing1@2x.png" alt="">
+                        </figure>
+                        <figcaption class="bestItemMsg">
+                            <a href="javascript:void(0)">关节与矫形外科</a>
+                            <p>共<b>30</b>课时</p>
+                            <article class="addClass">
+                                <i class="icon-addClass"></i>
+                                <p>添加</p>
+                            </article>
+                            <article class="addClassActive">
+                            	<p>已添加</p>
+                            </article>
+                        </figcaption>
+                    </article>
+                    <article class="bestItem">
+                        <figure class="bestItemImg">
+                            <img src="/image/index/xiaoer1@2x.png" alt="">
+                        </figure>
+                        <figcaption class="bestItemMsg">
+                            <a href="javascript:void(0)">小儿骨科</a>
+                            <p>共<b>30</b>课时</p>
+                            <article class="addClass">
+                                <i class="icon-addClass"></i>
+                                <p>添加</p>
+                            </article>
+                            <article class="addClassActive">
+                            	<p>已添加</p>
+                            </article>
+                        </figcaption>
+                    </article>
+                    <article class="bestItem">
+                        <figure class="bestItemImg">
+                            <img src="/image/index/kangfu1@2x.png" alt="">
+                        </figure>
+                        <figcaption class="bestItemMsg">
+                            <a href="javascript:void(0)">骨科康复</a>
+                            <p>共<b>30</b>课时</p>
+                            <article class="addClass">
+                                <i class="icon-addClass"></i>
+                                <p>添加</p>
+                            </article>
+                            <article class="addClassActive">
+                            	<p>已添加</p>
+                            </article>
+                        </figcaption>
+                    </article>
+                    <article class="bestItem">
+                        <figure class="bestItemImg">
+                            <img src="/image/index/zuhuai1@2x.png" alt="">
+                        </figure>
+                        <figcaption class="bestItemMsg">
+                            <a href="javascript:void(0)">足踝外科</a>
+                            <p>共<b>30</b>课时</p>
+                            <article class="addClass">
+                                <i class="icon-addClass"></i>
+                                <p>添加</p>
+                            </article>
+                            <article class="addClassActive">
+                            	<p>已添加</p>
+                            </article>
+                        </figcaption>
+                    </article>
+                </article>
+            </section>
+            <!--******系列课程end******-->
+            <!--*********精品课程begin*********-->
+        	<header class="contentItemHeader">
+                <h2>精品课程</h2>
+            </header>
+            <section class="contentItem" id="quality">
+                <section class="contentInnerItem">
+                    <article class="contentInnerContext">
+                        <h2>骨的发生与正常结构</h2>
+                        <p><span class="user">徐毅老师</span><span class="hospital">北京大学第三医院</span></p>
+                        <article class="contentOtherMsg">
+                            <span class="resourceType">脊柱外科</span>
+                            <i class="icon-comment"><span>243</span></i>
+                        </article>
+                    </article>
+                    <figure class="contentInnerImg">
+                        <img src="/image/index/hh.png" alt="">
+                    </figure>
+                </section>
+                <section class="contentInnerItem">
+                    <article class="contentInnerContext">
+                        <h2>骨的发生与正常结构骨的发生与正常结构骨的发生与正常结构</h2>
+                        <p><span class="user">徐毅老师</span><span class="hospital">北京大学第三医院</span></p>
+                        <article class="contentOtherMsg">
+                            <span class="resourceType">骨肿瘤</span>
+                            <i class="icon-comment"><span>243</span></i>
+                        </article>
+                    </article>
+                    <figure class="contentInnerImg">
+                        <img src="/image/index/hh.png" alt="">
+                    </figure>
+                </section>
+                <section class="contentInnerItem">
+                    <article class="contentInnerContext">
+                        <h2>骨的发生与正常结构</h2>
+                        <p><span class="user">徐毅老师</span><span class="hospital">北京大学第三医院</span></p>
+                        <article class="contentOtherMsg">
+                            <span class="resourceType">脊柱外科</span>
+                            <i class="icon-comment"><span>243</span></i>
+                        </article>
+                    </article>
+                    <figure class="contentInnerImg">
+                        <img src="/image/index/hh.png" alt="">
+                    </figure>
+                </section>
+                <section class="contentInnerItem">
+                    <article class="contentInnerContext">
+                        <h2>骨的发生与正常结构</h2>
+                        <p><span class="user">徐毅老师</span><span class="hospital">北京大学第三医院</span></p>
+                        <article class="contentOtherMsg">
+                            <span class="resourceType">脊柱外科</span>
+                            <i class="icon-comment"><span>243</span></i>
+                        </article>
+                    </article>
+                    <figure class="contentInnerImg">
+                        <img src="/image/index/hh.png" alt="">
+                    </figure>
+                </section>
+                <section class="contentInnerItem">
+                    <article class="contentInnerContext">
+                        <h2>骨的发生与正常结构</h2>
+                        <p><span class="user">徐毅老师</span><span class="hospital">北京大学第三医院</span></p>
+                        <article class="contentOtherMsg">
+                            <span class="resourceType">脊柱外科</span>
+                            <i class="icon-comment"><span>243</span></i>
+                        </article>
+                    </article>
+                    <figure class="contentInnerImg">
+                        <img src="/image/index/hh.png" alt="">
+                    </figure>
+                </section>
+                <section class="contentInnerItem">
+                    <article class="contentInnerContext">
+                        <h2>骨的发生与正常结构</h2>
+                        <p><span class="user">徐毅老师</span><span class="hospital">北京大学第三医院</span></p>
+                        <article class="contentOtherMsg">
+                            <span class="resourceType">脊柱外科</span>
+                            <i class="icon-comment"><span>243</span></i>
+                        </article>
+                    </article>
+                    <figure class="contentInnerImg">
+                        <img src="/image/index/hh.png" alt="">
+                    </figure>
+                </section>
+                <section class="contentInnerItem">
+                    <article class="contentInnerContext">
+                        <h2>骨的发生与正常结构</h2>
+                        <p><span class="user">徐毅老师</span><span class="hospital">北京大学第三医院</span></p>
+                        <article class="contentOtherMsg">
+                            <span class="resourceType">脊柱外科</span>
+                            <i class="icon-comment"><span>243</span></i>
+                        </article>
+                    </article>
+                    <figure class="contentInnerImg">
+                        <img src="/image/index/hh.png" alt="">
+                    </figure>
+                </section>
+                <section class="contentInnerItem">
+                    <article class="contentInnerContext">
+                        <h2>骨的发生与正常结构</h2>
+                        <p><span class="user">徐毅老师</span><span class="hospital">北京大学第三医院</span></p>
+                        <article class="contentOtherMsg">
+                            <span class="resourceType">脊柱外科</span>
+                            <i class="icon-comment"><span>243</span></i>
+                        </article>
+                    </article>
+                    <figure class="contentInnerImg">
+                        <img src="/image/index/hh.png" alt="">
+                    </figure>
+                </section>
+                <section class="contentInnerItem">
+                    <article class="contentInnerContext">
+                        <h2>骨的发生与正常结构骨的发生与正常结构骨的发生与正常结构</h2>
+                        <p><span class="user">徐毅老师</span><span class="hospital">北京大学第三医院</span></p>
+                        <article class="contentOtherMsg">
+                            <span class="resourceType">脊柱外科</span>
+                            <i class="icon-comment"><span>243</span></i>
+                        </article>
+                    </article>
+                    <figure class="contentInnerImg">
+                        <img src="/image/index/hh.png" alt="">
+                    </figure>
+                </section>
+            </section>
+            <section class="contentInnerMore">
+            	<p>更多精品课程</p>
+            	<i class="icon-rArrow"></i>
+            </section>
+            <!--***************精品课程end*******************-->
+        </section>
+        <!--***页脚部分****-->
+        <section class="pcModule al-pcFooterBar">
+            	
+        </section>
+    </section>
+    <section class="yd-confirmModalMask yd-alertModalMask show" style="background-color:rgba(0,0,0,0.3); ">
+        <!--<section class="yd-confirmModal"><article class="yd-confirmModalContent"><article><p>很抱歉！我们正在加紧审核您的认证信息，请耐心等待...</p></article></article><footer class="yd-confirmModalBtns"><button class="yd-confirmModalEnsureBtn" style="width:100%">好的</button></footer></section>-->
+
+
+        <section class="exercise-discuss"><header class="al-commentDetailsTitle ev-title">讨论<i class="al-commentDetailsClose ev-close"></i></header><section class="yd-timelineContent courseTopBg"><header class="yd-timelineTitle"><h2>课程标题12</h2><a class="btn-primary al-timelineFollow"></a></header><header class="yd-timelineTitle lucency"><h2></h2><a class="btn-primary al-timelineFollow"></a></header><section class="yd-timelineContentItemBox"><i class="yd-timeline"></i><article class="yd-timelineContentItem"><figure class="yd-timelineUserImg"><a href="https://www.yi-ding.net.cn//pages/personal/others_index.html?cId=1483928129449" target="_blank"><img src="https://img00.yi-ding.net.cn/default/customer/240_3x.png" alt=""></a></figure><article class="yd-timelineContentTextBox"><header class="yd-timelineContentAuthor"><a href="javascript:void(0)">李易峰<i class="yd-vipUser"></i></a><span>882828282</span><p class="yd-timelineTime">昨天</p></header><article class="yd-timelineContentText"><a href="javascript:void(0)"></a>6</article></article></article></section><section class="yd-timelineContentItemBox"><i class="yd-timeline"></i><article class="yd-timelineContentItem"><figure class="yd-timelineUserImg"><a href="https://www.yi-ding.net.cn//pages/personal/others_index.html?cId=1483928129449" target="_blank"><img src="https://img00.yi-ding.net.cn/default/customer/240_3x.png" alt=""></a></figure><article class="yd-timelineContentTextBox"><header class="yd-timelineContentAuthor"><a href="javascript:void(0)">李易峰<i class="yd-vipUser"></i></a><span>882828282</span><p class="yd-timelineTime">昨天</p></header><article class="yd-timelineContentText"><a href="javascript:void(0)">回复给李易峰：</a>就</article></article></article></section><section class="yd-timelineContentItemBox"><i class="yd-timeline"></i><article class="yd-timelineContentItem"><figure class="yd-timelineUserImg"><a href="https://www.yi-ding.net.cn//pages/personal/others_index.html?cId=1483928129449" target="_blank"><img src="https://img00.yi-ding.net.cn/default/customer/240_3x.png" alt=""></a></figure><article class="yd-timelineContentTextBox discussBorNone"><header class="yd-timelineContentAuthor"><a href="javascript:void(0)">李易峰<i class="yd-vipUser"></i></a><span>882828282</span><p class="yd-timelineTime">昨天</p></header><article class="yd-timelineContentText"><a href="javascript:void(0)">回复给李易峰：</a>就像我这</article></article></article></section><footer class="yd-timelineFooter"><div class="clear"><div class="disscussFunction clear"><div class="aswer" data-discussid="55972" data-refbelongid=""><i></i><span>回复</span></div><div class="praise" data-discussid="55972"><i class="" data-praiseid="undefined"></i><span>点赞</span></div></div></div></footer></section><section class="yd-timelineContent al-replayComment"></section></section>
+
+    </section>
+    <script src="/js/third-party/jquery/jquery-1.8.0.min.js"></script>
+    <script src="/js/third-party/jquery/jquery.json-2.4.js"></script>
+    <script src="/js/third-party/jqueryscrollpagination/js/scrollpagination.js"></script>
+    <script src="/js/third-party/fastclick.js"></script>
+    <script src="/js/common/main.js"></script>
+    <script src="/js/common/common.js"></script>
+    <script src="/js/common/comm.func.js"></script>
+    <script src="/js/common/comm-customer.js"></script>
+    <script src="/js/common/comm-data.js"></script>
+    <script src="/js/common/comm_service.js"></script>
+    <script src="/js/common/jweixin-1.0.0.js"></script>
+    <script src="/js/common/log.js"></script>
+    <script src="/js/common/comm.share.js"></script>
+    <script src="/js/common/comm.cutArray.js"></script>
+    <script type="text/javascript" src="/js/scene/index/index.js"></script>
+</body>
+
+</html>

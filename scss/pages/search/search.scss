@@ -1,0 +1,428 @@
+@charset "UTF-8";
+//内容区块 基本样式结构
+//公共方法模块调用
+@import "../../modules/_common-modules";
+//图标标签
+@import "../../components/_iconModule";
+//展开收起
+@import "../../components/common/_updown";
+//pc端块背景
+@import "../../components/common/_pcBackground";
+@import "../../pages/index/index";
+
+
+.clearfix{
+  @include clearfix;
+}
+.al-searchInputBar{
+  width:100%;
+  line-height:rem(30px);
+  overflow:hidden;
+  font-face:PingFangSC-Regular;
+  padding:rem(10px) 0;
+  background:#fff;
+  .icon-searchreturn{
+    float:left;
+    /*padding:0 rem(6px) 0 rem(15px);*/
+    cursor: pointer;
+
+    margin:rem(4px) 0 0 rem(15px);
+    @extend %icon-return;
+    font-size:0;
+    &::after{
+      width:rem(19px);
+      height:rem(19px);
+    }
+  }
+
+  form{
+    position: relative;
+    float: left;
+    width: 85%;
+  }
+  input {
+    -webkit-appearance: none;
+    //margin-top: 4px\9;
+    width:100%;
+    height:rem(30px);
+    line-height:rem(30px);
+    padding-left:rem(12px);
+    box-shadow: none;
+    border:none;
+    border:1px solid #e6e8ed\9;
+    //border-color: #e6e8ed\9;
+    //background: rgb(128, 128, 128);    /*不支持rgba的浏览器*/
+    background:rgba(128,128,128,0.1);
+    //filter:alpha(opacity=100);    /*IE8支持*/
+    border-radius:rem(20px);
+    font-size:rem(15px);
+    color: #808080;
+    vertical-align: middle;
+    float:left;
+    outline:none;
+  }
+  .al-search{
+    float:right;
+    font-size:rem(17px);
+    line-height:rem(30px);
+    color:#909090;
+    margin-right:rem(15px);
+    background:#fff;
+  }
+}
+.al-searchItem {
+  margin:rem(8px) 0;
+  background-color: #fff;
+  border-bottom: 1px solid #d7dbde;
+}
+.al-searchTitle{
+  padding:0 rem(15px);
+
+  border-bottom: 1px solid #e4e9ed;
+  font-weight: 400;
+  font-size:rem(15px);
+  color:#808080;
+  line-height:rem(40px);
+}
+.al-hotSearchContent {
+  background:#fff;
+  padding:rem(15px);
+  .al-hotSearchWord {
+    margin:0 rem(10px) rem(10px) 0;
+    font-size:rem(14px);
+    color:#555;
+    line-height:rem(34px);
+    border: 1px solid #e6e8ed;
+    border-radius: 6.66667rem;
+    display: inline-block;
+    padding:0 rem(12px);
+    cursor: pointer;
+  }
+}
+.al-historySearchContent {
+  background-color: #fff;
+  .al-historySearchContent li{
+    border-bottom:1px solid #e4e9ed;
+    font-size:rem(15px);
+    color: #555;
+    height:rem(44px);
+    max-height: 44px\9;
+    line-height:rem(44px);
+    padding:0 rem(15px);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+
+  }
+}
+.clear-history{
+  float:right;
+  font-size:rem(12px);
+  color:#73859e;
+  line-height:rem(40px);
+  cursor: pointer;
+}
+.al-searchResult{
+  background:#fff;
+  margin-top:rem(8px);
+}
+
+@include query(){
+  .al-searchInputBar
+  form{
+    width: 72%;
+    input{
+      width:100%;
+    }
+  }
+}
+
+
+
+.contentItem{
+  border:none ;
+}
+.yd-searchResult {
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+}
+.yd-searchResultItem {
+  margin-left: .9375rem;
+  padding-right: .9375rem;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+  font-size: .9375rem;
+  color: #222;
+  height: 3.125rem;
+  line-height: 3.125rem;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+  span {
+    color: #2899E6;
+  }
+
+}
+.seriesCoursesContent{
+  display: none;
+}
+.eliteSearchContent{
+  display: none;
+}
+.searchInexistence{
+  display: none;
+}
+.contentItemHeader{
+  h2{
+    font-size: .9375rem;
+  }
+}
+.contentSeriesNoResult{
+  display: none;
+}
+.searchYDnone{
+  padding-bottom: 1.625rem;
+  .contentOtherMsg {
+    margin:0;
+    margin-top:16px;
+  }
+  .Ydnone{
+    font-size: rem(16px);
+    color: #808080;
+    text-align: center;
+  }
+}
+.yd-noContentTips {
+  padding: 5.4375rem 0;
+  width: 100%;
+  text-align: center;
+  figcaption {
+    margin-top: 1.875rem;
+    color: grey;
+    font-size: .9375rem;
+  }
+}
+.buttonMore{
+  text-align: center;
+  width: 100%;
+  font-size: rem(30px);
+  color: #808080;
+  font-face:PingFangSC-Regular;
+  padding: rem(50px) 0;
+}
+.contentInner{
+  position: relative;
+  margin-top: rem(16px);
+}
+
+/*唯医资源*/
+.personalName{
+  display: inline-block;
+  margin-right: rem(25px);
+  i{
+    background: url("/image/search/main_list_editor.png") no-repeat;
+    width: rem(16px);
+    height: rem(16px);
+    display: inline-block;
+    background-size: cover;
+    vertical-align: middle;
+    line-height: rem(14px);
+    behavior: url("/js/third-party/backgroundsize.min.htc");
+  }
+  span{
+    font-size: rem(14px);
+  }
+}
+.watchNum{
+  display: inline-block;
+  i{
+    background: url("/image/search/main_list_view.png") no-repeat;
+    width: rem(16px);
+    height: rem(16px);
+    display: inline-block;
+    background-size: cover;
+    vertical-align: middle;
+    line-height: rem(14px);
+    behavior: url("/js/third-party/backgroundsize.min.htc");
+  }
+  span{
+    font-size: rem(12px);
+  }
+}
+.contentInnerImg{
+  position: relative;
+  .playIcon{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    margin: rem(-20px) 0 0 rem(-20px);
+    background: url("/image/classes/course/main_recommended_start@2x.png") no-repeat;
+    width: rem(40px);
+    height: rem(40px);
+    background-size: contain;
+  }
+  .timeNum {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    //background: url(/image/classes/course/video_time.png) no-repeat;
+    background-size: cover;
+    width: 5rem;
+    height: 1.5625rem;
+    font-size: .6875rem;
+    color: #fff;
+    text-indent: .625rem;
+    text-align: center;
+    line-height: 1.5625rem;
+  }
+}
+
+.allinDoc{
+  .contentInnerContext{
+    h2{
+      width: 100%;
+    }
+  }
+}
+.bestItemMsg{
+  width: 120px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.bestItem .addClass>p{
+  text-align: center;
+}
+
+.allinDocIcon{
+  display:inline-block;
+  width: rem(30px);
+  height: rem(15px);
+  line-height: rem(15px);
+  text-align: center;
+  border: solid 1px #791c2f;
+  color: #782326;
+  font-size: rem(12px);
+  margin-right: rem(14px);
+}
+
+.allinUserImg{
+  display: inline-block;
+  img{
+    behavior: url("/js/third-party/pie/PIE.htc");
+    position: relative;
+    width: rem(50px);
+    height: rem(50px);
+    border-radius: 50%;
+  }
+}
+.allinUserSynopsis{
+  display: inline-block;
+  margin-left: rem(9px);
+  vertical-align: top;
+  margin-top: 5px;
+  span{
+    display: block;
+  }
+  .name{
+    font-size: rem(16px);
+    color: #222;
+    line-height: rem(16px);
+    margin-bottom: rem(10px);
+  }
+  .hospital{
+    font-size: rem(14px);
+    color: #808080;
+    line-height: rem(14px);
+  }
+}
+
+.contentInnerContext{
+  position: relative;
+  width: 76%;
+  padding-right: 4%;
+  .topicIcon{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 5;
+    background: url("/image/search/topic.png") no-repeat;
+    width: rem(36px);
+    height: rem(60px);
+    background-size: cover;
+  }
+}
+#seriesNoResult{
+  text-align: center;
+}
+
+.allinJj{
+  font-size: 15px;
+  color: #666;
+  line-height: 27px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.al-contentSeminarTime{
+  font-size: rem(14px);
+  i{
+    background: url("/image/search/time.png") no-repeat;
+    height:rem(18px);
+    width: rem(16px);
+    display: inline-block;
+    background-size: contain;
+    vertical-align: middle;
+    margin-right: rem(8px);
+  }
+}
+
+.icon-contentSeminarPlace{
+  font-size: rem(14px);
+  margin-left: rem(30px);
+  i{
+    background: url("/image/search/address.png") no-repeat;
+    height:rem(19px);
+    width: rem(16px);
+    display: inline-block;
+    background-size: contain;
+    vertical-align: middle;
+    margin-right: rem(8px);
+  }
+}
+
+
+
+
+.al-contentOtherMsg {
+  color: #909090;
+  line-height: 1rem;
+  width: 500px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 16px;
+  font-size: rem(13px);
+}
+.al-contentPartModule{
+  display: table;
+  width: 100%;
+  padding-top: 1.625rem;
+  padding-bottom: 1.625rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}

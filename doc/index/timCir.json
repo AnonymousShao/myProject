@@ -1,0 +1,22 @@
+
+{
+  "name":"timCir(cBeg, cEnd, i)",
+  "des":"用canvas画出医鼎课程表圆弧渐变显示，cBeg:开始的颜色，cEnd：结束的颜色，i：索要画的圆弧的索引值",
+  "attention":["需在当前canvas的dom结构中动态加入开始颜色,结束颜色,进度的百分比值","在后台配置数据时注意每项数据都不可缺失"],
+  "comp":"IE8中不兼容！",
+  "scene":"医鼎首页课程表的圆弧显示，适用于有圆弧渐变显示的页面",
+  "returnVal":{
+    "isNull":true,//无返回值
+    "des":"",
+    "type":"json",
+    "val":{}
+
+  },
+  "code":"",
+  "param":{
+    "isNull":false,
+    "des":"",
+    "type":"json",
+    "val":{}
+  }
+}

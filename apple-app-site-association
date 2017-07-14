@@ -1,0 +1,15 @@
+{
+      "applinks":{
+          "apps":[],
+          "details":[
+              {
+                  "appID":"M79YS8WCB4.com.allinmd.yidin",
+                  "paths":[
+                  "*",
+                  "/"                
+                  ]
+              }
+          ]
+      }
+}
+

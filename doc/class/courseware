@@ -1,0 +1,13 @@
+{
+  "name":"courseware()",
+  "des":"//该方法是在新页打开课件，从而去观看课件。",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+  },
+  "param":{
+    "isNull":true
+  }
+}

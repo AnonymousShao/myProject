@@ -1,0 +1,22 @@
+
+{
+  "name":"checkPhone2()",
+  "des":"注册时进行校验账号的方法，含有正则验证，有错误提示",
+  "attention":[""],
+  "comp":"IE8兼容",
+  "scene":"注册时进行账号的验证",
+  "returnVal":{
+    "isNull":true,
+    "des":"",
+    "type":"json",
+    "val":{}
+
+  },
+  "code":"",
+  "param":{
+    "isNull":false,
+    "des":"",
+    "type":"json",
+    "val":{}
+  }
+}

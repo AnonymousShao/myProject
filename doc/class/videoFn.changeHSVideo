@@ -1,0 +1,13 @@
+{
+  "name": "videoFn.changeHSVideo()",
+  "des": "//通过此方法可以实现视频标清和高清之间的自由切换。",
+  "attention": "",
+  "comp": "",
+  "scene": "",
+  "returnVal": {
+    "isNull": true
+  },
+  "param": {
+    "isNull": true
+  }
+}

@@ -1,0 +1,873 @@
+/**
+ * 功能描述：
+ * 使用方法:
+ * 注意事件：
+ * 引入来源：  作用：
+ *
+ * Created by ZhangHongDa on 2016/11/1.
+ */
+@charset "UTF-8";
+@import "../../modules/_common-modules";
+@import "../../variables/_yiding-variables";
+html,body {
+    background-color: #eef3f8;
+}
+
+@import "../../components/_pageTopNav_And_SideBar";//主导航-主侧栏
+@import "conduct";//主导航-主侧栏
+//内容容器
+.contentInner {
+    width: 750px;
+    margin: 0 auto;
+}
+.contentItem {
+    border: 1px solid #e5e5e5;
+    box-shadow: 1px 1px 1px #eee;
+    background-color: #fff;
+    font-size: rem(15px);
+    padding: 0 rem(24px);
+}
+//课程表
+.timetables{
+    border: 1px solid #e5e5e5;
+    box-shadow: 1px 1px 1px #eee;
+    background-color: #fff;
+    font-size: rem(15px);
+    padding: 0 0 0 rem(24px);
+}
+
+//系列课程
+.seriesCourses{
+    border: 1px solid #e5e5e5;
+    box-shadow: 1px 1px 1px #eee;
+    background-color: #fff;
+    font-size: rem(15px);
+//  padding: 0 0 0 rem(24px);
+    .bestItem{
+        margin-left: rem(23px);
+        width: rem(340px);
+        box-sizing: border-box;
+      cursor: pointer;
+      width: 340px !important;
+    }
+}
+
+//添加更多课程
+.contentInnerMore {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-top: none;
+    box-sizing: border-box;
+    height: 55px;
+  text-align: center;
+    p{
+        display: inline-block;
+        line-height: rem(55px);
+        vertical-align: middle;
+        font-size: rem(15px);
+        text-align: center;
+        cursor: pointer;
+      color: #73859e;
+    }
+}
+
+//模块顶部标题样式
+.contentItemHeader{
+    height: 45px;
+    margin-top: rem(16px);
+    background: #fff;
+    border: 1px solid #e6eaed;
+    border-bottom: none;
+    h2 {
+        font-size: 16px;
+        color: #909090;
+        font-weight: normal;
+        line-height:45px;
+        margin-left: rem(24px);
+    }
+}
+//课程表
+.timetables{
+    border: 1px solid #e5e5e5;
+    box-shadow: 1px 1px 1px #eee;
+    background-color: #fff;
+    font-size: rem(15px);
+    padding: 0 rem(15px);
+    .bestItem{
+        margin-left: rem(9px);
+        width: rem(340px);
+        box-sizing:  border-box;
+        /*height: rem(98px);*/
+      cursor: pointer;
+        &:nth-child(2n){
+            margin-left: rem(22px);
+        }
+        .classContentName {
+            display: table-cell;
+            position: relative;
+            text-align: center;
+            p {
+                @include circle(rem(70px), #dff2f9);
+                text-align: center;
+                font-size: rem(16px);
+                color: #333;
+                overflow: hidden;
+                display: inline-block;
+                position: relative;
+               /* margin-top:8px;*/
+
+                &:before {
+                    content: "";
+                    display: inline-block;
+                    vertical-align: middle;
+                    height: 100%;
+                }
+                span {
+                    vertical-align: middle;
+                    display: inline-block;
+                    font-size: rem(12px);
+                    width: rem(50px);
+                    text-align: center;
+                }
+            }
+        }
+        .classContentContext {
+            display: table-cell;
+            vertical-align: top;
+            padding-left: rem(14px);
+            & > h2 {
+                color: #333;
+                font-size: rem(16px);
+                font-weight: normal;
+                width: rem(180px);
+                white-space:nowrap;
+                overflow:hidden;
+                text-overflow:ellipsis;
+              line-height: rem(16px);
+              margin-top: rem(5px);
+            }
+
+            & > p {
+                color: #b4b4b4;
+                font-size: rem(13px);
+                margin-top: rem(9px);
+              line-height: rem(13px);
+            @include ellipsis();
+              width: rem(224px);
+                & > span{
+                    height: 10px;
+                    width: 10px;
+                }
+            }
+            .time {
+                padding-top: rem(9px);
+                display: block;
+                color: #a9a9a9;
+                font-size: rem(13px);
+              line-height: rem(13px);
+            }
+        }
+    }
+}
+.circleBorder {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    height: rem(72px);
+    width: rem(72px);
+    margin-top:7px;
+}
+
+//内容条目
+.contentInnerItem {
+    display: table;
+    width: 100%;
+    padding-top: rem(26px);
+    padding-bottom: rem(26px);
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+//  height: rem(172px);
+  cursor: pointer;
+    &:nth-last-child(1) {
+        border-bottom: none;
+    }
+}
+
+
+
+.contentInnerContext {
+    display: table-cell;
+    vertical-align: top;
+    & > h2 {
+        margin-bottom: rem(18px);
+        color: #333;
+        width: 320px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: normal;
+      font-size: rem(18px);
+      line-height: rem(18px);
+    }
+    & > p {
+        font-size: rem(16px);
+        color: #909090;
+        line-height: rem(16px);
+        width: 500px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        .hospital {
+            margin-left: rem(12px);
+        }
+    } 
+}
+
+
+.contentOtherMsg {
+    margin-top: rem(30px);
+    line-height: 1;
+    font-size: rem(13px);
+    color: #909090;
+    * {
+        font-size: rem(13px);
+    }
+    i {
+        font-style: normal;
+        margin-right: 7px;
+        font-size: rem(14px);
+        cursor: pointer;
+        &:before {
+            display: inline-block;
+            vertical-align: middle; 
+        }
+    }
+    span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .resourceType {
+      behavior: url("/js/third-party/pie/PIE.htc");
+      position: relative;
+        border: 1px solid #dfdfdf;
+        padding:6px 10px;
+        border-radius: 5px;
+        margin-right: 30px;
+    }
+}
+
+.contentInnerImg {
+    display: table-cell;
+    width: rem(170px);
+    height: rem(113px);
+    img {
+        width: rem(170px);
+        height: rem(113px);
+        vertical-align: top;
+    }
+}
+.classAdd {
+    height: 275px;
+    background: #000 url('/image/index/banner_bg.png') top center no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    margin-top: 16px;
+    &:before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+    article {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        z-index: 5;
+
+        & > button {
+            padding: 0;
+            margin: 0;
+            border: none;
+            font-family: 'microsoft yahei';
+            background: #ffcb55;
+            text-align: center;
+            padding: rem(10px) rem(20px);
+            font-weight: bold;
+            font-size: rem(22px);
+            border-radius: 500px;
+            outline: none;
+            cursor: pointer;
+            color: #31394C;
+            
+            &:before{
+                content: "";
+                display: inline-block;
+                float: left;
+                width: rem(22px);
+                height: rem(21px);
+                box-sizing: border-box;
+                background: url('/image/index/head_jion class.png') center center no-repeat;
+                background-size: contain;
+                vertical-align: middle;
+                padding-top: rem(30px);
+                margin-right: rem(5px);
+            }
+        }
+        p {
+            color: #fff;
+            font-size: rem(21px);
+            margin-top: rem(20px);
+        }
+    }
+}
+.isLoginbg{
+    height: 275px;
+    background: #31394c;
+    margin-top:rem(16px);
+    header{
+        display: block;
+        padding-top: 48px;
+        text-align: center;
+        color: #acafb7;
+        font-size: 18px;
+    }
+    .stuCourse{
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        margin-top:26px;
+
+        span{
+            display: inline-block;
+            font-size: 38px;
+            color: #ffa800;
+        }
+
+        p{
+            display: inline-block;
+        }
+    }
+    .stuClass{
+        li{
+           display: inline-block; 
+           color: #FFFFFF;
+           font-size: 10px;
+           text-align: center;
+           margin-top: 40px;
+           width: 32%;
+           span{
+               display: inline-block;
+               font-size:22px;
+               color: #ffa800;
+           }
+
+           p{
+               display: inline-block;
+             font-size: 14px;
+             color: #eaebed;
+           }
+           em{
+               display: block;
+               font-style: normal;
+               font-size: 18px;
+             color: #eaebed;
+           }
+        }
+    }
+}
+
+.messageBar {
+    height: rem(40px);
+    background-color: #fff;
+    text-align: center;
+    line-height: rem(40px);
+    i {
+        font-style: normal;
+        position: absolute;
+        &:nth-child(1) {
+            left: rem(15px);
+        }
+        &:nth-child(2) {
+            right: rem(0px);
+        }
+    }
+
+}
+
+@import "../../components/_tagItem"; //推荐标签
+@import "../../components/_iconModule"; //图标标签
+@import "../../components/_footerBar"; //页脚
+.icon-person {
+    @extend %icon-person;
+}
+
+.icon-follower {
+    @extend %icon-follower;
+}
+
+.icon-comment {
+    @extend %icon-comment;
+  vertical-align: middle;
+}
+
+.icon-load {
+  @extend %icon-load;
+  vertical-align: middle;
+}
+
+.icon-search {
+    @extend %icon-search;
+}
+@include query(){
+    .icon-search{
+        width: rem(18px);
+        height: rem(19px);
+        display: inline-block;
+        margin-right: rem(10px);
+        background: url("/image/index_search.png") no-repeat;
+        background-size: contain;
+        cursor: pointer;
+    }
+
+}
+
+.icon-message {
+    @extend %icon-message;
+    span {
+        vertical-align: middle;
+    }
+}
+
+.icon-rArrow {
+    @extend %icon-rArrow;
+    span {
+        vertical-align: middle;
+        color: #909090;
+    }
+}
+
+@include query() {
+    //课程表
+    .timetables{
+        .bestItem{
+         margin-left: rem(0px);
+            &:nth-child(2n){
+                margin-left: rem(0px);
+            }
+        }
+    }
+    //内容容器
+    .contentItem {
+       font-size: rem(18px);
+       &Header{
+           font-size: rem(15px);
+           
+       }
+    }
+    //内容条目
+    .contentInnerItem {
+        display: table;
+        width: 100%;
+        padding-top: rem(16px);
+        box-sizing: border-box;
+        border-bottom: 1px solid #eee;
+        height: rem(100px);
+        &:nth-last-child(1) {
+            border-bottom: none;
+        }
+    }
+    .contentInnerContext {
+        display: table-cell;
+        vertical-align: top;
+        & > h2 {
+            font-size: rem(17px);
+            margin-bottom: rem(12px);
+            color: #333;
+            font-weight: normal;
+            line-height: rem(17px);
+        }
+        & > p {
+            font-size: rem(16px);
+            color: #909090;
+            .hospital {
+                margin-left: rem(10px);
+            }
+        }
+    }
+    .contentOtherMsg {
+        margin-top: rem(12px);
+        margin-bottom: rem(15px);
+        line-height: 1;
+        font-size: rem(14px);
+        color: #909090;
+        * {
+            font-size: rem(14px);
+        }
+        i {
+            font-style: normal;
+            margin-right:5px;
+            font-size: rem(14px);
+            &:before {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+        span {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: rem(11px);
+        }
+        .resourceType {
+            border: 1px solid #909090;
+            padding: rem(3px) rem(4px);
+            border-radius: 5px;
+            margin-right: rem(20px);
+        }
+    }
+    
+    .contentInnerImg {
+        display: table-cell;
+        width: rem(155px);
+        height: rem(70px);
+        img {
+            width: rem(155px);
+            height: rem(70px);
+            vertical-align: top;
+        }
+    }
+
+    .contentInnerContext {
+        display: table-cell;
+        vertical-align: top;
+        & > h2 {
+            font-size: rem(17px);
+            color: #222;
+            font-weight: normal;
+          line-height: rem(17px);
+        }
+
+        & > p {
+            font-size: rem(13px);
+            color: #909090;
+            .hospital {
+                margin-left: rem(10px);
+            }
+        }
+    }
+    
+    
+    .contentInnerImg {
+        display: table-cell;
+        width: rem(105px);
+        height: rem(70px);
+        margin-right: rem(30px);
+        img {
+            width: rem(105px);
+            height: rem(70px);
+        }
+    }
+    .contentItemHeader{
+        height: rem(40px);
+        margin-top: rem(20px);
+        background: #fff;
+        border: 1px solid #e6eaed;
+        border-bottom: none;
+        h2 {
+            font-size: rem(15px);
+            color: #909090;
+            font-weight: normal;
+            margin-top: rem(10px);
+            margin-left: rem(30px);
+            
+        }
+    }
+    .seriesCourses{
+        border: 1px solid #e5e5e5;
+        box-shadow: 1px 1px 1px #eee;
+        background-color: #fff;
+        font-size: rem(15px);
+        
+        .bestItem{
+            width: 87%;
+        }
+    }
+    .contentInnerMore {
+        height: rem(40px);
+        p{
+            display: inline-block;
+            line-height: rem(55px);
+            vertical-align: middle;
+            font-size: rem(15px);
+            cursor: pointer;
+            text-align: center;
+          color: #73859e;
+        }
+    }
+
+    .classAdd {
+        height: 370px;
+        background: #000 url('/image/index/banner_bg.png') top center no-repeat;
+        background-size: 100% 100%;
+        text-align: center;
+        position: relative;
+        box-sizing: border-box;
+        display: -moz-box;
+        margin-top: 0;
+        article {
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            z-index: 5;
+    
+            & > button {
+                padding: 0;
+                margin: 0;
+                border: none;
+                font-family: 'microsoft yahei';
+                background: #ffcb55;
+                text-align: center;
+                padding: rem(10px) rem(20px);
+                font-weight: bold;
+                font-size: rem(16px);
+                border-radius: 500px;
+                outline: none;
+                cursor: pointer;
+                
+                &:before{
+                    content: "";
+                    display: inline-block;
+                    float: left;
+                    width: rem(13px);
+                    height: rem(13px);
+                    box-sizing: border-box;
+                    background: url('/image/index/head_jion class.png') center center no-repeat;
+                    background-size: contain;
+                    vertical-align: middle;
+                    padding-top: rem(20px);
+                    margin-right: rem(5px);
+                }
+            }
+            p {
+                color: #fff;
+                font-size: rem(15px);
+                margin-top: rem(20px);
+            }
+        }
+    }
+    .al-footerBar.mobileMobule {
+        display: flex;
+    }
+    .isLoginbg{
+        height: 275px;
+        background: #31394c;
+        
+        header{
+            display: block;
+            padding-top: 0;
+            text-align: center;
+            color: #fff;
+            opacity: 0.6;
+            font-size: rem(11px);
+        }
+        .stuCourse{
+            text-align: center;
+            color: #fff;
+            font-size: rem(17px);
+            margin-top: rem(20px);
+            height: rem(28px);
+            span{
+                display: inline-block;
+                font-size: rem(38px);
+                color: #ffa800;
+            }
+
+            p{
+                display: inline-block;
+            }
+        }
+        .stuClass{
+            padding: 0 rem(25px);
+
+            li{
+               display: inline-block; 
+               color: #FFFFFF;
+               font-size: 10px;
+               text-align: center;
+               margin-top: rem(32px);
+
+                &:nth-child(2){
+                    margin-left: rem(75px);
+                }
+                &:nth-child(3){
+                    margin-left: rem(75px);
+                }
+               span{
+                   display: inline-block;
+                   font-size: rem(17px);
+                   color: #ffa800;
+               }
+               p{
+                   display: inline-block;
+                   font-size: rem(11px);
+               }
+               em{
+                   display: block;
+                   font-style: normal;
+                   font-size: rem(11px);
+               }
+            }
+        }
+    }
+}
+
+.al-personalBrowsedPart {
+    background-color: #fff;
+    padding-left: rem(30px);
+}
+
+.al-personalBrowsedItem {
+    padding: rem(20px) rem(30px) rem(20px) 0;
+
+    border-bottom: 1px solid #ccc;
+    font-size: rem(15px);
+    a {
+        color: #333333;
+        position: relative;
+        display: block;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: rem(-14px);
+            background-size: cover;
+            content: "";
+            width: rem(11px);
+            height: rem(21px);
+            background: transparent url('/image/rArrow.png') center center no-repeat;
+        }
+    }
+    .al-newsNum {
+      behavior: url("/js/third-party/pie/PIE.htc");
+      position: relative;
+        border-radius: 50%;
+        background-color: #F34B4B;
+        font-style: normal;
+        position: absolute;
+        top: rem(8px);
+        right: rem(20px);
+        margin-right: rem(-5px);
+        display: block;
+        font-size: rem(12px);
+        width: rem(15px);
+        height: rem(15px);
+        text-align: center;
+        line-height: rem(15px);
+        color: #fff
+    }
+}
+
+.al-msgRemindPart {
+    margin-top: rem(16px);
+    background-color: #fff;
+}
+
+.al-msgRemindItem {
+    padding: rem(20px) rem(30px);
+    padding-bottom: rem(14px);
+    @include clearfix();
+
+    border-bottom: 1px solid #ccc;
+}
+
+.al-msgRemindIcon {
+    float: left;
+    position: relative;
+    .icon-newTips:after {
+        right: 0;
+        top: rem(-5px);
+    }
+}
+
+.al-msgRemindContent {
+    margin-left: rem(40px);
+}
+
+.al-msgRemindTitle {
+    font-size: rem(15px);
+    color: #333;
+    font-weight: normal;
+    margin: 0;
+    .al-msgRemindTime {
+        float: right;
+        font-size: rem(12px);
+
+        color: #ccc;
+
+    }
+}
+
+.al-msgRemindContentText {
+    font-size: rem(14px);
+    color: #808080;
+    margin: rem(13px) 0;
+}
+
+.al-msgRemindContentTextHide {
+    color: #5f6f8f;
+    margin: rem(13px) 0;
+    font-size: rem(14px);
+}
+
+.icon-msgFollow{
+    @extend %icon-msgFollow;
+}
+.icon-msgComment{
+    @extend %icon-msgComment;
+}
+.icon-msgRemind{
+    @extend %icon-msgRemind;
+}
+.icon-msgLike{
+    @extend %icon-msgLike;
+}
+.icon-mailbox{
+    @extend %icon-mailbox;
+}
+.icon-addClass{
+    @extend %icon-addClass;
+}
+ 
+//@import "common/base"; //公共样式
+//@import "course"; //课程样式
+//@import "discuss"; //讨论样式
+//@import "exercises"; //习题样式
+//@import "index"; //首页样式
+//@import "login-register"; //登录-注册样式
+//@import "messages"; //消息样式
+//@import "personal"; //我的样式
+//@import "search"; //搜索样式
+
+//@import "pages/index/index"; //搜索样式
+
+
+
+
+.icon-rArrow{
+  &.iconBottomMore{
+    background-image: url('/image/sprite/icon.png');
+    background-repeat: no-repeat;
+    background-position:-2px -70px;
+    width: 13px;
+    height: 9px;
+  }
+}
+
+.iconLoad{
+  display: inline-block;
+  margin-left: 20px;
+}

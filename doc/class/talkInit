@@ -1,0 +1,13 @@
+{
+  "name":"talkInit()",
+  "des":"//讨论数据初始化，根据是否登录，做不同的处理，未登录的用户只能查看讨论的总数，不能查看具体的讨论",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+  },
+  "param":{
+    "isNull":true
+  }
+}

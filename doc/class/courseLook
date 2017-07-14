@@ -1,0 +1,19 @@
+{
+  "name": "courseLook(isFinish,playTimeLength)",
+  "des": "//该方法用来向记录用户当前暂停到上一次暂停所播放的时间。",
+  "attention": "",
+  "comp": "",
+  "scene": "",
+  "returnVal": {
+    "isNull": true
+  },
+  "param": {
+    "isNull": false,
+    "des": "",
+    "type": "string",
+    "timeUpdata": {
+      "isFinish": "判断是不是观看完毕",
+      "playTimeLength": "从上次暂停到现在暂停的观看记录"
+    }
+  }
+}

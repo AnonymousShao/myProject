@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的收藏</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/yiding.ico">
+    <meta name="keywords" content="模拟考试、能力评估、真题、专项练习、顺序练习、海量习题、住培真题、骨科住培习题、测试题">
+    <meta name="viewport" content="width=750">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/exercises/exercises.css" />
+    <script src="/js/common/rem.js"></script>
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="/build/compatibility.js"></script>
+    <![endif]-->
+
+<body>
+<!--全内容容器——mainInner-->
+<section class="yd-mainInner none">
+    <section class="contentInner">
+        <!--试题答题部分-->
+        <section id="quesContainer" class="quesContainer none">
+            <ul id="queInnerContent" class="innerContent">
+            </ul>
+        </section>
+
+        <!--上一题下一题操作-->
+        <section id="queBehavior" class="queBehaviors none collectionList">
+            <p class="queBehIteam queBehPre queIco"><i></i><span class="queName">上一题</span></p>
+            <p class="queBehIteam  queBehExp queIco"><i></i><span class="queName">答案解析</span></p>
+            <p class="queBehIteam queBehNext queIco queIcoNextQue" data-handin="false"><i></i><span class="queName">下一题</span></p>
+        </section>
+        <!--答题过程中的答题记录-->
+        <section id="queShiTiRecord" class="queShiTiRecordIn none">
+        </section>
+        <!--每一道题对应的答题分析-->
+        <section class="queAnalysisIn">
+            <ul id="queAnalysis">
+                <li class="queAnalysisIteam queAnalysisIteamActive">
+                    <div class="answerAnalysis  answerAnalysisActive">
+                        <div class="exercisesAnalysis">
+                        </div>
+                        <section class="course-footer">
+                            <div class="yd_c_bg">
+                                <article class="clear"><h3>相关推荐</h3></article>
+                                <div class="recommendCont">
+                                    <div class="recommend">
+                                        <ul class="clear">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="courseBLock discuss-content">
+                            <div class="queShiTiDiscussion ">
+                                <div class="queShiTiDisTitle clearfix">
+                                    <div class="width92"> 考题讨论&nbsp;&nbsp;(6)<span class="queShiTiPart fr">参与讨论</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="queShiTiDisNothing">
+                                <p class="queShiTiDisNoIte queShiTiDisNoIteTop">
+                                    本题还没有相关讨论，
+                                </p>
+                                <p class="queShiTiDisNoIte">点击参与讨论发表你的看法吧!</p>
+                            </div>
+                            <section class="discussList">
+                                <div class="width92">
+                                    <ul class="discussAllList">
+
+                                    </ul>
+                                </div>
+                            </section>
+                        </section>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </section>
+</section>
+<!--common.log统计ip,address-->
+<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+<!-- end -->
+<script src="/js/third-party/jquery/jquery-1.8.0.min.js"></script>
+<!--about:jq-->
+<script src="/build/jqAll.js"></script>
+<!-- end -->
+<!--about:common&login-->
+<script src="/build/common.js"></script>
+<!-- end -->
+<script src="/js/scene/discuss/discuss.js"></script>
+<script src="/js/scene/exercises/json2.js" type="text/javascript"></script>
+<script src="../../js/scene/exercises/talk.js" type="text/javascript"></script>
+<script src="/js/scene/exercises/exerciseCommon.min.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function(){
+        var orderOptions = {
+            "type": {
+                "page":3,
+                "exam":4,
+                "name":"收藏"
+            },
+            initData: {
+                "isRestart": "2",
+                "customerId": localStorage.getItem("userId"),
+                "type": "8",
+                "subMajorId": exerciseCommon.means.getUrlName("subMajorId")
+            },
+            "record": true,
+            "login":true,
+            "site":true
+        };
+        exerciseCommon.analysis(orderOptions);
+    });
+</script>
+</body>
+
+</html>

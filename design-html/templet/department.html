@@ -1,0 +1,983 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D骨科-医鼎</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/yiding.ico">
+    <meta name="keywords" content="3D骨科,创伤,1.培训目标、轮转目的模块内容较多，默认显示四行且多出部分收起，单击模块区域展开全部文字。
+2.教师介绍默认显示三人信息，显示内容为头像、姓名、职称、所在医院，排序方式为姓名首字母先后，展开后显示当前科室课程的所有任课老师。
+3.基本要求模块默认收起，仅展示“实践部分”“理论部分”标题，单击模块区域展开全部文字,培训目标、轮转目的、教师介绍、基本要求(实践要求和理论要求)等模块的名称及内容
+授课老师的展示需要排重，因为目前没有老师端的用户ID，所以通过姓名、职称、所在医院相同即视为同一人进行排重。,贾玲意,李明远,张金龙,张远航">
+    <meta name="viewport" content="width=750">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/index/index.css">
+    <link rel="stylesheet" href="/css/pages/classes/department.css">
+    <script src="https://hm.baidu.com/hm.js?6f821f9b68f7d9af379b68d75dd5262f"></script>
+    <script src="https://hm.baidu.com/hm.js?6f821f9b68f7d9af379b68d75dd5262f"></script>
+    <script src="/js/third-party/jquery/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="/js/common/rem.js"></script>
+    <script src="/js/common/documentLink.js"></script>
+    <script src="/js/third-party/jquery-qrcode-master/jquery.qrcode.min.js"></script>
+
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="/js/common/html5shiv.js"></script>
+    <script type="text/javascript" src="/js/common/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="/build/common.js"></script>
+
+    <script src="/js/common/shareAll.js"></script>
+
+    <script src="//pv.sohu.com/cityjson?ie=utf-8"></script>
+
+    <script src="/js/common/comm.log.js"></script>
+
+</head>
+<body>
+<!--全内容容器——mainInner-->
+<section class="yd-mainInner">
+    <header class="al-header al-indexHeader pcModule" style="margin-left: 0px;">
+        <section class="al-headerContainer">
+            <ul class="al-headerTopNav" id="al-headerTopNav">
+                <li class=""><a href="//www.yi-ding.net.cn">首页</a></li>
+                <li class="active"><a href="//www.yi-ding.net.cn/pages/curriculum/curriculum.html">课程</a></li>
+                <li class=""><a href="//www.yi-ding.net.cn/pages/category/question.html">习题</a></li>
+                <li class=""><a href=""></a></li>
+            </ul>
+            <div class="al-se-lo-re">
+                <div class="al-search">
+                    <div class="icon-search"
+                         data-url="//www.yi-ding.net.cn/pages/search/search.html?1483580727328.html"></div>
+                </div>
+                <div class="al-lo-re notLogin" id="notLogin">
+                    <div class="al-login">登录</div>
+                    <div class="al-register">注册</div>
+                </div>
+                <div class="al-lo-re isLogin" id="isLogin" style="display: none;">
+                    <div class="user-header"><img src="" style="width:40px;height:40px;"></div>
+                    <div class="user-name"><a href="//www.yi-ding.net.cn/pages/personal/personal_index.html">黄志强</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <section id="al-mainSidebar" class="pcModule"
+             style="width: auto; height: 1000px;position: fixed; left: 0;top: 0; z-index: 3;">            <!--左侧导航栏-->
+        <aside class="al-mainSidebar al-mainSidebarCollapse pcModule" style="width: 80px;" id="al-mainSidebarWide">
+            <header class="al-collapseLogo" style="display: none;"><img src="/image/index/bigLogo.png" alt=""></header>
+            <header class="al-mainLogo" style="display: block;"><img src="/image/index/logo.png" alt=""
+                                                                     style="box-shadow: rgb(51,51,51) 0px 0px 2px;">
+            </header>
+            <section class="al-mainSidebarList" id="al-mainSidebarList">
+                <ul>
+                    <li class="al-mainSidebarItem Ev-sidebarIndex"><a href="//www.yi-ding.net.cn"> <img
+                            src="/image/index/home.png" alt="">
+                        <figcaption style="display: block;">首页</figcaption>
+                        <article class="al-collapseItem" style="display: none;"><p class="al-collapseItemText"></p>
+                            <h4>首页</h4>
+                            <p>HOME</p>
+                            <p></p></article>
+                    </a></li>
+                    <li class="al-mainSidebarItem Ev-sidebarMessage"><a href="/pages/message/message_discuss.html"> <img
+                            src="/image/index/mail.png" alt="">
+                        <figcaption style="display: block;">消息</figcaption>
+                        <article class="al-collapseItem" style="display: none;"><p class="al-collapseItemText"></p>
+                            <h4>消息</h4>
+                            <p>MESSAGE</p>
+                            <p></p></article>
+                    </a></li>
+                </ul>
+            </section>
+        </aside>
+    </section>
+    <!--pc端返回-->
+    <section class="pcModule return_pc">
+        <a class="text" href="javascript:history.go(-1)">返回</a>
+    </section>
+
+    <section class="depart_head width_auto" seriesid="1483580727328"
+             style="background: url(/image/classes/department/banner_bg.png) no-repeat ">
+        <!--h5端返回-->
+
+        <!--h5端-->
+        <div class="depart_title clear mobileModule">
+            <div class="de_user_img">
+                <img src="http://img04.yi-ding.net.cn/series/attachment/2017/01/05/1483582626156.png">
+            </div>
+            <div class="de_classesname">
+                3D骨科
+            </div>
+            <!--h5未加入-->
+            <section class="de_addclass ev-addBtnH5 ev-btnH5">
+                <span class="de_addclasstext">加入</span>
+            </section>
+            <!--h5已加入-->
+            <section class="de_addfinish ev-finBtnH5 ev-btnH5">
+                <span class="de_addclasstext">已加入</span>
+            </section>
+
+        </div>
+        <!--pc端-->
+        <div class="depart_title clear pcModule">
+            <section class="depart_titletop clear">
+                <div class="de_user_img">
+                    <img src="http://img04.yi-ding.net.cn/series/attachment/2017/01/05/1483582626156.png">
+
+                </div>
+
+            </section>
+            <section class="">
+                <div class="de_classesname">
+                    3D骨科
+                </div>
+            </section>
+            <section class="de_addclass ev-de_addclass ev-addBtn">
+                <span class="de_addclasstext ev-addCourse">加入系列课程</span>
+                <span class="de_finclasstext ev-finCourse" style="display: none;"><a href="javaScript:;">开始学习 1.1
+                    骨的正常与发生</a></span>
+            </section>
+        </div>
+
+    </section>
+    <nav class="depart_nav width_auto pcModule">
+        <div class="yd_t_bg"></div>
+        <div class="yd_c_bg">
+            <ul class="nav_list clear">
+
+                <li class="chapter_num"><span class="chart_zj">2</span>章内容</li>
+                <li class="chapter_num"><span class="chart_nr">6</span>个课时</li>
+                <li class="chapter_num"><span class="chart_cs">3</span>个练习测验</li>
+
+
+            </ul>
+        </div>
+        <div class="yd_b_bg"></div>
+    </nav>
+    <nav class="depart_nav width_auto mobileModule">
+        <ul class="nav_list clear">
+            <li>
+                <div class="chapter_num clear">
+                    <div class="chart_zj">2</div>
+                    <div class="chapter_t">章</div>
+                </div>
+                <div class="chapter_text">内容</div>
+            </li>
+
+            <li>
+                <div class="chapter_num clear">
+                    <div class="chart_nr">6</div>
+                    <div class="chapter_t">个</div>
+                </div>
+                <div class="chapter_text">课时</div>
+            </li>
+            <li>
+                <div class="chapter_num clear">
+                    <div class="chart_cs">3</div>
+                    <div class="chapter_t">个</div>
+                </div>
+                <div class="chapter_text">练习测验</div>
+            </li>
+        </ul>
+
+    </nav>
+    <section class="modulesFloor width_auto">
+        <div class="yd_t_bg pcModule"></div>
+        <div class="yd_c_bg">
+            <nav class="de_dire_nav tab_box">
+                <ul class="clear line_df" style="z-index: 1;">
+                    <li class="introduction_text current" data-role="a">简介</li>
+                    <li class="catalog_text" data-role="b">目录</li>
+                </ul>
+            </nav>
+            <div class="departmentTab">
+                <!--简介-->
+                <div class="trainTarget_cont" data-role="a" style="display: block">
+                    <aside class="train_target clear mB" style="padding-bottom: 25px;">
+                        <div class="trTarget_title">培训目标</div>
+                        <div class="trTarget_cont ev-trTarget_cont ev-trTarget_cont_mb line2">
+                            1.培训目标、轮转目的模块内容较多，默认显示四行且多出部分收起，单击模块区域展开全部文字。
+                            2.教师介绍默认显示三人信息，显示内容为头像、姓名、职称、所在医院，排序方式为姓名首字母先后，展开后显示当前科室课程的所有任课老师。
+                            3.基本要求模块默认收起，仅展示“实践部分”“理论部分”标题，单击模块区域展开全部文字
+                        </div>
+                        <div class="icon-upMore ev-icon-upMore" style="display: none;"><i></i><span>展开</span></div>
+                    </aside>
+                    <aside class="train_target clear mD" style="padding-bottom: 25px;">
+                        <div class="trTarget_title">轮转目的</div>
+                        <div class="trTarget_cont ev-trTarget_cont ev-trTarget_cont_md line2">
+                            培训目标、轮转目的、教师介绍、基本要求(实践要求和理论要求)等模块的名称及内容
+                            授课老师的展示需要排重，因为目前没有老师端的用户ID，所以通过姓名、职称、所在医院相同即视为同一人进行排重。
+                        </div>
+                        <div class="icon-upMore ev-icon-upMore" style="display: none;"><i></i><span>展开</span></div>
+                    </aside>
+                </div>
+                <!--简介 END-->
+                <!--目录-->
+                <div class="catalog_cont" data-role="b" style="display: none">
+                    <aside class="clear">
+                        <div class="margin30"></div>
+
+                        <aside data-index="0" class="boneBasis_title ev-boneBasis_title">
+                            <aside class="boneBasisTitleNav clear" data-serid="1483580871523">
+                                <div class="boneBasis_titleText">3D骨科基础</div>
+                                <div class="UpDown boneBasis_packUp"></div>
+                            </aside>
+                            <ul class="boneBasis_list" data-index="0" style="" flag="1">
+                                <li data-inserid="1483581078256" serid="1483581078256" open="0"
+                                    jumpurlpc="www.yi-ding.net.cn/course/2016/12/20/1482216110477.html"
+                                    jumpurlh5="undefined"><a href="javaScript:;">第一章</a><span></span></li>
+                                <li data-inserid="1483669387798" serid="1483669387798" open="0"
+                                    jumpurlpc="www.yi-ding.net.cn/course/2017/01/06/1483669513983.html"
+                                    jumpurlh5="undefined"><a href="javaScript:;">第二章</a><span></span></li>
+                                <li data-inserid="1483669404519" serid="1483669404519" open="0" jumpurlpc=""
+                                    jumpurlh5="undefined"><a href="javaScript:;">第三章</a><span></span></li>
+                                <li data-inserid="1483669419822" serid="1483669419822" open="0"
+                                    jumpurlpc="www.yi-ding.net.cn/course/2017/01/09/1483757519036.html"
+                                    jumpurlh5="undefined"><a href="javaScript:;">第四张</a><span></span></li>
+                            </ul>
+                        </aside>
+                        <aside data-index="1" class="boneBasis_title ev-boneBasis_title">
+                            <aside class="boneBasisTitleNav clear" data-serid="1483580915946">
+                                <div class="boneBasis_titleText">3D骨科进阶</div>
+                                <div class="boneBasis_packDown UpDown"></div>
+                            </aside>
+                            <ul class="boneBasis_list" data-index="1" style="display: none" flag="0">
+                                <li data-inserid="1483581101861" serid="1483581101861" open="0"
+                                    jumpurlpc="www.yi-ding.net.cn/course/2017/01/04/1483498215425.html"
+                                    jumpurlh5="undefined"><a href="javaScript:;">第一章（进阶）</a><span></span></li>
+                                <li data-inserid="1483757654512" serid="1483757654512" open="0"
+                                    jumpurlpc="www.yi-ding.net.cn/course/2017/01/06/13829281928121.html"
+                                    jumpurlh5="undefined"><a href="javaScript:;">测试111</a><span></span></li>
+                                <li data-inserid="1486277598251" serid="1486277598251" open="0" jumpurlpc=""
+                                    jumpurlh5="undefined"><a href="javaScript:;">髌骨不稳</a><span></span></li>
+                            </ul>
+                        </aside>
+                    </aside>
+                </div>
+                <!--目录 END-->
+            </div>
+        </div>
+        <div class="yd_b_bg pcModule"></div>
+
+    </section>
+    <section class="modulesFloor width_auto teachers">
+        <div class="yd_t_bg pcModule"></div>
+        <div class="yd_c_bg">
+            <header class="modulesTitle">
+                <div class="width92">教师介绍<span>排名不分先后</span></div>
+            </header>
+            <ul class="teacher_ranking clear ev-teacher_ranking">
+
+
+                <li class="clear teaIte" cid="1482136766271" style="display: block;">
+                    <div class="teacherImg"><img src="https://img04.yi-ding.net.cn/author/2016/12/20/1482204465572.jpg">
+                    </div>
+                    <div class="teacherIntroduction">
+                        <div class="teacherName">贾玲意</div>
+                        <div class="teacherText"><span>中日友好医院</span>中日友好医院</div>
+                    </div>
+                </li>
+                <li class="clear teaIte" cid="0" style="display: block;">
+                    <div class="teacherImg"><img
+                            src="https://img05.allinmd.cn/public1/M00/00/79/wKgBw1hssuWAdsyfAACqWExuAxc157.png"></div>
+                    <div class="teacherIntroduction">
+                        <div class="teacherName">李明远</div>
+                        <div class="teacherText"><span>主任医师</span>北京积水潭医院</div>
+                    </div>
+                </li>
+                <li class="clear teaIte" cid="1481524040800" style="display: block;">
+                    <div class="teacherImg"><img src="https://img04.yi-ding.net.cn/author/2016/12/20/1482220104772.jpg">
+                    </div>
+                    <div class="teacherIntroduction">
+                        <div class="teacherName">张金龙</div>
+                        <div class="teacherText"><span>副主任医师</span>解放军第309医院</div>
+                    </div>
+                </li>
+                <li class="clear teaIte" cid="0" style="display: block;">
+                    <div class="teacherImg"><img
+                            src="https://img05.allinmd.cn/public1/M00/00/7D/wKgBw1htuQOAeVDJAACinIDFq1Q860.jpg"></div>
+                    <div class="teacherIntroduction">
+                        <div class="teacherName">张远航</div>
+                        <div class="teacherText"><span>教授</span>中国人民解放军301医院</div>
+                    </div>
+                </li>
+            </ul>
+            <aside class="lookMore ev-lookMore" style="display: none;">
+                <span>展开更多</span>
+            </aside>
+        </div>
+        <div class="yd_b_bg pcModule"></div>
+    </section>
+    <section class="modulesFloor width_auto baseRequire">
+        <div class="yd_t_bg pcModule"></div>
+        <div class="yd_c_bg">
+            <header class="modulesTitle">
+                <div class="width92">基础要求</div>
+            </header>
+            <aside class="requireFloor width92">
+                <div class="reFloor_title clear">实践部分
+                    <div class="icon-upMore ev-icon-upMore"><i></i><span>展开</span></div>
+                </div>
+                <div class="reFloor_cont ev-reFloor_cont">
+                    <div class="mainTitleBox" style="font-family: &quot;microsoft yahei&quot;;">
+                        <div class="mainTitle" style="font-size: 1rem; color: rgb(85, 85, 85); line-height: 1rem;">
+                            病种及例数要求
+                        </div>
+                        <ul class="tm_ul" style="padding: 0px; margin: 0.625rem 0px 0.875rem;">
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i>
+                                    <span>锁骨骨折</span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    2例
+                                </div>
+                            </li>
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i><span>胫腓骨骨折</span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    2例
+                                </div>
+                            </li>
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i><span>肱骨外科颈骨折</span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    3例
+                                </div>
+                            </li>
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i><span>肩关节脱位 </span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    2例
+                                </div>
+                            </li>
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i><span>桡骨远端骨折 </span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    5例
+                                </div>
+                            </li>
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i><span>尺骨鹰嘴骨折 </span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    2例
+                                </div>
+                            </li>
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i><span>髌骨骨折 </span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    3例
+                                </div>
+                            </li>
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i><span>股骨近端骨折 </span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    3例
+                                </div>
+                            </li>
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i><span>胫骨平台骨折 </span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    2例
+                                </div>
+                            </li>
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i><span>关节扭伤 </span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    2例
+                                </div>
+                            </li>
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i><span>肱骨干骨折 </span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    2例
+                                </div>
+                            </li>
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i><span>股骨干骨折 </span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    2例
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mainTitleBox" style="font-family: &quot;microsoft yahei&quot;;">
+                        <div class="mainTitle" style="font-size: 1rem; color: rgb(85, 85, 85); line-height: 1rem;">
+                            临床操作技术要求
+                        </div>
+                        <div class="mainTitleText"
+                             style="font-size: 1rem; color: rgb(85, 85, 85); line-height: 1.35rem;">
+                            <span class="mainTitleNum" style="width: 5%;">1.</span><span class="mainTitleContent"
+                                                                                         style="width: 95%;">书写住院病历不少于5份；书写大病历不少于2份。</span>
+                            &nbsp; &nbsp;
+                        </div>
+                        <div class="mainTitleText"
+                             style="font-size: 1rem; color: rgb(85, 85, 85); line-height: 1.35rem;">
+                            <span class="mainTitleNum" style="width: 5%;">2.</span><span class="mainTitleContent"
+                                                                                         style="width: 95%;">在上级医师指导下完成以下手术及例数</span>
+                            &nbsp; &nbsp;
+                        </div>
+                        <ul class="tm_ul" style="padding: 0px; margin: 0.625rem 0px 0.875rem;">
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i>
+                                    <span>常见部位骨折的手法复位、夹板、石膏外固定</span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    10例
+                                </div>
+                            </li>
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i><span>常见部位关节脱位的手法复位</span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    3例
+                                </div>
+                            </li>
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i>
+                                    <span>常见部位的皮牵引/骨牵引</span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    2例
+                                </div>
+                            </li>
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i>
+                                    <span>简单的骨折内固定物取出术</span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    3例
+                                </div>
+                            </li>
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i>
+                                    <span>较简单的髌骨骨折切开复位内固定术</span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    1例
+                                </div>
+                            </li>
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i>
+                                    <span>股骨近端骨折的闭合复位内固定术</span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    1例
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="mainTitleText"
+                             style="font-size: 1rem; color: rgb(85, 85, 85); line-height: 1.35rem;">
+                            <span class="mainTitleNum" style="width: 5%;">3.</span><span class="mainTitleContent"
+                                                                                         style="width: 95%;">参加以下手术及例数</span>
+                            &nbsp; &nbsp;
+                        </div>
+                        <ul class="tm_ul" style="padding: 0px; margin: 0.625rem 0px 0.875rem;">
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i><span>开放性骨折的清创,骨折内固定术</span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    5例
+                                </div>
+                            </li>
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i><span>较为复杂的四肢骨折内固定或外固定手术</span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    5例
+                                </div>
+                            </li>
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i>
+                                    <span>长管状骨骨折的髓内钉内固定技术</span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    5例
+                                </div>
+                            </li>
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i>
+                                    <span>骨盆或髋臼骨折的内固定或外固定手术</span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    1例
+                                </div>
+                            </li>
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i>
+                                    <span>神经、肌腱松解或筋膜间隙减压手术</span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    1例
+                                </div>
+                            </li>
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i>
+                                    <span>合并有多器官组织损伤的复合伤的一期或分期手术</span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    1例
+                                </div>
+                            </li>
+                            <li class="tm_li"
+                                style="list-style: none; line-height: 1.8125rem; font-family: &quot;microsoft yahei&quot;; overflow: hidden;">
+                                <div class="tm_contentItem"
+                                     style="float: left; font-size: 1rem; color: rgb(85, 85, 85);">
+                                    <i class="list_point"
+                                       style="width: 0.1875rem; height: 0.1875rem; display: block; margin-right: 0.4375rem; background: url(&quot;https://www.yi-ding.net.cn/image/classes/department/text_pointer.png&quot;) left center / cover no-repeat; float: left; margin-top: 0.875rem;"></i>
+                                    <span>较复杂的植皮或皮瓣手术</span>
+                                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                </div>
+                                <div class="tm_contentItemNum"
+                                     style="float: right; font-size: 0.8125rem; color: rgb(85, 85, 85);">
+                                    1例
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <script type="text/javascript">
+                        if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE8.0") {
+                            var ele = document.querySelectorAll('.tm_ul')
+                            for (var i = 0; i < ele.length; i++) {
+                                ele[i].style.padding = "0";
+                                ele[i].style.margin = "0";
+                                ele[i].style.marginBottom = "14px";
+                                ele[i].style.marginTop = "10px";
+                            }
+                            var ele = document.querySelectorAll('.mainTitleBox')
+                            for (var i = 0; i < ele.length; i++) {
+                                ele[i].style.fontFamily = "microsoft yahei";
+                            }
+                            var ele = document.querySelectorAll('.tm_li')
+                            for (var i = 0; i < ele.length; i++) {
+                                ele[i].style.listStyle = "none";
+                                ele[i].style.lineHeight = "29px";
+                                ele[i].style.fontFamily = "microsoft yahei";
+                            }
+                            var ele = document.querySelectorAll('.tm_contentItem')
+                            for (var i = 0; i < ele.length; i++) {
+                                ele[i].style.float = "left";
+                                ele[i].style.fontSize = "16px";
+                                ele[i].style.color = "#555";
+                                ele[i].parentNode.style.overflow = 'hidden';
+                            }
+                            var ele2 = document.querySelectorAll(".tm_contentItemNum");
+                            for (var i = 0; i < ele2.length; i++) {
+                                ele2[i].style.float = "right";
+                                ele2[i].style.fontSize = "13px";
+                                ele2[i].style.color = "#555";
+                            }
+                            var eleT = document.querySelectorAll(".mainTitle");
+                            for (var i = 0; i < eleT.length; i++) {
+                                eleT[i].style.fontSize = '16px';
+                                eleT[i].style.color = "#555";
+                                eleT[i].style.lineHeight = "16px";
+                                eleT[i].style.margin = "23px 0 14px 0";
+                            }
+                            var eleC = document.querySelectorAll(".mainTitleText");
+                            for (var i = 0; i < eleC.length; i++) {
+                                eleC[i].style.fontSize = "16px";
+                                eleC[i].style.color = "#555";
+                                eleC[i].style.lineHeight = "21.6px";
+                            }
+                            var eleCs = document.querySelectorAll(".mainTitleNum");
+                            for (var i = 0; i < eleCs.length; i++) {
+                                eleCs[i].style.width = "5%";
+                            }
+                            var eleCss = document.querySelectorAll(".mainTitleContent");
+                            for (var i = 0; i < eleCss.length; i++) {
+                                eleCss[i].style.width = "95%";
+                            }
+                            var eleBefore = document.querySelectorAll(".mainTitleBefore");
+                            for (var i = 0; i < eleBefore.length; i++) {
+                                eleBefore[i].style.marginTop = "5px";
+                                eleBefore[i].style.display = "inline-block";
+                            }
+                            var elePoint = document.querySelectorAll(".list_point");
+                            for (var i = 0; i < elePoint.length; i++) {
+                                elePoint[i].style.width = "3px";
+                                elePoint[i].style.height = "3px";
+                                elePoint[i].style.display = "block";
+                                elePoint[i].style.marginRight = "7px";
+                                elePoint[i].style.background = "url(https://www.yi-ding.net.cn/image/classes/department/text_pointer.png) no-repeat left center";
+                                elePoint[i].style.backgroundSize = "cover";
+                                elePoint[i].style.float = "left";
+                                elePoint[i].style.marginTop = "14px";
+                            }
+
+                        } else {
+
+                            //如果不是ie8
+                            var ele = document.querySelectorAll('.tm_ul')
+                            for (var i = 0; i < ele.length; i++) {
+                                ele[i].style.padding = "0";
+                                ele[i].style.margin = "0";
+                                ele[i].style.marginBottom = "0.875rem";
+                                ele[i].style.marginTop = "0.625rem";
+                            }
+                            var ele = document.querySelectorAll('.mainTitleBox')
+                            for (var i = 0; i < ele.length; i++) {
+                                ele[i].style.fontFamily = "microsoft yahei";
+                            }
+                            var ele = document.querySelectorAll('.tm_li')
+                            for (var i = 0; i < ele.length; i++) {
+                                ele[i].style.listStyle = "none";
+                                ele[i].style.lineHeight = "1.8125rem";
+                                ele[i].style.fontFamily = "microsoft yahei";
+                            }
+                            var ele = document.querySelectorAll('.tm_contentItem')
+                            for (var i = 0; i < ele.length; i++) {
+                                ele[i].style.float = "left";
+                                ele[i].style.fontSize = "1rem";
+                                ele[i].style.color = "#555";
+                                ele[i].parentNode.style.overflow = 'hidden';
+                            }
+                            var ele2 = document.querySelectorAll(".tm_contentItemNum");
+                            for (var i = 0; i < ele2.length; i++) {
+                                ele2[i].style.float = "right";
+                                ele2[i].style.fontSize = "0.8125rem";
+                                ele2[i].style.color = "#555";
+                            }
+                            var eleT = document.querySelectorAll(".mainTitle");
+                            for (var i = 0; i < eleT.length; i++) {
+                                eleT[i].style.fontSize = '1rem';
+                                eleT[i].style.color = "#555";
+                                eleT[i].style.lineHeight = "1rem";
+                                eleT[i].style.margin = "1.4375 0 0.875rem 0";
+                            }
+                            var eleC = document.querySelectorAll(".mainTitleText");
+                            for (var i = 0; i < eleC.length; i++) {
+                                eleC[i].style.fontSize = "1rem";
+                                eleC[i].style.color = "#555";
+                                eleC[i].style.lineHeight = "1.35rem";
+                            }
+                            var eleCs = document.querySelectorAll(".mainTitleNum");
+                            for (var i = 0; i < eleCs.length; i++) {
+                                eleCs[i].style.width = "5%";
+                            }
+                            var eleCss = document.querySelectorAll(".mainTitleContent");
+                            for (var i = 0; i < eleCss.length; i++) {
+                                eleCss[i].style.width = "95%";
+                            }
+                            var eleBefore = document.querySelectorAll(".mainTitleBefore");
+                            for (var i = 0; i < eleBefore.length; i++) {
+                                eleBefore[i].style.marginTop = "0.3125rem";
+                                eleBefore[i].style.display = "inline-block";
+                            }
+                            var elePoint = document.querySelectorAll(".list_point");
+                            for (var i = 0; i < elePoint.length; i++) {
+                                elePoint[i].style.width = "0.1875rem";
+                                elePoint[i].style.height = "0.1875rem";
+                                elePoint[i].style.display = "block";
+                                elePoint[i].style.marginRight = "0.4375rem";
+                                elePoint[i].style.background = "url(https://www.yi-ding.net.cn/image/classes/department/text_pointer.png) no-repeat left center";
+                                elePoint[i].style.backgroundSize = "cover";
+                                elePoint[i].style.float = "left";
+                                elePoint[i].style.marginTop = "0.875rem";
+                            }
+                        }
+
+                    </script>
+
+                </div>
+            </aside>
+
+        </div>
+        <div class="yd_b_bg pcModule"></div>
+    </section>
+    <section class="quitClass ev-quitClass" style="display: none;">退出系列课程</section>
+    <footer class="yd-mainFooter pcModule">
+        <section class="yd-mainFooterInner">
+            <section class="yd-mainFooterContent">
+                <section class="yd-mainFooterLinks"><a href="/pages/help/statement.html" class="yd-mainFooterLinkItem"
+                                                       style="padding-left: 0;">隐私声明</a> <a
+                        href="/pages/help/service.html" class="yd-mainFooterLinkItem">服务条款</a> <a
+                        href="/pages/help/about_us.html" class="yd-mainFooterLinkItem">关于我们</a> <a
+                        href="/pages/help/contact.html" class="yd-mainFooterLinkItem"
+                        style="padding-right: 0;border-right: none;">联系我们</a></section>
+                <article class="yd-mainFooterMsg">
+                    <figure class="yd-mainFooterMsgImg marginR"><a id="___szfw_logo___"
+                                                                   href="https://credit.szfw.org/CX20160321018165560180.html"
+                                                                   target="_blank"> <img
+                            src="//img10.allinmd.cn/v3/common/icon/site_1.png" alt=""> </a></figure>
+                    <figure class="yd-mainFooterMsgImg"><a
+                            href="http://www.anquan.org/authenticate/cert/?site=www.allinmd.cn&amp;at=business"> <img
+                            src="//img10.allinmd.cn/v3/common/icon/site_2.png" alt=""> </a></figure>
+                </article>
+                <article class="yd-mainFooterRecordMsg"><p>京ICP备14007118号-3 京公网安备 11010502031779号京卫计网审[2014] 第0378号 </p>
+                    <p>Copyright@2017 Yi-ding.net.cn All Rights Reserved.版权所有@北京欧应科技有限公司</p></article>
+            </section>
+        </section>
+    </footer>
+</section>
+
+<section class="mobileModule mlbileAddClass">
+    <span>加入系列课程</span>
+</section>
+
+<section class="mobileModule learnStart">
+    <span>开始学习1.1骨的发生于正常结构</span>
+</section>
+<section style="height: 114px;" class="mobileModule"></section>
+
+
+<script src="/js/common/mobile-util.js"></script>
+<script src="/js/third-party/fastclick.js"></script>
+
+
+<!--build:jq-->
+<script src="/js/third-party/jquery/jquery.json-2.4.js"></script>
+<script src="/js/third-party/jqueryscrollpagination/js/scrollpagination.js"></script>
+<script src="/js/third-party/jquery-form/jquery.form.js"></script>
+<!-- endbuild -->
+
+<!--build:compatility-->
+<script type="text/javascript" src="/js/common/respond.min.js"></script>
+<!-- endbuild -->
+
+<!-- build:comm -->
+<!--<script src="/js/common/main.js"></script>-->
+<!--<script src="/js/common/common.js"></script>-->
+<!--<script src="/js/common/comm.func.js"></script>-->
+<!--<script src="/js/common/comm-customer.js"></script>-->
+<!--<script src="/js/common/comm-data.js"></script>-->
+<!--<script src="/js/common/comm_service.js"></script>-->
+<!--<script src="/js/common/jweixin-1.0.0.js"></script>-->
+<!--<script src="/js/common/comm.log.js"></script>-->
+<!--<script src="/js/common/shareAll.js"></script>-->
+<!--<script src="/js/common/comm.cutArray.js"></script>-->
+<!--<script src="/js/common/documentLink.js"></script>-->
+<!--<script src="/js/common/fastclick.js"></script>-->
+<!--<script src="/js/common/comm.autoHeight.js"></script>-->
+<!-- endbuild -->
+
+<!--build:login-->
+<!--<script src="/js/scene/authority/login.js"></script>-->
+<!--<script src="/js/scene/authority/register.js"></script>-->
+<!--<script src="/js/scene/authority/authentication.js"></script>-->
+<!--<script src="/js/scene/authority/checkLogin.js"></script>-->
+<!-- endbuild -->
+
+<script src="/build/login.js"></script>
+
+<script src="/js/scene/classes/department.js"></script>
+
+<script type="text/javascript">
+    domain.get(
+            "/css/base.css",
+            "/css/pages/index/index.css",
+            "/css/pages/classes/department.css"
+    );
+    var href = window.location.href;
+    if (pcOrH5.pc()) {
+        if (window.location.href.indexOf("m.yi-ding.net.cn") > -1) {
+            window.location.href = href.replace("m.yi-ding.net.cn", "www.yi-ding.net.cn");
+        }
+
+    } else {
+        if (window.location.href.indexOf("www.yi-ding.net.cn") > -1) {
+            window.location.href = href.replace("www.yi-ding.net.cn", "m.yi-ding.net.cn");
+        }
+        domain.get(
+                "/js/common/jumpapp.js"
+        );
+    }
+</script>
+<link href="https://www.yi-ding.net.cn/css/base.css" rel="stylesheet" type="text/css">
+<link href="https://www.yi-ding.net.cn/css/pages/index/index.css" rel="stylesheet" type="text/css">
+<link href="https://www.yi-ding.net.cn/css/pages/classes/department.css" rel="stylesheet" type="text/css">
+
+
+<aside class="pcModule al-rightNav" id="al-rightNav">
+    <div class="toTop rightNav" id="toTop"><i class="icon-toTop" style="display: block;"></i>
+        <p style="display: none;">回到<br>顶部</p></div>
+    <div class="code rightNav" id="code"><i class="icon-code" style="display: block;"></i>
+        <p style="display: none;">二维码</p>
+        <p class="codePic" style="display: none;"><img src="/image/1486539881.png"></p></div>
+    <div class="suggestion rightNav" id="suggestion"><i class="icon-suggestion"></i>
+        <p style="display: none;">意见<br>反馈</p></div>
+    <section class="yd-suggestionBox">
+        <button class="yd-suggestionBoxClose">X</button>
+        <article class="yd-suggestionText"><textarea name="" id="Ev-suggestionText" cols="30" rows="10"
+                                                     placeholder="请输入反馈，我们将不断为您改进"></textarea> <span>500</span>
+        </article>
+        <figure class="yd-suggestionBtn">
+            <button>提交</button>
+        </figure>
+    </section>
+    <div class="share rightNav" id="share"><i class="icon-share" style="display: block;"></i>
+        <p class="shareTxt" style="display: none;">分享</p>
+        <article class="sharePic" id="yd-shareBox" style="display: none;"><b class="yd-weixin"><i
+                class="icon-weixin"></i><em>微信</em></b>
+            <section class="Ev-shareWeixinCode" style="display: none;position: absolute;bottom: 100%;"><h3>
+                使用微信扫描二维码</h3></section>
+            <b class="yd-qqFriends"><i class="icon-qq"></i><em>QQ</em></b><b class="yd-qZone"><i
+                    class="icon-zone"></i><em>QQ空间</em></b><b class="yd-weibo"><i class="icon-weibo"></i><em>微博</em></b>
+        </article>
+    </div>
+</aside>
+<section class="al-middleTipsBox" style="z-index: -10;">
+    <section class="al-middleTipsModal ev-loading" style="display: none;">
+        <figure class="al-middleTipsModalText al-loading"><img src="/image/personal/loading_big@2x.png" alt=""></figure>
+    </section>
+</section>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name":"courseAbstract()",
+  "des":"//该方法实现课程终端页的所有的展开、收起功能，让展开和收起自由切换",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+  },
+  "param":{
+    "isNull":true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name":"swipe(container, containerImg, Imgwidth, containerLi, height)",
+  "des":"//该方法是左右点击滑动事件，他可以让超出的部分滑动显示出来，并且可以切换按钮的状态",
+  "attention":"",
+  "comp":"",
+  "scene":"左右点击滑动操作",
+  "returnVal":{
+    "isNull":true
+  },
+  "param":{
+    "isNull":false,
+    "des":"",
+    "type":"number",
+    "timeUpdata":{"container":"包围所有图片容器的父级用来相对定位","containerImg":"包围所有图片的容器用来绝对定位","Imgwidth":"图片的宽度","containerLi":"包围图片的Li元素","height":"包围图片的容器的高度"}
+  }
+}

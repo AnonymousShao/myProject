@@ -1,0 +1,221 @@
+@charset "UTF-8";
+//内容区块 基本样式结构
+//公共方法模块调用
+@import "../../modules/_common-modules";
+
+
+.helpFeedback{
+  width: 750px;
+  margin: 16px auto 0;
+  .helpFeedbackModule{
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(215,222,229,0.50), 0 0 2px 0 #C7D3DF;
+    margin-bottom: 16px;
+    .moduleTitle{
+      font-size: 16px;
+      color: #909090;
+      height: 46px;
+      line-height: 46px;
+      border-bottom: solid 1px #dfdfdf;
+      padding-left: 24px;
+    }
+
+    li{
+      margin:0 24px;
+      border-bottom: solid 1px #eee;
+      padding-bottom: 20px;
+      span{
+        font-size: 16px;
+        color: #333;
+      }
+      &:last-child{
+        border: none;
+      }
+      i{
+        background: url(/image/exercises/main_drop_down@2x.png) no-repeat;
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        float: right;
+      }
+      &.active{
+        i{
+          background: url(/image/exercises/main_pack_up@2x.png) no-repeat;
+          width: 15px;
+          height: 15px;
+          display: inline-block;
+        }
+        .feedbackAswer{
+          font-size: 15px;
+          color: #555555;
+          letter-spacing: 0;
+          line-height: 25px;
+          margin-top: 18px;
+        }
+      }
+    }
+  }
+}
+.helpFeedbackModule{
+  figure{
+    margin-top: 10px;
+    img{
+      width: 170px;
+      height: 113px;
+    }
+  }
+  .feedbackAswerText{
+    font-size: 15px;
+    color: #909090;
+    line-height: 15px;
+    margin-top: 35px;
+  }
+  button{
+    width: 68px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #73859E;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #73859E;
+    margin: 15px 20px 0 0;
+  }
+  .myFeedback{
+    background: #FBFBFB;
+    border: 1px solid #EEEEEE;
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+    &:before{
+      content: "";
+      height: 0;
+      width: 0;
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid #eee;
+      border-left: 9px solid transparent;
+      border-right: 9px solid transparent;
+      display: inline-block;
+      position: absolute;
+      top: -18px;
+      left: 33px;
+    }
+    &:after{
+      content: "";
+      height: 0;
+      width: 0;
+      border-top: 7.5px solid transparent;
+      border-bottom: 7.5px solid #fbfbfb;
+      border-left: 7.5px solid transparent;
+      border-right: 7.5px solid transparent;
+      display: inline-block;
+      position: absolute;
+      top: -14px;
+      left: 35px;
+    }
+    header{
+      font-size: 15px;
+      color: #808080;
+      margin-bottom: 17px;
+      line-height: 15px;
+    }
+    textarea{
+      background: #FFFFFF;
+      font-family: MicrosoftYaHei;
+      border: 1px solid #DFDFDF;
+      border-radius: 4px;
+      font-size: 15px;
+      color: #222222;
+      line-height: 25px;
+      width: 635px;
+      height: 80px;
+      padding: 10px 12px;
+    }
+
+    .uploadPhotoButton{
+      margin-top: 20px;
+      @include clearfix();
+      .uploadPhoto{
+        float: left;
+        position: relative;
+        .yd-loading{
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          background: #31394c;
+          filter:alpha(opacity=0); /*IE滤镜，透明度50%*/
+          -moz-opacity:0; /*Firefox私有，透明度50%*/
+          opacity:0;/*其他，透明度50%*/
+          width: 50%;
+          margin-top: -5px;
+          &.show{
+            opacity: 1;
+            filter:alpha(opacity=100); /*IE滤镜，透明度50%*/
+            -moz-opacity:1; /*Firefox私有，透明度50%*/
+          }
+          img{
+            height: 100%;
+            width: 100%;
+            animation: rotate 1.5s linear forwards infinite;
+          }
+        }
+        .postPicButton{
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 2;
+          width: 42px;
+          height: 42px;
+          opacity: 0;
+          filter:alpha(opacity=0); /*IE滤镜，透明度50%*/
+          -moz-opacity:0; /*Firefox私有，透明度50%*/
+          outline: none;
+          @include cursor();
+        }
+        i{
+          background: url("/image/help/add_pic.png") no-repeat;
+          width: 42px;
+          height: 42px;
+          display: inline-block;
+          float: none;
+          margin-right: 8px;
+        }
+        span{
+          font-size: 12px;
+          color: #73859E;
+        }
+      }
+      .uploadBtn{
+        float: right;
+        button{
+          background: #FFFFFF;
+          border: 1px solid #73859E;
+          border-radius: 4px;
+          width: 68px;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+          font-size: 14px;
+          color: #73859E;
+        }
+        .submit{
+          margin:0;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+.helpFeedbackItem{
+  padding: 20px 0 0 0;
+  @include cursor();
+}
+
+
+.Isfeedback{
+  margin-bottom: 20px;
+}

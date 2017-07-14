@@ -1,0 +1,13 @@
+{
+  "name":"courseTap()",
+  "des":"//这是一个导航栏切换功能，用来实现课程终端页简介、目录、讨论之间的相互切换。",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+  },
+  "param":{
+    "isNull":true
+  }
+}

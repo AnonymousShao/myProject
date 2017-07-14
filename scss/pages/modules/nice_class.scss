@@ -1,0 +1,120 @@
+@charset "UTF-8";
+//内容区块 基本样式结构
+//公共方法模块调用
+@import "../../modules/_common-modules";
+
+@import "../../components/_indexHeader"; //页头
+
+// 变量入口引入
+@import "../../variables/_yiding-variables";
+
+
+.niceClassCont{
+  .contentItemHeader{
+    height: 45px;
+    margin-top: rem(13px);
+    background: #fff;
+    border: 1px solid #e6eaed;
+    border-bottom: none;
+
+    h2 {
+      font-size: 16px;
+      color: #909090;
+      font-weight: normal;
+      line-height: 45px;
+      margin-left: rem(24px);
+
+
+    }
+  }
+  .contentItem {
+    border: 1px solid #dfdfdf;
+    box-shadow: 1px 1px 1px #eee;
+    background-color: #fff;
+    font-size: rem(15px);
+    padding: 0 rem(15px);
+    .contentInnerItem {
+      display: table;
+      width: 100%;
+      padding-top: rem(26px);
+      padding-bottom: rem(26px);
+      box-sizing: border-box;
+      border-bottom: 1px solid #eee;
+      //  height: rem(172px);
+      &:nth-last-child(1) {
+        border-bottom: none;
+      }
+    }
+    .contentInnerContext {
+      display: table-cell;
+      vertical-align: top;
+      & > h2 {
+        font-size: rem(18px);
+        margin-bottom: rem(12px);
+        color: #333;
+        width: 320px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: normal;
+        line-height: rem(18px);
+      }
+      & > p {
+        font-size: rem(16px);
+        color: #909090;
+        line-height: rem(16px);
+        .hospital {
+          margin-left: rem(12px);
+        }
+        span {
+          display: inline-block;
+          vertical-align: middle;
+          max-width: 15rem;
+          @include ellipsis();
+        }
+      }
+    }
+
+    .contentInnerImg {
+      display: table-cell;
+      width: rem(170px);
+      height: rem(113px);
+      img {
+        width: rem(170px);
+        height: rem(113px);
+        vertical-align: top;
+      }
+    }
+    .contentOtherMsg {
+      margin-top: rem(25px);
+      line-height: 1;
+      font-size: rem(14px);
+      color: #909090;
+      * {
+        font-size: rem(13px);
+      }
+      i {
+        font-style: normal;
+        margin-right: 5px;
+        font-size: rem(14px);
+        cursor: pointer;
+        &:before {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+      span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .resourceType {
+        position: relative;
+        border: 1px solid #dfdfdf;
+        padding: 6px 10px;
+        border-radius: 5px;
+        margin-right: 30px;
+      }
+    }
+  }
+}
+

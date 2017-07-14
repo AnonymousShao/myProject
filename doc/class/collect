@@ -1,0 +1,13 @@
+{
+  "name":"collect()",
+  "des":"//该方法是针对课程终端页上所有的收藏进行操作，实现收藏的功能，包括收藏题目，和收藏视频。",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+  },
+  "param":{
+    "isNull":true
+  }
+}

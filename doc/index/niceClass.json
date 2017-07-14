@@ -1,0 +1,22 @@
+
+{
+  "name":"niceClass()",
+  "des":"获取精品课程的内容",
+  "attention":["使用前要预想加载ajaxFn()方法"],
+  "comp":"IE8兼容",
+  "scene":"展示静态数据",
+  "returnVal":{
+    "isNull":true,//无返回值
+    "des":"",
+    "type":"json",
+    "val":{}
+
+  },
+  "code":"",
+  "param":{
+    "isNull":false,
+    "des":"",
+    "type":"json",
+    "val":{}
+  }
+}

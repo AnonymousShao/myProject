@@ -1,0 +1,18 @@
+{
+  "name": "videoFn.operate(nowtime)",
+  "des": "//通过传递当前的播放时间，与目录的以及视频节点的时间属性进行比较，从而显示答题即将开始的话术，而且使目录节点实时显示。",
+  "attention": "",
+  "comp": "",
+  "scene": "",
+  "returnVal": {
+    "isNull": true
+  },
+  "param": {
+    "isNull": false,
+    "des": "",
+    "type": "json",
+    "timeUpdata": {
+      "nowtime": "当前的时间"
+    }
+  }
+}

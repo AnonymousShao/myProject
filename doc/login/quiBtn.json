@@ -1,0 +1,22 @@
+
+{
+  "name":"quiBtn()",
+  "des":"医鼎快速登录的逻辑，如果输入的手机号是存在的医鼎账号，则直接登录否则直接创建新账号进行创建",
+  "attention":[],
+  "comp":"IE8兼容",
+  "scene":"",
+  "returnVal":{
+    "isNull":true,
+    "des":"",
+    "type":"json",
+    "val":{}
+
+  },
+  "code":"",
+  "param":{
+    "isNull":false,
+    "des":"",
+    "type":"json",
+    "val":{}
+  }
+}

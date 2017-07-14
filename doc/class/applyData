@@ -1,0 +1,17 @@
+{
+  "name":"applyData(type,data)",
+  "des":"//根据参数类型的不同，进行不同的数据类型展示，像相关推荐，课后思考题这些展示性质的内容。",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+  },
+  "param":{
+    "isNull":false,
+    "des":"",
+    "type":"object",
+    "timeUpdata":{"type":"各种类型的关键字，用以区分不同的类型，传参的形式是字符串","data":"向后台传递的参数，传参的形式是对象"}
+
+  }
+}

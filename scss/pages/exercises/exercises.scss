@@ -1,0 +1,1797 @@
+@charset "UTF-8";
+@import "../../modules/_common-modules";
+@import "../../components/_discuss";
+@import "../../pages/exercises/practice";
+@import "../../components/_pageTopNav_And_SideBar";
+@import "../../components/_contentInner"; //内容容器
+//内容区块 基本样式结构
+//公共方法模块调用
+//展开收起
+@import "../../components/common/_updown";
+
+@import "../../components/_classDetails";  //课程终端
+
+@import "../../components/_indexHeader"; //页头
+
+@import "../../components/_discuss";//讨论
+@import "../../components/_tagSelectorBox";
+//@import "../../components/_authentication";
+//h5题型展示
+@import "../../components/_question_h5";
+
+//答题解析
+@import "../../components/_answer_analysis";
+//相关推荐
+@import "../../components/_recommend";
+//大图弹层
+@import "../../pages/discuss/big-img";
+.lucency{
+  filter:alpha(opacity=0);
+  -moz-opacity:0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+.fl{
+  float:left;
+}
+.fr{
+  float:right;
+}
+  .clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+  }
+  .clearfix {
+    zoom: 1;
+  }
+.queIco{
+  /*line-height: rem(49px);*/
+  i{
+    display: inline-block;
+    width:rem(19px);
+    height:rem(19px);
+    //behavior: url("/js/third-party/backgroundsize.min.htc");
+    vertical-align: middle;
+    margin-right: rem(5px);
+  }
+}
+.yd-tagSelectorBox{
+  left: rem(80px);
+}
+.contentInner{
+  position:relative;
+}
+.queIcoNextQue i{
+  background-image: url('/image/sprite/icon.png');
+  background-repeat: no-repeat;
+  background-position:-190px 0;
+}
+.queIcoHandin i{
+  background: url(/image/exercises/tab_next@2x.png) no-repeat 0 0;
+  background-size: contain;
+}
+.queIcoExeriseQue i{
+  background-image: url('/image/sprite/icon.png');
+  background-repeat: no-repeat;
+  background-position:-149px 0;
+}
+.queIcoExeriseDel {
+  /*display: none;*/
+  i{
+    background-image: url('/image/sprite/icon.png');
+    background-repeat: no-repeat;
+    background-position:-245px -31px;
+    width: 17px;
+    height: 19px;
+    display: inline-block;
+    margin-right: .3125rem;
+    vertical-align: middle;
+  }
+}
+  .queBehPre i{
+    background-image: url('/image/sprite/icon.png');
+    background-repeat: no-repeat;
+    background-position:-108px 0;
+  }
+  .queBehExp i{
+    background-image: url('/image/sprite/icon.png');
+    background-repeat: no-repeat;
+    background-position:-169px 0;
+  }
+  .contentInner{
+    margin-top:rem(16px);
+  }
+  .questionsHeader{
+    border: solid 1px #e3e8ed;
+    border-bottom:1px solid #eee;
+    background:#fff;
+    font-size:rem(18px);
+    line-height:rem(52px);
+    color:#73859e;
+    position: relative;
+    .saveTime{
+      position: absolute;
+      right: -80px;
+      top: 0;
+      z-index: 5;
+      border: solid 1px #EEE;
+      padding: 20px 14px;
+      background: #fff;
+      cursor: pointer;
+      &:hover{
+        border: solid 1px #EEE;
+        background: #9aa7b9;
+        i{
+          background-image: url('/image/sprite/icon.png');
+          background-repeat: no-repeat;
+          background-position:-66px 0;
+        }
+        span{
+          color: #fff;
+        }
+      }
+      i{
+        background-image: url('/image/sprite/icon.png');
+        background-repeat: no-repeat;
+        background-position:-21px 0;
+        height: 22px;
+        width: 22px;
+        display:block;
+        margin-left: 3px;
+        margin-bottom: 5px;
+      }
+      span{
+        display: block;
+        color: #9aa7b9;
+        line-height: 16px;
+        font-size: 14px;
+      }
+    }
+    .queIcoTitle{
+      display: block;
+      margin: 0 auto;
+      width:rem(100px);
+      text-align: center
+    }
+
+    .queIcoTime{
+      position: absolute;
+      top:50%;
+      right:rem(100px);
+      margin-top:rem(-29px);
+      line-height:rem(50px);
+    }
+    .queIcoTime i{
+      background: url(../../../image/exercises/Nav_stop@2x.png) no-repeat 50% 50%;
+    }
+    .queIcoCollect{
+      position: absolute;
+      top:0;
+      right:0;
+      line-height: rem(52px);
+    }
+    .queKeepTickTime{
+      font-style: normal;
+    }
+
+    .queIcoCollect {
+      cursor: pointer;
+      i{
+        display: inline-block;
+        background-image: url('/image/sprite/icon.png');
+        background-repeat: no-repeat;
+        background-position:-46px 0;
+        width:rem(19px);
+        height: rem(19px);
+        width: 19px\9;
+        height: 19px\9;
+        vertical-align: middle;
+        line-height: rem(52px);
+        &.active{
+          background-image: url('/image/sprite/icon.png');
+          background-repeat: no-repeat;
+          background-position:0 0;
+          width:rem(19px);
+          height: rem(19px);
+          vertical-align: middle;
+          line-height: rem(52px);
+        }
+      }
+      .queName{
+        font-size: rem(14px);
+        margin:0 rem(15px) 0 rem(5px);
+      }
+    }
+  }
+
+  .quesContainer{
+    height:auto;
+    width:100%;
+    padding: 0;
+    border: solid 1px #e3e8ed;
+    border-top: none;
+    margin-bottom: 16px;
+    @include clearfix();
+    .innerContent{
+      width:100%;
+      /*height:rem(300px);*/
+      @include clearfix();
+      .queIteam{
+        width:100%;
+        min-height:rem(150px);
+        //display: none;
+        /*float:left;*/
+        display: block;
+        background:#fff;
+        .queMaterial{
+          height:rem(160px);
+          padding:rem(20px) rem(15px) 0;
+          font-size:rem(16px);
+          line-height: rem(24px);
+          overflow-y: scroll;
+          background: #f4f7f6;
+          /*display: none;*/
+          color:#555;
+          .queMaType{
+            height:rem(20px);
+            margin-right:rem(5px);
+            width:rem(36px);
+            color:#909090;
+            font-size:rem(13px);
+            text-align: center;
+            line-height: rem(20px);
+            border-radius: rem(4px);
+            float: left;
+            border:1px solid #909090;
+          }
+        }
+
+        .quesSingle{
+          min-height:rem(125px);
+          padding:rem(20px) rem(24px) 0;
+          padding-top:rem(25px);
+          background:#fff;
+         /* height:rem(370px);*/
+          .queShitiTitle{
+            font-size:rem(17px);
+            line-height: rem(24px);
+            margin-bottom:rem(10px);
+            padding-bottom: rem(10px);
+            @include clearfix();
+            .queShitiType{
+              display: block;
+              width:rem(20px);
+              height:rem(20px);
+              width: 20px\9;
+              height: 20px\9;
+              font-size:rem(13px);
+              color:#fff;
+              float:left;
+              line-height: rem(20px);
+              line-height: 20px\9;
+              background: #d8d8d8;
+              border-radius: rem(4px);
+              text-align: center;
+              margin-top:rem(5px);
+              margin-right:rem(5px);
+            }
+            .queShiticont{
+              float: left;
+              width: 92%;
+            }
+          }
+          .queShitiOptionsContent{
+            min-height:rem(120px);
+            height:auto;
+            .queShitiOptions{
+              margin:rem(20px) 0 ;
+              font-size:rem(15px);
+              color:#555;
+              cursor: pointer;
+              line-height:rem(24px);
+              @include clearfix();
+             .anwercont{
+                float: left;
+                width: 90%;
+              }
+              /*span{
+                display: block;
+                float: left;
+                width: 89%;
+              }*/
+              .queNoStatus{
+                display: block;
+                float:left;
+                width:rem(22px);
+                height:rem(22px);
+                border-radius: 50%;
+                border:rem(1px) solid #ccc;
+                font-size:rem(14px);
+                font-style: normal;
+                text-align: center;
+                line-height:rem(24px);
+                margin-right:rem(10px);
+                position: relative;
+                //behavior: url(js/pie/pie.htc);
+                margin-top: rem(3px);
+              }
+              .queMultiple{
+                border-radius: rem(4px);
+              }
+              .queRStatus{
+                color:#2cc17b;
+              }
+              .queWStatus{
+                color:#f35555;
+              }
+            }
+            .queShitiOptionsN{
+              color:#ffa800;
+              .queNoStatus{
+                color:#fff;
+                border: none;
+                background: #ffa800;
+              }
+            }
+            .queShitiOptionsR{
+              color:#2cc17b;
+              .queNoStatus{
+                font-size: 0;
+                background: url(../../../image/exercises/main_right_26.png) no-repeat 50% 50%;
+              }
+              .queMultiple{
+                font-size: 0;
+                background: url(../../../image/exercises/main_right_mutiple_26.png) no-repeat -1px 0;
+              }
+            }
+            .queShitiOptionsW{
+              color:#f35555;
+              .queNoStatus{
+                font-size: 0;
+                background: url(../../../image/exercises/main_wrong_26.png) no-repeat 50% 50%;
+              }
+              .queMultiple{
+                font-size: 0;
+                background: url(../../../image/exercises/main_wrong_mutiple.png) no-repeat -1px 0;
+              }
+            }
+            .queShitiOptionsG{
+              color:#aeaeae;
+            }
+
+          }
+        }
+
+      }
+      .queIteamActive{
+        display: block;
+        min-height: rem(400px);
+        height:auto;
+      }
+    }
+  }
+  .queAffirmContainer{
+    width:100%;
+    background: #fff;
+    padding-bottom:rem(20px);
+    .queButton{
+      display: none;
+      margin: 0 auto;
+      height: 2.5rem;
+      width: 18.75rem;
+      border-radius: 1.25rem;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 2.5rem;
+      color: #fff;
+      @include cursor();
+    }
+    .queButtonReady{
+      background: #f8d285;
+    }
+    .queButtonBeen{
+      background: #ffa800;
+    }
+  }
+  .queBehaviors{
+    height:rem(60px);
+    padding:0 rem(15px);
+    background: #fff;
+    width:auto;
+    color:#73859e;
+    font-size:rem(17px);
+    text-align: center;
+    border: solid 1px #e3e8ed;
+    border-bottom: none;
+    line-height: rem(60px);
+    .queBehIteam{
+      float:left;
+      cursor: pointer;
+      width: 25%;
+    }
+
+    &.collectionList{
+      .queBehIteam{
+        float:left;
+        cursor: pointer;
+        width: 33%;
+      }
+    }
+    .queBehIteamSi{
+      margin:0 rem(60px);
+    }
+    .queBehPre,.queBehNext{
+      // width:rem(140px);
+    }
+    .queBehNow,.queBehExp{
+      //width:rem(180px);
+    }
+  }
+
+  .queShiTiRecordIn,.queLastResultInner{
+    width:100%;
+    height:rem(465px);
+    background:#fff;
+    overflow: hidden;
+    .queShiTiReTitle{
+      height:rem(80px);
+      width:100%;
+      border-bottom:1px solid #eee;
+      .queShiTiReIte{
+        float:left;
+        line-height:rem(80px);
+        margin-left:40px;
+        i{
+          margin-left:rem(10px);
+        }
+      }
+      .queShiTiReIteH{
+        color:#ccc;
+      }
+      .queShiTiReIteR{
+        color:#2cc17b;
+      }
+      .queShiTiReIteW{
+        color:#f35555;
+      }
+      .queShiTiReIteN{
+        color:#ccc;
+      }
+      .queShiTiReIteC{
+        height:rem(30px);
+        width:rem(60px);
+        border-radius: rem(15px);
+        margin-top:rem(25px);
+        margin-right:rem(10px);
+        color:#73859e;
+        float:right;
+        padding-left:rem(16px);
+        line-height: rem(30px);
+        border:1px solid #73859e;
+        font-size: rem(15px);
+        text-align: center;
+        cursor: pointer;
+      }
+      /*一道题没有答得时候交卷样式*/
+      .queShiTiReIteL{
+        height:rem(30px);
+        width:rem(60px);
+        border-radius: rem(15px);
+        margin-top:rem(25px);
+        color:#ccc;
+        float:right;
+        line-height: rem(30px);
+        border:1px solid #ccc;
+        font-size: rem(15px);
+        text-align: center;
+      }
+    }
+    .queShiTiReContent{
+      min-height:rem(230px);
+      height:rem(350px);
+      overflow-y: auto;
+      padding:rem(20px) rem(30px);
+      .queShiTiReLi{
+        width:rem(40px);
+        height:rem(40px);
+        border-radius: 50%;
+        text-align: center;
+        line-height:rem(40px);
+        font-size:rem(16px);
+        float:left;
+        margin:rem(15px) rem(10px);
+        //behavior: url("/js/third-party/pie/PIE.htc");
+      }
+      .queShiTiReLiR{
+        color:#2cc17b;
+        border:1px solid #2cc17b;
+        background: #fff;
+      }
+      .queShiTiReLiW{
+        color:#f35555;
+        border:1px solid #f35555;
+        background: #fff;
+      }
+      .queShiTiReLiH{
+        color:#808080;
+        border:1px solid #808080;
+        background: #fff;
+      }
+      .queShiTiReLiN{
+        color:#ccc;
+        border:1px solid #ccc;
+        background: #fff;
+      }
+      .queShiTiReLiT{
+        color:#808080;
+        border:1px solid #808080;
+        background: #f4f7f6;
+      }
+    }
+  }
+  .queAnalysisIn{
+    height:auto;
+    margin-bottom:rem(5px);
+    /*background: #fff;*/
+    .queAnalysisIteam{
+      display: none;
+      .queExplainTitle{
+        margin:0 auto;
+        font-size:rem(13px);
+        color:#909090;
+        width:100%;
+        height:rem(28px);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        .queExplainLine{
+          width:rem(259px);
+          height:rem(12px);
+          border-bottom:1px solid #e1e1e1;
+        }
+        .queExplainName{
+          width:rem(104px);
+          padding:rem(7px) rem(7px);
+          text-align: center;
+        }
+      }
+      .queExplainResult{
+        margin-bottom:rem(20px);
+        font-size:rem(15px);
+        width:100%;
+        height:rem(15px);
+        line-height:rem(15px);
+        .queExplainRight{
+          color:#2cc17b;
+          margin-right:rem(20px);
+        }
+        .queExplainWrong{
+          color:#f35555;
+        }
+
+      }
+      .queExplainContent{
+        min-height: rem(50px);
+        line-height:rem(24px);
+        font-size:rem(14px);
+        color:#555;
+      }
+      .queShitKnowledge{
+        @include clearfix();
+        .queShitKnTitle{
+          margin:rem(15px) 0;
+          font-size: rem(15px);
+          color:#909090;
+          font-weight:500;
+        }
+        .queShitKnPointList{
+          min-height: rem(34px);
+          .queShitKnPoint{
+            padding: .625rem .8125rem;
+            margin: .9375rem .625rem 0 0;
+            font-size: .875rem;
+            color: #555;
+            border: solid 1px #ccc;
+            border-radius: 3em;
+            float: left;
+            line-height: .875rem;
+          }
+        }
+      }
+    }
+    .answerAnalysis{
+      padding: 0 /*rem(24px)*/ 0 rem(30px);
+      /*background: #fff;*/
+      border: none;
+    }
+    .course-footer {
+      background: #fff;
+      margin: rem(16px) 0;
+      h3 {
+        padding-top: rem(20px);
+        margin-bottom: rem(15px);
+      }
+      .class-abstract {
+        color: #333;
+        font-size: rem(17px);
+        word-break: break-all;
+        line-height: rem(27px);
+      }
+      .classDown {
+        overflow: hidden;
+        .maxWidth {
+          width: 100000px;
+        }
+        li {
+          width: rem(150px);
+          float: left;
+          margin-right: rem(40px);
+          @include cursor();
+          .downIcon {
+            width: rem(150px);
+            height: rem(150px);
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .classTitle {
+            font-size: rem(20px);
+            color: #333;
+            margin: rem(7px) 0;
+          }
+          .className {
+            font-size: rem(16px);
+            color: #808080;
+            margin-bottom: rem(10px);
+          }
+        }
+      }
+      .recommendCont {
+        overflow: hidden;
+        .recommend {
+          width: 100000px;
+          li {
+            float: left;
+            width: rem(210px);
+            margin-right: rem(15px);
+            @include cursor();
+            .reImg {
+              width: rem(210px);
+              height: rem(140px);
+              position: relative;
+              img {
+                width: 100%;
+                height: 100%;
+              }
+              .playIcon {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                z-index: 2;
+                cursor: pointer;
+                margin: rem(-28px) 0 0 rem(-28px);
+                &:before {
+                  content: "";
+                  display: inline-block;
+                  float: left;
+                  width: rem(56px);
+                  height: rem(56px);
+                  background: url("/image/classes/course/main_recommended_start@2x.png") center center no-repeat;
+                  background-size: contain;
+                  vertical-align: middle;
+                }
+              }
+              .allinIcon {
+                position: absolute;
+                left: rem(10px);
+                top: rem(10px);
+                z-index: 5;
+                &:before {
+                  content: "";
+                  display: inline-block;
+                  float: left;
+                  width: rem(58px);
+                  height: rem(30px);
+                  background: url("/image/classes/course/allinicon.png") center center no-repeat;
+                  background-size: contain;
+                  vertical-align: middle;
+                }
+              }
+              .timeNum{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                z-index: 2;
+                background: url("/image/classes/course/video_time.png") no-repeat;
+                background-size:cover ;
+                width: rem(80px);
+                height: rem(25px);
+                font-size: rem(11px);
+                color: #fff;
+                text-indent: rem(10px);
+                text-align: center;
+                line-height: 1.5625rem;
+              }
+            }
+            .reText {
+              color: #333;
+              font-size: rem(15px);
+              margin: rem(11px) 0;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+            }
+          }
+        }
+      }
+    }
+
+    @include query() {
+
+      /*.course{*/
+      .course-footer {
+        display: none;
+        .recommendCont {
+          .recommend {
+            li {
+              width: rem(105px);
+              .reImg {
+                width: rem(105px);
+                height: rem(70px);
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+                .playIcon {
+                  position: absolute;
+                  left: 50%;
+                  top: 50%;
+                  z-index: 5;
+                  margin: rem(-14px) 0 0 rem(-14px);
+                  &:before {
+                    content: "";
+                    display: inline-block;
+                    float: left;
+                    width: rem(28px);
+                    height: rem(28px);
+                    background: url("/image/classes/course/main_recommended_start@2x.png") center center no-repeat;
+                    background-size: contain;
+                    vertical-align: middle;
+                  }
+                }
+                .allinIcon {
+                  position: absolute;
+                  left: rem(5px);
+                  top: rem(5px);
+                  z-index: 5;
+                  &:before {
+                    content: "";
+                    display: inline-block;
+                    float: left;
+                    width: rem(29px);
+                    height: rem(15px);
+                    background: url("/image/classes/course/allinicon.png") center center no-repeat;
+                    background-size: contain;
+                    vertical-align: middle;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .classDown {
+          li {
+            width: rem(90px);
+            margin-right: rem(20px);
+            .downIcon {
+              width: rem(90px);
+              height: rem(90px);
+              img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            .classTitle {
+              font-size: rem(17px);
+              color: #333;
+              margin: rem(7px) 0;
+            }
+            .className {
+              font-size: rem(14px);
+              color: #808080;
+              margin-bottom: rem(10px);
+            }
+          }
+        }
+      }
+    }
+    .discuss-content{
+      display: none;
+      .discussList{
+        li{
+          padding: rem(10px) 0 rem(15px) 0;
+          border-bottom:solid 1px #eee;
+          color: #333;
+          font-size: rem(17px);
+          line-height: rem(27px);
+          @include cursor();
+          .checkDiscuss{
+            float: left;
+            color: #73859e;
+            font-size: rem(14px);
+            cursor: pointer;
+          }
+          .icon-upMore{
+            float: right;
+            margin-bottom: 0;
+          }
+          &.upmore{
+            .discussThink{
+              float: left;
+              width: 81%;
+              display:block;
+              white-space:nowrap;
+              overflow:hidden;
+              text-overflow:ellipsis;
+            }
+          }
+
+          .userTime{
+            margin-top:rem(3px);
+            .userCont{
+              float: left;
+              .userImg{
+                float: left;
+                height: rem(40px);
+                width: rem(40px);
+                background: #eee;
+                border-radius: 50%;
+                img{
+                  //behavior: url("/js/third-party/pie/PIE.htc");
+                  position: relative;
+                  width: rem(40px);
+                  height: rem(40px);
+                  border-radius: 50%;
+                }
+              }
+              dl{
+                float: left;
+                margin-left: .9375rem;
+                .list-name {
+                  margin: 0 0 .3125rem 0;
+                  font-size: 1.125rem;
+                  line-height: 1.125rem;
+                }
+                dt{
+                  font-size: .8125rem;
+                  color: #909090;
+                  line-height: rem(20px);
+                }
+              }
+            }
+            .time{
+              float: right;
+              color: #909090;
+              font-size: rem(12px);
+              cursor: default;
+            }
+          }
+          .previousDiscuss{
+            font-size: rem(15px);
+            color: #808080;
+            margin: rem(10px) 0;
+            border-left: solid rem(3px) #f4f4f4;
+            height: rem(15px);
+            line-height: rem(15px);
+            padding-left:rem(10px)
+          }
+          .discussAds {
+            .oneAds {
+              li {
+                border: none;
+                img {
+                  width: rem(462px);
+                  height: rem(348px);
+                }
+              }
+            }
+            .moreAds {
+              li {
+                padding: 0;
+                &:last-child{
+                  margin:0;
+                }
+                border: none;
+                float: left;
+                margin-right:rem(10px);
+                position: relative;
+                img {
+                  width: rem(222px);
+                  height: rem(222px);
+                }
+                .numImg {
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  z-index: 5;
+                  background: #000;
+                  filter: alpha(opacity=50); /*IE滤镜，透明度50%*/
+                  -moz-opacity: 0.5; /*Firefox私有，透明度50%*/
+                  opacity: 0.5; /*其他，透明度50%*/
+                  width: rem(222px);
+                  height: rem(222px);
+                }
+
+                i{
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  z-index: 5;
+                  width: rem(222px);
+                  /*height: rem(222px);*/
+                  color: #fff;
+                  font-size: rem(18px);
+                  text-align: center;
+                  line-height: rem(222px);
+                  &:after{
+                    content: "";
+                    display: inline-block;
+                    width: rem(8px);
+                    height: rem(12px);
+                    background: url("/image/classes/course/course_list_more.png") right no-repeat;
+                    background-size: cover;
+                    vertical-align: middle;
+                    margin-left:rem(5px);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    @include query(){
+      .discuss-content{
+        .discussList{
+          li{
+            .discussAds{
+              .oneAds{
+                li{
+                  img{
+                    width: rem(231px);
+                    height:rem(174px);
+                  }
+                }
+              }
+              .moreAds{
+                li{
+                  margin-right:rem(5px);
+                  img{
+                    width: rem(111px);
+                    height:rem(111px);
+                  }
+                  .numImg{
+                    width: rem(111px);
+                    height: rem(111px);
+                  }
+
+
+                  i{
+                    line-height:rem(111px);
+                    width: rem(111px);
+                    text-align: center;
+                    font-size: rem(15px);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .queAnalysisIteamActive{
+      display: block;
+    }
+  }
+  .queResultShareIte{
+    display: block;
+    cursor: pointer;
+  }
+  .queResultContent{
+    /*position: absolute;*/
+    top:0;
+    width:100%;
+    height:auto;
+    min-height: rem(800px);
+    z-index: 2;
+    background: #fff;
+    .queResultInner{
+      height:rem(500px);
+      height:500px\9;
+      background:url(/image/exercises/text_result_pass@2x.png) no-repeat 0 0;
+      font-size:rem(18px);
+      line-height:rem(18px);
+      color:#fff;
+      .queScoreRe{
+        color:#fff;
+        .queScoreReTi{
+          height:rem(18px);
+          padding:rem(50px) rem(15px) rem(15px);
+          font-size:rem(20px);
+          line-height:rem(18px);
+          color:#fff;
+          text-align: center;
+        }
+        .queScoreReCo{
+          font-size:rem(13px);
+          line-height:rem(25px);
+          text-align: center;
+        }
+      }
+      .queResultProgress{
+        position: relative;
+        width:rem(300px);
+        height:rem(300px);
+        width:300px\9;
+        height:300px\9;
+        margin:0 auto;
+        background: url("/image/exercises/circle_projection@2x.png") no-repeat;
+        .queResultImg{
+          position: absolute;
+          left: 28px;
+          top: 28px;
+          z-index: 5;
+        }
+        .queResultGrade{
+          width:rem(380px);
+          height:rem(230px);
+          position: absolute;
+          top:50%;
+          right:-96%;
+          z-index: 8;
+          background: url(../../../image/exercises/seal_pass@2x.png) no-repeat 0 0;
+        }
+        .queResultProContent{
+          color:#fff;
+          position: absolute;
+          top:0;
+          left:0;
+          right: 0;
+          bottom: 0;
+          .queResultProCoHd{
+            text-align: center;
+            font-size: rem(20px);
+            color:#fff;
+            width:100%;
+            position: absolute;
+            top:50%;
+            left:rem(10px);
+            margin-top:rem(-60px);
+            font-weight: 300;
+            height:rem(20px);
+          }
+          .queResultProCoTitle{
+            text-align: center;
+            width:100%;
+            position: absolute;
+            top:55%;
+            left:rem(10px);
+            margin-top:rem(-20px);
+            font-size:rem(44px);
+            height:rem(44px);
+            .queResultProCoSum{
+              font-size:rem(20px);
+            }
+          }
+          .resultStar{
+            position: absolute;
+            top: 65%;
+            left: 0;
+            z-index: 2;
+            text-align: center;
+            width: 100%;
+            figure{
+              display: inline-block;
+            }
+          }
+        }
+
+        .queResultProContentSi{
+          color:#fff;
+          position: absolute;
+          top:rem(68px);
+          left:rem(37px);
+          right: 0;
+          bottom: 0;
+          .queResultProCoHd{
+            text-align: center;
+            height:rem(44px);
+            color:#fff;
+            width:100%;
+            position: absolute;
+            top:55%;
+            font-size:rem(44px);
+            margin-top:rem(-60px);
+            font-weight: 300;
+          }
+          .queResultProCoTitle{
+            text-align: center;
+            width:100%;
+            position: absolute;
+            font-weight: 100;
+            top:55%;
+            margin-top:rem(-20px);
+            font-size: rem(13px);
+            height:rem(13px);
+          }
+        }
+        .queResultProContentAbi{
+          .queResultProCoHd{
+            text-align: center;
+            height:rem(20px);
+            width:100%;
+            position: absolute;
+            font-weight: 100;
+            top:45%;
+            margin-top:rem(-20px);
+            font-size: rem(20px);
+
+          }
+          .queResultProCoTitle{
+            text-align: center;
+            color:#fff;
+            width:100%;
+            height:rem(44px);
+            position: absolute;
+            top:70%;
+            font-size:rem(44px);
+            margin-top:rem(-60px);
+            font-weight: 300;
+          }
+        }
+      }
+    }
+    .queResultInnerG{
+      background:url(../../../image/exercises/text_result_%20good@2x.png) no-repeat 0 0;
+      .queResultProgress{
+        .queResultGrade{
+          background: url(../../../image/exercises/seal_good@2x.png) no-repeat 0 0;
+        }
+      }
+    }
+    .queResultInnerNP{
+      background:url(../../../image/exercises/text_result_%20no%20pass@2x.png) no-repeat 0 0;
+      .queResultProgress{
+        .queResultGrade{
+          background: url(../../../image/exercises/seal_no%20pass@2x.png) no-repeat 0 0;
+        }
+      }
+
+    }
+    .queResultInnerPe{
+      background:url(../../../image/exercises/text_result_%20perfect@2x.png) no-repeat 0 0;
+      .queResultProgress{
+        .queResultGrade{
+          background: url(../../../image/exercises/seal_no%20pass@2x.png) no-repeat 0 0;
+        }
+      }
+
+    }
+    .queResultInnerP{
+      background:url(../../../image/exercises/text_result_pass@2x.png) no-repeat 0 0;
+      .queResultProgress{
+        .queResultGrade{
+          background: url(../../../image/exercises/seal_pass@2x.png) no-repeat 0 0;
+        }
+      }
+
+    }
+    .queResultBeha{
+      height:rem(49px);
+      padding:0 rem(15px);
+      background: #fff;
+      margin:rem(30px) auto;
+      width:rem(400px);
+      .queResultBehaIte{
+        color:#73859e;
+        font-size:rem(17px);
+        text-align: center;
+        float:left;
+        margin:0 rem(10px);
+      }
+    }
+    .queResultCarIte{
+      display: block;
+      width:rem(95px);
+      text-align: center;
+      .queResultCareBg{
+        display: block;
+        width:rem(95px);
+        height:rem(95px);
+        margin-bottom: rem(5px);
+      }
+      .queResultCareName{
+        font-size:rem(15px);
+        color:#808080;
+        line-height: rem(15px);
+        display: inline-block;
+      }
+    }
+
+    .queResultReport{
+      height:rem(100px);
+      padding:rem(12.5px) rem(35px);
+      color:#808080;
+      margin:0 auto;
+      line-height: rem(20px);
+      font-size: rem(15px);
+      font-weight: 100;
+      .queResultReportTi{
+        font-size: rem(15px);
+        height:100%;
+        color:#808080;
+        font-weight: 100;
+      }
+      .queResultReportCo{
+        width:rem(600px);
+        margin-left:rem(10px);
+        font-weight: 100;
+      }
+    }
+    .queResultCare{
+      width:rem(402px);
+      margin:0 auto;
+      padding:rem(40px) rem(25px);
+      @include clearfix();
+      .queResultCareName{
+        /*margin-top:rem(24px);*/
+      }
+    }
+
+    .queResultShare{
+      /*height:rem(316px);*/
+      margin:rem(50px) auto;
+      padding-bottom:rem(50px);
+      .queResultShareIte{
+        height:rem(50px);
+        width:rem(375px);
+        margin:rem(20px) auto;
+        border-radius: rem(44px);
+        text-align: center;
+        line-height: rem(50px);
+        font-size: rem(16px);
+      }
+      .queResultShareWi{
+        background: #fff;
+        border:1px solid #546690;
+        color:#546690;
+      }
+      .queResultShareMor{
+        background: #546690;
+        color:#fff;
+      }
+      .queAbilityShare{
+        /*width:rem(300px);
+        height:rem(44px);
+        margin:rem(40px) auto;*/
+        .queResultShareIte{
+          /*display: block;
+          height:rem(44px);
+          width:rem(140px);
+          border-radius: rem(44px);
+          text-align: center;
+          line-height: rem(44px);
+          font-size: rem(16px);
+          float:left;
+          margin:0 auto;*/
+        }
+        .queResultShareIn{
+          /*background: #546690;
+          color:#fff;
+          margin-right:rem(10px);*/
+        }
+        .queResultShareMor{
+          /*background: #546690;
+          color:#fff;*/
+        }
+      }
+    }
+  }
+  .queSpeciallyIn{
+    height:auto;
+    min-height: rem(300px);
+    background: #fff;
+    z-index: 4;
+    width:100%;
+    .queSpeciallyList{
+      min-height:rem(280px);
+      height:auto;
+      .queSpeciallyIteam{
+        min-height: rem(49px);
+        height:auto;
+        .queSpeciallyIteamTi{
+          border-bottom:rem(1px) solid #eee;
+          padding: 0 rem(24px);
+          @include clearfix();
+          .queSpeciallyLiName{
+            font-size: rem(16px);
+            color:#222;
+            line-height: rem(42px);
+            margin-right:rem(9px) ;
+          }
+          .queSpeciallyLiSum{
+            font-size: rem(16px);
+            color:#222;
+            line-height: rem(49px);
+            text-align: center;
+          }
+
+          .queSpeciallyLiAns{
+            cursor: pointer;
+            float:left ;
+            text-align: center;
+            font-size: rem(13px);
+            border:rem(1px) solid #dfdfdf;
+            border-radius: rem(19px);
+            color: #555;
+            padding: .3125rem .625rem;
+            margin-top: rem(10px);
+          }
+
+          .queSpeciallyLiIco{
+            float:left ;
+            background: url(/image/exercises/main_drop_down@2x.png) no-repeat 0 0;
+            background-size: 15px;
+            width: 15px;
+            height: 15px;
+            margin-top: 17px;
+            margin-left: 15px;
+          }
+          .queSpeciallyLiIcoTo{
+            background: url(/image/exercises/main_pack_up@2x.png) no-repeat 0 0;
+            background-size: 15px;
+          }
+        }
+        .queSpeciallyIteamInner{
+          height:auto;
+          min-height: rem(48px);
+          background: #fbfbfb;
+          .queSpeciInnerLi{
+            @include clearfix();
+            border-bottom:rem(1px) solid #eee;
+            margin: 0 24px 0 30px;
+            .queSpeciInnerLiName{
+              font-size: rem(15px);
+              color:#555;
+              line-height: rem(49px);
+              margin-right:rem(9px) ;
+            }
+            .queSpeciInnerLiSum{
+              font-size: rem(15px);
+              color:#909090;
+              line-height: rem(49px);
+            }
+
+            .queSpeciInnerLiAns{
+              float:left ;
+              text-align: center;
+              font-size: rem(13px);
+              //padding:rem(11px) rem(20px);
+              border:rem(1px) solid #dfdfdf;
+              border-radius: rem(19px);
+              cursor: pointer;
+              color: #555;
+              padding: .3125rem .625rem;
+              margin-top: rem(10px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .queBeginContent{
+    position: absolute;
+    top:0;
+    height:auto;
+    min-height: rem(300px);
+    /*background: #fbfbfb;*/
+    z-index: 5;
+    width:100%;
+    .queReTiBg{
+      /*position: absolute;
+      top:0;
+      left:0;*/
+
+    }
+    .queBeginTitle{
+      height:rem(18px);
+      width: 100%;
+      text-align: center;
+      font-size:rem(18px);
+      line-height:rem(18px);
+      color:#fff;
+      position: absolute;
+      top:rem(50px);
+      z-index: 10;
+    }
+
+    .queBeginInner{
+      height:rem(660px);
+      padding:rem(12.5px) rem(15px);
+      /*border-bottom:1px solid #28aaff;
+      background: #28aaff;*/
+      font-size:rem(18px);
+      line-height:rem(18px);
+      color:#fff;
+      position: relative;
+      .queBeginImg{
+        display: block;
+        width:rem(110px);
+        height:rem(110px);
+
+        margin:rem(127px) auto rem(48px);
+      }
+      .queBeginAlert{
+        .queBeginName{
+          font-size:rem(24px);
+          color:#fff;
+          text-align: center;
+          margin-bottom:rem(14px);
+        }
+        .queBeginSign{
+          font-size:rem(15px);
+          color:#fff;
+          text-align: center;
+          margin-bottom:rem(112px);
+        }
+      }
+      .queBeginInfo{
+        background: url(../../../image/exercises/practice_start_bg@2x.png) no-repeat 0 0;
+        .queSimuType{
+          margin-top:rem(128px);
+          margin-left:rem(80px);
+        }
+        .queSimuTime{
+          margin-left:rem(80px);
+        }
+        .queSimuStandard{
+          margin-left:rem(50px);
+        }
+        .queBeginInfoName{
+          color:#909090;
+          font-size:rem(15px);
+          line-height:rem(90px);
+        }
+        .queBeginInfoContent{
+          color:#555;
+          font-size:rem(16px);
+          line-height:rem(90px);
+        }
+      }
+      .queBeginInfo{
+        position: absolute;
+        width:rem(650px);
+        height:rem(532px);
+        top:rem(500px);
+        left:50%;
+        margin-left:rem(-325px);
+      }
+    }
+    .queBeginButton{
+      .queBeginSign{
+        color:#909090;
+        font-size:rem(13px);
+        width:100%;
+        text-align: center;
+        margin-bottom:rem(20px);
+      }
+      .queBeginIte{
+        display: block;
+        height:rem(54px);
+        width:rem(450px);
+        margin:rem(10px) auto;
+        border-radius: rem(44px);
+        text-align: center;
+        line-height: rem(54px);
+        font-size: rem(16px);
+      }
+      .queBeginMor{
+        background: #546690;
+        color:#fff;
+
+      }
+
+
+    }
+
+  }
+  .passAnswer{
+    cursor: pointer;
+  }
+  .queLastResultInner{
+    position: absolute;
+    top:0;
+    height:auto;
+    min-height: rem(300px);
+    background: #fff;
+    z-index: 6;
+    width:100%;
+    .queLastResultTitle{
+      height:rem(18px);
+      padding:rem(12.5px) rem(15px);
+      background: #fff;
+      text-align: center;
+      font-size:rem(18px);
+      line-height:rem(18px);
+      color:#555;
+      border:rem(1px) solid #ccc;
+    }
+    .queShiTiReContent{
+      //height:rem(800px);
+    }
+  }
+  .queLastWrongResultInner{
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right: 0;
+    height:auto;
+    min-height: rem(300px);
+    background: #fff;
+    z-index: 7;
+    width:100%;
+    .queLastWResultTitle{
+      height:rem(18px);
+      padding:rem(12.5px) rem(15px);
+      background: #fff;
+      text-align: center;
+      font-size:rem(18px);
+      line-height:rem(18px);
+      color:#555;
+      border:rem(1px) solid #ccc;
+    }
+    .queShiTiReTitle{
+      padding:rem(12.5px) rem(15px);
+    }
+    .queShiTiReContent{
+      .queShiTiReLi{
+        width:rem(40px);
+        height:rem(40px);
+        border-radius: 50%;
+        text-align: center;
+        line-height:rem(40px);
+        font-size:rem(16px);
+        float:left;
+        margin:rem(15px) rem(10px);
+      }
+      .queShiTiReLiW{
+        color:#f35555;
+        border:1px solid #f35555;
+        background: #fff;
+      }
+    }
+  }
+
+
+  .discussPublish{
+    display: none;
+    /*width: 93.5%;
+    margin: 0 auto;*/
+  }
+
+  .selected {
+    .answerNum {
+      border: solid 1px #ffa800;
+      background: #ffa800;
+      color: #fff;
+    }
+  }
+  .none{
+    display: none;
+  }
+  .activeSection{
+    display: block;
+  }
+  .exercise-discuss{
+    width:rem(750px);
+    margin:rem(100px) auto;
+    overflow: auto;
+  }
+
+  @include query(){
+    .queResultContent{
+      .queResultInner {
+        width: 100%;
+
+      }
+    }
+  }
+
+
+
+
+
+  .queShiTiDisTitle{
+    height: rem(50px);
+    line-height: rem(50px);
+    color: #222;
+    font-size: rem(16px);
+    font-weight: bold;
+    border-bottom: solid 1px #ccc;
+    .queShiTiPart{
+      //behavior: url("/js/third-party/pie/PIE.htc");
+      position: relative;
+      display: inline-block;
+      width: rem(80px);
+      height: rem(25px);
+      border: solid 1px #ccc;
+      line-height: rem(25px);
+      text-align: center;
+      border-radius: 3rem;
+      font-size: rem(14px);
+      color: #73859e;
+      font-weight: normal;
+      vertical-align: middle;
+      margin-top: 12px;
+      cursor: pointer;
+    }
+  }
+  .queShiTiDisNothing{
+    text-align: center;
+    font-size: rem(16px);
+    color: #808080;
+    line-height: rem(28px);
+    padding: rem(40px) 0;
+    display: none;
+  }
+
+  .discuss-content{
+    background: #fff;
+    margin: 20px 0;
+    border: solid 1px #e3e8ed;
+  }
+  @include query(){
+    .quesContainer .innerContent .queIteam .quesSingle {
+      padding:rem(20px) rem(15px) 0;
+    }
+  }
+
+
+.answerAnalysis{
+  display: none;
+  .course-footer{
+    display: none;
+  }
+  .courseBLock{
+    display: none;
+  }
+}
+.answerAnalysisActive{
+  display: block;
+  .course-footer{
+
+  }
+  .courseBLock{
+    display: none;
+  }
+}
+
+.errorNone{
+
+}
+
+.queSpeciallyTitle{
+  height:rem(35px);
+  padding:rem(12.5px) rem(15px);
+  border-bottom:1px solid #eee;
+  background:#fff;
+  text-align: center;
+  font-size:rem(20px);
+  line-height:rem(35px);
+  color:#222;
+}
+
+
+
+.queBehPreGray{
+  i{
+    background-image: url('/image/sprite/icon.png');
+    background-repeat: no-repeat;
+    background-position:-88px 0;
+  }
+  span{
+    color: #ccc;
+  }
+}
+.queBehNextGray{
+  i{
+    background: url(/image/exercises/tab_next_unable.png) no-repeat 0 0;
+    background-size: contain;
+  }
+  span{
+    color: #ccc;
+  }
+}
+
+
+.exercisesAnalysis{
+  width: 92%;
+  background: #fff;
+  border: solid 1px #e3e8ed;
+  border-top: none;
+  padding:0 1.8125rem 1.875rem;
+  display: none;
+  .coursePic-right{
+    display: block;
+  }
+}
+.course-footer{
+  border: solid 1px #e3e8ed;
+  .yd_c_bg{
+    width: 92%;
+    margin: 0 auto;
+    padding-bottom: 1.25rem;
+  }
+}
+.icon-vip{
+  @extend %icon-vip;
+}
+.yd-vipUser{
+  @extend %icon-vip;
+}
+.discussThink{
+  overflow: hidden;
+}
+//<div class="previousDiscuss" data-review="52324" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">该条评论已被作者删除</div>
+.previousDiscussOverflow{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 98%;
+}
+
+.yd-timelineFooter{
+  .discussPublish {
+    width: 101.3%;
+    margin: 5px 0 0 -28px;
+    background: #f5f7f6;
+    padding: 15px 24px 22px;
+  }
+}
+/*超出4行隐藏*/
+.courseHidden{
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  white-space: normal;
+}
+
+
+
+.yd_t_bg,.yd_c_bg {
+  background: none;
+}
+.yd_t_bg{
+  height: 0;
+}
+
+
+
+
+
+@include query(){
+  .quesContainer .innerContent .queIteam .quesSingle .queShitiTitle .queShitiType{
+    margin-top: rem(5px);
+  }
+}
+
+

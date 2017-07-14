@@ -1,0 +1,21 @@
+
+{
+  "name":"sendCode(dom,phone,typeId)",
+  "des":"发送验证码,dom:点击发送验证码的按钮节点名称,phone:输入框的节点名称,typeId：医鼎后台需要传的验证码类型)",
+  "attention":["参数全部传"],
+  "comp":"IE8兼容",
+  "scene":"登录时进行发送验证码",
+  "returnVal":{
+    "isNull":true,
+    "des":"",
+    "type":"json",
+    "val":{}
+  },
+  "code":"",
+  "param":{
+    "isNull":false,
+    "des":"",
+    "type":"json",
+    "val":{}
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name":"courseTest()",
+  "des":"//控制随堂测试的展示，如果展示过就不再展示，如果没有展示过，就展示，并且根据视频是全屏播放还是小屏播放，进入不同的操作。",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+
+  },
+  "param":{
+    "isNull":true
+  }
+}

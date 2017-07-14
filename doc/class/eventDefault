@@ -1,0 +1,14 @@
+{
+  "name":"eventDefault()",
+  "des":"//页面刚刚加载进来时候的一些默认事件，用来判断是刷新还是新打开的页面，是否调用点击滑动事件",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+
+  },
+  "param":{
+    "isNull":true
+  }
+}

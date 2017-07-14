@@ -1,0 +1,160 @@
+@charset "UTF-8";
+//搜索终端
+//公共方法模块调用
+@import "../../modules/common-modules";
+//公共变量引用
+@import "../../variables/_yiding-variables";
+@import "../../components/_indexHeader"; //首页头部信息栏
+@import "../../components/_iconModule"; //小图标组件
+@import "../../components/_buttonModule"; //按钮组件
+@import "../../components/_searchList"; //搜索列表组件
+@import "../../components/_confirmModal"; //仿confirm模态框
+@import "../../components/_contentItem"; //内容模块
+@import "../../components/_noContent"; //无内容提示
+.yd-searchInputBar {
+    background-color: #fff;
+    input {
+        background-color: #f8f8f8;
+    }
+}
+.search_doc .yd-doctorRecommend{
+    background:#eff4f8;
+}
+.yd-noContentTips{
+    display: block;
+}
+.yd-searchInputBar {
+    width: 100%;    
+    input {
+        width: 85%;
+        transition:none;
+        -webkit-transition:none;
+    }
+    .yd-searchCancel{
+        display: inline-block;
+        position: absolute;
+        right: rem(15px);
+        top: 50%;
+        font-size: rem(15px);
+        padding: 0;
+        transform:translateY(-50%);
+        -webkit-transform:translateY(-50%);
+    }
+
+
+}
+    .icon-searchCancel{
+        right: 1rem;
+        position: absolute;
+        top: 50%;
+        margin-top: rem(-14px);
+        display: none;
+    }
+.yd-searchItem {
+    margin-top: rem(10px);
+    background-color: #fff;
+    border-bottom: rem(1px) solid $outerBorderColor;
+    .yd-searchTitle {
+        padding: rem(13px) rem(15px);
+        border-bottom: 1px solid $innerBorderColor;
+        font-weight: normal;
+        font-size: rem(14px);
+        color: #666;
+        line-height: 1;
+    }
+}
+
+.yd-contentPartModule:nth-last-child(1) {
+    border-bottom: none;
+}
+
+.yd-hotSearchContent {
+    padding: rem(20px) rem(15px);
+    padding-bottom: rem(10px);
+    .yd-hotSearchWord {
+        padding: rem(8px) rem(10px);
+        font-size: rem(13px);
+        color: #333;
+        border: 1px solid #e6e8ed;
+        border-radius: rem(500px);
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: rem(10px);
+        margin-bottom: rem(10px);
+    }
+}
+
+.yd-historySearchContent {
+    background-color: #fff;
+    .yd-historySearchItem {
+        border-bottom: 1px solid $innerBorderColor;
+       font-size: rem(15px);
+        color: #333;
+        height: rem(50px);
+        line-height: rem(50px);
+        margin-left: rem(15px);
+        padding-right: rem(15px);
+        @include ellipsis();
+    }
+    .yd-clearHistorySearch {
+        text-align: center;
+        font-size: rem(13px);
+        color: #3598db;
+        height: rem(50px);
+        line-height: rem(50px);
+    }
+}
+
+.yd-confirmModalEnsureBtn {
+    font-weight: normal !important;
+}
+
+.yd-confirmModalCancelBtn {
+    font-weight: bold;
+}
+
+.yd-indexNavbar {
+    background-color: #fff;
+    border-bottom: 1px solid $outerBorderColor;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: rem(95px);
+    line-height: rem(95px);
+    a{
+        display: block;
+    }
+    
+}
+.yd-indexNavbar ul .active a:after{
+    bottom: 0;
+        left: 0;
+    right: 0;
+}
+.yd-searchMoreUser {
+    font-size: rem(13px);
+    color: #808080;
+    text-align: center;
+    height: rem(40px);
+    line-height: rem(40px);
+}
+
+.yd-searchResultStatus {
+    padding-top: rem(25px);
+    padding-bottom: rem(75px);
+    color: #626f8c;
+    font-size: rem(13px);
+    text-align: center;
+    & > .icon-searchLoading:before {
+        @include animate(rotate, 2s, linear, infinite);
+    }
+}
+
+.yd-searchResultContent {
+    display: none;
+    background:#eff4f8;
+}
+
+.yd-searchResultContent.active {
+    display: block;
+}
+

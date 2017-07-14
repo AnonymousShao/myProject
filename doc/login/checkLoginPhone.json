@@ -1,0 +1,21 @@
+
+{
+  "name":"checkLoginPhone()",
+  "des":"校验登录时input框中正则判断和账户判断",
+  "attention":[""],
+  "comp":"IE8兼容",
+  "scene":"校验登录账号是否为正确的手机号，并且该手机号是医鼎已经存在可登录的账号，无错误提示",
+  "returnVal":{
+    "isNull":true,
+    "des":"",
+    "type":"json",
+    "val":{}
+  },
+  "code":"",
+  "param":{
+    "isNull":false,
+    "des":"",
+    "type":"json",
+    "val":{}
+  }
+}

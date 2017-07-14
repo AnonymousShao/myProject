@@ -1,0 +1,13 @@
+{
+  "name":"eventClick()",
+  "des":"//该方法是课程终端页一些小的点击事件，像一些埋点，自动点击之类的事件。",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+  },
+  "param":{
+    "isNull":true
+  }
+}

@@ -1,0 +1,13 @@
+@charset "UTF-8";
+//内容区块 基本样式结构
+//公共方法模块调用
+@import "../../modules/_common-modules";
+
+@import "../../components/_indexHeader"; //页头
+
+@import "../../components/_discuss";//讨论
+
+// 变量入口引入
+@import "../../variables/_yiding-variables";
+
+

@@ -1,0 +1,64 @@
+[
+  {"name":"login","func":["a","b"],"des":"","attention":[],"comp":"","scene":""},
+  {"name":"register","func":["a","b"],"des":"","attention":"","comp":"","scene":""},
+  {"name":"course","func":["a","b"],"des":"","attention":"","comp":"","scene":""}
+]
+module,本身是一个json文件，内含一个数组，数组内包含json，一个json代表一个模块。
+模块字段说明：{"name":"login","func":["a","b"],"des":"","attention":["",""],"comp":"","scene":""},
+name:模块的名称,这个名字必须是字母组成的，名字对应一个文件夹，例如登录对应一个login文件夹字符串，
+func，这个模块下调用过的方法。只填写方法名称。数组
+des，模块的描述，描述中至少说出这个模块的汉语名称，字符串
+attention:这个模块的注意事项,数组,有多少条写多少个
+comp：关于兼容的提示
+scene:这个模块的使用场景
+
+
+{
+  "name":"toast(content,time1,time2)",
+  "des":"//提示框的toast显示,time1:时间间隔，time2:显示时间。",
+  "attention":[],
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+  "isNull":false,
+    "type":"json",
+    "des":""
+
+  },
+  "code":"",
+  "param":{
+    "des":""
+  }
+}
+一个方法就是一个json,json文件的名字就以这个方法的名字命名
+name是这个方法的名字，内部的形参原样复制，字符串
+des，关于这个方法的描述，必须写
+attention：关于这个方法的注意事项,数组,有多少条写多少个
+comp：关于兼容的提示
+scene:这个方法的使用场景
+type:,返回值类型说明
+returnVal：这个方法的返回值的说明,json
+isNull:如果不需要返回值，这个值为true,如果有返回值，就是false
+des：关于返回值的文字描述
+如果返回值是个json,需要将json内的键值对加以说明例如
+return {"a":"这是json的a返回值"，"b":"这是json的b返回值"}
+文档即是，
+{
+  "name":"toast(content,time1,time2)",
+  "des":"//提示框的toast显示,time1:时间间隔，time2:显示时间。",
+  "attention":[],
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+  "isNull":false,
+    "des":"",
+    "type":"json",
+    "val":{"a":"这是json的a返回值"，"b":"这是json的b返回值"}
+
+  },
+  "param":{
+    "isNull":false,
+        "des":"",
+        "type":"json",
+        "val":{"a":"这是json的a返回值"，"b":"这是json的b返回值"}
+}

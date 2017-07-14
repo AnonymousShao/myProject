@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>登录</title>
+    <meta name="viewport" content="width=750">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/personal/personal_introConfig.css">
+</head>
+
+<body>
+<!--验证默认-->
+<section class="authentication" style="display:none;">
+    <section class="width">
+
+        <aside class="Jurisdiction">
+            <div class="userNormal"><img src="/image/authority/authentication/renzheng.png" /></div>
+            <div class="rz-after">认证后</br>
+                你将拥有全部课程观看、讨论、下载权限</div>
+            <div class="authNone">暂不认证</div>
+        </aside>
+        <section class="authorityCommon authCommonNonepadding">
+            <!--错误提示-->
+            <section class="errorTip"><i></i> <span>密码错误</span></section>
+
+        <header class="title">
+            <div class="authorityTitle">医师认证</div>
+        </header>
+
+        <aside class="rzInput">
+            <div class="titleInput clear marginTop">
+                <div class="titleText">姓名</div>
+                <input class="titleType" placeholder="请输入姓名">
+            </div>
+            <!--专业选中-->
+            <div class="titleInput clear marginTop overflow">
+                <div class="titleText paddingBot">专业</div>
+                <ul class="checkboxXl">
+                    <li><span style="margin:0;">小儿骨科</span><i class="ev-tagClose" tagid="5">X</i></li>
+                    <li><span style="margin:0;">小儿骨科</span><i class="ev-tagClose" tagid="5">X</i></li>
+                    <li><span style="margin:0;">小儿骨科</span><i class="ev-tagClose" tagid="5">X</i></li>
+                    <!--<li><span style="margin:0;">小儿骨科</span><i class="ev-tagClose" tagid="5">X</i></li>
+                    <li><span style="margin:0;">小儿骨科</span><i class="ev-tagClose" tagid="5">X</i></li>-->
+                </ul>
+                <section class="yd-tagSelectorBox hide pcModule Ev-professionalBox">
+                    <header class="yd-tagSelectorBoxTitle">选择专业领域<span class="yd-tagSelectorBoxCloseBtn">X</span></header>
+                    <section class="yd-tagSelectorItem">
+                        <button class="active">关节</button>
+                        <button>足踝</button>
+                        <button>四肢矫形</button>
+                        <button>小儿骨科</button>
+                        <button>肘&amp;肩</button>
+                        <button>脊柱</button>
+                        <button>运动医学</button>
+                        <button>创伤</button>
+                        <button>骨肿瘤</button>
+                        <button>康复</button>
+                        <button>骨质疏松</button>
+                        <button>基础</button>
+                        <button>显微修复</button>
+                        <button>中西医结合</button>
+                    </section>
+                    <footer class="yd-tagSelectorBoxFootBtn">
+                        <button class="yd-personalAdviceSubmit Ev-professionalSure">确定</button>
+                        <button class="yd-personalAdviceCancel Ev-professionalCancel">取消</button>
+                    </footer>
+                </section>
+            </div>
+            <!--专业选中 end-->
+            <!--专业默认-->
+            <div class="titleInput clear marginTop">
+                <div class="titleText">专业</div>
+                <input class="titleType" placeholder="请选择专业">
+            </div>
+            <!--专业默认 end-->
+            <!--下拉列表参考 https://www.allinmd.cn/pages/personal/customerInfo.html-->
+            <!--职称选中-->
+            <div class="titleInput clear marginTop">
+                <div class="titleText">职称</div>
+                <div class="technical">主任医师，教授，硕士生导师</div>
+                <section class="al-tagSelectorBox ev-medicalBox" style="display: none;">
+                    <header class="al-tagSelectorBoxTitle">选择职称<span class="al-tagSelectorBoxCloseBtn ev-medCancel">X</span></header>
+                    <section class="al-tagSelectorItem ev-medicalConList">
+                        <article class="al-tagSelectorList">
+                            <span class="ev-medicalLiList" select-status="false" medicalid="1">住院医师</span>
+                            <span class="ev-medicalLiList" select-status="false" medicalid="2">主治医师</span>
+                            <span class="ev-medicalLiList" select-status="false" medicalid="3">副主任医师</span>
+                            <span class="ev-medicalLiList active" select-status="true" medicalid="4">主任医师</span>
+                        </article>
+                        <article class="al-tagSelectorList hide" style="display: block;">
+                            <span class="ev-medicalLiList" select-status="false" medicalid="5">讲师</span>
+                            <span class="ev-medicalLiList" select-status="false" medicalid="6">副教授</span>
+                            <span class="ev-medicalLiList" select-status="false" medicalid="7">教授</span>
+                        </article>
+                        <article class="al-tagSelectorList hide" style="display: block;">
+                            <span class="ev-medicalLiList" select-status="false" medicalid="8">硕士生导师</span>
+                            <span class="ev-medicalLiList active" select-status="true" medicalid="9">博士生导师</span>
+                        </article>
+                    </section>
+                    <footer class="al-tagSelectorBoxFootBtn">
+                        <button class="al-personalAdviceSubmit ev-medSave">确定</button>
+                        <button class="al-personalAdviceCancel ev-medCancel">取消</button>
+                    </footer>
+                </section>
+            </div>
+            <!--职称选中 end-->
+            <!--职称默认-->
+            <div class="titleInput clear marginTop">
+                <div class="titleText">职称</div>
+                <input class="titleType" placeholder="请选择职称">
+            </div>
+            <!--职称默认 end-->
+            <div class="titleInput clear marginTop">
+                <div class="titleText">就职医院</div>
+                <input class="titleType" placeholder="请选择就职医院">
+            </div>
+            <div class="titleInput clear">
+                <div class="titleText">住培基地</div>
+                <input class="titleType" placeholder="请选择住培基地">
+            </div>
+        </aside>
+        <!--激活按钮添加 类名 （activation）-->
+        <div class="loginBtn activation">下一步</div>
+    </section>
+        </section>
+</section>
+<!--验证默认 END-->
+
+<!--认证工作表-->
+<section class="authentication" style="display: ;">
+    <section class="width">
+        <section class="authorityCommon">
+        <header class="title">
+            <div class="authorityTitle">医师认证</div>
+            <div class="errortipHeader"><span>当前网络环境不佳，上传失败</span></div>
+        </header>
+        <aside class="authenticationStyle">
+            <div class="clear">
+                <div class="styleTitle">认证类型：</div>
+                <figure class="selectBorder">
+                    <ul class="authenticationList">
+                        <li>工作证</li>
+                        <li>医师执业证</li>
+                        <li>医师资格证</li>
+                    </ul>
+                </figure>
+            </div>
+            <div class="pitchOn">工作证</div>
+            <section class="titleInput clear marginTop">
+                <div class="titleText authenticationNum">证件编号</div>
+                <input class="titleType" placeholder="请输入证件编号（选填）">
+            </section>
+            <div class="uploadPhoto clear">
+                <div class="leftNormalImg"><img src="/image/authority/authentication/auth_uploadphoto.png"> <span>上传认证照片</span>
+                    <!--<div class="againPopup">
+                        <div class="againPopupBg"></div>
+                        <div class="againPopupText">重新上传</div>
+                    </div>-->
+                    <input type="file" name="file" class="authenticationFile" />
+                </div>
+                <div class="rightNormalImg"><img src="/image/authority/authentication/sample_degree.png"> <span>示例</span></div>
+            </div>
+        </aside>
+        <!--激活按钮添加 类名 （activation）-->
+        <div class="loginBtn activation">下一步</div>
+    </section>
+</section>
+</section>
+<!--认证工作表 END-->
+<!--认证拒绝-->
+
+<section class="authentication" style="display:none ;">
+    <section class="width">
+        <section class="authorityCommon">
+            <header class="authorityTitle">认证拒绝</header>
+            <aside class="refuseText">您提交的认证资料未通过审核，请修改后重新提交</aside>
+            <div class="loginBtn activation">重新认证</div>
+            <div class="authenticationNone"></div>
+        </section>
+    </section>
+</section>
+
+<!--认证拒绝 end-->
+</body>
+</html>

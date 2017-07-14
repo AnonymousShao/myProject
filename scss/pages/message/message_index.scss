@@ -1,0 +1,255 @@
+@charset "UTF-8";
+//消息主页
+//公共方法模块调用
+@import "../../modules/common-modules";
+//公共变量引用
+@import "../../variables/_yiding-variables";
+//样式模块调用
+@import "../../components/_indexHeader";
+//首页头部信息栏
+@import "../../components/_iconModule";
+//小图标组件
+@import "../../components/_buttonModule";
+//按钮组件
+@import "../../components/_noContent";
+//无内容
+@import "../../components/_contentInner"; //内容容器
+@import "../../components/_msgListModule";  //信息列表组件
+//查看大图
+@import "../discuss/big-img";
+.yd-mainInner {
+  background-color: #f4f7f6;
+}
+
+//主内容——首页
+.yd-personalBrowsedPart {
+  background-color: #fff;
+  padding-left: rem(15px);
+  margin: rem(8px) 0;
+  border: 1px solid #e6eaed;
+}
+.yd-messageHeader{
+  margin-top: 0;
+}
+.yd-personalBrowsedItem {
+  padding: rem(15px) rem(15px) rem(15px) 0;
+  border-bottom: 1px solid #eee;
+  font-size: rem(15px);
+  &:nth-last-child(1) {
+    border-bottom: none;
+  }
+  a {
+    color: #333333;
+    position: relative;
+    display: block;
+    span {
+      vertical-align: middle;
+    }
+  }
+  .yd-newsNum {
+    text-align: center;
+    top: 50%;
+    margin-top: rem(-7.5px);
+    margin-right: rem(15px);
+    @include circle(rem(17px), #f35555);
+    display: block;
+    position: absolute;
+    right: 0;
+    font-size: rem(12px);
+    line-height: rem(17px);
+    text-align: center;
+    color: #fff;
+  }
+}
+
+.yd-msgRemindPart {
+  margin-top: rem(16px);
+  background-color: #fff;
+  border: 1px solid #e6eaed;
+}
+
+.yd-msgRemindItem {
+  padding: rem(20px) rem(15px);
+  padding-bottom: rem(14px);
+  @include clearfix();
+  border-bottom: 1px solid #eee;
+}
+
+.yd-msgRemindIcon {
+  float: left;
+  position: relative;
+  .icon-newTips:after {
+    right: 0;
+    top: rem(-5px);
+  }
+}
+
+.yd-msgRemindContent {
+  margin-left: rem(35px);
+}
+
+.yd-msgRemindTitle {
+  font-size: rem(16px);
+  color: #333;
+  font-weight: normal;
+  margin: 0;
+  .yd-msgRemindTime {
+    float: right;
+    font-size: rem(12px);
+    color: #aeaeae;
+  }
+}
+
+.yd-msgRemindContentText {
+  font-size: rem(14px);
+  color: #909090;
+  margin: rem(13px) 0;
+  position: relative;
+  padding-right: rem(20px);
+  display: block;
+}
+
+.yd-msgRemindContentTextHide {
+  color: #73859e;
+  margin: rem(13px) 0;
+  font-size: rem(14px);
+}
+
+.yd-msgRemindMainTitle {
+  height: rem(40px);
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding-left: rem(15px);
+  line-height: rem(40px);
+  h2 {
+    font-weight: normal;
+    font-size: rem(16px);
+    color: #909090;
+  }
+}
+
+.icon-msgDiscuss {
+  @extend %icon-msgDiscuss;
+}
+
+.icon-msgLike {
+  @extend %icon-msgLike;
+  position: relative;
+}
+.icon-msgInformation {
+  @extend %icon-msgInformation;
+  position: relative;
+  margin-right: 0.75rem;
+}
+
+
+
+.icon-system {
+  @extend %icon-system;
+}
+
+.icon-rightArrow {
+  @extend %icon-rightArrow;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: rem(-7.5px);
+
+}
+
+.icon-msgItemArrow {
+  @extend %icon-msgItemArrow;
+  position: absolute;
+  right: 0;
+}
+
+.newTips {
+  width: rem(8px);
+  height: rem(8px);
+  background-color: #f35555;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 50%;
+}
+.icon-vip {
+  @extend %icon-vip;
+}
+
+
+
+@import "../../components/_footerBar"; //页脚功能栏
+
+
+.msgInformation{
+  padding: rem(20px) 0;
+  border-bottom: solid 1px #eee;
+  .informationTitle{
+    font-size: rem(18px);
+    line-height: rem(18px);
+    color: #333;
+  }
+
+  .informationText{
+    font-size: rem(16px);
+    line-height: rem(24px);
+    color: #909090;
+    margin: rem(10px) 0;
+  }
+  .informationAds{
+    position: relative;
+    img{
+      width: rem(690px);
+      height: rem(240px);
+    }
+  }
+
+  .times{
+    position: absolute;
+    right: 0;
+    top: rem(14px);
+    z-index: 2;
+    background: #000;
+    filter:alpha(opacity=50); /*IE滤镜，透明度50%*/
+    -moz-opacity:0.5; /*Firefox私有，透明度50%*/
+    opacity:0.5;/*其他，透明度50%*/
+    padding: 0 rem(14px) 0 rem(20px);
+    font-size: rem(14px);
+    color: #fff;
+    height: rem(30px);
+    line-height: rem(30px);
+    border-radius: 3rem 0 0 3rem;
+  }
+}
+.yd-maskBackground{
+  .maskBackInformationAds{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height:100%;
+    text-align: center;
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+    }
+    .yd-bigImg_close{
+      position: absolute;
+      top: 0;
+      right:0;
+      margin-top: rem(-24px);
+      margin-right: rem(-24px);
+    }
+  }
+}
+.maskBackImg{
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  img{
+    max-height: rem(900px);
+    max-width: rem(1000px);
+  }
+}

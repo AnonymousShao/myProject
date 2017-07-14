@@ -1,0 +1,22 @@
+
+{
+  "name":"alertBoxClo(opt)",
+  "des":"存在医鼎图标，带有关闭按钮的单个按钮的弹层",
+  "attention":[""],
+  "comp":"IE8兼容",
+  "scene":"",
+  "returnVal":{
+    "isNull":false,
+    "des":"",
+    "type":"",
+    "val":{}
+
+  },
+  "code":"",
+  "param":{
+    "isNull":false,
+    "des":"",
+    "type":"json",
+    "val":{}
+  }
+}

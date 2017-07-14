@@ -1,0 +1,16 @@
+{
+  "name":"toggleExer(newtime, maxtime)",
+  "des":"//通过此方法根据最新观看记录，和最大观看记录，可以判断出视频节点是否弹过题，并增加属性观看属性data-showed=true。",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+  },
+  "param":{
+    "isNull":false,
+    "des":"",
+    "type":"json",
+    "timeUpdata":{"newtime":"最新时间","maxtime":"最大时间"}
+  }
+}

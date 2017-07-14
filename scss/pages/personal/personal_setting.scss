@@ -1,0 +1,983 @@
+@charset "UTF-8";
+// 个人中心 设置
+// Created by qiangkailiang on 2016/11/08
+// 功能库引入
+@import "../../modules/_common-modules";
+// 变量入口引入
+@import "../../variables/_yiding-variables";
+@import "../../components/_pageTopNav_And_SideBar"; //主导航-主侧栏
+@import "../../components/_contentInner"; //内容容器
+@import "../../components/_indexHeader"; //页头
+@import "../../components/_iconModule"; //小图标
+// @import "../../components/_tableModule"; //表单组件
+@import "../../components/_buttonModule"; //按钮组件
+@import "../../components/_bindWeixin"; //微信绑定二维码
+html,
+body {
+    background-color: #f5f7f6;
+}
+
+.yd-settingContent {
+    margin-top: rem(8px);
+    background-color: #fff;
+    padding-left: rem(15px);
+    box-sizing: border-box;
+    @at-root {
+        .yd-settingContentItem {
+            border-bottom: 1px solid #eee;
+            line-height: rem(60px);
+            padding-right: rem(15px);
+            position: relative;
+            & > a {
+                color: #222;
+                font-size: rem(17px);
+                display: block;
+                .icon-rightArrow {
+                    float: right;
+                }
+                span {
+                    float: right;
+                    color: #909090;
+                    font-size: rem(13px);
+                    b {
+                        font-weight: normal;
+                        margin-left: rem(10px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.btn-normal {
+    margin-left: rem(15px);
+}
+
+.yd-quitLogin a {
+    text-align: center;
+    color: #73859e;
+}
+
+.yd-tableModuleItem {
+    margin-left: 0;
+}
+
+.yd-tableModuleItemInput {
+    left: 0;
+    margin-left: 4.9375rem;
+}
+
+.yd-addSaveBox {
+    text-align: center;
+}
+
+// 修改XXX
+.yd-changeMobileBox {
+    background-color: #fff;
+    margin-top: rem(8px);
+    padding: 0 rem(15px);
+    height: 100%;
+    .yd-changeMobileContent {
+        font-size: rem(15px);
+        color: #808080;
+        line-height: 1.5;
+        p {
+            margin-top: rem(10px);
+        }
+    }
+    .yd-changeMobileContent.title {
+        padding-top: rem(20px);
+    }
+}
+
+.yd-validateInput {
+    margin-top: rem(100px);
+    margin-bottom: rem(45px);
+    padding-bottom: rem(10px);
+    position: relative;
+    overflow: hidden;
+    input {
+        width: 100%;
+        height: rem(30px);
+        border: none;
+        background: none;
+        outline: none;
+        font-family: "microsoft yahei";
+        padding-left: rem(17.5px);
+        box-sizing: border-box;
+        font-size: rem(16px);
+    }
+    &:after {
+        content: "";
+        width: 100%;
+        height: rem(4px);
+        display: block;
+        background: transparent url('/images/img50/pages/personal/validate_bottom.png') center center no-repeat;
+        background-size: cover;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.icon-rightArrow:after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    width: rem(6px);
+    height: 15px;
+    height: rem(15px);
+    background: url('/image/personal/list_forward@2x.png') center center no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle;
+    margin-left: rem(10px);
+}
+
+.yd-tableModule {
+    background-color: #fff;
+    border: 1px solid #e4e9ed;
+    border-top: none;
+}
+
+.workCard {
+    padding-top: 30px !important;
+} //证件信息 工作证栏Top值
+.yd-tableItem {
+    padding-top: 20px;
+    position: relative;
+    /*提示信息：begin*/
+    .yd-promptContentPop {
+        &:before {
+            content: "";
+            height: 0;
+            width: 0;
+            border: 8px solid transparent;
+            border-bottom: 8px solid #fff;
+            position: absolute;
+            left: 35px;
+            top: -15px;
+        }
+        position:absolute;
+        top:55px;
+        left:140px;
+        background-color:#fff;
+        z-index:3;
+        padding:44px 50px 30px;
+        text-align: center;
+        line-height:normal;
+        cursor: auto;
+        border:1px solid #e4e9ed;
+        box-shadow: 8px 8px 8px rgba(0,
+        0,
+        0,
+        0.14),
+        -3px -2px 8px rgba(0,
+        0,
+        0,
+        0.14);
+        border-radius:4px;
+        div {
+            color: #333;
+        }
+        .yd-promptHead {
+            font-weight: bold;
+            margin-bottom: 20px;
+            margin-left: -20px;
+            b {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background: transparent url('//img10.allinmd.cn/v3/common/icon/icon_success.png') center center no-repeat;
+                vertical-align: text-top;
+                margin-right: 8px;
+            }
+        }
+        span {
+            display: block;
+            margin-top: 26px;
+            color: #b4b4b4;
+        }
+    }
+    /*提示信息：end*/
+    p {
+        width: 76px;
+        text-align: right;
+        color: #000;
+        display: inline-block;
+        white-space: nowrap;
+        vertical-align: top;
+    }
+    @at-root {
+        .yd-tableItemContent {
+            display: inline-block;
+            margin-left: 40px;
+            color: #000;
+            position: relative;
+            font-size: 17px;
+            b {
+                display: block;
+                font-weight: normal;
+                color: #333;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .yd-tablePersonalMsg {
+        padding: 16px 24px 22px;
+        color: #555;
+        line-height: 32px;
+        display: block;
+        margin-top: -20px;
+        word-break: break-all;
+        .yd-contentCollapse {
+            margin-left: 20px;
+        }
+    }
+}
+
+.yd-tableItemTagsList {
+    display: inline-block;
+    margin-left: 40px;
+    font-size: 0;
+    vertical-align: top;
+    width: 80%;
+    .yd-tableItemTagItem {
+        display: inline-block;
+        margin-right: 12px;
+        margin-bottom: 12px;
+        padding: 0 15px;
+        height: 36px;
+        line-height: 36px;
+        color: #808080;
+        font-size: 15px;
+        border: 1px solid #e6e8ed;
+        border-radius: 4px;
+        position: relative;
+    }
+}
+
+.yd-personalMsgConfig {
+    float: right;
+    font-size: 14px;
+    color: #38a1f0;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.yd-addTableMsg {
+    text-align: center;
+    width: 100%;
+    font-size: 17px;
+    color: #3598db;
+    background-color: #fff;
+    border-left: 1px solid #e4e9ed;
+    border-right: 1px solid #e4e9ef;
+    box-sizing: border-box;
+    p {
+        margin: 0 24px;
+        cursor: pointer;
+        border-bottom: 1px solid #ecf0f2;
+        line-height: 75px;
+    }
+    i {
+        margin-right: 6px;
+        font-size: 24px;
+        font-weight: 700;
+        font-style: normal;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: -3px;
+    }
+}
+
+.yd-tablePadding {
+    padding: 0 24px 30px;
+    .yd-tableItem {
+        padding-top: 40px;
+    }
+}
+
+.yd-tableWriteComplate {
+    padding: 24px;
+    cursor: pointer;
+    position: relative;
+    &:hover {
+        background-color: #fafbfd;
+        .yd-tableWriteComplateConfig {
+            display: block;
+        }
+    }
+    .yd-tableIconJob {
+        width: 27px;
+        height: 24px;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 14px;
+        background: transparent url('//img10.allinmd.cn/v3/common/icon/table_icon_job.png') center center no-repeat;
+    }
+    .yd-tableIconMsg {
+        width: 31px;
+        height: 24px;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 13px;
+        background: transparent url('//img10.allinmd.cn/v3/common/icon/table_icon_edu.png') center center no-repeat;
+    }
+    .yd-tableIconConEdu {
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 14px;
+        background: transparent url('//img10.allinmd.cn/v3/common/icon/table_icon_conEdu.png') center center no-repeat;
+    }
+    .yd-tableIconAward {
+        width: 28px;
+        height: 27px;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 14px;
+        background: transparent url('//img10.allinmd.cn/v3/common/icon/table_icon_award.png') center center no-repeat;
+    }
+    .yd-tableIconFoud {
+        width: 26px;
+        height: 26px;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 13px;
+        background: transparent url('//img10.allinmd.cn/v3/common/icon/table_icon_foud.png') center center no-repeat;
+    }
+    .yd-tableIconSociety {
+        width: 26px;
+        height: 26px;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 12px;
+        background: transparent url('//img10.allinmd.cn/v3/common/icon/table_icon_society.png') center center no-repeat;
+    }
+    .yd-tableIconMonographs {
+        width: 23px;
+        height: 27px;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 14px;
+        background: transparent url('//img10.allinmd.cn/v3/common/icon/table_icon_monographs.png') center center no-repeat;
+    }
+    .yd-tableIconPatent {
+        width: 22px;
+        height: 35px;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 10px;
+        background: transparent url('//img10.allinmd.cn/v3/common/icon/table_icon_patent.png') center center no-repeat;
+    }
+    .yd-tableWriteContent {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 15px;
+        max-width: 618px;
+        h2 {
+            font-weight: normal;
+            font-size: 17px;
+            color: #333;
+            line-height: 26px;
+            word-break: break-all;
+            margin-bottom: 5px;
+        }
+        span {
+            font-size: 15px;
+            color: #777;
+            vertical-align: middle;
+            display: inline-block;
+            line-height: 22px;
+            word-break: break-all;
+        }
+        .yd-infor {
+            padding-top: 10px;
+        }
+        .yd-timeRange:before {
+            content: "";
+            @include square(4px);
+            display: inline-block;
+            vertical-align: middle;
+            background-color: #2899e6;
+            margin-right: 6px;
+            margin-left: 20px;
+        }
+    }
+}
+
+.yd-personalQualificationBtn {
+    margin-top: 20px;
+    background-color: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    height: 137px;
+    width: 100%;
+    box-sizing: border-box;
+    display: none;
+    p {
+        margin-bottom: 20px;
+    }
+    button {
+        background-color: #ff9224;
+        color: #fff;
+        font-size: 16px;
+        width: 180px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50px;
+        cursor: pointer;
+        &:hover {
+            background-color: #ffa245;
+        }
+        &:active {
+            background-color: #ee8822;
+        }
+    }
+}
+
+//二次认证弹层：begin
+
+/*
+    .yd-two_authenticate{
+        position:fixed;
+        top:0;
+        left:0;
+        z-index:5;
+        width:100%;
+        height:100%;
+        //background-color: rgba(0, 0, 0, 0.5);
+        .al_twoSureBox{
+            width:500px;
+            height:258px;
+            box-sizing: border-box;
+            background-color:#fff;
+            border:1px solid #e4e9ed;
+            border-radius: 4px;
+            margin:315px auto 0;
+            padding:0 21px 30px;
+            text-align: center;
+            .yd-popCloseBtn{
+                float:right;
+                cursor: pointer;
+                width: 13px;
+                height: 13px;
+                background: transparent url("//img10.allinmd.cn/v3/common/icon/icon_close.png") center center no-repeat;
+                margin-top:17px;
+            }
+            figcaption{
+                margin-top:58px;
+                color:#333;
+                font-weight: bold;
+            }
+            >p{
+                color:#333;
+                padding-left:40px;
+                text-align:left;
+                line-height:26px;
+                margin-top:16px;
+            }
+            footer{
+                margin-top:50px;
+                cursor: pointer;
+                font-size:15px;
+                span{
+                    display: inline-block;
+                    width:80px;
+                    height:34px;
+                    line-height:34px;
+                    color:#fff;
+                    background-color:#2899E6;
+                    border-radius: 4px;
+                }
+                .yd-againSure{
+                    display: inline-block;
+                    margin-left:15px;
+                    color:#bdc3cf;
+                }
+            }
+        }
+    }
+    */
+
+//二次认证弹层：end
+.yd-noQualificationStatueTips {
+    padding-top: 126px;
+    text-align: center;
+    background-color: #fff;
+    box-sizing: border-box;
+    height: 350px;
+    border: 1px solid #E4E9ED;
+    p {
+        color: #555;
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+    button {
+        background-color: #ff9224;
+        color: #fff;
+        font-size: 16px;
+        width: 180px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50px;
+        cursor: pointer;
+        &:hover {
+            background-color: #ffa245;
+        }
+        &:active {
+            background-color: #ee8822;
+        }
+    }
+}
+
+.yd-tableModule {
+    .yd-detailedTableItem {
+        border-left: none!important;
+        border-right: none!important;
+    }
+}
+
+.yd-credentialsUploadBox {
+    .yd-tableDetailedBtn {
+        background-color: #f3f6f9;
+        & > figure{
+            display: inline-block;
+            margin-left: 40px;
+        }
+    }
+}
+ .yd-tableDetailedBtn {
+        & > figure{
+            display: inline-block;
+            margin-left: 40px;
+        }
+    }
+
+.yd-detailedTableItem {
+    padding: 0px 24px 0; //设置页
+    margin: 0 -24px 0 -24px; //设置页
+    border-top: 1px solid #ecf0f2; //设置页
+    border-bottom: 1px solid #ecf0f2;
+    display: none;
+  line-height: 34px;
+  article{
+    padding-top: 12px;
+  }
+    span {
+        margin-left: 40px;
+        vertical-align: middle;
+    }
+    p {
+        width: 76px;
+        text-align: right;
+        height: 34px;
+        line-height: 34px;
+        white-space: nowrap;
+        font-size: rem(16px);
+        color: #222;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    input {
+        width: rem(230px);
+        height: rem(34px);
+        line-height: rem(34px);
+        font-family: "microsoft yahei";
+        font-size: rem(15px);
+        padding-left: rem(10px);
+        border-radius: rem(3px);
+        position: relative;
+        border: 1px solid #dbdbdb;
+    }
+    .yd-tableErrorTips {
+        font-size: rem(13px);
+        font-family: "宋体";
+        color: #f34b4b;
+        margin-left: 10px;
+        display: none;
+        width: auto !important;
+        span{
+            margin-left: 0;
+            vertical-align: middle;
+        }
+        i {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            float: none;
+            vertical-align: middle;
+            margin-right: 4px;
+            background: transparent url('//img10.allinmd.cn/v3/common/icon/error_tips.png') center center no-repeat;
+        }
+    }
+}
+
+.yd-detailedTableItem .error {
+    input {
+        border: solid 1px #f34b4b;
+        box-shadow: 0 0 3px #f34b4b;
+    }
+    .yd-tableErrorTips {
+        display: inline-block;
+    }
+    span {
+        margin-left: 40px;
+    }
+}
+
+.yd-erweiBind {
+    display: block;
+}
+
+.yd-erweiBindBox {
+    position: absolute;
+    background-color: #fff;
+    width: 176px;
+    height: 203px;
+    text-align: center;
+    color: #909090;
+    font-size: 13px;
+    box-shadow: 8px 8px 20px #c5ced6, -2px -2px 20px #c5ced6;
+    z-index: 1;
+    left: 109px;
+    top: 57px;
+    &:before {
+        content: "";
+        @include triangle(16px,
+        #fff,
+        up);
+        position: absolute;
+        top: -16px;
+        left: 44px;
+    }
+    figcaption {
+        margin-bottom: 20px;
+        text-align: center;
+        display: inline;
+    }
+    img {
+        @include square(120px);
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.yd-sendValidateCodeBtn {
+    position: relative; //IE
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
+    color: #333;
+    font-size: 14px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    margin-left: 10px;
+    @include linear-gradient(to top,
+    #f2f2f2,
+    #ffffff);
+    -pie-background: linear-gradient(to bottom, #f2f2f2, #ffffff);
+    cursor: pointer;
+}
+.yd-sendValidateSended {
+    color: #909090;
+}
+.yd-personalAdviceSubmit {
+    border-radius: 50px;
+    position: relative; //IE
+    width: 75px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #2899e6;
+    margin-top: 25px;
+    margin-right: 6px;
+  margin-bottom: 25px;
+    font-size: 13px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.yd-personalAdviceCancel {
+    color: #aaa;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+//单选框
+.yd-tableItemRadio {
+    display: inline-block;
+    height: 34px;
+    line-height: 34px;
+    margin-right: 18px;
+    i {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+    .yd-tableRadioOff {
+        background: transparent url('//img10.allinmd.cn/v3/common/icon/icon_selectOff.png') center center no-repeat;
+    }
+    .yd-tableRadioOn {
+        background: transparent url('//img10.allinmd.cn/v3/common/icon/icon_selectOn.png') center center no-repeat;
+    }
+}
+
+.yd-tableItemSelector {
+    height: 26px;
+    border-radius: 5px;
+    border: 1px solid #dbdbdb;
+    @include linear-gradient(to top,
+    #f2f2f2,
+    #ffffff);
+    display: inline-block;
+    position: relative;
+    -pie-background: linear-gradient(to bottom, #f2f2f2, #ffffff);
+    select.yd-year {
+        $w: 94px;
+        width: $w;
+        padding-left: 25px;
+    }
+    select::-ms-expand {
+        display: none;
+    }
+    select {
+        height: 26px;
+        border: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: none;
+        cursor: pointer;
+    }
+    select.yd-month,
+    select.yd-day {
+        $w: 84px;
+        width: $w;
+        padding-left: 20px;
+    }
+    b {
+        font-size: 15px !important;
+        position: absolute;
+        right: 15px;
+        bottom: -14px;
+        cursor: pointer;
+    }
+}
+
+.yd-tableTagConfigItem {
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px;
+    margin-top: 3px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 12px;
+    font-family: "宋体";
+    display: inline-block;
+    cursor: pointer;
+    i {
+        font-style: normal;
+        margin-left: 10px;
+    }
+}
+
+//选中输入标签按钮
+.yd-clickJumpSelectBox {
+    width: 230px;
+    min-height: 34px;
+    height: auto;
+    font-family: "microsoft yahei";
+    font-size: 15px;
+    padding-left: 10px;
+    border-radius: 3px;
+    border: 1px solid #dbdbdb;
+    figure {
+        line-height: 26px;
+        margin-top: 4px;
+    }
+}
+
+//标签选择弹框
+.yd-tagSelectorBox {
+    width: 450px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 8px 8px 20px #c5ced6, -2px -2px 20px #c5ced6;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 40px;
+    .yd-tagSelectorBoxTitle {
+        font-size: 18px;
+        color: #333;
+        padding: 20px 25px;
+        border-bottom: 1px solid $innerBorderColor;
+        .yd-tagSelectorBoxCloseBtn {
+            float: right;
+            font-size: 15px;
+            color: #909090;
+            cursor: pointer;
+        }
+    }
+    .yd-tagSelectorItem {
+        padding: 20px 25px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid $innerBorderColor;
+        button {
+            padding: 6px 12px;
+            border: 1px solid #dbdbdb;
+            border-radius: 50px;
+            background-color: #fff;
+            color: #909090;
+            font-size: 15px;
+            cursor: pointer;
+            margin-right: 12px;
+            margin-bottom: 12px;
+            &:hover {
+                background-color: #f9f6fb;
+            }
+        }
+        button.active {
+            color: #fff;
+            background-color: #2899e6;
+        }
+    }
+    .yd-tagSelectorBoxFootBtn {
+        padding: 20px 18px;
+    }
+    .yd-personalAdviceSubmit {
+        margin-top: 0;
+    }
+}
+
+.yd-tagSelectorList {
+    &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        @include square(4px);
+        background-color: #2899e6;
+        margin-right: 7px;
+    }
+    span {
+        margin-left: 0;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        font-size: 15px;
+        display: inline-block;
+        cursor: pointer;
+        color: #333;
+        padding: 5px 7px;
+        &:hover {
+            background-color: #f6f9fb;
+        }
+    }
+    span.active {
+        font-size: 15px;
+        color: #3598db;
+    }
+}
+
+.yd-tableTextarea {
+    width: 638px;
+    height: 114px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    position: relative;
+    resize: none;
+    padding: 10px;
+    font-size: 16px;
+    color: #555;
+    margin: 30px 24px 0;
+}
+
+.yd-tableTextareaShort {
+    width: 515px;
+    height: 74px;
+    margin-top: 0;
+    vertical-align: top;
+}
+
+.yd-personal {
+    input:focus {
+        border: 1px solid #3598db;
+        box-shadow: 1px 1px 1px #3598db, -1px -1px 1px #3598db;
+    }
+}
+
+.yd-tableItemConnectText {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: normal;
+    color: #909090;
+    font-size: 16px;
+    font-style: normal;
+}
+
+.yd-tableItemCheckbox {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: normal;
+    color: #333;
+    font-size: 16px;
+    font-style: normal;
+    margin-left: 10px;
+    i {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.yd-tableItemCheckboxOff i {
+    background: transparent url('//img10.allinmd.cn/v3/common/icon/icon_checkbox_off.png') center center no-repeat;
+}
+
+.yd-tableItemCheckboxOn i {
+    background: transparent url('//img10.allinmd.cn/v3/common/icon/icon_checkbox_on.png') center center no-repeat;
+}
+
+.yd-tableWriteComplateConfig {
+    display: inline-block;
+    position: absolute;
+    right: 32px;
+    bottom: 37px;
+    display: none;
+    a {
+        display: inline-block;
+        font-size: 14px;
+        color: #A3A7AA;
+    }
+    .yd-tableWriteComplateConfigBtn {
+        font-size: 14px;
+        color: #3598db;
+        padding-right: 25px;
+    }
+}
+
+input:focus {
+    border: 1px solid #3598db;
+    box-shadow: 1px 1px 1px #3598db, -1px -1px 1px #3598db;
+}
+.yd-settingContentItem > a{
+    em{
+        font-style: normal;
+    }
+}
+.showIb{
+    display: inline-block !important;
+}
+
+
+#phone_pwd,#email_upa{
+  margin-top: 8px;
+}

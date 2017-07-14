@@ -1,0 +1,409 @@
+@charset "UTF-8";
+// 个人中心 主页
+// Created by qiangkailiang on 2016/11/02
+// 功能库引入
+@import "../../modules/_common-modules";
+// 变量入口引入
+@import "../../variables/_yiding-variables";
+@import "../../components/_contentInner"; //内容容器
+@import "../../components/_iconModule"; //图标标签
+@import "../../components/_buttonModule"; //按钮组件
+@import "../../components/_raderImage"; //雷达图
+@import "../../components/_noContent"; //无内容
+@import "../../components/_indexHeader"; //页头
+@import "../../components/_imgUploaderPc"; //头像上传
+.yd-mainInner {
+    background-color: #f5f7f6;
+    padding-bottom: rem(170px);
+    min-height: 100%;
+}
+html,body{
+    height: 100%;
+}
+
+@include query() {
+    .contentInner {
+        margin-top: rem(0px);
+    }
+}
+
+.yd-noContentTips {
+    margin-top: rem(9px);
+    background-color: #fff;
+}
+
+.yd-personalHeader {
+    width: 100%;
+    background: transparent url('/image/personal/my_page_bg@2x.png') left top no-repeat;
+    background-size: 100%;
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/image/personal/my_page_bg@2x.png',sizingMethod='scale')";
+    padding-top: 52px;
+    padding-right: 15px;
+    padding-left: 50px;
+    padding-bottom: 52px;
+    padding-top: rem(52px);
+    padding-right: rem(15px);
+    padding-left: rem(50px);
+    padding-bottom: rem(52px);
+    position: relative;
+    box-sizing: border-box;
+  margin-top: 16px;
+    .yd-personalImg {
+        behavior: url("/js/third-party/pie/PIE.htc");
+        display: inline-block;
+        vertical-align: top;
+        @include circle(rem(55px),
+        transparent);
+        position: relative;
+        border: rem(2.5px) solid rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        & > img {
+            behavior: url("/js/third-party/pie/PIE.htc");
+            position: relative;
+            width: 100%;
+            height: 100%;
+            vertical-align: top;
+            border-radius: 50%;
+        }
+    }
+    .yd-personalBaseMessage {
+        display: inline-block;
+        vertical-align: top;
+        color: #fff;
+        margin-top: rem(6px);
+        margin-left: rem(15px);
+        & > h2 {
+            font-weight: normal;
+            font-size: rem(17px);
+            margin-bottom: rem(9px);
+            span {
+                vertical-align: middle;
+            }
+        }
+        & > p {
+            color: #eee;
+            font-size: rem(13px);
+            span {
+                margin-right: rem(7px);
+            }
+        }
+    }
+    .icon-personalConfig {
+        position: absolute;
+        right: rem(30px);
+        top: rem(52px);
+        cursor: pointer;
+    }
+}
+@include query(){
+    .yd-personalHeader{
+        -webkit-background-size:100% 100%;
+        background-size:100% 100%;
+    }
+}
+.yd-personalNoLogin {
+    .yd-personalImg {
+        vertical-align: middle;
+    }
+    .yd-personalBaseMessage {
+        display: none;
+    }
+    .btn-yellow {
+        vertical-align: middle;
+        margin-left: rem(15px);
+        display: inline-block;
+    }
+}
+
+.yd-personalLoginBtn {
+    display: none;
+    cursor: pointer;
+}
+
+.yd-personalScrollHead {
+    height: rem(50px);
+    line-height: rem(50px);
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s linear;
+    h2 {
+        text-align: center;
+        font-weight: normal;
+        color: #555;
+        font-size: rem(18px)
+    }
+}
+
+.yd-personalScrollHead.show {
+    visibility: visible;
+    opacity: 1;
+}
+.yd-personalEntry {
+    background-color: #fff;
+    @include clearfix();
+    box-sizing: border-box;
+    border-left: 1px solid #dfdfdf;
+    &Item {
+        float: left;
+        width: 25%;
+        text-align: center;
+        box-sizing: border-box;
+        padding: rem(15px);
+        border-right: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        white-space: nowrap;
+        cursor: pointer;
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            font-size: rem(15px);
+            color: #555;
+        }
+        span {
+            vertical-align: middle;
+        }
+    }
+    @include query() {
+        .yd-personalEntryItem {
+            width: 50%;
+        }
+    }
+}
+
+@import "../../components/_footerBar"; //页脚
+.btn-personalIntro {
+    color: #eee;
+    display: inline-block;
+    font-size: rem(12px);
+    padding: rem(7px) rem(20px);
+    border-radius: rem(500px);
+    line-height: 1;
+    margin-top: rem(12px);
+    behavior: url(/js/third-party/pie/pie.htc);
+    position: relative;
+    span {
+        vertical-align: middle;
+    }
+}
+
+.yd-personalIntroPerfect {
+    background-color: #627eb9;
+}
+
+.yd-personalIntroConfig {
+    background-color: #37487c;
+}
+
+.yd-personalClassRatio {
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-top: none;
+}
+
+.yd-personalClassItem {
+    & > h2 {
+        font-weight: normal;
+        color: #ffa800;
+        font-size: rem(17px);
+        border-bottom: 1px solid #dfdfdf;
+        padding: rem(15px);
+        & > span {
+            font-size: rem(15px);
+            float: right;
+        }
+    }
+}
+
+.yd-personalClassItem.open {
+    .yd-personalClassSecondItem {
+        display: block;
+    }
+}
+
+.yd-personalClassSecondItem {
+    background-color: #fbfbfb;
+    display: none;
+    & > a {
+        color: #555;
+        display: block;
+        padding: rem(20px) 0;
+        margin-left: rem(30px);
+      margin-right: rem(24px);
+        font-size: rem(15px);
+        line-height: 1;
+        border-bottom: 1px solid #eee;
+        i {
+            margin-right: rem(5px);
+        }
+        span {
+            float: right;
+            font-size: rem(15px);
+        }
+    }
+}
+
+.yd-loading {
+    background-color: rgba(0, 0, 0, .75);
+    border-radius: 50%;
+    behavior: url("/js/third-party/pie/pie.htc");
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+    }
+    img {
+        width: rem(30px);
+        height: rem(30px);
+        vertical-align: middle;
+        margin-left: -0.2rem;
+        animation: rotate 1.5s linear forwards infinite;
+    }
+}
+
+@include query() {
+    .yd-changeImg {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 5;
+        background: #fff;
+        .yd-bigHeadImg {
+            width: rem(375px);
+            height: rem(375px);
+            margin-top: rem(30px);
+            & > img {
+                text-align: center;
+                vertical-align: top;
+                width: 100%;
+                height: 100%;
+            }
+            & + figcaption {
+                text-align: center;
+                margin-top: rem(25px);
+            }
+        }
+    }
+}
+
+//旋转——上传状态等
+@include keyframes (rotate) {
+    0% {
+        transform: rotate(0);
+        -webkit-transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.icon-introPerfect {
+    @extend %icon-introPerfect;
+}
+
+.icon-personalConfig {
+    @extend %icon-personalConfig;
+}
+
+.icon-personalWrong {
+    @extend %icon-personalWrong;
+}
+
+.icon-personalMsg {
+    @extend %icon-personalMsg;
+}
+
+.icon-personalDiscuss {
+    @extend %icon-personalDiscuss;
+}
+
+.icon-personalCollect {
+    @extend %icon-personalCollect;
+}
+
+.icon-personalHistory {
+    @extend %icon-personalHistory;
+}
+
+.icon-vip {
+    @extend %icon-vip;
+}
+
+.off {
+    a {
+        color: #aeaeae;
+    }
+    .icon-personalWrong:before {
+        background: url('/image/personal/icon_wrong_disable@2x.png') center center no-repeat;
+        background-size: 100% 100%;
+    }
+    .icon-personalMsg:before {
+        background: url('/image/personal/icon_message_disable@2x.png') center center no-repeat;
+        background-size: 100% 100%;
+    }
+    .icon-personalDiscuss:before {
+        background: url('/image/personal/icon_comments_disable@2x.png') center center no-repeat;
+        background-size: 100% 100%;
+    }
+    .icon-personalCollect:before {
+        background: url('/image/personal/icon_collection_disable@2x.png') center center no-repeat;
+        background-size: 100% 100%;
+    }
+    .icon-personalHistory:before {
+        background: url('/image/personal/icon_history_disable@2x.png') center center no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+
+
+
+.yd-personalUserNoQualification {
+  width: 100%;
+  position: absolute;
+  top: 70px;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: #3698db;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  color: #fff;
+  font-size: 15px;
+  text-align: left;
+  line-height: 50px;
+  article {
+    width: 750px;
+    margin: 0 auto;
+  }
+  a {
+    color: #fef5ad;
+  }
+
+  .al-close {
+    font-size: 16px;
+    color: #fff;
+    font-style: normal;
+    float: right;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 2px;
+  }
+}

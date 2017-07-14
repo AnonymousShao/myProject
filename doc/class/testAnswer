@@ -1,0 +1,13 @@
+{
+  "name":"testAnswer()",
+  "des":"//该方法是随堂测试弹出题后，一些答题的操作，答题过后显示相应的解析，以及正确和错误的答案还有知识点。",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+  },
+  "param":{
+    "isNull":true
+  }
+}

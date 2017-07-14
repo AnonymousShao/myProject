@@ -1,0 +1,22 @@
+
+{
+  "name":"isPC()",
+  "des":"响应式中js判断是pc或H5的方法",
+  "attention":["返回值为boole值可放在if()判断中使用"],
+  "comp":"IE8兼容",
+  "scene":"在响应式判断是pc或H5的js逻辑",
+  "returnVal":{
+    "isNull":false,
+    "des":"返回一个boole值",
+    "type":"boole",
+    "val":{"true":"是PC端"}
+
+  },
+  "code":"",
+  "param":{
+    "isNull":false,
+    "des":"",
+    "type":"json",
+    "val":{}
+  }
+}

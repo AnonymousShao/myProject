@@ -1,0 +1,13 @@
+{
+  "name":"share()",
+  "des":"//开启分享QQ，微博，QQ空间，微信的功能，以及分享的话术",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+  },
+  "param":{
+    "isNull":true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "changeVideo()",
+  "des": "//此方法是点击相关推荐的视频，切换到另一个视频去播放。",
+  "attention": "",
+  "comp": "",
+  "scene": "",
+  "returnVal": {
+    "isNull": true
+  },
+  "param": {
+    "isNull": true
+  }
+}

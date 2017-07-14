@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>${seo_title!''}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/yiding.ico">
+    <meta name="keywords" content="${seo_keyword!''}">
+    <meta name="viewport" content="width=750">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/classes/course.css">
+    <link rel="stylesheet" href="/css/pages/classes/jquery-ui.min.css">
+    <link rel="stylesheet" href="/css/pages/classes/video-js.css">
+    <script type="text/javascript" src="/js/common/rem.js"></script>
+    <!--[if lte IE 8]>
+
+    <script type="text/javascript" src="/js/common/html5shiv.js" ></script>
+    <script type="text/javascript" src="/js/common/respond.min.js"></script>
+
+
+    <![endif]-->
+
+
+</head>
+<body>
+<!--全内容容器——mainInner-->
+<section class="yd-mainInner" id="mymainInner">
+    <!--收藏的课程-->
+    <section class="pcModule  course-guide" style="display: none;">
+        <section class="guideExercises" style="background-color:rgba(0,0,0,0.8);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);position: fixed;left: 0;right: 0; top: 0;bottom: 0;z-index: 10;"></section>
+        <div class="pcCourseCollect">
+            <div class="guideCont"><img src="/image/guide/courseCollect.png"> </div>
+            <div class="guideBut"><img src="/image/guide/button.png"> </div>
+        </div>
+    </section>
+    <section class="contentInner">
+        <section class="course" id="course-main" data-courseId="${seriesCourse.courseId!''}">
+            <section class="course-video" data-videoHD="${videoAttUrlHD!''}" data-videoSD="${videoAttUrlSD!''}">
+                <video id="example_video_1" style="width:100%;height:100%;" class="video-js vjs-default-skin" controls="controls"  preload="auto" width="750" height="422"   src="${videoAttUrlSD!''}"   poster="" data-setup='{"autoplay":true}'>
+                    <source src="${videoAttUrlSD!''}" type="video/mp4">
+                    <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+                </video>
+                <header class="hallTestVideo hallTestVideoShade"></header>
+                <div class="hallTestVideoText hallTestVideoShade">答题结束可继续观看视频</div>
+            </section>
+            <section class="course-main" style="margin-left: -2px;">
+                <!--随堂-->
+                <aside class="hallTest_cont">
+                    <aside class="width92">
+                        <div class="hallTestTitle">随堂测试<i class="collProblems"><span class="collIcon"></span><span>收藏题目</span></i> </div>
+                    </aside>
+                </aside>
+
+                <!--随堂end-->
+
+                <section class="courseCont">
+                    <header class="courseContHeader" >
+                        <div class="yd_c_bg pcModule">
+                            <ul class="coursePc-coll clear pcModule">
+                                <li class="courseColl-pc">收藏</li>
+                                <li class="courseQution-pc">提问</li>
+                            </ul>
+
+                        </div>
+                        <div class="yd_b_bg pcModule"></div>
+                    </header>
+                    <header class="qustionWrite">
+
+                    </header>
+                    <header class="course-head ">
+                        <div class="yd_t_bg pcModule"></div>
+                        <div class="yd_c_bg">
+                            <aside class="width92">
+                                <#if seriesCourse??>
+                                    <p>${seriesCourse.courseTitle!''}</p>
+                                </#if>
+                                <#if cmsSeries??>
+                                    <span>${cmsSeries.seriesTitle!''}</span>
+                                </#if>
+
+                            </aside>
+                        </div>
+                        <div class="yd_b_bg pcModule"></div>
+                    </header>
+                    <section class="courseContent">
+                        <div class="yd_t_bg pcModule"></div>
+                        <div class="yd_c_bg">
+                            <section class="courseCont">
+                                <section class="course-tab">
+                                    <header>
+                                        <ul class="clear">
+                                            <li class="course-tabite course-tab-intro"><p class="abstract course-active">简介</p></li>
+                                            <li class="course-tabite course-tab-catalog"><p class="catalog">目录</p></li>
+                                            <li class="course-tabite course-tab-discuss"><p class="discuss">讨论</p></li>
+                                        </ul>
+                                    </header>
+                                </section>
+                                <section class="courseBLock abstract-content" style="display: none;">
+                                    <header class="clear width92">
+                                        <#if (seriesCourseAuthorList??)&&(seriesCourseAuthorList?size>0)>
+                                            <#list seriesCourseAuthorList as authorList>
+                                                <div class="userImg">
+                                                    <img src="${authorList.authorLogoUrl!''}" alt="">
+                                                </div>
+                                                <ul>
+                                                    <li class="list-name">${authorList.authorName!''}</li>
+                                                    <li>${authorList.medicalTitle!''} &nbsp;&nbsp; ${authorList.company!''}</li>
+                                                </ul>
+                                            </#list>
+                                        </#if>
+                                    </header>
+                                    <article class="width92 clear courseMarBom">
+                                        <h3>课程简介</h3>
+                                        <aside class="classSynopsis coursePrepare">
+                                            <#if seriesCourse??>
+                                                <p class="class-abstract">${seriesCourse.courseAbstract!''}</p>
+                                                <p class="class-abstract"><#if (seriesCourse.searchKeyword)??>中文关键词：${seriesCourse.searchKeyword!''}</#if></p>
+                                                <p class="class-abstract"><#if (seriesCourse.searchKeywordEn)??>英文关键词：${seriesCourse.searchKeywordEn!''}</#if></p>
+                                            </#if>
+                                        </aside>
+                                        <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+
+                                    </article>
+                                    <article class="width92 clear courseMarBom">
+                                        <h3>课前预习</h3>
+                                        <aside class="coursePrepare">
+                                            <#if seriesCourse??>
+                                                <p class="class-abstract prepare">${seriesCourse.coursePreview!''} </p>
+                                            </#if>
+                                        </aside>
+                                        <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+
+                                    </article>
+                                    <article class="width92 clear courseMarBom">
+                                        <h3>课程目标</h3>
+                                        <aside class="coursePrepare">
+                                            <#if seriesCourse??>
+                                                <#if (seriesCourse.courseTargetControl)?? >
+                                                    <p class="class-abstract prepare">掌握：${seriesCourse.courseTargetControl!''} </p>
+                                                </#if>
+                                                <#if (seriesCourse.courseTargetFamiliar)?? >
+                                                    <p class="class-abstract prepare">熟悉：${seriesCourse.courseTargetFamiliar!''} </p>
+                                                </#if>
+                                                <#if (seriesCourse.courseTargetUnderstand)?? >
+                                                    <p class="class-abstract prepare">了解：${seriesCourse.courseTargetUnderstand!''} </p>
+                                                </#if>
+                                                <#if (seriesCourse.courseTargetPoint)?? >
+                                                    <p class="class-abstract prepare">重点：${seriesCourse.courseTargetPoint!''} </p>
+                                                </#if>
+                                                <#if (seriesCourse.courseTargetHard)?? >
+                                                    <p class="class-abstract prepare">难点：${seriesCourse.courseTargetHard!''} </p>
+                                                </#if>
+                                            </#if>
+                                        </aside>
+                                        <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+
+                                    </article>
+
+                                </section>
+                                <section class="courseBLock catalog-content">
+                                    <ul>
+                                        <#if (courseNodeList??)&&(courseNodeList?size>0)>
+                                            <#list courseNodeList as nodeList>
+                                                <li class="single first read">
+                                                    <div class="width92 clear">
+                                                        <div class="catalogTime">${nodeList.nodeTime!''}</div>
+                                                        <div class="catalogText">${nodeList.courseNodeName!''}</div>
+                                                    </div>
+                                                    <div class="live_pointer"></div>
+                                                </li>
+                                            </#list>
+                                        </#if>
+                                    </ul>
+                                </section>
+                                <section class="courseBLock discuss-content">
+                                    <header class="discussAll_title">
+                                        <div class="width92 clear">
+                                            <div class="all_text"></div>
+                                            <ul class="clear discussAllLast"><li class="selected" data-role="recently">最新</li><li data-role="oldest">最旧</li></ul>
+                                        </div>
+                                    </header>
+                                    <section class="discussList">
+                                        <div class="width92">
+                                            <ul  class="discussAllLastThink">
+
+                                            </ul>
+                                            <aside class="loginNone">
+                                                <div class="commLogin"></div>
+                                                <div class="loginGo">去登录</div>
+                                            </aside>
+                                            <aside class="discussNone none">本课还没有相关讨论，快去发表你的看法吧！</aside>
+                                            <ul class="discussAllList">
+
+                                            </ul>
+
+                                        </div>
+                                    </section>
+                                </section>
+                            </section>
+                        </div>
+                        <div class="yd_b_bg pcModule"></div>
+                    </section>
+
+                    <!--简介尾部-->
+                    <section class="synopsisFooter">
+                        <#if (seriesCourseAttList??)&&(seriesCourseAttList?size>0)>
+                            <section class="course-footer">
+                                <div class="yd_t_bg pcModule"></div>
+                                <div class="yd_c_bg">
+                                    <article class="width92 clear">
+                                        <h3>课件预览</h3>
+                                    </article>
+                                    <div class="classDown width92">
+                                        <ul class="clear maxWidth">
+
+                                            <#list seriesCourseAttList as courseAtt>
+                                                <li data-attUrl="${courseAtt.attPath!''}">
+                                                    <div class="downIcon"><img src="${courseAtt.attBgPath!''}"> </div>
+                                                    <div class="classTitle">${courseAtt.attName!''}</div>
+                                                    <div class="className">${courseAtt.attAuth!''}</div>
+                                                </li>
+                                            </#list>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="yd_b_bg pcModule"></div>
+                            </section>
+                        </#if>
+                        <#if (bookList??)&&(bookList?size>0)>
+                            <section class="course-footer">
+                                <div class="yd_t_bg pcModule"></div>
+                                <div class="yd_c_bg">
+                                    <article class="width92 clear">
+                                        <h3>参考书籍&文献</h3>
+                                        <aside class="coursePrepare">
+
+                                            <#list bookList as book>
+                                                <p class="class-abstract prepare">${book_index+1 }、${book.bookName!''}&nbsp;${book.bookAuthor!''}
+                                                    &nbsp;${book.bookAuthorTitle!''}&nbsp;${book.bookSource!''}&nbsp;${book.bookYear!''}</p>
+                                            </#list>
+
+                                        </aside>
+                                        <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                                    </article>
+                                </div>
+                                <div class="yd_b_bg pcModule"></div>
+
+                            </section>
+                        </#if>
+                    </section>
+
+                    <!--简介尾部-->
+                    <!--相关推荐-->
+                    <section class="course-footer recommendContainer none">
+                        <div class="yd_t_bg pcModule"></div>
+                        <div class="yd_c_bg">
+                            <article class="width92 clear">
+                                <h3>相关推荐</h3>
+                            </article>
+                            <div class="recommendCont width92">
+                                <div class="recommend">
+                                    <ul class="clear">
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="yd_b_bg pcModule"></div>
+
+
+                    </section>
+                </section>
+            </section>
+            <!--相关推荐 end-->
+            <!--课后思考题-->
+            <section class="classThink" style="display: none;">
+                <section class="pc_width">
+                    <aside class="cThink_cont">
+                        <aside class="width92">
+                            <div class="title">课后思考题</div>
+                            <div class="classThinkClose"><img src="/image/authority/login/login_close.png"> </div>
+                            <ul class="thinkList">
+
+                            </ul>
+                            <div class="courseThinkNext">学习下一课</div>
+                        </aside>
+                    </aside>
+                </section>
+            </section>
+        </section>
+    </section>
+
+</section>
+
+<section style="height: 114px;" class="mobileModule"></section>
+
+</section>
+
+
+
+
+<section class="courseFixed mobileModule">
+    <div class="width92">
+        <ul>
+            <li class="collect">收藏</li>
+            <li class="quiz">提问</li>
+        </ul>
+    </div>
+</section>
+<!--common.log统计ip,address-->
+<script src="//pv.sohu.com/cityjson?ie=utf-8"></script>
+<!-- end -->
+<script src="/js/third-party/jquery/jquery-1.8.0.min.js"></script>
+<!--about:jq-->
+<script src="/build/jqAll.js"></script>
+<!-- end -->
+<!--about:common&login-->
+<script src="/build/common.js"></script>
+<!-- end -->
+<script src="/js/third-party/video/video.js"></script>
+<script src=/build/courseTalk.js></script>
+<!-- endbuild -->
+
+<script type="text/javascript">
+    var href=window.location.href;
+    if(pcOrH5.pc()){
+        if (window.location.href.indexOf("m.yi-ding.net.cn")>-1){
+            window.location.href=href.replace("m.yi-ding.net.cn","www.yi-ding.net.cn");
+        }
+        domain.get(
+                "/js/scene/classes/course.js"
+        );
+    }else{
+        if (window.location.href.indexOf("www.yi-ding.net.cn")>-1){
+            window.location.href=href.replace("www.yi-ding.net.cn","m.yi-ding.net.cn");
+        }
+        domain.get(
+                "/js/common/jumpapp.js",
+                "/js/scene/classes/h5course.js"
+        );
+    }
+</script>
+</body>
+
+</html>
+</header>
+<section class="courseContent">
+    <div class="yd_t_bg pcModule"></div>
+    <div class="yd_c_bg">
+        <section class="courseCont">
+            <section class="course-tab">
+                <header>
+                    <ul class="clear">
+                        <li class="course-tabite course-tab-intro"><p class="abstract course-active">简介</p></li>
+                        <li class="course-tabite course-tab-catalog"><p class="catalog">目录</p></li>
+                        <li class="course-tabite course-tab-discuss"><p class="discuss">讨论</p></li>
+                    </ul>
+                </header>
+            </section>
+            <section class="courseBLock abstract-content" style="display: none;">
+                <header class="clear width92">
+                    <#if (seriesCourseAuthorList??)&&(seriesCourseAuthorList?size>0)>
+                        <#list seriesCourseAuthorList as authorList>
+                            <div class="userImg">
+                                <img src="${authorList.authorLogoUrl!''}" alt="">
+                            </div>
+                            <ul>
+                                <li class="list-name">${authorList.authorName!''}</li>
+                                <li>${authorList.medicalTitle!''} &nbsp;&nbsp; ${authorList.company!''}</li>
+                            </ul>
+                        </#list>
+                    </#if>
+                </header>
+                <article class="width92 clear courseMarBom">
+                    <h3>课程简介</h3>
+                    <aside class="classSynopsis coursePrepare">
+                        <#if seriesCourse??>
+                            <p class="class-abstract">${seriesCourse.courseAbstract!''}</p>
+                            <p class="class-abstract"><#if (seriesCourse.searchKeyword)??>中文关键词：${seriesCourse.searchKeyword!''}</#if></p>
+                            <p class="class-abstract"><#if (seriesCourse.searchKeywordEn)??>英文关键词：${seriesCourse.searchKeywordEn!''}</#if></p>
+                        </#if>
+                    </aside>
+                    <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+
+                </article>
+                <article class="width92 clear courseMarBom">
+                    <h3>课前预习</h3>
+                    <aside class="coursePrepare">
+                        <#if seriesCourse??>
+                            <p class="class-abstract prepare">${seriesCourse.coursePreview!''} </p>
+                        </#if>
+                    </aside>
+                    <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+
+                </article>
+                <article class="width92 clear courseMarBom">
+                    <h3>课程目标</h3>
+                    <aside class="coursePrepare">
+                        <#if seriesCourse??>
+                            <#if (seriesCourse.courseTargetControl)?? >
+                                <p class="class-abstract prepare">掌握：${seriesCourse.courseTargetControl!''} </p>
+                            </#if>
+                            <#if (seriesCourse.courseTargetFamiliar)?? >
+                                <p class="class-abstract prepare">熟悉：${seriesCourse.courseTargetFamiliar!''} </p>
+                            </#if>
+                            <#if (seriesCourse.courseTargetUnderstand)?? >
+                                <p class="class-abstract prepare">了解：${seriesCourse.courseTargetUnderstand!''} </p>
+                            </#if>
+                            <#if (seriesCourse.courseTargetPoint)?? >
+                                <p class="class-abstract prepare">重点：${seriesCourse.courseTargetPoint!''} </p>
+                            </#if>
+                            <#if (seriesCourse.courseTargetHard)?? >
+                                <p class="class-abstract prepare">难点：${seriesCourse.courseTargetHard!''} </p>
+                            </#if>
+                        </#if>
+                    </aside>
+                    <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+
+                </article>
+
+            </section>
+            <section class="courseBLock catalog-content">
+                <ul>
+                    <#if (courseNodeList??)&&(courseNodeList?size>0)>
+                        <#list courseNodeList as nodeList>
+                            <li class="single first read">
+                                <div class="width92 clear">
+                                    <div class="catalogTime">${nodeList.nodeTime!''}</div>
+                                    <div class="catalogText">${nodeList.courseNodeName!''}</div>
+                                </div>
+                                <div class="live_pointer"></div>
+                            </li>
+                        </#list>
+                    </#if>
+                </ul>
+            </section>
+            <section class="courseBLock discuss-content">
+                <header class="discussAll_title">
+                    <div class="width92 clear">
+                        <div class="all_text"></div>
+                        <ul class="clear discussAllLast"><li class="selected" data-role="recently">最新</li><li data-role="oldest">最旧</li></ul>
+                    </div>
+                </header>
+                <section class="discussList">
+                    <div class="width92">
+                        <ul  class="discussAllLastThink">
+
+                        </ul>
+                        <aside class="loginNone">
+                            <div class="commLogin"></div>
+                            <div class="loginGo">去登录</div>
+                        </aside>
+                        <aside class="discussNone none">本课还没有相关讨论，快去发表你的看法吧！</aside>
+                        <ul class="discussAllList">
+
+                        </ul>
+
+                    </div>
+                </section>
+            </section>
+        </section>
+    </div>
+    <div class="yd_b_bg pcModule"></div>
+</section>
+
+<!--简介尾部-->
+<section class="synopsisFooter">
+    <#if (seriesCourseAttList??)&&(seriesCourseAttList?size>0)>
+        <section class="course-footer">
+            <div class="yd_t_bg pcModule"></div>
+            <div class="yd_c_bg">
+                <article class="width92 clear">
+                    <h3>课件预览</h3>
+                </article>
+                <div class="classDown width92">
+                    <ul class="clear maxWidth">
+
+                        <#list seriesCourseAttList as courseAtt>
+                            <li data-attUrl="${courseAtt.attPath!''}">
+                                <div class="downIcon"><img src="${courseAtt.attBgPath!''}"> </div>
+                                <div class="classTitle">${courseAtt.attName!''}</div>
+                                <div class="className">${courseAtt.attAuth!''}</div>
+                            </li>
+                        </#list>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="yd_b_bg pcModule"></div>
+        </section>
+    </#if>
+    <#if (bookList??)&&(bookList?size>0)>
+        <section class="course-footer">
+            <div class="yd_t_bg pcModule"></div>
+            <div class="yd_c_bg">
+                <article class="width92 clear">
+                    <h3>参考书籍&文献</h3>
+                    <aside class="coursePrepare">
+
+                        <#list bookList as book>
+                            <p class="class-abstract prepare">${book_index+1 }、${book.bookName!''}&nbsp;${book.bookAuthor!''}
+                                &nbsp;${book.bookAuthorTitle!''}&nbsp;${book.bookSource!''}&nbsp;${book.bookYear!''}</p>
+                        </#list>
+
+                    </aside>
+                    <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                </article>
+            </div>
+            <div class="yd_b_bg pcModule"></div>
+
+        </section>
+    </#if>
+</section>
+
+<!--简介尾部-->
+<!--相关推荐-->
+<section class="course-footer recommendContainer none">
+    <div class="yd_t_bg pcModule"></div>
+    <div class="yd_c_bg">
+        <article class="width92 clear">
+            <h3>相关推荐</h3>
+        </article>
+        <div class="recommendCont width92">
+            <div class="recommend">
+                <ul class="clear">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="yd_b_bg pcModule"></div>
+
+
+</section>
+</section>
+</section>
+<!--相关推荐 end-->
+<!--课后思考题-->
+<section class="classThink" style="display: none;">
+    <section class="pc_width">
+        <aside class="cThink_cont">
+            <aside class="width92">
+                <div class="title">课后思考题</div>
+                <div class="classThinkClose"><img src="/image/authority/login/login_close.png"> </div>
+                <ul class="thinkList">
+
+                </ul>
+                <div class="courseThinkNext">学习下一课</div>
+            </aside>
+        </aside>
+    </section>
+</section>
+</section>
+</section>
+
+</section>
+
+<section style="height: 114px;" class="mobileModule"></section>
+
+</section>
+
+
+
+
+<section class="courseFixed mobileModule">
+    <div class="width92">
+        <ul>
+            <li class="collect">收藏</li>
+            <li class="quiz">提问</li>
+        </ul>
+    </div>
+</section>
+<!--build:jq-->
+<script src="/js/third-party/jquery/jquery-1.8.0.min.js"></script>
+<script src="/js/third-party/jquery/jquery.json-2.4.js"></script>
+<script src="/js/third-party/jqueryscrollpagination/js/scrollpagination.js"></script>
+<script src="/js/third-party/jquery-form/jquery.form.js"></script>
+<script src="/js/third-party/jquery-qrcode-master/jquery.qrcode.min.js"></script>
+<script src="/js/third-party/video/jquery-ui.min.js"></script>
+<script src="/js/third-party/swiper/idangerous.swiper.min.js"></script>
+<!-- endbuild -->
+<!--build:mobile-->
+<!--<script src="/js/third-party/fastclick.js"></script>-->
+<!--<script src="/js/common/mobile-util.js"></script>-->
+<script src="/build/mobile.js"></script>
+<!-- endbuild -->
+<!--build:compatility-->
+<!--<script type="text/javascript" src="/js/common/rem.js"></script>-->
+<script type="text/javascript" src="../../js/common/html5shiv.js"></script>
+<script type="text/javascript" src="../../js/common/respond.min.js"></script>
+<!-- endbuild -->
+<!-- build:comm -->
+<!--<script src="/js/common/main.js"></script>-->
+<!--<script src="/js/common/common.js"></script>-->
+<!--<script src="/js/common/comm.func.js"></script>-->
+<!--<script src="/js/common/comm-customer.js"></script>-->
+<!--<script src="/js/common/comm-data.js"></script>-->
+<!--<script src="/js/common/comm_service.js"></script>-->
+<!--<script src="/js/common/jweixin-1.0.0.js"></script>-->
+<!--<script src="/js/common/comm.cutArray.js"></script>-->
+<!--<script src="/js/common/comm.log.js"></script>-->
+<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script src="/build/common.js"></script>
+<script src="/js/common/comm.date.js"></script>
+<script src="/js/common/documentLink.js"></script>
+<script src="/js/common/shareAll.js"></script>
+<script src="/js/common/log.js"></script>
+<script src="/js/third-party/video/video.js"></script>
+<script src="/js/common/comm.log.js"></script>
+<!--<script src="/js/scene/exercises/json2.js"></script>-->
+<!--<script src="/js/scene/exercises/talk.js"></script>-->
+<!--<script src="/js/scene/discuss/discuss.js"></script>-->
+<!--<script src="/js/scene/classes/videojs.disableProgress.js"></script>-->
+<script src=/build/courseTalk.js></script>
+<!-- endbuild -->
+<!--build:login-->
+<!--<script src="/js/scene/authority/authentication.js"></script>-->
+<!--<script src="/js/scene/authority/login.js"></script>-->
+<!--<script src="/js/scene/authority/register.js"></script>-->
+<!--<script src="/js/scene/authority/checkLogin.js"></script>-->
+<script src="/build/login.js"></script>
+<!-- endbuild -->
+
+<script>
+    videojs.options.flash.swf = "/js/third-party/video/video-js.swf";
+</script>
+<script type="text/javascript">
+    var href=window.location.href;
+    if(pcOrH5.pc()){
+        if (window.location.href.indexOf("m.yi-ding.net.cn")>-1){
+            window.location.href=href.replace("m.yi-ding.net.cn","www.yi-ding.net.cn");
+        }
+    }else{
+        if (window.location.href.indexOf("www.yi-ding.net.cn")>-1){
+            window.location.href=href.replace("www.yi-ding.net.cn","m.yi-ding.net.cn");
+        }
+    }
+</script>
+<script>
+    if(pcOrH5.pc()){
+        domain.get(
+                "/js/scene/classes/course.js"
+        );
+    }else{
+        domain.get(
+                "/js/common/jumpapp.js",
+                "/js/scene/classes/h5course.js"
+        );
+    }
+</script>
+</body>
+
+</html>

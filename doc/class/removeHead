@@ -1,0 +1,14 @@
+{
+  "name":"removeHead()",
+  "des":"//在课程终端页头部导航栏不显示，此方法是将头部的导航栏隐藏",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+
+  },
+  "param":{
+    "isNull":true
+  }
+}

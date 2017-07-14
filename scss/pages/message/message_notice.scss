@@ -1,0 +1,68 @@
+@charset "UTF-8";
+//消息——关注提醒
+//公共方法模块调用
+@import "../../modules/common-modules";
+//公共变量引用
+@import "../../variables/_yiding-variables";
+//样式模块调用
+@import "../../components/_indexHeader"; //首页头部信息栏
+@import "../../components/_iconModule"; //小图标组件
+@import "../../components/_buttonModule"; //按钮组件
+@import "../../components/_confirmModal"; //中部悬浮弹窗
+
+
+
+.yd-messageNoticeContent {
+    padding: rem(23px) rem(15px);
+    background-color: #fff;
+    margin-top: rem(16px);
+    &Title {
+        margin-bottom: rem(30px);
+        & > h2 {
+            color: #222;
+            font-size: rem(18px);
+            margin-bottom: rem(10px);
+        }
+        & > p {
+            color: #808080;
+            font-size: rem(14px);
+            span {
+                margin-left: rem(15px);
+            }
+            em {
+                margin-left: rem(5px);
+                font-style: normal;
+            }
+        }
+    }
+}
+
+.yd-messageNoticeContentItem {
+    margin-bottom: rem(25px);
+    p {
+        color: #333;
+        font-size: rem(16px);
+        line-height: 1.5;
+    }
+    h3{
+        color: #222;
+        font-size: rem(16px);
+        margin-bottom: rem(12px);
+    }
+    a{
+        color: #73859e;
+        font-size: rem(16px);
+        margin-top: rem(25px);
+        display: block;
+    }
+}
+.icon-msgNoticeShare{
+    @extend %icon-msgNoticeShare;
+}
+
+
+.informationContent img{
+  display: block;
+  max-width: 700px;
+  margin: 20px auto;
+}

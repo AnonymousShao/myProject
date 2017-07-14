@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>账号设置 - 医鼎</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/yiding.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=750">
+    <meta data-alcode="a8"/>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/personal/personal_setting.css">
+    <script src="/js/common/rem.js"></script>
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="/build/compatibility.js"></script>
+    <![endif]-->
+
+</head>
+
+<body data-alcode="46">
+<!-- 主内容容器 -->
+<section class="yd-mainInner none">
+    <section class="contentInner">
+        <a href="javascript:history.back(-1)" class="pcModule yd-pageBackBtn"><img
+                src="/image/personal/nav_back_black@2x.png" alt=""><span>返回</span>
+        </a>
+        <header class="yd-indexHeader mobileModule">
+            <figure class="yd-indexHeaderItem">
+                <a href="javascript:history.back(-1);">
+                    <img src="/image/personal/nav_back_black@2x.png" alt="">
+                </a>
+            </figure>
+            <figure class="yd-indexHeaderItem">
+                <h1>账号安全</h1>
+            </figure>
+            <figure class="yd-indexHeaderItem">
+                <a href="javascript:void(0)">
+                </a>
+            </figure>
+        </header>
+        <section class="yd-settingContent" data-alcode-mod="22">
+            <article class="yd-settingContentItem">
+                <a href="javascript:void(0)" class="Ev-bindWeixin">微信<span><em>未绑定</em><button
+                        class="btn-normal Ev-configData Ev-bindWeixinContent" data-alcode="e11">绑定</button></span></a>
+                <section class="ev-weixinPopWindow weixin_border_cont" style="display: none;">
+                    <section class="">
+                        <figure class="wx_ewm weixin_erweima" id="Ev-erweiCode">
+                        </figure>
+
+                    </section>
+                </section>
+            </article>
+            <article class="yd-settingContentItem Ev-bindAllinmd">
+                <a href="javascript:void(0)">唯医
+                    <span class="Ev-bindAllinmdContentNumber"><em></em><button
+                            class="btn-normal Ev-configData Ev-bindAllinmdConfig" data-alcode="e12">更换</button>
+                        </span>
+                </a>
+                <section class="yd-detailedTableItem Ev-bindAllinmdContent">
+                    <article>
+                        <p>唯医账号</p>
+                        <span><input id="allinAccount" type="text" placeholder="请输入唯医账号"></span>
+                        <p class="yd-tableErrorTips Ev-allinAccountErrorTips error_phonemsg">
+                            <i></i><span>请输入正确手机号码</span></p>
+                    </article>
+                    <article>
+                        <p>密码</p>
+                        <span><input id="allinPwd" name="caosPwd" type="password" placeholder="请输入唯医密码"></span>
+                        <p class="yd-tableErrorTips Ev-allinPwdErrorTips hide"><i></i><span></span></p>
+                    </article>
+                    <section class="yd-tableDetailedBtn">
+                        <p>&nbsp;</p>
+                        <figure>
+                            <button class="yd-personalAdviceSubmit" id="allin_save">确定</button>
+                            <button class="yd-personalAdviceCancel" id="allin_cancel">取消</button>
+                        </figure>
+                    </section>
+                </section>
+            </article>
+            <article class="yd-settingContentItem Ev-bindMobile">
+                <a href="javascript:void(0)">手机<span class="Ev-bindMobileContentNumber"><em>未绑定</em><button
+                        class="btn-normal Ev-configData Ev-bindMobileConfig" data-alcode="e13">绑定</button></a>
+                <section class="yd-detailedTableItem Ev-bindMobileContent">
+                    <article>
+                        <p>当前密码</p>
+                        <span><input id="phone_pwd" type="password" placeholder="请输入当前密码"></span>
+                        <p class="yd-tableErrorTips Ev-mobilePhonePwdError error_phonePwdMsg"><i></i><span></span></p>
+                    </article>
+                    <article>
+                        <p>手机</p>
+                        <span><input id="phone_number" type="text" placeholder="请输入绑定手机"></span>
+                        <p class="yd-tableErrorTips Ev-mobilePhoneError error_phonemsg"><i></i><span></span></p>
+                    </article>
+
+                    <article>
+                        <p>验证码</p>
+                        <span><input id="validCode" type="text" placeholder="请输入验证码"></span>
+                        <button class="yd-sendValidateCodeBtn yd-sendValidateSended" id="Ev-sendValidCode"
+                                data-status="0">发送验证码
+                        </button>
+                        <p class="yd-tableErrorTips Ev-validCodeError error_validCodemsg"><i></i><span></span></p>
+                    </article>
+                    <section class="yd-tableDetailedBtn">
+                        <p>&nbsp;</p>
+                        <figure>
+                            <button class="yd-personalAdviceSubmit" id="valide_mobile" on="true">确定</button>
+                            <button class="yd-personalAdviceCancel" id="bindphone_cancel">取消</button>
+                        </figure>
+                    </section>
+                </section>
+            </article>
+            <article class="yd-settingContentItem Ev-bindMailBox">
+                <a href="javascript:void(0)">邮箱<span class="Ev-bindMailBoxContentNumber"><em>未绑定</em><button
+                        class="btn-normal Ev-configData Ev-bindMailBoxConfig">绑定</button></span></a>
+                <form id="emailUpa_form" novalidate="novalidate">
+                    <section class="yd-detailedTableItem Ev-bindMailBoxContent">
+                        <article>
+                            <p>新邮箱</p>
+                            <span><input name="email" id="email_upa" type="text" placeholder="请输入邮箱"></span>
+                            <p class="yd-tableErrorTips Ev-emailErrorTips hide"><i></i><span></span></p>
+                        </article>
+                        <section class="yd-tableDetailedBtn">
+                            <p>&nbsp;</p>
+                            <figure>
+                                <button class="yd-personalAdviceSubmit" id="emailUpa_save" on="false">确定</button>
+                                <button class="yd-personalAdviceCancel" id="emialUpa_cancel">取消</button>
+                            </figure>
+                        </section>
+                    </section>
+                </form>
+            </article>
+            <article class="yd-settingContentItem Ev-bindPassword">
+                <a href="javascript:void(0)" id="Ev-changePwdBtn">修改密码</a>
+                <form id="pwd_form" novalidate="novalidate">
+                    <section class="yd-detailedTableItem Ev-bindPasswordContent">
+                        <article class="">
+                            <p>当前密码</p>
+                            <span><input id="password" name="password" type="password" placeholder="请输入当前密码"></span>
+                            <p class="yd-tableErrorTips Ev-passwordErrorTips hide"><i></i><span></span></p>
+                        </article>
+                        <article>
+                            <p>新密码</p>
+                            <span><input id="newpassword" name="newpassword" type="password"
+                                         placeholder="请输入6位以上密码"></span>
+                            <p class="yd-tableErrorTips Ev-newpasswordErrorTips hide"><i></i><span></span></p>
+                        </article>
+                        <article>
+                            <p>确认密码</p>
+                            <span><input id="repassword" name="repassword" type="password" placeholder="重新输入"></span>
+                            <p class="yd-tableErrorTips Ev-repasswordErrorTips hide"><i></i><span></span></p>
+                        </article>
+                        <section class="yd-tableDetailedBtn">
+                            <p>&nbsp;</p>
+                            <figure>
+                                <button class="yd-personalAdviceSubmit" id="pwd_save">确定</button>
+                                <button class="yd-personalAdviceCancel" id="pwd_cancel">取消</button>
+                            </figure>
+                        </section>
+                    </section>
+                </form>
+            </article>
+        </section>
+        <section class="yd-settingContent">
+            <article class="yd-settingContentItem yd-quitLogin">
+                <a href="javascript:void(0)">退出登录</a>
+            </article>
+        </section>
+    </section>
+</section>
+<!--common.log统计ip,address-->
+<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+<!-- end -->
+<script src="/js/third-party/jquery/jquery-1.8.0.min.js"></script>
+<!--about:jq-->
+<script src="/build/jqAll.js"></script>
+<!-- end -->
+<script src="/js/third-party/jquery.md5.js"></script>
+<!--about:common&login-->
+<script src="/build/common.js"></script>
+<!-- end -->
+<script src="/js/common/weixin/module.welcome.js"></script>
+
+<script src="/js/common/weixin/weixin.js"></script>
+<script src="/js/scene/personal/personalSetting.js"></script>
+<script src="/js/common/comm.sps.js"></script>
+</body>
+
+
+</html>

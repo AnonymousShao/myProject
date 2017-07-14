@@ -1,0 +1,13 @@
+{
+  "name":"videoFn.showSubway()",
+  "des":"//该方法是对目录进行初始化，根据观看的进度使目录呈现出不同的样式。",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+  },
+  "param":{
+    "isNull":true
+  }
+}

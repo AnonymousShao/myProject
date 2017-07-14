@@ -1,0 +1,534 @@
+@charset "UTF-8";
+//内容区块 基本样式结构
+//公共方法模块调用
+@import "../../modules/_common-modules";
+@import "../../components/_authorityCommon";
+
+/*.loginWidth{
+  width: 50%;
+  margin: 0 auto;
+}*/
+body{
+    //-webkit-user-select: none;  /* Chrome all / Safari all */
+    //-moz-user-select: none;     /* Firefox all */
+    //-ms-user-select: none;      /* IE 10+ */
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    /*
+      Introduced in IE 10.
+      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+    */
+    -ms-user-select: none;
+    user-select: none;
+}
+::-webkit-scrollbar{
+    width: 6px;
+    height: 16px;
+}
+::-webkit-scrollbar-track-piece{
+    background: #fff;
+    -webkit-border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:vertical{
+    background: #ccc;
+    -webkit-border-radius: 10px;
+}
+input{
+  font-family: microsoft yahei;
+}
+.loginMain{
+  //background: #f4f7f6;
+  .loginCont{
+    .experience{
+        cursor: pointer;
+      float: right;
+      color: #ccc;
+      font-size: rem(17px);
+      margin: rem(35px) 0 rem(50px);
+    }
+    .yd_logo{
+      width:rem(200px);
+      margin: 0 auto;
+    }
+    .loginUsername{
+      border-bottom:solid 1px #dfdfdf;
+      text-align: left;
+      &.marginTop{
+        margin-top:rem(38px);
+      }
+
+      .close{
+        background: url("/image/authority/login/search_delete.png") no-repeat;
+        width: rem(15px);
+        height: rem(15px);
+        display: inline-block;
+        background-size: cover;
+        margin-right:rem(20px) ;
+        text-align: right;
+        cursor: pointer;
+      }
+      .password{
+        float: right;
+        margin-top:rem(20px);
+         display: none;
+        .close{
+//          display: none;
+        }
+      }
+      .phone{
+        float: right;
+        margin-top:rem(20px); 
+         display: none;
+        .close{
+//         
+        }
+        
+      }
+      input{
+        border: none;
+        height: rem(54px);
+        line-height: rem(54px);
+        font-size: rem(16px);
+        color:#222;
+        width: 60%;
+      } 
+      .eyeClose{
+        background: url("/image/authority/login/login_invisible.png") no-repeat;
+        width: rem(15px);
+        height: rem(15px);
+        display: inline-block;
+        background-size: cover;
+        text-align: right;
+        cursor: pointer;
+        display: none;
+      }
+      .eyeOpen{
+        background: url("/image/authority/login/login_visible.png") no-repeat;
+        width: rem(15px);
+        height: rem(15px);
+        display: inline-block;
+        background-size: cover;
+        text-align: right;
+        cursor: pointer;
+      }
+    }
+    .phoneFind{
+      font-size: rem(14px);
+      color: #73859e;
+      margin: rem(15px) 0 rem(35px) 0;
+      .phoneLogin{
+          cursor: pointer;
+        float: left;
+        position: relative;
+        .prompt{
+            display: none;
+          position: absolute;
+          left: rem(90px);
+          top: rem(-7px);
+          z-index: 3;
+          background: url("/image/authority/login/kuang.png") no-repeat;
+          width: rem(207px);
+          height: rem(35px);
+          font-size: rem(15px);
+          color: #2899e6;
+          background-size: cover;
+          line-height: rem(35px);
+          padding-left:rem(10px) ;
+        }
+      }
+      .findPassword{
+          cursor: pointer;
+        float: right;
+      }
+    }
+
+    .goOnregister{
+       cursor: pointer;
+      line-height: rem(16px);
+      font-size: rem(16px);
+      color: #546690;
+      margin:rem(25px) 0 rem(110px) 0;
+      text-align: center;
+    }
+    .OR{
+      background: url("/image/authority/login/or.png") no-repeat center;
+      height: rem(15px);
+      background-size: cover;
+      behavior: url(/js/third-party/backgroundsize.min.htc);
+    }
+    .unionLogin{
+      margin-top:rem(30px);
+      li{
+          cursor: pointer;
+        float: left;
+        width: 25.3%;
+        text-align: center;
+        font-size: rem(13px);
+        color: #909090;
+
+      }
+      .icon{
+        margin-bottom: rem(10px);
+        img{
+          width: 50%;
+        }
+      }
+      .allin{
+        margin-left: 12%;
+      }
+      .caos{
+        margin-left: 12%;
+      }
+    }
+  }
+}
+
+
+
+/*错误提示*/
+.errorTip{
+  width: rem(375px);
+  height: rem(35px);
+  line-height: rem(35px);
+  font-size: rem(14px);
+  color: #f35555;
+  background: #ffefef;
+  text-align: center;
+  position: fixed;
+  left: 50%;
+  top: 0;
+  z-index: 11;
+  margin-left:rem(-188px);
+  display: none;
+  i{
+      width: rem(16px);
+      height: rem(16px);
+      display: inline-block;
+      margin-right: rem(5px);
+      background: url(/image/authority/login/login_prompt.png) no-repeat;
+      background-size:cover;
+      vertical-align: middle;
+      behavior: url(/js/third-party/backgroundsize.min.htc);
+  }
+}
+
+
+
+
+/*返回*/
+.loginWidth{
+  position: relative;
+  .reset{
+    display: none;
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100px;
+    height: 70px;
+    top: 50%;
+    left: 35%;
+    color: #fff;
+    line-height: 70px;
+  }
+  .loginFixed{
+    /*z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left:rem(-375px);*/
+  }
+  //输入历史记录
+  .history{
+      z-index: 2;
+        position: absolute;
+        max-height: 140px;
+        width: 375px;
+        overflow: scroll;
+        overflow-x: hidden;
+        
+        li{
+            display: none;
+            cursor: pointer;
+            height: 46px;
+            width: 375px; 
+            border-bottom: 1px solid #DFDFDF;
+            background: #FFF; 
+            color: #909090;
+            line-height: 46px;
+            text-align: left;
+            font-size: 17px;
+        }
+        
+    }
+  /*手机端返回*/
+  .return{
+    position: absolute;
+    left: 0;
+    top:14px;
+    z-index: 2;
+    &:before{
+      content: '';
+      width: rem(19px);
+      height: rem(19px);
+      display: inline-block;
+      background: url(/image/authority/login/return.png) no-repeat;
+      background-size: cover;
+      vertical-align: middle;
+    }
+  }
+  .title{
+    color: #555;
+    font-size: rem(23px);
+    text-align: center;
+    line-height: rem(45px);
+    border-bottom: solid 1px #ccc;
+    margin-bottom: rem(75px);
+  }
+
+  .binding{
+    font-size: rem(16px);
+    color: #555;
+    text-align: left;
+    margin: rem(30px) 0 rem(20px);
+  }
+}
+
+
+
+
+
+/*定位的体验一下*/
+.experiencePo{
+   cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: rem(15px);
+  z-index: 2;
+  color: #ccc;
+  font-size: rem(17px);
+  img{
+    width: rem(20px);
+    height:  rem(20px);
+  }
+}
+
+
+.yanzheng{
+  font-size: rem(17px);
+  color: #808080;
+  margin: rem(50px) 0 rem(60px) 0;
+}
+
+.loginFixed{
+
+.proving{
+
+  height: rem(65px);
+  line-height: rem(65px);
+  font-size: rem(30px);
+  width: 100%;
+  margin-bottom: rem(35px);
+  /*background-size: cover;*/
+  input{
+    border: none;
+    width: 80%;
+    height: rem(65px);
+    line-height: rem(65px);
+    color: #222;
+    background: url("/image/authority/login/line.png") no-repeat bottom;
+    letter-spacing: 55px;
+    padding-left: 60px;
+    outline: medium;
+    &.error{
+      color: #f35555;
+    }
+  }
+}
+  .send{
+    font-size: rem(15px);
+    color: #909090;
+    text-align: center;
+  }
+  .surplus{
+    font-size: rem(13px);
+    color: #aeaeae;
+    text-align: center;
+    margin-top: rem(10px);
+  }
+}
+
+
+input{
+  outline: medium;
+}
+
+
+/*带标题输入框*/
+.titleInput{
+  height: rem(54px);
+  /*line-height: rem(54px);*/
+  border-bottom: solid 1px #ccc;
+  margin-bottom: rem(65px);
+  position: relative;
+  text-align: left;
+  
+  .phone{
+      display: none;
+  }
+  
+  .close{
+    display: none;
+    background: url("/image/authority/login/search_delete.png") no-repeat;
+    width: rem(15px);
+    height: rem(15px);
+    display: inline-block;
+    background-size: cover;
+    margin-right:rem(20px) ;
+    text-align: right;
+    cursor: pointer;
+
+  }
+  .eyeClose{
+    background: url("/image/authority/login/login_invisible.png") no-repeat;
+    width: rem(15px);
+    height: rem(15px);
+    display: inline-block;
+    background-size: cover;
+    text-align: right;
+    cursor: pointer;
+    display: none;
+  }
+  .eyeOpen{
+    background: url("/image/authority/login/login_visible.png") no-repeat;
+    width: rem(15px);
+    height: rem(15px);
+    display: inline-block;
+    background-size: cover;
+    text-align: right;
+    cursor: pointer;
+  }
+  .validate{
+      cursor: pointer;
+     position: absolute;
+    right: 0;
+    top:10px;
+    z-index: 2;
+    background: #eee;
+    font-size: rem(15px);
+    color: #73859e;
+     width: rem(110px);
+    height: rem(35px);
+    line-height: rem(35px);
+    text-align: center;
+
+    &.resend{
+      color: #ccc;
+      font-size: rem(14px);
+    }
+  }
+  &.marginTop{
+    margin: 0;
+
+  }
+  .titleText{
+    /*float: left;*/
+    width:rem(80px);
+    text-align: left;
+    /*line-height: rem(54px);*/
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .titleType{
+    border: none;
+    height: rem(54px);
+    display: inline-block;
+    vertical-align: middle;
+    line-height: rem(54px);
+  }
+  .password{
+      display: none;
+  }
+}
+
+
+/*登录注册按钮*/
+.loginBtn{
+    cursor: pointer;
+  behavior: url("/js/third-party/pie/PIE.htc");
+  position: relative;
+  width: 100%;
+  height: rem(50px);
+  line-height: rem(50px);
+  background: #98a3bc;
+  border-radius: 3rem;
+  font-size: rem(18px);
+  color: #d5dae4;
+  text-align: center;
+  &.activation{
+    background: #546690;
+    color: #fff;
+  }
+}
+
+
+.createAccount{
+  font-size: rem(20px);
+  color: #222;
+  text-align: left;
+  line-height: rem(20px);
+   margin:rem(60px) 0 rem(20px) 0;
+}
+.shortcut{
+  font-size: rem(20px);
+  color: #909090;
+  text-align: left;
+  line-height: rem(20px);
+  margin-bottom: rem(70px);
+}
+.changeSigns{
+  cursor: pointer;
+  behavior: url("/js/third-party/pie/PIE.htc");
+  position: relative;
+  width: 100%;
+  border: solid 2px #546690;
+  font-size: rem(18px);
+  color: #546690;
+  text-align: center;
+  height: rem(48px);
+  line-height: rem(48px);
+  border-radius: 3rem;
+  margin-top:rem(20px)  ;
+}
+.returnText{
+  text-align: center;
+  font-size:rem(16px);
+  display: inline-block;
+  color: #909090;
+  line-height: rem(16px);
+  margin-top:rem(40px);
+}
+
+
+
+
+/*pc垂直居中*/
+html,body{
+  width: 100%;
+  height: 100%;
+}
+.loginMain{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  &:before{
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
+  .loginCont{
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

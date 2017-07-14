@@ -1,0 +1,17 @@
+{
+  "name":"manageData(type, req)",
+  "des":"//该方法用来展示请求成功后的数据，根据不同的类型进行不同的展示。",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+  },
+  "param":{
+    "isNull":false,
+    "des":"",
+    "type":"object",
+    "timeUpdata":{"type":"各种类型的关键字，用以区分不同的类型，传参的形式是字符串","req":"发起请求成功后，后台返回的数据"}
+
+  }
+}

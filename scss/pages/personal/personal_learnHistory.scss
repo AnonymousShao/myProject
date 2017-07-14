@@ -1,0 +1,38 @@
+@charset "UTF-8";
+// 个人中心 学习历史
+// Created by qiangkailiang on 2016/11/03
+// 功能库引入
+@import "../../modules/_common-modules";
+// 变量入口引入
+@import "../../variables/_yiding-variables";
+@import "../../components/_pageTopNav_And_SideBar"; //主导航-主侧栏
+@import "../../components/_contentInner"; //内容容器
+@import "../../components/_indexHeader"; //页头
+@import "../../components/_noContent"; //无内容提示
+@import "../../components/_iconModule"; //图标标签
+@import "../../components/_contentItem"; //内容条目
+@import "../../components/_confirmModal"; //内容条目
+@import "../../components/_timeLineModule"; //时间轴
+html,
+body {
+    background-color: #f4f7f6;
+}
+
+.yd-clearHistory {
+    color: #73859E;
+    font-size: rem(17px);
+    vertical-align: top;
+  float: right;
+  margin-top: rem(20px);
+    a {
+        color: #73859E;
+    }
+}
+
+.yd-scrollTips {
+    text-align: center;
+    color: #808080;
+    font-size: rem(15px);
+    padding: rem(22px) 0;
+}
+

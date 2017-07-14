@@ -1,0 +1,12 @@
+@charset "UTF-8";
+//内容区块 基本样式结构
+//公共方法模块调用
+@import "../../modules/_common-modules";
+//展开收起
+@import "../../components/common/_updown";
+
+@import "../../components/_classDetails";  //课程终端
+
+@import "../../components/_indexHeader"; //页头
+
+@import "../../components/_discuss";//讨论

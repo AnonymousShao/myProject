@@ -1,0 +1,67 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0051)http://tkyk.github.com/jquery-history-plugin/#demos -->
+<HTML 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>jQuery history plugin</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8"><LINK 
+href="jQuery%20history%20plugin_files/style.css" type=text/css 
+rel=stylesheet><LINK href="jQuery%20history%20plugin_files/prettify.css" 
+type=text/css rel=stylesheet><LINK 
+href="jQuery%20history%20plugin_files/site.css" type=text/css rel=stylesheet>
+<SCRIPT src="jQuery%20history%20plugin_files/jquery.min.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT src="jQuery%20history%20plugin_files/jquery.history.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT src="jQuery%20history%20plugin_files/prettify.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT src="jQuery%20history%20plugin_files/site.js" 
+type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.6000.17092" name=GENERATOR></HEAD>
+<BODY>
+<DIV id=main_container>
+<DIV id=header>
+<H1>jQuery history plugin</H1></DIV>
+<DIV id=navigation><A 
+href="http://tkyk.github.com/jquery-history-plugin/">Home</A> <A 
+href="http://tkyk.github.com/jquery-history-plugin/#demos">Demos</A> <A 
+href="http://tkyk.github.com/jquery-history-plugin/#documentation">Documentation</A> 
+<A href="http://tkyk.github.com/jquery-history-plugin/#history">History</A> <A 
+href="http://tkyk.github.com/jquery-history-plugin/#license">License</A> <A 
+href="http://tkyk.github.com/jquery-history-plugin/#contact">Contact</A> </DIV>
+<DIV id=content>
+<H2>About jQuery history</H2>
+<P>jQuery history plugin helps you to support back/forward buttons and bookmarks 
+in your javascript applications. You can store the application state into URL 
+hash and restore the state from it. </P>
+<P id=download><A 
+href="http://github.com/tkyk/jquery-history-plugin/raw/master/jquery.history.js">Download 
+jquery.history.js</A> </P>
+<P><SMALL>jQuery history plugin is hosted on Github. Please visit <A 
+href="http://github.com/tkyk/jquery-history-plugin">the project page</A> for 
+development.</SMALL> </P>
+<H2>Supported browsers</H2>
+<UL>
+  <LI>Internet Explorer 6, 7, and 8+ 
+  <LI>Safari 4 and 5+ 
+  <LI>Google Chrome 4+ </LI></UL>
+<P>This plugin is built on <A 
+href="http://www.w3.org/TR/html5/history.html#event-hashchange">hashchange 
+event</A>, which is defined in HTML5 and supported in most modern browsers. 
+Unless it is supported the plugin works on some fallback mechanisms: </P>
+<UL>
+  <LI>monitoring location.hash by setInterval (Safari 4) 
+  <LI>iframe and setInterval (IE 6, 7, and compatibility mode on IE8) </LI></UL>
+<H2>Known issues</H2>
+<DL class=known-issues>
+  <DT>IE6, 7, and IE8 compatibility mode 
+  <DD>Back/forward button will not work if you refresh the page and the document 
+  is reloaded. 
+  <DT>IE8 standards mode 
+  <DD>The current hash will not be recorded in the history if you update the URL 
+  hash by hand or loading bookmarks. </DD></DL></DIV>
+<DIV id=footer>© 2010 <A href="http://wp.serpere.info/">Takayuki Miwa</A> | 
+Design By <A href="http://www.zilladesigns.net/">Jeremy D.</A> 
+</DIV></DIV></BODY></HTML>

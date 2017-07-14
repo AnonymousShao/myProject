@@ -1,0 +1,803 @@
+@charset "UTF-8";
+//内容区块 基本样式结构
+//公共方法模块调用
+@import "../../modules/_common-modules";
+
+//pc导航
+@import "../../components/_pageTopNav_And_SideBar";
+@import "../../components/_contentInner";
+@import "../index/index";
+
+
+.return_pc{
+  background: url("/image/classes/department/return_pc.png") no-repeat left;
+  height: 55px;
+  width: 750px;
+  margin: 0 auto;
+  line-height: 55px;
+  font-size: 16px;
+  color:#6c7893;
+  .text{
+    margin-left: 15px;
+  }
+  a{
+    color:#6c7893;
+  }
+}
+.depart_head{
+  background:url("/image/classes/department/department_head_bg@2x.png") no-repeat;
+  height: rem(295px);
+  height: 295px\9;
+
+}
+.depart_title{
+  width:500px;
+  margin: 0 auto;
+  padding-top: rem(40px);
+  text-align: center;
+  .depart_titletop{
+    margin-bottom: 10px;
+    display: inline-block;
+    font-size: 0;
+  }
+  .de_user_img{
+    position: relative;
+    border-radius: 50%;
+    width: rem(100px);
+    height: rem(100px);
+    border:solid #6f7a99 6px;
+    float: left;
+    & > img{
+      position:relative;
+      width: 100%;
+      height: 100%;
+      vertical-align: top;
+      border-radius: 50%;
+    }
+  }
+  .de_classesname{
+    /*float: left;*/
+    font-size:rem(20px);
+    color:#fff ;
+    line-height: rem(20px);
+    /*margin-left: rem(30px);*/
+    margin-bottom: rem(30px);
+  }
+  .de_addclass {
+    position: relative;
+    border: solid 1px #fff;
+    border-radius: 3rem;
+    height: rem(38px);
+    line-height: rem(38px);
+    color: #fff;
+    font-size: rem(18px);
+    display: inline-block;
+    cursor: pointer;
+
+    .de_addclasstext {
+      background: url("/image/classes/department/course_list_add.png") no-repeat  rem(10px);
+      padding-left: rem(30px);
+      background-size: 16px 16px;
+      padding-right: rem(10px);
+      a{
+          color: #fff;
+      }
+    }
+  }
+  .de_finclasstext{//pc端已经加入
+    padding: 0 rem(15px);
+    background-size: 16px 16px;
+    color: #fff; 
+    a{
+        color: #fff;
+    }
+  }
+  .de_addfinish{//h5已加入
+        display: none;
+        position: relative;
+        border: solid 1px #fff;
+        border-radius: 3rem;
+        height: rem(38px);
+        line-height: rem(38px);
+        color: #fff;
+        font-size: rem(18px);
+        display: inline-block;
+        
+        .de_addclasstext {
+          padding: 0 rem(20px);
+        }
+      }
+}
+@include query() {
+
+  .depart_head {
+    height: 334px;
+    .return_head {
+      width: 93%;
+      margin: 0 auto;
+      padding-top: 25px;
+      .return_mobile {
+        background: url("/image/classes/department/nav_back_shadow.png") no-repeat;
+        width: 38px;
+        height: 38px;
+        display: inline-block;
+      }
+      .share_mobile {
+        background: url("/image/classes/department/Nav_share_white.png") no-repeat;
+        width: 38px;
+        height: 38px;
+        display: inline-block;
+        float: right;
+      }
+    }
+    .depart_title {
+      width: 93%;
+      margin: 0 auto;
+      padding-top: rem(26px);
+      .de_user_img {
+        width: rem(55px);
+        height: rem(55px);
+      }
+      .de_classesname{
+        float: left;
+        font-size:rem(23px);
+        color:#fff ;
+        line-height: rem(55px);
+        margin-left: rem(15px);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 350px;
+        text-align: left;
+      }
+      .de_addclass{
+        position: relative;
+        padding-right: rem(0px);
+        width: rem(70px);
+        height: rem(28px);
+        border: solid 1px #fff;
+        border-radius: 1.25rem;
+        float: right;
+        line-height: rem(28px);
+        color: #fff;
+        font-size:rem(13px);
+        margin-top: rem(15px);
+        .de_addclasstext{
+          background: url("/image/classes/department/course_list_add.png") no-repeat rem(7px);
+          height: 56px;
+          padding-left: rem(20px);
+          padding-right: rem(10px);
+        }
+      }
+      .de_addfinish{
+        display: none;
+        position: relative;
+        padding-right: rem(0px);
+        width: rem(70px);
+        height: rem(28px);
+        border: solid 1px #fff;
+        border-radius: 1.25rem;
+        float: right;
+        line-height: rem(28px);
+        color: #fff;
+        font-size:rem(13px);
+        margin-top: rem(15px);
+        text-align: center;
+        .de_addclasstext {
+          padding: 0 0;
+          background: url("/image/classes/department/course_list_add.png") no-repeat rem(7px);
+          a{
+              color: #fff; 
+          }
+        }
+      }
+    }
+  }
+}
+
+.icon-addus:before{
+  content: "";
+  display: inline-block;
+  float: left;
+  width: .8125rem;
+  height: .8125rem;
+  background: url("/image/classes/department/course_list_add.png") center center no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  margin-right: .375rem;
+  margin-left: .625rem;
+}
+
+.depart_nav{
+   margin-top:20px;
+  .nav_list li{
+    width: 33%;
+    border-right: solid 2px #f1f1f1;
+    margin: rem(20px) 0;
+    text-align: center;
+    float: left;
+      color: #31394c;
+      font-size:rem(14px);
+      /*cursor: pointer;*/
+      
+      &:last-child{
+          border-right: none;
+      }
+      span {
+        font-size:rem(26px);
+        line-height: 1rem;
+        margin-right: 3%;
+      }
+
+  }
+}
+
+
+@include query() {
+  .depart_nav{
+    background: #fff;
+    margin-top:0;
+    .nav_list li{
+      margin: rem(10px) 0;
+      .chapter_num{
+        color: #31394c;
+        display: inline-flex;
+        font-size:rem(14px);
+        & > div {
+          font-size:rem(26px);
+          line-height: 1rem;
+          float: left;
+          margin-left: 5%;
+        }
+        .chapter_t {
+          font-size:rem(14px);
+          line-height: 1rem;
+          margin-left: 5%;
+        }
+      }
+      .chapter_text {
+        font-size: rem(14px);
+        line-height: 1rem;
+        color: #909090;
+      }
+    }
+  }
+}
+
+
+.modulesFloor{
+  margin-top: rem(16px);
+
+  .line_df {
+    border-bottom: solid #dfdfdf 1px;
+    height: rem(40px);
+    line-height: rem(36px);
+    li {
+      width: 21.3%;
+      text-align: center;
+      font-size: 1.0625rem;
+      color: #909090;
+    }
+    .current {
+      border-bottom: solid #ffa800 4px;
+      color: #ffa800;
+    }
+    .introduction_text {
+      margin-left: 21%;
+      float: left;
+      cursor: pointer;
+    }
+    
+    .catalog_text {
+      margin-right: 21%;
+      float: right;
+      cursor: pointer;
+    }
+  }
+
+  .de_dire_nav{
+    width: 753px;
+    position: absolute;
+  //  height: rem(40px);
+  }
+  //吸顶的类
+  .toTop{
+      position: fixed;
+      top: 0;
+      background: #fff;
+      z-index: 10;
+  }
+  .departmentTab{
+      padding-top: rem(68px);
+  }
+  .train_target{
+    width: 92%;
+    margin:0 auto;
+    .trTarget_title{
+      color: #222;
+      font-size: rem(16px);
+      line-height: rem(16px);
+      font-weight: 700;
+      margin-bottom: rem(8px);
+    }
+    .trTarget_cont{
+      color: #909090;
+      font-size: rem(15px);
+      line-height: rem(24px);
+      width: 100%;
+      //white-space: pre-wrap;
+    }
+  }
+  //显示4行超出隐藏
+  .line2{
+      text-overflow:ellipsis;
+      -o-text-overflow:ellipsis; 
+        -icab-text-overflow: ellipsis; 
+        -khtml-text-overflow: ellipsis; 
+        -moz-text-overflow: ellipsis; 
+        -webkit-text-overflow: ellipsis; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+  }
+  .modulesTitle{
+    color: #333;
+    font-size: rem(16px);
+    line-height: rem(42px);
+    border-bottom: solid #dfdfdf 1px;
+    font-weight: 700;
+    span{
+      font-size: rem(13px);
+      color: #ccc;
+      font-weight: normal;
+      display: inline-block;
+      margin-left:rem(10px);
+    }
+  }
+}
+
+
+
+/*pc端内容区背景*/
+.yd_t_bg {
+  background: url(/image/classes/department/bj01.png) no-repeat;
+  height: 7px;
+  
+  
+  
+}
+.yd_c_bg {
+  background: url(/image/classes/department/bj02.png) repeat-y;
+}
+.yd_b_bg {
+  background: url(/image/classes/department/bj03.png) no-repeat;
+  height: 4px;
+}
+
+
+/*下拉查看更多*/
+.icon-upMore{
+  float: right;
+  font-size: rem(14px);
+  color: #73859e;
+  cursor: pointer;
+  i{
+    width: rem(13px);
+    height: rem(13px);
+    display: inline-block;
+    margin-right: rem(5px);
+    background: url(/image/classes/department/dropdown.png) left rem(3px) no-repeat;
+    background-size: cover;
+  }
+}
+
+.shiJianMar{
+  margin-bottom: rem(20px);
+}
+/*点击收起*/
+.icon-downHid{
+  font-size: rem(14px);
+  color: #73859e;
+  float: right;
+  i{
+    width: rem(13px);
+    height: rem(13px);
+    display: inline-block;
+    margin-right: rem(5px);
+    background: url(/image/classes/department/pack_up.png) left rem(3px) no-repeat;
+    background-size: cover;
+  }
+}
+
+
+
+/*教师排名*/
+.teacher_ranking{
+  padding-top: 24px;
+  cursor: pointer;
+  li{
+    float: left;
+    width: 338px;
+    border: solid 1px #eee;
+    padding:rem(15px) 0 rem(15px) 0;
+    margin:0 0 20px 24px;
+    display: none;
+  }
+
+  .teacherImg{
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: top;
+    height:60px;
+    margin-right: 15px;
+    img{
+      width:60px;
+      height:60px;
+      border-radius: 50%; 
+    }
+  }
+
+  .teacherIntroduction{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 5px;
+    width: 210px;
+    .teacherName{
+      font-size: rem(16px);
+      color:#222;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .teacherText{
+      font-size: rem(13px);
+      color:#909090;
+      margin-top: 5px;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 210px;
+      span{
+        display: inline-block;
+        margin-right: rem(10px);
+      }
+    }
+  }
+}
+ 
+@include query(){
+  .teacher_ranking{
+    padding:0;
+    li{
+      padding:rem(18px) 0 0 0;
+      float: none;
+      width: 100%;
+      margin:0;
+      border:none;
+      margin-left: rem(15px);
+      .teacherImg{
+        width: 15%;
+        float: left;
+        margin:0;
+
+        img{
+          //width: 77%;
+        }
+      }
+      .teacherIntroduction{
+        float: left;
+        width: 85%;
+        border-bottom: solid 1px #eee;
+        margin:0 ;
+        .teacherName{
+          font-size: rem(16px);
+          color:#222;
+        }
+        .teacherText{
+          font-size: rem(13px);
+          color:#909090;
+          margin-bottom: rem(18px);
+          width: 570px;
+          span{
+            display: inline-block;
+            margin-right: rem(10px);
+          }
+        }
+      }
+    }
+  }
+  .modulesFloor{
+      .de_dire_nav{
+        width: 753px;
+        position: absolute;
+        height: rem(40px);
+      }
+  }
+}
+/*下拉查看更多*/
+.lookMore{
+  border-top:solid 1px #dfdfdf;
+  font-size:rem(14px);
+  color: #73859e;
+  line-height:rem(40px) ;
+  text-align: center;
+  cursor: pointer;
+  &:after{
+    content: '';
+    width: .8125rem;
+    height: .8125rem;
+    display: inline-block;
+    margin-left: .3125rem;
+    background: url(/image/classes/department/dropdown.png) right .1875rem no-repeat;
+    background-size: cover;
+  }
+}
+
+/*基本要求*/
+.requireFloor{
+  border-bottom:solid 1px #dfdfdf;
+    &:last-child{
+          border-bottom: none;
+    }
+
+  .reFloor_title{
+    font-size: rem(17px);
+    color:#333;
+    padding: rem(20px) 0 0;
+    .packUp{
+      float: right;
+      cursor: pointer;
+      &:before{
+        content: '';
+        width: .8125rem;
+        height: .8125rem;
+        display: inline-block;
+        margin-right: .3125rem;
+        background: url(/image/classes/department/pack_up.png) right .1875rem no-repeat;
+        background-size: cover;
+      }
+      span{
+        font-size:rem(14px);
+        color: #73859e;
+      }
+    }
+  }
+  .reFloor_cont{
+      display: none;
+    li{
+      line-height:rem(29px);
+      .reF_listText{
+        &:before{
+          content: '';
+          width: rem(3px);
+          height: rem(3px);
+          display: block;
+          margin-right: rem(7px);
+          background: url(/image/classes/department/text_pointer.png) no-repeat left center;
+          background-size: cover;
+          float: left;
+          margin-top: rem(14px);
+        }
+        float: left;
+        font-size: rem(16px);
+        color:#555;
+      }
+      .reF_listNum{
+        float: right;
+        font-size: rem(13px);
+        color:#808080;
+      }
+    }
+  }
+  .reFloorSubtitle_cont{
+    ul{
+      &:before{
+        content: '';
+        margin-top:rem(10px);
+        height: 1px;
+        width: 1px;
+        display: block;
+      }
+      &:after{
+        content: '';
+        margin-top: rem(14px);
+        height: 1px;
+        width: 1px;
+        display: block;
+      }
+      li{}
+    }
+    .reFloorSubtitle{
+      font-size: rem(16px);
+      color:#555;
+      line-height: rem(16px);
+      margin:rem(23px) 0 rem(14px) 0;
+    }
+    .reFloorSubtitle_text{
+      &:before{
+        content: '';
+        margin-top:rem(5px);
+        display: inline-block;
+      }
+      font-size: rem(16px);
+      color:#555;
+      line-height: rem(22px);
+      .reSub_num{
+        width:5%;
+      }
+      .reSub_text{
+        width:95%;
+      }
+      span{
+        display: inline-block;
+        float: left;
+      }
+    }
+  }
+}
+/*手机底部添加科室*/
+.mlbileAddClass{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background: #6a717e;
+  line-height: rem(49px);
+  text-align: center;
+  width: 100%;
+  height: rem(49px);
+  
+  &:before {
+    content: '';
+    width: rem(12.5px);
+    height: rem(12.5px);
+    display: inline-block;
+    background: url(/image/classes/department/course_list_add.png) no-repeat left center;
+    background-size: cover;
+
+  }
+  span {
+    font-size: rem(16px);
+    color:#ffffff;
+  }
+}
+
+/*开始学习*/
+.learnStart{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background: #6a717e;
+  line-height: rem(49px);
+  text-align: center;
+  width: 100%;
+  height: rem(49px);
+  display: none;
+  &:after{
+    content: '';
+    width: rem(20px);
+    height: rem(20px);
+    display: inline-block;
+    background: url(/image/classes/department/learn_start.png) no-repeat left center;
+    background-size: cover;
+    vertical-align: middle;
+  }
+  span {
+    font-size: rem(16px);
+    color:#ffffff;
+  }
+}
+
+/*推出系列课程*/
+.quitClass{
+  position: relative;
+  text-align: center;
+  width: rem(160px);
+  height: rem(38px);
+  border:solid 1px #909090;
+  border-radius:rem(20px);
+  font-size: rem(16px);
+  color:#909090;
+  line-height: rem(38px);
+  margin: rem(23px) auto rem(27px);
+  @include cursor();
+}
+/*目录*/
+.catalog_cont{
+  .margin30{
+    margin-top:rem(-30px);
+  }
+  .boneBasis_title{
+    color: #333;
+    font-size: rem(17px);
+    line-height:  rem(58px);
+    border-bottom: solid 1px #eee;
+    /*border-top: solid 1px #eee;*/
+    &:last-child{
+      border: none;
+    }
+  }
+  .boneBasis_titleText{
+    float: left;
+  }
+  .boneBasis_packUp{
+    float: right;
+    &:before{
+    content: '';
+    width: .8125rem;
+    height: .8125rem;
+    display: inline-block;
+    margin-right: .3125rem;
+    background: url(/image/classes/department/pack_up.png) right .1875rem no-repeat;
+    background-size: cover;
+  }
+  }
+  .boneBasis_packDown{
+    float: right;
+    &:before{
+      content: '';
+      width: .8125rem;
+      height: .8125rem;
+      display: inline-block;
+      margin-right: .3125rem;
+      background: url(/image/classes/department/dropdown.png) right .1875rem no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .boneBasis_list{
+      display: block;
+    background: #fbfbfb;
+    width: 96.3%;
+    margin-left: 2px;
+    padding-left: 25px;
+    li{ 
+      border-bottom: solid 1px #eee;
+      padding: rem(13px) 0;
+      margin-left:rem(25px);
+      line-height: rem(24px);
+      font-size: rem(16px);
+      color:#555;
+      width: 92%;
+      a{
+          color: #909090;
+      } 
+      span{
+        display:block;
+        color: #909090;
+        font-size: rem(13px);
+      }
+      &:last-child{
+        border:none;
+        position: relative;
+      }
+    }
+  }
+
+  .trTarget_cont{
+      color: #333;
+      font-size: rem(15px);
+      line-height: rem(24px);
+      width: 100%;
+    }
+    .yd-confirmModalContent{
+        img{
+            display: block;
+            width: rem(75px);
+            height: rem(40px);
+        }
+    }
+}
+
+
+.boneBasisTitleNav{
+  border-bottom: solid 1px #eee;
+  padding: 0 rem(30px);
+  @include cursor();
+}
+
+

@@ -1,0 +1,95 @@
+@charset "UTF-8";
+//内容区块 基本样式结构
+//公共方法模块调用
+@import "../../modules/_common-modules";
+.yd-loginInner {
+    width: rem(375px);
+    height: 100%;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.yd-authLoginCancel {
+    color: #ccc;
+    display: block;
+    box-sizing:border-box;
+    padding-top: rem(32.5px);
+    padding-left: rem(15px);
+}
+
+.yd-authLoginHeader {
+    width: rem(300px);
+    border-bottom: 1px solid #dfdfdf;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: rem(50px);
+    padding-bottom: rem(30px);
+    & > .yd-authLoginImg {
+        display: inline-block;
+        vertical-align: middle;
+        & > img {
+            width: 100%;
+            height: 100%;
+            vertical-align: top;
+        }
+    }
+    .ydLogo {
+        width: rem(35px);
+        height: rem(60px);
+    }
+    .authorizeLogo {
+        width: rem(33px);
+        height: rem(33px);
+        padding: 0 rem(50px);
+    }
+    .allinLogo {
+        width: rem(59px);
+        height: rem(43px);
+    }
+}
+
+.yd-authLoginMsg {
+    margin: 0 auto;
+    margin-top: rem(45px);
+    width: rem(300px);
+    & > h3 {
+        color: #333;
+        font-size: rem(17px);
+        font-weight: normal;
+        margin-bottom: rem(25px);
+        display: none;
+    }
+    & > p {
+        font-size: rem(15px);
+        color: #909090;
+        margin-bottom: rem(20px);
+        .point {
+            width: rem(4px);
+            height: rem(4px);
+            background-color: #909090;
+            margin-right: rem(5px);
+            border-radius: 50%;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        span {
+            vertical-align: middle;
+            display: inline-block;
+        }
+    }
+}
+
+.yd-authLoginBtn {
+    margin: 0 auto;
+    margin-top: rem(110px);
+    width: rem(300px);
+    text-align: center;
+    & > button {
+        color: #fff;
+        width: rem(280px);
+        height: rem(40px);
+        border-radius: rem(2px);
+        line-height: rem(40px);
+        background-color: #2899e6;
+    }
+}

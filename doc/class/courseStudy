@@ -1,0 +1,13 @@
+{
+  "name":"courseStudy()",
+  "des":"//该方法是创建学习记录，并向后台传递记录。",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+  },
+  "param":{
+    "isNull":true
+  }
+}

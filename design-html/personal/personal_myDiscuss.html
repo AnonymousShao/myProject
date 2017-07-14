@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的讨论</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=750">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/personal/personal_myDiscuss.css">
+    <script type="text/javascript" src="/js/common/mobile-util.js"></script>
+    <script type="text/javascript" src="/js/common/fastclick.js"></script>
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="/js/common/rem.js"></script>
+    <script type="text/javascript" src="/js/common/html5shiv.js" ></script>
+    <script type="text/javascript" src="/js/common/respond.min.js"></script>
+
+    <![endif]-->
+</head>
+
+<body>
+    <!-- 主内容容器 -->
+    <section class="yd-mainInner">
+        <header class="al-header al-indexHeader pcModule" style="margin-left: 0px;">
+            <section class="al-headerContainer">
+                <ul class="al-headerTopNav" id="al-headerTopNav">
+                    <li class="active"><a href="javascript:void(0)">首页</a></li>
+                    <li><a href="javascript:void(0)">课程</a></li>
+                    <li><a href="javascript:void(0)">习题</a></li>
+                </ul>
+                <div class="al-se-lo-re">
+                    <div class="al-search">
+                        <i class="icon-search"></i>
+                    </div>
+                    <div class="al-lo-re notLogin" id="notLogin">
+                        <div class="al-login">登录</div>
+                        <div class="al-register">注册</div>
+                    </div>
+                    <div class="al-lo-re isLogin" id="isLogin">
+                        <div class="user-header"></div>
+                        <div class="user-name">黄志强</div>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <section id="al-mainSidebar" class="pcModule" style="width: auto; height: 1000px;position: fixed; left: 0;top: 0; z-index: 10;">
+            <!--左侧导航栏-->
+            <aside class="al-mainSidebar al-mainSidebarCollapse pcModule" style="width: 80px;" id="al-mainSidebarWide">
+                <header class="al-collapseLogo" style="display: none;">
+                    <img src="/image/index/bigLogo.png" alt="">
+                </header>
+                <header class="al-mainLogo" style="display: block;">
+                    <img src="/image/index/logo.png" alt="" style="box-shadow: rgb(51,51,51) 0px 0px 2px;">
+                </header>
+                <section class="al-mainSidebarList" id="al-mainSidebarList">
+                    <ul>
+                        <li class="al-mainSidebarItem active">
+                            <a href="/design-html/index/index.html">
+                                <img src="/image/index/home.png" alt="">
+                                <figcaption style="display: block;">首页</figcaption>
+                                <article class="al-collapseItem" style="display: none;">
+                                    <p class="al-collapseItemText">
+                                    </p>
+                                    <h4>首页</h4>
+                                    <p>HOME</p>
+                                    <p></p>
+                                </article>
+                            </a>
+                        </li>
+                        <li class="al-mainSidebarItem">
+                            <a href="/pages/message/message_index.html">
+                                <img src="/image/index/mail.png" alt="">
+                                <figcaption style="display: block;">消息</figcaption>
+                                <article class="al-collapseItem" style="display: none;">
+                                    <p class="al-collapseItemText">
+                                    </p>
+                                    <h4>消息</h4>
+                                    <p>MESSAGE</p>
+                                    <p></p>
+                                </article>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </aside>
+        </section>
+        <section class="contentInner">
+            <header class="yd-indexHeader mobileModule">
+                <figure class="yd-indexHeaderItem">
+                    <a href="javascript:history.back(-1);">
+                        <img src="/image/personal/nav_back_black@2x.png" alt="">
+                    </a>
+                </figure>
+                <figure class="yd-indexHeaderItem">
+                    <h1>我的讨论</h1>
+                </figure>
+                <figure class="yd-indexHeaderItem">
+                    <a href="javascript:void(0)">
+                    </a>
+                </figure>
+            </header>
+            <figure class="yd-noContentTips">
+                <img src="/image/personal/message_nor@2x.png" alt="">
+                <figcaption>
+                    暂无讨论
+                </figcaption>
+            </figure>
+            <section class="yd-commentBox">
+                <section class="yd-commentItem">
+                    <figure class="yd-commentImg">
+                        <a href=""><img src="/image/logo.png" alt=""></a>
+                    </figure>
+                    <figcaption class="yd-commentContext">
+                        <h2>强凯亮<i class="icon-vip"></i><span>刚才</span></h2>
+                        <p><span class="yd-classMark">课程</span><span><b>1.2</b>猛猪出洞</span></p>
+                        <article>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat praesentium velit, ea sint architecto soluta nemo nobis veniam laborum, consequatur, corporis, optio culpa cum aut sapiente. Voluptates expedita totam mollitia!
+                        </article>
+                    </figcaption>
+                </section>
+                <section class="yd-commentItem">
+                    <figure class="yd-commentImg">
+                        <a href=""><img src="/image/logo.png" alt=""></a>
+                    </figure>
+                    <figcaption class="yd-commentContext">
+                        <h2>强凯亮<i class="icon-vip"></i><span>刚才</span></h2>
+                        <p><span class="yd-classMark">课程</span><span><b>1.2</b>猛猪出洞</span></p>
+                        <article>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat praesentium velit, ea sint architecto soluta nemo nobis veniam laborum, consequatur, corporis, optio culpa cum aut sapiente. Voluptates expedita totam mollitia!
+                        </article>
+                    </figcaption>
+                </section>
+                <section class="yd-commentItem">
+                    <figure class="yd-commentImg">
+                        <a href=""><img src="/image/logo.png" alt=""></a>
+                    </figure>
+                    <figcaption class="yd-commentContext">
+                        <h2>强凯亮<i class="icon-vip"></i><span>刚才</span></h2>
+                        <p><span class="yd-classMark">课程</span><span><b>1.2</b>猛猪出洞</span></p>
+                        <article>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat praesentium velit, ea sint architecto soluta nemo nobis veniam laborum, consequatur, corporis, optio culpa cum aut sapiente. Voluptates expedita totam mollitia!
+                        </article>
+                    </figcaption>
+                </section>
+            </section>
+        </section>
+        <footer class="al-footerBar mobileModule" id="al-footerBar">
+            <a href="javascript:;" class="al-footerBarItem">
+                <img src="/image/index/Tabbar_index_sel@2x.png" alt="">
+                <figcaption class="al-footerBarItemTitle active">
+                    首页
+                </figcaption>
+            </a>
+            <a href="javascript:;" class="al-footerBarItem">
+                <img src="/image/index/Tabbar_classify_def@2x.png" alt="">
+                <figcaption class="al-footerBarItemTitle">
+                    分类
+                </figcaption>
+            </a>
+            <a href="javascript:;" class="al-footerBarItem">
+                <img src="/image/index/Tabbar_personal_def@2x.png" alt="">
+                <figcaption class="al-footerBarItemTitle">
+                    我的
+                </figcaption>
+            </a>
+        </footer>
+    </section>
+    <script type="text/javascript" src="/js/third-party/jquery/jquery-1.8.0.min.js"></script>
+    <script src="/js/third-party/jquery/jquery.json-2.4.js"></script>
+    <script src="/js/third-party/jqueryscrollpagination/js/scrollpagination.js"></script>
+    <script src="/js/third-party/fastclick.js"></script>
+    <script src="/js/common/main.js"></script>
+    <script src="/js/common/common.js"></script>
+    <script src="/js/common/comm.func.js"></script>
+    <script src="/js/common/comm-customer.js"></script>
+    <script src="/js/common/comm-data.js"></script>
+    <script src="/js/common/comm_service.js"></script>
+    <script src="/js/common/jweixin-1.0.0.js"></script>
+    <script src="/js/common/log.js"></script>
+    <script src="/js/common/shareAll.js"></script>
+    <script src="/js/common/comm.cutArray.js"></script>
+    <script type="text/javascript" src="/js/third-party/chart/Chart.min.js"></script>
+    <script>
+    var ctx = document.getElementById("myChart");
+    var data = {
+        labels: ["创伤骨科", "关节与矫形外科", "脊柱外科", "运动医学", "手外科", "骨软组织肿瘤科", "小儿骨科", "骨科康复", "足踝外科"],
+        datasets: [{
+            borderWidth: 1, //雷达线
+            pointRadius: 0, //交点圆心，0不显示
+            backgroundColor: "rgba(255,168,0,0.4)", //覆盖区背景
+            borderColor: "rgba(255,194,76,1)", //覆盖区边框色
+            data: [65, 59, 90, 81, 56, 55, 40], //顺时针 点的取值
+
+        }]
+    };
+    Chart.defaults.global.legend.display = false; //不显示区块描述
+    var myRadarChart = new Chart(ctx, {
+        type: 'radar',
+        data: data,
+        options: {
+
+            scale: {
+                reverse: false, //不反转
+                fontColor: "#666", //标签文本色
+                fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif", //标签字体
+                fontSize: 24, //标签字号
+                gridLines: {
+                    lineWidth: 1 //网格线宽
+                },
+                ticks: {
+                    beginAtZero: true, //刻度从0起始
+                    max: 100, //最大最小值
+                    min: 0,
+                    stepSize: 20, //每一刻度值
+                    fontSize: 0, //即不显示刻度
+                    fontColor: "transparent"
+                },
+                pointLabels: {
+                    fontSize: 0,
+                    fontColor: "#555",
+                    fontFamily: "'Microsoft YaHei','Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
+                },
+                angleLines: {
+                    lineWidth: 1
+                }
+            },
+        },
+    });
+    if (!IsPC()) {
+        $(window).scroll(function() {
+            var h = $(".yd-personalHeader").height();
+            var eH = $(".yd-personalEntry").height();
+            if ($(window).scrollTop() > h + eH) {
+                $(".yd-personalScrollHead").addClass('show');
+            } else {
+                $(".yd-personalScrollHead").removeClass('show');
+            }
+        });
+
+    }
+
+
+    function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPod");
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+
+    $(".yd-personalClassItem").on("click", function() {
+        if ($(this).hasClass('open')) {
+            $(this).removeClass('open');
+        } else {
+            $(this).addClass('open');
+        }
+    });
+    </script>
+</body>
+
+</html>

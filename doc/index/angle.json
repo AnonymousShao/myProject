@@ -1,0 +1,22 @@
+
+{
+  "name":"toA(a)",
+  "des":"a:圆环的角度，在canvas中arc()方法中使用的角度为弧度值",
+  "attention":["圆环的角度范围在0-360之间"],
+  "comp":"IE8中不兼容！",
+  "scene":"医鼎首页课程表的圆弧显示，适用于有圆弧渐变显示的页面",
+  "returnVal":{
+    "isNull":false,
+    "des":"将角度装换成弧度的值",
+    "type":"json",
+    "val":{"180":"π"}
+
+  },
+  "code":"",
+  "param":{
+    "isNull":false,
+    "des":"",
+    "type":"json",
+    "val":{}
+  }
+}

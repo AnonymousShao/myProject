@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=750">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/authority/authentication.css" />
+    <link rel="stylesheet" href="/css/pages/exercises/exercises.css" />
+    <script type="text/javascript" src="../../js/common/mobile-util.js"></script>
+    <script type="text/javascript" src="../../js/common/fastclick.js"></script>
+    <script type="text/javascript" src="../../js/common/rem.js" ></script>
+    <script src="/js/third-party/jquery/jquery-1.8.0.min.js"></script>
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="../../js/common/html5shiv.js" ></script>
+    <script type="text/javascript" src="../../js/common/respond.min.js"></script>
+    <![endif]-->
+<body>
+<!--全内容容器——mainInner-->
+<section class="yd-mainInner">
+
+    <!--手机端的引导页-->
+    <!--收藏的习题-->
+    <section class="mobileModule">
+        <section class="guideExercises" style="background-color:#000;position: fixed;left: 0;right: 0; top: 0;bottom: 0;z-index: 10;opacity:0.8;"></section>
+        <div class="guideCont"><img src="/image/guide/CollectQuestion.png"> </div>
+        <div class="guideBut"><img src="/image/guide/Iknow.png"> </div>
+    </section>
+    <!--收藏的课程-->
+    <section class="mobileModule">
+        <section class="guideExercises" style="background-color:#000;position: fixed;left: 0;right: 0; top: 0;bottom: 0;z-index: 10;opacity:0.8;"></section>
+        <div class="guideCont"><img src="/image/guide/CollectCourse.png"> </div>
+        <div class="guideBut"><img src="/image/guide/Iknow.png"> </div>
+   </section>
+    <!--答题卡-->
+    <section class="mobileModule">
+        <section class="guideExercises" style="background-color:#000;position: fixed;left: 0;right: 0; top: 0;bottom: 0;z-index: 10;opacity:0.8;"></section>
+        <div class="guideContSheet"><img src="/image/guide/AnswerSheet.png"> </div>
+        <div class="guideButSheet"><img src="/image/guide/Iknow.png"> </div>
+    </section>
+    <!--错题本-->
+    <section class="mobileModule">
+        <section class="guideExercises" style="background-color:#000;position: fixed;left: 0;right: 0; top: 0;bottom: 0;z-index: 10;opacity:0.8;"></section>
+        <div class="guideContSheet"><img src="/image/guide/AnswerError.png"> </div>
+        <div class="guideButSheet"><img src="/image/guide/Iknow.png"> </div>
+    </section>
+
+
+    <!--pc端引导页-->
+    <!--收藏的习题-->
+    <section class="yd-confirmModalMask show" style="background-color:rgba(0,0,0,0.3); ">
+        <div class="pcQuestionsCollect">
+            <div class="guideCont"><img src="/image/guide/questionsCollect.png"> </div>
+            <div class="guideBut"><img src="/image/guide/button.png"> </div>
+        </div>
+    </section>
+    <!--收藏的课程-->
+    <section class="yd-confirmModalMask show" style="background-color:rgba(0,0,0,0.3); ">
+        <div class="pcCourseCollect">
+            <div class="guideCont"><img src="/image/guide/courseCollect.png"> </div>
+            <div class="guideBut"><img src="/image/guide/button.png"> </div>
+        </div>
+    </section>
+    <!--错题本-->
+    <section class="yd-confirmModalMask show" style="background-color:rgba(0,0,0,0.3); ">
+        <div class="pcErrorQuestions">
+            <div class="guideCont"><img src="/image/guide/errorTi.png"> </div>
+            <div class="guideBut"><img src="/image/guide/button.png"> </div>
+        </div>
+    </section>
+
+
+
+    <header class="al-header al-indexHeader pcModule" style="margin-left: 0px;">
+        <section class="al-headerContainer">
+            <ul class="al-headerTopNav" id="al-headerTopNav">
+            </ul>
+            <div class="al-se-lo-re">
+                <div class="al-search"> <a href="//www.yi-ding.net.cn/pages/search/search.html?exercise_order.html" class="icon-search"></a> </div>
+                <div class="al-lo-re notLogin" id="notLogin" style="display: none;">
+                    <div class="al-login">登录</div>
+                    <div class="al-register">注册</div>
+                </div>
+                <div class="al-lo-re isLogin" id="isLogin" style="display: inline-block; cursor: pointer;">
+                    <div class="user-header" style="background-image: url(&quot;https://img05.allinmd.cn/public1/M00/07/62/wKgBL1h-5YeAV2KoAAFiLZw8RKQ023_c_p_150_150.jpg&quot;);"></div>
+                    <div class="user-name"><a href="//www.yi-ding.net.cn/pages/personal/personal_index.html">带点</a></div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <section id="al-mainSidebar" class="pcModule" style="width: auto; height: 1000px;position: fixed; left: 0;top: 0; z-index: 3;"> <!--左侧导航栏-->
+        <aside class="al-mainSidebar al-mainSidebarCollapse pcModule" style="width: 80px;" id="al-mainSidebarWide">
+            <header class="al-collapseLogo" style="display: none;"> <img src="/image/index/bigLogo.png" alt=""> </header>
+            <header class="al-mainLogo" style="display: block;"> <img src="/image/index/logo.png" alt="" style="box-shadow: rgb(51,51,51) 0px 0px 2px;"> </header>
+            <section class="al-mainSidebarList" id="al-mainSidebarList">
+                <ul>
+                    <li class="al-mainSidebarItem Ev-sidebarIndex"> <a href="//www.yi-ding.net.cn"> <img src="/image/index/home.png" alt="">
+                        <figcaption style="display: block;">首页</figcaption>
+                        <article class="al-collapseItem" style="display: none;">
+                            <p class="al-collapseItemText"> </p>
+                            <h4>首页</h4>
+                            <p>HOME</p>
+                            <p></p>
+                        </article>
+                    </a> </li>
+                    <li class="al-mainSidebarItem Ev-sidebarMessage"> <a href="/pages/message/message_discuss.html"> <img src="/image/index/mail.png" alt="">
+                        <figcaption style="display: block;">消息</figcaption>
+                        <article class="al-collapseItem" style="display: none;">
+                            <p class="al-collapseItemText"> </p>
+                            <h4>消息</h4>
+                            <p>MESSAGE</p>
+                            <p></p>
+                        </article>
+                    </a> <span class="yd-newsNum">...</span></li>
+                </ul>
+            </section>
+        </aside>
+    </section>
+    <section class="contentInner">
+        <!--整个模块的头部-->
+        <header id="questionsHd" class="questionsHeader"> <span class="queIcoClose mobileMobule"><i></i></span> <span class="queHdIteam   queIcoTitle">顺序练习</span> <span class=" queIcoShare mobileMobule"><i></i></span> <span class="queIcoCollect"><i class="active"></i><span class="queName">收藏</span></span>
+            <!--实时保存-->
+            <div class="saveTime"><i></i><span>保存</span><span>进度</span></div>
+        </header>
+        <!--试题答题部分-->
+        <section id="quesContainer" class="quesContainer">
+            <ul id="" class="innerContent" style="display: block;">
+                <li class="queIteam queOneCheck queIteamActive" data-collectid="2172" data-correct="1481504422468" data-status="2" data-errorid="" data-collect="true" data-customeroption="" data-ansid="0" data-type="1" data-id="1481504402348" data-nowqueindex="0">
+                    <article class="quesSingle">
+                        <div class="queShitiTitle">
+                            <span class="queShitiType">单</span>
+                            <div class="queShiticont">
+                                <p>下列关于术中即时导航系统的234<sub>34</sub>操作程序的描述234<sup>23</sup>，错误的是：</p>
+                                <ul style="clear: both;" class="clear">
+                                    <li style="float: left;margin-right: 10px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                    <li style="float: left;margin-right: 10px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                    <li style="float: left;margin-right: 10px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                    <li style="float: left;margin-right: 10px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                    <li style="float: left;margin-right: 10px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="queShitiOptionsContent">
+                            <div class="queShitiOptions" data-opid="1481504416286" data-judge="false" data-arrange="A">
+                                <i class="queNoStatus">A</i>
+                                <div class="anwercont">
+                                    <p>术中参考架固可定于拟定固定节段邻近的上位或下位棘突234<sup>34,</sup>546<sub>45</sub>。</p>
+                                    <ul style="clear: both;" class="clear">
+                                        <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                        <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                        <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                        <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                        <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="queShitiOptions" data-opid="1481504416286" data-judge="false" data-arrange="A">
+                                <i class="queNoStatus">B</i>
+                                <div class="anwercont">
+                                    <ul style="clear: both;" class="clear">
+                                        <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                        <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                        <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                        <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                        <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                    </ul>
+                                </div>
+                            </div><div class="queShitiOptions" data-opid="1481504416286" data-judge="false" data-arrange="A">
+                            <i class="queNoStatus">C</i>
+                            <div class="anwercont">
+                                <p>术中参考架固可定于拟定固定节段邻近的上位或下位棘突234<sup>34,</sup>546<sub>45</sub>。</p>
+                                <ul style="clear: both;" class="clear">
+                                    <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                    <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                    <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                    <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                    <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                </ul>
+                            </div>
+                        </div>
+                            <div class="queShitiOptions" data-opid="1481504416286" data-judge="false" data-arrange="A">
+                                <i class="queNoStatus">D</i>
+                                <div class="anwercont">
+                                    <ul style="clear: both;" class="clear">
+                                        <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                        <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                        <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                        <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                        <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="queShitiOptions" data-opid="1481504416286" data-judge="false" data-arrange="A">
+                                <i class="queNoStatus">E</i>
+                                <div class="anwercont">
+                                    <p>术中参考架固可定于拟定固定节段邻近的上位或下位棘突234<sup>34,</sup>546<sub>45</sub>。</p>
+                                    <ul style="clear: both;" class="clear">
+                                        <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                        <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                        <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                        <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                        <li style="float: left;margin-right: 5px;"><img src="/image/erweiCode.jpg" style="width: 200px;height: 200px;"> </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+                </li>
+
+
+
+
+            </ul>
+            <!--多选题确认按钮-->
+            <section id="queAffirm" class="queAffirmContainer">
+                <div id="queAffirmButton" class="queButton queButtonReady" style="display: none;">确认答案</div>
+            </section>
+        </section>
+
+        <!--上一题下一题操作-->
+        <section id="queBehavior" class="queBehaviors">
+            <p class="queBehIteam queBehPre queIco queBehPreGray"><i></i><span class="queName">上一题</span></p>
+            <p class="queBehIteam  queBehNow queIco queIcoExeriseQue"><i></i><span class="queName">1/52题</span></p>
+            <p class="queBehIteam  queBehExp queIco"><i></i><span class="queName">答案解析</span></p>
+            <p class="queBehIteam queBehNext queIco queIcoNextQue" data-handin="false"><i></i><span class="queName" data-handin="false">下一题</span></p>
+        </section>
+        <!--答题过程中的答题记录-->
+        <section id="queShiTiRecord" class="queShiTiRecordIn none">
+            <!--<div class="queShiTiReTitle">
+                      <span class="queShiTiReIte queShiTiReIteR">对<i class="queShiTiReR">111</i></span>
+                      <span class="queShiTiReIte queShiTiReIteW">错<i class="queShiTiReW">111</i></span>
+                      <span class="queShiTiReIte queShiTiReIteN">未答<i  class="queShiTiReN">111</i></span>
+                      <span class="queShiTiReIte"></span>
+                  </div>
+                  <div class="queShiTiReContent">
+                      <a href="javascript:;" data-shitiId="1" class="queShiTiReLi queShiTiReLiR">1</a>
+                      <a href="javascript:;" data-shitiId="2" class="queShiTiReLi queShiTiReLiR">2</a>
+                      <a href="javascript:;" data-shitiId="3" class="queShiTiReLi queShiTiReLiW">3</a>
+                      <a href="javascript:;" data-shitiId="4" class="queShiTiReLi queShiTiReLiR">4</a>
+                      <a href="javascript:;" data-shitiId="5" class="queShiTiReLi queShiTiReLiR">5</a>
+                      <a href="javascript:;" data-shitiId="6" class="queShiTiReLi queShiTiReLiW">6</a>
+                      <a href="javascript:;" data-shitiId="7" class="queShiTiReLi queShiTiReLiN">7</a>
+                      <a href="javascript:;" data-shitiId="8" class="queShiTiReLi queShiTiReLiN">8</a>
+                      <a href="javascript:;" data-shitiId="9" class="queShiTiReLi queShiTiReLiR">9</a>
+                      <a href="javascript:;" data-shitiId="10" class="queShiTiReLi queShiTiReLiR">10</a>
+                      <a href="javascript:;" data-shitiId="11" class="queShiTiReLi queShiTiReLiR">11</a>
+                      <a href="javascript:;" data-shitiId="12" class="queShiTiReLi queShiTiReLiR">12</a>
+                      <a href="javascript:;" data-shitiId="1" class="queShiTiReLi queShiTiReLiR">13</a>
+                      <a href="javascript:;" data-shitiId="2" class="queShiTiReLi queShiTiReLiR">14</a>
+                      <a href="javascript:;" data-shitiId="3" class="queShiTiReLi queShiTiReLiW">15</a>
+                      <a href="javascript:;" data-shitiId="4" class="queShiTiReLi queShiTiReLiR">16</a>
+                      <a href="javascript:;" data-shitiId="5" class="queShiTiReLi queShiTiReLiR">17</a>
+                      <a href="javascript:;" data-shitiId="6" class="queShiTiReLi queShiTiReLiW">18</a>
+                      <a href="javascript:;" data-shitiId="7" class="queShiTiReLi queShiTiReLiN">19</a>
+                      <a href="javascript:;" data-shitiId="8" class="queShiTiReLi queShiTiReLiN">20</a>
+                      <a href="javascript:;" data-shitiId="9" class="queShiTiReLi queShiTiReLiR">21</a>
+                      <a href="javascript:;" data-shitiId="10" class="queShiTiReLi queShiTiReLiR">22</a>
+                      <a href="javascript:;" data-shitiId="11" class="queShiTiReLi queShiTiReLiR">23</a>
+                      <a href="javascript:;" data-shitiId="12" class="queShiTiReLi queShiTiReLiR">24</a>
+                      <a href="javascript:;" data-shitiId="1" class="queShiTiReLi queShiTiReLiR">1</a>
+                      <a href="javascript:;" data-shitiId="2" class="queShiTiReLi queShiTiReLiR">2</a>
+                      <a href="javascript:;" data-shitiId="3" class="queShiTiReLi queShiTiReLiW">3</a>
+                      <a href="javascript:;" data-shitiId="4" class="queShiTiReLi queShiTiReLiR">4</a>
+                      <a href="javascript:;" data-shitiId="5" class="queShiTiReLi queShiTiReLiR">5</a>
+                      <a href="javascript:;" data-shitiId="6" class="queShiTiReLi queShiTiReLiW">6</a>
+                      <a href="javascript:;" data-shitiId="7" class="queShiTiReLi queShiTiReLiN">7</a>
+                      <a href="javascript:;" data-shitiId="8" class="queShiTiReLi queShiTiReLiN">8</a>
+                      <a href="javascript:;" data-shitiId="9" class="queShiTiReLi queShiTiReLiR">9</a>
+                      <a href="javascript:;" data-shitiId="10" class="queShiTiReLi queShiTiReLiR">10</a>
+                      <a href="javascript:;" data-shitiId="11" class="queShiTiReLi queShiTiReLiR">11</a>
+                      <a href="javascript:;" data-shitiId="12" class="queShiTiReLi queShiTiReLiR">12</a>
+                      <a href="javascript:;" data-shitiId="6" class="queShiTiReLi queShiTiReLiW">18</a>
+                      <a href="javascript:;" data-shitiId="7" class="queShiTiReLi queShiTiReLiN">19</a>
+                      <a href="javascript:;" data-shitiId="8" class="queShiTiReLi queShiTiReLiN">20</a>
+                      <a href="javascript:;" data-shitiId="9" class="queShiTiReLi queShiTiReLiR">21</a>
+                      <a href="javascript:;" data-shitiId="10" class="queShiTiReLi queShiTiReLiR">22</a>
+                      <a href="javascript:;" data-shitiId="11" class="queShiTiReLi queShiTiReLiR">23</a>
+                      <a href="javascript:;" data-shitiId="12" class="queShiTiReLi queShiTiReLiR">24</a>
+                      <a href="javascript:;" data-shitiId="1" class="queShiTiReLi queShiTiReLiR">1</a>
+                      <a href="javascript:;" data-shitiId="2" class="queShiTiReLi queShiTiReLiR">2</a>
+                      <a href="javascript:;" data-shitiId="3" class="queShiTiReLi queShiTiReLiW">3</a>
+                      <a href="javascript:;" data-shitiId="4" class="queShiTiReLi queShiTiReLiR">4</a>
+                      <a href="javascript:;" data-shitiId="5" class="queShiTiReLi queShiTiReLiR">5</a>
+                      <a href="javascript:;" data-shitiId="6" class="queShiTiReLi queShiTiReLiW">6</a>
+                      <a href="javascript:;" data-shitiId="7" class="queShiTiReLi queShiTiReLiN">7</a>
+                      <a href="javascript:;" data-shitiId="8" class="queShiTiReLi queShiTiReLiN">8</a>
+                      <a href="javascript:;" data-shitiId="9" class="queShiTiReLi queShiTiReLiR">9</a>
+                      <a href="javascript:;" data-shitiId="10" class="queShiTiReLi queShiTiReLiR">10</a>
+                      <a href="javascript:;" data-shitiId="11" class="queShiTiReLi queShiTiReLiR">11</a>
+                      <a href="javascript:;" data-shitiId="12" class="queShiTiReLi queShiTiReLiR">12</a>
+                  </div>-->
+        </section>
+        <!--每一道题对应的答题分析-->
+        <section class="queAnalysisIn">
+            <ul id="queAnalysis" class="">
+                <li class="queAnalysisIteam" data-nowanaindex="0">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：B</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">置钉时先在虚拟导航图像引导下选取拟置钉节段表面3个骨性解剖标志校对系统精确度。置钉时先在虚拟导航图像引导下选取拟置钉节段表面3个骨性解剖标志校对系统精确度。置钉时先在虚拟导航图像引导下选取拟置钉节段表面3个骨性解剖标志校对系统精确度。置钉时先在虚拟导航图像引导下选取拟置钉节段表面3个骨性解剖标志校对系统精确度。置钉时先在虚拟导航图像引导下选取拟置钉节段表面3个骨性解剖标志校对系统精确度。置钉时先在虚拟导航图像引导下选取拟置钉节段表面3个骨性解剖标志校对系统精确度。置钉时先在虚拟导航图像引导下选取拟置钉节段表面3个骨性解剖标志校对系统精确度。置钉时先在虚拟导航图像引导下选取拟置钉节段表面3个骨性解剖标志校对系统精确度。</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                            <div class="knowledgePoint">
+                                <div class="title">知识点：</div>
+                                <ul class="knowledgeList clear">
+                                    <li data-knoid="986">1</li>
+                                    <li data-knoid="987">实施点点带你带单带你带</li>
+                                    <li data-knoid="1005">hkl知识点添加</li>
+                                    <li data-knoid="1006">hkl知识点添加</li>
+                                    <li data-knoid="1007">ww</li>
+                                    <li data-knoid="1008">ww</li>
+                                    <li data-knoid="11764">w</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="1">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：A</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">AS病理性骨折最常见于下颈椎，其次为胸腰椎和腰椎。</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                            <div class="knowledgePoint">
+                                <div class="title">知识点：</div>
+                                <ul class="knowledgeList clear">
+                                    <li data-knoid="995">嘿嘿嘿</li>
+                                    <li data-knoid="996">嘿嘿嘿</li>
+                                    <li data-knoid="997">法得到的的</li>
+                                    <li data-knoid="998">顶顶顶顶</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="2">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：D</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">一般认为，无移位、无神经损害的新鲜AS颈椎骨折和（或）脱位可采用非手术治疗，主要方法为牵引、颈围或Halo背心，但牵引或Halo制动存在导致神经损害恶化或不融合的可能。</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="3">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：B</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">特发性脊柱侧凸Lenke 分型标准</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                            <div class="knowledgePoint">
+                                <div class="title">知识点：</div>
+                                <ul class="knowledgeList clear">
+                                    <li data-knoid="11770">asdad</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="4">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：C</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">肋-椎角差越大（&gt;20°），侧凸进展风险越大。</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="5">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：B</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">儿童先天性侧后凸畸形，支具对原发弯无效，但可有效纠正代偿弯。故B错。</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="6">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：C</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">休门病后凸畸形的影像学特征为至少连续三个椎体前方有5°楔形变、Schmoral 结节及终板碎裂和椎间隙狭窄，同时胸椎后凸超过50°。</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="7">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：C</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">侧前方入路是一种常用手术入路，通常选择切口在左前斜方，绕过副主动脉到达椎前，这样对下腔静脉的损伤几率会较低。</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="8">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：C</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">胸椎管狭窄症保守治疗无效，且其术前病程与疗效正反比，故而应尽快手术。。</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="9">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：B</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">峡部断裂处有瘢痕，滑脱复位后椎间孔局部可以继发狭窄，累及出口根。</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="10">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：D</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">峡部裂性滑脱的后柱结构稳定性完全破坏，继发出现滑脱后应手术治疗，手术方式以减压、固定、融合为主。</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="11">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：C</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">腰椎退变性滑脱可以引起腰部不适，严重者可以累及神经，但不会出现脊髓损害。</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="12">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：B</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">滑脱复位是手段而并非目的。</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="13">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：D</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">嗜酸性肉芽肿（EG）是一种孤立性的组织细胞的非肿瘤性质的异常分化。嗜酸性肉芽肿是郎罕氏细胞增多症的一种表现，以前称为组织细胞增生症X。嗜酸性肉芽肿多发生于5-10岁的儿童，侵犯部位为骨骼和肺。这占郎罕氏细胞增多症病例的60-80%。对于中轴骨的侵犯多见于胸椎，患者年龄通常不满12岁，影像检查表现为整个椎体均匀性压扁成线条状，而上下椎间隙完全正常。 知识点：嗜酸性肉芽肿的流行病学和影像学特征</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="14">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：C</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">骨纤维异样增殖症是指骨的纤维组织的增生、变性，通过化生而形成的骨为幼稚的交织骨。又称骨纤维结构不良。本病在瘤样病变中占首位（38.42%）。多见于11～30岁青年人，男女发病之比为1.1∶1。好发部位主要在股骨和胫骨，其次在颌骨和肋骨。</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="15">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：C</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">十三十四</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                            <div class="knowledgePoint">
+                                <div class="title">知识点：</div>
+                                <ul class="knowledgeList clear">
+                                    <li data-knoid="11785">gdsgdsgdsgdsgdsgds</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="16">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：B</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">AORI分型全称“Anderson骨科研究所骨缺损分型”，根据骨缺损严重程度分为Ⅰ-Ⅲ型；Vancouver分型是假体周围骨折分型；Crowe分型是DDH分型；Schatzker分型是胫骨平台骨折分型。</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                            <div class="knowledgePoint">
+                                <div class="title">知识点：</div>
+                                <ul class="knowledgeList clear">
+                                    <li data-knoid="11786">dsadas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="17">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：D</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">踩棉花感因中枢神经元病变导致下肢深感觉障碍而引起，ABC是退行性脊柱侧凸的常见临床表现</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="18">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：C</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan"> 退行性脊柱侧凸的治疗不以矫正畸形恢复外观作为治疗原则，更非手术指征。 知识点: 退行性脊柱侧凸的手术指征包括严重的腰痛、神经根受压症状、神经根跛行症状，且保守治疗无效或效果不佳。</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="19">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：C</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">机械性疼痛的特点是活动痛，休息可缓解，炎症性疼痛反之</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="20">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：D</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">膝关节结构不包括股骨大粗隆。</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="21">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：A</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">测试</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                            <div class="knowledgePoint">
+                                <div class="title">知识点：</div>
+                                <ul class="knowledgeList clear">
+                                    <li data-knoid="991">ddd</li>
+                                    <li data-knoid="993">00</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="22">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：A</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">去去去去去去去去去去群群群22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                            <div class="knowledgePoint">
+                                <div class="title">知识点：</div>
+                                <ul class="knowledgeList clear">
+                                    <li data-knoid="994">hkl知识点1</li>
+                                    <li data-knoid="11741">重复</li>
+                                    <li data-knoid="11742">重复</li>
+                                    <li data-knoid="11743">重复</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="23">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：A</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">错题本专用（勿动）练习题1</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                            <div class="knowledgePoint">
+                                <div class="title">知识点：</div>
+                                <ul class="knowledgeList clear">
+                                    <li data-knoid="1009">错题本专用（勿动）练习题1知识点</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="24">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：B</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">错题本专用（勿动）练习题2</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="25">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：A</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">错题本专用（勿动）练习题3</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="26">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：A</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">错题本专用（勿动）练习题4</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="27">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：A</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">错题本专用（勿动）练习题5</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="28">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：B</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">错题本专用（勿动）练习题6</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="29">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：A</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">错题本专用（勿动）练习题7</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="30">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：A</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">错题本专用（勿动）练习题8</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="31">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：A</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">错题本专用（勿动）练习题9</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="32">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：A</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">错题本专用（勿动）练习题11</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="33">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：A</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">错题本专用（勿动）练习题12</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="34">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：B</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">错题本专用（勿动）练习题13</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="35">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：A</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">错题本专用（勿动）练习题14</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="36">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：A</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">错题本专用（勿动）练习题15</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="37">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：A</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">春运抢票成功有窍门，详情咨询lzm春运抢票系统</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="38">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：ABD</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">B骨扫描多用于对脊柱转移瘤及感染性疾病的诊断，对退行性脊柱侧凸的诊断治疗并无益处，故排除</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="39">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：AB</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">错题本专用（勿动）练习题16</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="40">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：AC</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">错题本专用（勿动）练习题17</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="41">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：AB</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">错题本专用（勿动）练习题18</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                            <div class="knowledgePoint">
+                                <div class="title">知识点：</div>
+                                <ul class="knowledgeList clear">
+                                    <li data-knoid="11752">重复2</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="42">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：AB</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">错题本专用（勿动）练习题19</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="43">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：BC</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">错题本专用（勿动）练习题20</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                            <div class="knowledgePoint">
+                                <div class="title">知识点：</div>
+                                <ul class="knowledgeList clear">
+                                    <li data-knoid="11740">a</li>
+                                    <li data-knoid="11744">ssss</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="44">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：ADE</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">春运抢票成功有窍门，详情咨询lzm春运抢票系统</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="45">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：A</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">春运抢票成功有窍门，详情咨询lzm春运抢票系统</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                            <div class="knowledgePoint">
+                                <div class="title">知识点：</div>
+                                <ul class="knowledgeList clear">
+                                    <li data-knoid="11765">抢票</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="46">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：D</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">以AORI分型为基础，不同的骨缺损类型，重建的方法不同：Ⅰ型缺损（完整型）：良好的松质骨结构可以支持普通假体和翻修假体，小的骨缺损可以用骨水泥或异体颗粒骨充填。Ⅱ型缺损（受损）：干骺端骨皮质缺损，常需用异体结构性骨移植，组配式带有金属垫块、金属骨小梁cone或多孔涂层sleeves重建，配或不配延长杆的不同限制性的翻修假体。Ⅲ型缺损（骨缺损）：干骺端骨质严重缺损，常累及侧副韧带止点，不能为髁型翻修假体提供支持，除了Ⅱ型中常用的重建方法外，常需用到限制性假体，甚至旋转铰链膝（RHK）或特制假体进行翻修。</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="47">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：BCDE</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">临床上经常会遇到骨关节炎和类风湿性关节炎的患者，在患病早期，存在一些类似点，然而其病理、症状、治疗、预后均明显不同，应当结合发病机制、病例改变、临床特点、辅助检查、治疗方案等，进行明确的鉴别和处置。</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                            <div class="knowledgePoint">
+                                <div class="title">知识点：</div>
+                                <ul class="knowledgeList clear">
+                                    <li data-knoid="990">ddd</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="48">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：A</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">实践失败。运气不好重新再来！！！！！</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="49">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：AC</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">测试用答案解析测试用答案解析测试用答案解析测试用答案解析测试用答案解析测试用答案解析测试用答案解析测试用答案解析测试用答案解析测试用答案解析测试用答案解析测试用答案解析</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="50">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：A</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">春节抢票不再难</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="queAnalysisIteam" data-nowanaindex="51">
+                    <div class="answerAnalysis ">
+                        <div class="exercisesAnalysis">
+                            <div class="answerATitle"><span>答案解析</span></div>
+                            <div class="aswerDisplay"><span class="trueAswer">正确答案：A</span></div>
+                            <div class="aAnalysis_text"><span class="aAnalysis_textSpan">lzm私家骨科康复008 答案解析1222-1025</span>
+                                <p class="coursePic-right icon-upMore"><i href="javascript:;"></i><span>展开</span></p>
+                            </div>
+                            <div class="knowledgePoint">
+                                <div class="title">知识点：</div>
+                                <ul class="knowledgeList clear">
+                                    <li data-knoid="1001">lzm私家骨科康复008 知识点</li>
+                                    <li data-knoid="1002">lzm私家骨科康复008 知识点</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </section>
+    <footer class="yd-mainFooter pcModule">
+        <section class="yd-mainFooterInner">
+            <section class="yd-mainFooterContent">
+                <section class="yd-mainFooterLinks"> <a href="/pages/help/statement.html" class="yd-mainFooterLinkItem" style="padding-left: 0;">隐私声明</a> <a href="/pages/help/service.html" class="yd-mainFooterLinkItem">服务条款</a> <a href="/pages/help/about_us.html" class="yd-mainFooterLinkItem">关于我们</a> <a href="/pages/help/contact.html" class="yd-mainFooterLinkItem" style="padding-right: 0;border-right: none;">联系我们</a> </section>
+                <article class="yd-mainFooterMsg">
+                    <figure class="yd-mainFooterMsgImg marginR"> <a id="___szfw_logo___" href="https://credit.szfw.org/CX20160321018165560180.html" target="_blank"> <img src="//img10.allinmd.cn/v3/common/icon/site_1.png" alt=""> </a> </figure>
+                    <figure class="yd-mainFooterMsgImg"> <a href="http://www.anquan.org/authenticate/cert/?site=www.allinmd.cn&amp;at=business"> <img src="//img10.allinmd.cn/v3/common/icon/site_2.png" alt=""> </a> </figure>
+                </article>
+                <article class="yd-mainFooterRecordMsg">
+                    <p>京ICP备14007118号-3 京公网安备 11010502031779号京卫计网审[2014] 第0378号 </p>
+                    <p>Copyright@2017 Yi-ding.net.cn All Rights Reserved.版权所有@北京欧应科技有限公司</p>
+                </article>
+            </section>
+        </section>
+    </footer>
+</section>
+<script src="/js/third-party/jquery/jquery.json-2.4.js"></script>
+<script src="/js/third-party/jqueryscrollpagination/js/scrollpagination.js"></script>
+<script src="/js/third-party/swiper/idangerous.swiper.min.js"></script>
+<script src="/js/third-party/fastclick.js"></script>
+<script src="/js/common/main.js"></script>
+<script src="/js/common/common.js"></script>
+<script src="/js/common/comm.func.js"></script>
+<script src="/js/common/comm-customer.js"></script>
+<script src="/js/common/comm.autoHeight.js"></script>
+<script src="/js/common/log.js"></script>
+<script src="/js/common/comm-data.js"></script>
+<script src="/js/common/comm.date.js"></script>
+<script src="/js/common/comm_service.js"></script>
+<script src="/js/common/comm.log.js"></script>
+<script src="/js/third-party/jquery-form/jquery.form.js"></script>
+<script src="/js/common/jweixin-1.0.0.js"></script>
+<script src="/js/scene/discuss/discuss.js"></script>
+<script src="/js/scene/authority/login.js"></script>
+<script src="/js/scene/authority/register.js"></script>
+<script src="/js/scene/authority/authentication.js"></script>
+<script src="/js/scene/authority/checkLogin.js"></script>
+<script src="/js/common/shareAll.js"></script>
+<script src="/js/common/comm.cutArray.js"></script>
+<script src="/js/third-party/jquery-qrcode-master/jquery.qrcode.min.js"></script>
+<script src="/js/common/comm.log.js"></script>
+<script src="../../js/scene/exercises/json2.js" type="text/javascript"></script>
+<script src="/js/scene/exercises/exercise_data.js" type="text/javascript"></script>
+<script src="../../js/scene/exercises/talk.js" type="text/javascript"></script>
+<script src="../../js/scene/exercises/exercise_order.js" type="text/javascript"></script>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?1d94d86b3aa94a505d5ea9b7ded46e40";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<aside class="pcModule al-rightNav" id="al-rightNav">
+    <div class="toTop rightNav" id="toTop"> <i class="icon-toTop" style="display: block;"></i>
+        <p style="display: none;">回到<br>
+            顶部</p>
+    </div>
+    <div class="code rightNav" id="code"> <i class="icon-code" style="display: block;"></i>
+        <p style="display: none;">二维码</p>
+        <p class="codePic" style="display: none;"> <img src="/image/1486539881.png"> </p>
+    </div>
+    <div class="suggestion rightNav" id="suggestion"> <i class="icon-suggestion" style="display: block;"></i>
+        <p style="display: none;">意见<br>
+            反馈</p>
+    </div>
+    <section class="yd-suggestionBox">
+        <button class="yd-suggestionBoxClose">X</button>
+        <article class="yd-suggestionText">
+            <textarea name="" id="Ev-suggestionText" cols="30" rows="10" placeholder="请输入反馈，我们将不断为您改进"></textarea>
+            <span>500</span> </article>
+        <figure class="yd-suggestionBtn">
+            <button>提交</button>
+        </figure>
+    </section>
+    <div class="share rightNav" id="share"><i class="icon-share" style="display: block;"></i>
+        <p class="shareTxt" style="display: none;">分享</p>
+        <article class="sharePic" id="yd-shareBox" style="display: none;"><b class="yd-weixin"><i class="icon-weixin"></i><em>微信</em></b>
+            <section class="Ev-shareWeixinCode" style="display: none;position: absolute;bottom: 100%;">
+                <h3>使用微信扫描二维码</h3>
+            </section>
+            <b class="yd-qqFriends"><i class="icon-qq"></i><em>QQ</em></b><b class="yd-qZone"><i class="icon-zone"></i><em>QQ空间</em></b><b class="yd-weibo"><i class="icon-weibo"></i><em>微博</em></b></article>
+    </div>
+</aside>
+<section class="al-middleTipsBox">
+    <section class="al-middleTipsModal ev-loading" style="display: none;">
+        <figure class="al-middleTipsModalText al-loading"><img src="/image/personal/loading_big@2x.png" alt=""></figure>
+    </section>
+</section>
+</body>
+</html>

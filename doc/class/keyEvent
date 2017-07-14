@@ -1,0 +1,13 @@
+{
+  "name":"keyEvent()",
+  "des":"//该方法集合了关于视频的一些键盘事件，例如ESC和空格事件。",
+  "attention":"",
+  "comp":"",
+  "scene":"",
+  "returnVal":{
+    "isNull":true
+  },
+  "param":{
+    "isNull":true
+  }
+}

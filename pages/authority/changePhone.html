@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>唯医联合登录-更换手机号</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/yiding.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=750">
+    <link rel="stylesheet" href="/css/base.css">
+	<script src="/js/common/rem.js"></script>
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="/build/compatibility.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+	<section class="loginMain">
+	    <!-- 主内容容器 -->
+	    <section class="loginCont">
+            <section class="authorityCommon" style="margin-top: 16px">
+	    	<!--错误提示-->
+            <section class="errorTip" style="display: none"><i></i> <span>密码错误</span></section>
+		    <!--唯医绑定医鼎账号-->
+	        <section class="loginWidth ev-bindAllin">
+	            <div class="loginFixed">
+                    <div class="authorityTitle">绑定医鼎账号</div>
+	                <section class="binding">绑定医鼎账号，可用唯医登录</section>
+	                <section class="titleInput clear marginTop">
+	                    <div class="titleText">账号</div>
+	                    <input class="titleType ev-bindYiNum" placeholder="请输入手机号" />
+	                    <div class="phone"> 
+		            		<i class="close"></i>
+		            	</div>
+	                </section>
+	                <section class="titleInput clear">
+	                    <div class="titleText">验证码</div>
+	                    <input class="titleType ev-bindYiCode" placeholder="请输入验证码" />
+	                    <div class="validate ev-bindValidate">获取验证码</div>
+	                </section>
+	                <div class="loginBtn ev-bindYiLogin">登录</div>
+					</div>
+	            </section>
+				<i class="authorityBg"></i>
+	        </section>
+
+                </section>
+	        <!--绑定医鼎账号 END-->
+	    </section>
+    </section>
+<!--common.log统计ip,address-->
+<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+<!-- end -->
+<script src="/js/third-party/jquery/jquery-1.8.0.min.js"></script>
+<!--about:jq-->
+<script src="/build/jqAll.js"></script>
+<!-- end -->
+<!--about:common&login-->
+<script src="/build/common.js"></script>
+<!-- end -->
+<script src="/js/scene/authority/allinAuthority.js"></script>
+</body>
+
+</html>

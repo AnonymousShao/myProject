@@ -1,0 +1,332 @@
+  @charset "UTF-8";
+  @import "modules/_common-modules";
+  @import "variables/_yiding-variables";
+  @import "components/_iconModule";
+  @import "components/common/_popup";
+  @include normalize(mobile);
+  .mobileModule {
+      display: none;
+  }
+
+  .pcModule {
+      display: block;
+  }
+  a{
+      @include unstyled-link();
+  }
+  .al-footerBar.mobileModule {
+      display: none;
+  }
+
+  html,
+  body {
+      font-size: 16px;
+      background-color: #eef3f8;
+          height: 100%;
+      width: 100%;
+  }
+  .yd-mainInner{
+      min-height: 100%;
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 192px;
+  }
+  .width_auto {
+      width: 753px;
+      margin: 0 auto;
+  }
+
+  .width92 {
+      width: 92%;
+      margin: 0 auto;
+  }
+  .yd-pageBackBtn.pcModule{
+    display: inline-block;
+  }
+  @include query() {
+
+      html,
+      body {
+          font-size: 32px;
+          background-color: $mainBackground;
+      }
+      .mobileModule {
+          display: block;
+      }
+      .pcModule {
+          display: none;
+      }
+      .al-footerBar.mobileModule {
+          display: flex;
+      }
+      .yd-pageBackBtn.pcModule {
+          display: none;
+      }
+  }
+
+  .clear:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+  }
+  .yd-maskBackground{
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);
+      //background-color: #000;
+      z-index: 8;
+  }
+  //旋转——上传状态等
+  @include keyframes (rotate) {
+      0% {
+          transform: rotate(0);
+          -webkit-transform: rotate(0);
+      }
+      100% {
+          transform: rotate(360deg);
+          -webkit-transform: rotate(360deg);
+      }
+  }
+  .lucency{
+      filter:alpha(opacity=0);
+      -moz-opacity:0;
+      -khtml-opacity: 0;
+      opacity: 0;
+      height:0;
+      border:none;
+      padding:0;
+  }
+  .Ev-shareWeixinCode{
+      width: 268px;
+
+      padding: 25px 0;
+      box-sizing: border-box;
+      background-color: #fff;
+      text-align: center;
+      box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.14), -3px 4px 8px rgba(0, 0, 0, 0.14);
+      margin-top: -15px;
+      margin-left: -1px;
+      &:before{
+          content: '';
+          @include triangle(10px,#fff,down);
+          position: absolute;
+          bottom: -10px;
+          left: 70px;
+      }
+      h3{
+          font-size:rem(14px);
+          margin-bottom:25px;
+      }
+  }
+  .Ev-sidebarMessage{
+      .yd-newsNum {
+          text-align: center;
+          top: 20%;
+          margin-top: rem(-7.5px);
+          margin-right: rem(15px);
+          @include circle(rem(17px), #f35555);
+          display: block;
+          position: absolute;
+          right: -5%;
+          font-size: rem(12px);
+          line-height: rem(17px);
+          color: #fff;
+      }
+  }
+
+
+  @import "components/_footerSelector";
+  @import "components/_confirmModal";
+  @import "components/_middleTipsModal";
+  @import "components/_settingHeadImg";
+  @import "components/_pageFooter";
+  @import "components/_pageTopNav_And_SideBar"; //主导航-主侧栏
+  @import "components/_loginWindow";
+  @import "components/_authentication";
+  @import "components/_authorityCommon"; //登录注册认证公共部门
+  @import "components/common/_h5_header"; //登录注册认证公共部门
+
+
+
+  .icon-vip {
+    @extend %icon-vip;
+  }
+  .yd-vipUser{
+    @extend %icon-vip;
+  }
+
+
+
+  /*body200%高*/
+  .yd_overflow{
+    overflow: hidden;
+  }
+  .app_download_wx{
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 7;
+      img{
+          width: 100%;
+          height: 100%;
+          vertical-align: middle;
+      }
+  }
+
+
+
+
+
+  /*引导页*/
+  .pcQuestionsCollect{
+    width: 750px;
+    margin: 0 auto;
+    display: inline-block;
+    position: fixed;
+    margin-left: -375px;
+    .guideCont{
+      position: absolute;
+      top: 43px;
+      right: -15px;
+      z-index: 10;
+      width:372px;
+      height: 276px;
+      img{
+        width: 100%;
+      }
+    }
+
+    .guideBut{
+      position: absolute;
+      right: 180px;
+      top: 350px;
+      z-index: 10;
+      @include cursor();
+    }
+  }
+    .pcCourseCollect{
+      width: 750px;
+      margin: 0 auto;
+      display: inline-block;
+      position: fixed;
+      margin-left: -375px;
+      .guideCont{
+        position: absolute;
+        top: 433px;
+        left: 123px;
+        z-index: 10;
+        width:343px;
+        height: 284px;
+        img{
+          width: 100%;
+        }
+      }
+      .guideBut{
+        position: absolute;
+        left: 286px;
+        top: 737px;
+        z-index: 10;
+        @include cursor();
+      }
+    }
+    .pcErrorQuestions{
+      width: 750px;
+      margin: 0 auto;
+      display: inline-block;
+      position: fixed;
+      margin-left: -375px;
+      .guideCont{
+        position: absolute;
+        top: 136px;
+        left: 5px;
+        z-index: 10;
+        width:721px;
+        height: 401px;
+        img{
+          width: 100%;
+        }
+      }
+      .guideBut{
+        position: absolute;
+        left: 286px;
+        top: 560px;
+        z-index: 10;
+        @include cursor();
+      }
+    }
+
+
+
+  @include query(){
+  .mobileModule{
+      .guideCont{
+        position: fixed;
+        left:rem(20px);
+        right: rem(30px);
+        bottom: 0;
+        z-index: 10;
+        width: 89%;
+        img{
+          width: 100%;
+        }
+      }
+      .guideBut{
+        position: fixed;
+        right: rem(60px);
+        bottom: rem(200px);
+        z-index: 10;
+        width: 32%;
+        @include cursor();
+      }
+    }
+    .guideContSheet{
+      position: fixed;
+      left:rem(45px);
+      top: rem(85px);
+      z-index: 10;
+      width: 74%;
+      img{
+        width: 100%;
+      }
+    }
+    .guideButSheet{
+      position: fixed;
+      right: rem(125px);
+      bottom: rem(180px);
+      z-index: 10;
+      width: 32%;
+      @include cursor();
+    }
+  }
+
+
+
+
+  .none{
+    display: none;
+  }
+
+
+
+
+  .yd-loading2{
+    text-align: center;
+    &:before{
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+    }
+    & > div{
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+

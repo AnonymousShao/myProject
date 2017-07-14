@@ -1,0 +1,45 @@
+@charset "UTF-8";
+html,body {
+    background-color: #eef3f8;
+}
+// 精品课程
+@import "../../modules/_common-modules";
+@import "../../variables/_yiding-variables";
+@import "../../components/_pageTopNav_And_SideBar"; //主导航-主侧栏
+@import "../../components/_contentInner"; //内容容器
+@import "../../components/_indexHeader"; //页头
+@import "../../components/_noContent"; //无内容提示
+@import "../../components/_iconModule"; //图标标签
+@import "../../components/_contentItem"; //内容条目
+@import "../../components/_twoFloorsFilter";//分层筛选
+@import "index";//首页的sass
+
+
+.icon-comment {
+    @extend %icon-comment;
+}
+.icon-search{
+    @extend %icon-search;
+}
+.al-pcFooterBar{
+    height: 10.75rem;
+    width: 100%;
+    background: #fff;
+    margin-top: 70px;
+    margin-bottom: -120px;
+}
+.contentInnerMore{
+    &:hover{
+       background: #CCCCCC;
+       color: #000;  
+       font-size: 14px;
+    }
+    p{
+        height:auto;
+        margin-top: 0;
+        margin-left: 0;
+    }
+    @include cursor();
+}   
+
+

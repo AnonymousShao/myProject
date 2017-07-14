@@ -1,0 +1,39 @@
+@charset "UTF-8";
+// 个人中心 错题本
+// Created by qiangkailiang on 2016/11/03
+// 功能库引入
+@import "../../modules/_common-modules";
+// 变量入口引入
+@import "../../variables/_yiding-variables";
+@import "../../components/_pageTopNav_And_SideBar"; //主导航-主侧栏
+@import "../../components/_contentInner"; //内容容器
+@import "../../components/_indexHeader"; //页头
+@import "../../components/_noContent"; //无内容提示
+@import "../../components/_iconModule"; //图标标签
+@import "../../components/_buttonModule";  //按钮组件
+@import "../../components/_classGetRatio"; //课程掌握程度
+@import "../../components/_twoFloorContentItem"; //垂直手风琴菜单
+html,
+body {
+    background-color: #f4f7f6;
+}
+
+.yd-mainInner {
+    padding-bottom: rem(120px);
+}
+
+
+.contentItemHeader {
+    margin-top: 0;
+}
+
+.contentItem {
+    padding: 0 !important;
+}
+
+
+.icon-downArrow {
+    @extend %icon-downArrow;
+}
+
+@import "../../components/_footerBar"; //页脚
